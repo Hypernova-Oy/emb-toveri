@@ -1,0 +1,18 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# AT-1220-TWT-5V-R
+#
+DEF AT-1220-TWT-5V-R AT 0 40 Y Y 1 F N
+F0 "AT" -300 -400 60 H V C CNN
+F1 "AT-1220-TWT-5V-R" -300 0 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+C -300 -200 112 0 1 0 N
+X + 1 0 -150 197 L 50 50 1 1 P
+X - 2 0 -250 197 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

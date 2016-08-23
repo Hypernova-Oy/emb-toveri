@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/kivilahtio/KiCad/authenticator/authenticator.sch</source>
+    <date>ti 23. elokuuta 2016 10.15.43</date>
+    <tool>Eeschema 4.0.3+e1-6302~38~ubuntu14.04.1-stable</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Authenticator</title>
+        <company>Vaara-kirjastot</company>
+        <rev>0.1</rev>
+        <date/>
+        <source>authenticator.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J1">
+      <value>RPi_GPIO</value>
+      <footprint>EuroBoard_Outline:EuroBoard_achtel_Type-II_80mmX25mm</footprint>
+      <libsource lib="RPi_Hat-cache" part="RPi_GPIO"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BB6E59</tstamp>
+    </comp>
+    <comp ref="DS1">
+      <value>DS18B20+</value>
+      <footprint>Transistors_OldSowjetAera:OldSowjetaera_Transistor_Type-II_BigPads</footprint>
+      <libsource lib="ds18b20+" part="DS18B20+"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BB7AAF</tstamp>
+    </comp>
+    <comp ref="EC1">
+      <value>EC2-3TNU</value>
+      <footprint>Relays_ThroughHole:Relay_SPDT_Schrack-RT1_RM5mm</footprint>
+      <libsource lib="ec2-3tnu" part="EC2-3TNU"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BB815A</tstamp>
+    </comp>
+    <comp ref="AT1">
+      <value>AT-1220-TWT-5V-R</value>
+      <libsource lib="at-1220-twt-5v-r" part="AT-1220-TWT-5V-R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BB8418</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>LED_RABG</value>
+      <libsource lib="device" part="LED_RABG"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BB8481</tstamp>
+    </comp>
+    <comp ref="NHD1">
+      <value>NHD-0420CW-AB3</value>
+      <libsource lib="nhd-0420cw-ab3" part="NHD-0420CW-AB3"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BB890D</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>12V</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BBB4BD</tstamp>
+    </comp>
+    <comp ref="EC2">
+      <value>EC2-3TNU</value>
+      <footprint>Relays_ThroughHole:Relay_SPDT_Schrack-RT1_RM5mm</footprint>
+      <libsource lib="ec2-3tnu" part="EC2-3TNU"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BC1B74</tstamp>
+    </comp>
+    <comp ref="D3">
+      <value>LED</value>
+      <libsource lib="device" part="LED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BC2AAE</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>CP</value>
+      <libsource lib="device" part="CP"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BC47D3</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>4.7k</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BC80CD</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>46</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BC9DFD</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>0</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BC9FE5</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>0</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BCA0AF</tstamp>
+    </comp>
+    <comp ref="D4">
+      <value>D</value>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BC0DED</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>D</value>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BC211D</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="at-1220-twt-5v-r" part="AT-1220-TWT-5V-R">
+      <fields>
+        <field name="Reference">AT</field>
+        <field name="Value">AT-1220-TWT-5V-R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="CP">
+      <description>Polarised capacitor</description>
+      <footprints>
+        <fp>CP*</fp>
+        <fp>Elko*</fp>
+        <fp>TantalC*</fp>
+        <fp>C*elec</fp>
+        <fp>c_elec*</fp>
+        <fp>SMD*_Pol</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="D">
+      <description>Diode</description>
+      <footprints>
+        <fp>Diode_*</fp>
+        <fp>D-Pak_TO252AA</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ds18b20+" part="DS18B20+">
+      <fields>
+        <field name="Reference">DS</field>
+        <field name="Value">DS18B20+</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+        <pin num="2" name="DQ" type="passive"/>
+        <pin num="3" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="ec2-3tnu" part="EC2-3TNU">
+      <fields>
+        <field name="Reference">EC</field>
+        <field name="Value">EC2-3TNU</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SET+" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="RES+" type="passive"/>
+        <pin num="7" name="RES-" type="passive"/>
+        <pin num="8" name="~" type="passive"/>
+        <pin num="9" name="~" type="passive"/>
+        <pin num="10" name="~" type="passive"/>
+        <pin num="12" name="SET-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="LED">
+      <footprints>
+        <fp>LED-3MM</fp>
+        <fp>LED-5MM</fp>
+        <fp>LED-10MM</fp>
+        <fp>LED-0603</fp>
+        <fp>LED-0805</fp>
+        <fp>LED-1206</fp>
+        <fp>LEDV</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="LED_RABG">
+      <description>Common Anode RGB LED</description>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED_RABG</field>
+      </fields>
+      <pins>
+        <pin num="1" name="RED_CATHODE" type="passive"/>
+        <pin num="2" name="COMMON_ANODE" type="passive"/>
+        <pin num="3" name="BLUE_CATHODE" type="passive"/>
+        <pin num="4" name="GREEN_CATHODE" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="nhd-0420cw-ab3" part="NHD-0420CW-AB3">
+      <fields>
+        <field name="Reference">NHD</field>
+        <field name="Value">NHD-0420CW-AB3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VSS" type="passive"/>
+        <pin num="2" name="VDD" type="passive"/>
+        <pin num="3" name="REGVDD" type="passive"/>
+        <pin num="4" name="D/C" type="passive"/>
+        <pin num="5" name="R/W" type="passive"/>
+        <pin num="6" name="E" type="passive"/>
+        <pin num="7" name="D0" type="passive"/>
+        <pin num="8" name="D1" type="passive"/>
+        <pin num="9" name="D2" type="passive"/>
+        <pin num="10" name="D3" type="passive"/>
+        <pin num="11" name="D4" type="passive"/>
+        <pin num="12" name="D5" type="passive"/>
+        <pin num="13" name="D6" type="passive"/>
+        <pin num="14" name="D7" type="passive"/>
+        <pin num="15" name="CS" type="passive"/>
+        <pin num="16" name="RES" type="passive"/>
+        <pin num="17" name="BS0" type="passive"/>
+        <pin num="18" name="BS1" type="passive"/>
+        <pin num="19" name="BS2" type="passive"/>
+        <pin num="20" name="VSS(Frame)" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RPi_Hat-cache" part="RPi_GPIO">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">RPi_GPIO</field>
+      </fields>
+      <pins>
+        <pin num="1" name="3.3V" type="power_in"/>
+        <pin num="2" name="5V" type="power_in"/>
+        <pin num="3" name="GPIO02_SDA1_I2C" type="BiDi"/>
+        <pin num="4" name="5V" type="power_in"/>
+        <pin num="5" name="GPIO03_SCL1_I2C" type="BiDi"/>
+        <pin num="6" name="GND" type="power_in"/>
+        <pin num="7" name="GPIO04_GCLK" type="BiDi"/>
+        <pin num="8" name="GPIO14_TXD0" type="BiDi"/>
+        <pin num="9" name="GND" type="power_in"/>
+        <pin num="10" name="GPIO15_RXD0" type="BiDi"/>
+        <pin num="11" name="GPIO17" type="BiDi"/>
+        <pin num="12" name="GPIO18" type="BiDi"/>
+        <pin num="13" name="GPIO27" type="BiDi"/>
+        <pin num="14" name="GND" type="power_in"/>
+        <pin num="15" name="GPIO22" type="BiDi"/>
+        <pin num="16" name="GPIO23" type="BiDi"/>
+        <pin num="17" name="3.3V" type="power_in"/>
+        <pin num="18" name="GPIO24" type="BiDi"/>
+        <pin num="19" name="GPIO10_SPI_MOSI" type="BiDi"/>
+        <pin num="20" name="GND" type="power_in"/>
+        <pin num="21" name="GPIO09_SPI_MISO" type="BiDi"/>
+        <pin num="22" name="GPIO25" type="BiDi"/>
+        <pin num="23" name="GPIO11_SPI_CLK" type="BiDi"/>
+        <pin num="24" name="GPIO08_SPI_CE0_N" type="BiDi"/>
+        <pin num="25" name="GND" type="power_in"/>
+        <pin num="26" name="GPIO07_SPI_CE1_N" type="BiDi"/>
+        <pin num="27" name="ID_SD" type="BiDi"/>
+        <pin num="28" name="ID_SC" type="BiDi"/>
+        <pin num="29" name="GPIO05" type="BiDi"/>
+        <pin num="30" name="GND" type="power_in"/>
+        <pin num="31" name="GPIO06" type="BiDi"/>
+        <pin num="32" name="GPIO12" type="BiDi"/>
+        <pin num="33" name="GPIO13" type="BiDi"/>
+        <pin num="34" name="GND" type="power_in"/>
+        <pin num="35" name="GPIO19" type="BiDi"/>
+        <pin num="36" name="GPIO16" type="BiDi"/>
+        <pin num="37" name="GPIO26" type="BiDi"/>
+        <pin num="38" name="GPIO20" type="BiDi"/>
+        <pin num="39" name="GND" type="power_in"/>
+        <pin num="40" name="GPIO21" type="BiDi"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
+    <library logical="nhd-0420cw-ab3">
+      <uri>/home/kivilahtio/KiCad/authenticator/libraries/nhd-0420cw-ab3.lib</uri>
+    </library>
+    <library logical="ds18b20+">
+      <uri>/home/kivilahtio/KiCad/authenticator/libraries/ds18b20+.lib</uri>
+    </library>
+    <library logical="RPi_Hat-cache">
+      <uri>/home/kivilahtio/KiCad/authenticator/libraries/RPi_Hat_Template/RPi_Hat-cache.lib</uri>
+    </library>
+    <library logical="ec2-3tnu">
+      <uri>/home/kivilahtio/KiCad/authenticator/libraries/ec2-3tnu.lib</uri>
+    </library>
+    <library logical="at-1220-twt-5v-r">
+      <uri>/home/kivilahtio/KiCad/authenticator/libraries/at-1220-twt-5v-r.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(D3-Pad2)">
+      <node ref="EC2" pin="8"/>
+      <node ref="D3" pin="2"/>
+    </net>
+    <net code="2" name="Net-(J1-Pad23)">
+      <node ref="J1" pin="23"/>
+      <node ref="NHD1" pin="7"/>
+    </net>
+    <net code="3" name="Net-(J1-Pad19)">
+      <node ref="NHD1" pin="8"/>
+      <node ref="J1" pin="19"/>
+    </net>
+    <net code="4" name="Net-(J1-Pad21)">
+      <node ref="NHD1" pin="9"/>
+      <node ref="J1" pin="21"/>
+    </net>
+    <net code="5" name="Net-(AT1-Pad1)">
+      <node ref="AT1" pin="1"/>
+      <node ref="J1" pin="12"/>
+    </net>
+    <net code="6" name="/GND">
+      <node ref="EC1" pin="12"/>
+      <node ref="EC1" pin="7"/>
+      <node ref="DS1" pin="1"/>
+      <node ref="D2" pin="2"/>
+      <node ref="NHD1" pin="4"/>
+      <node ref="NHD1" pin="18"/>
+      <node ref="NHD1" pin="17"/>
+      <node ref="NHD1" pin="14"/>
+      <node ref="NHD1" pin="13"/>
+      <node ref="NHD1" pin="12"/>
+      <node ref="NHD1" pin="11"/>
+      <node ref="NHD1" pin="20"/>
+      <node ref="NHD1" pin="10"/>
+      <node ref="NHD1" pin="6"/>
+      <node ref="NHD1" pin="5"/>
+      <node ref="J1" pin="6"/>
+      <node ref="NHD1" pin="3"/>
+      <node ref="NHD1" pin="1"/>
+      <node ref="AT1" pin="2"/>
+      <node ref="EC2" pin="12"/>
+      <node ref="NHD1" pin="19"/>
+      <node ref="C1" pin="2"/>
+      <node ref="D4" pin="2"/>
+    </net>
+    <net code="7" name="+12V">
+      <node ref="EC1" pin="4"/>
+    </net>
+    <net code="8" name="Net-(EC1-Pad5)">
+      <node ref="R5" pin="1"/>
+      <node ref="EC1" pin="5"/>
+    </net>
+    <net code="9" name="Net-(DS1-Pad2)">
+      <node ref="J1" pin="18"/>
+      <node ref="DS1" pin="2"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="10" name="Net-(D3-Pad1)">
+      <node ref="EC2" pin="9"/>
+      <node ref="D3" pin="1"/>
+    </net>
+    <net code="11" name="Net-(D4-Pad1)">
+      <node ref="D4" pin="1"/>
+      <node ref="EC1" pin="1"/>
+      <node ref="J1" pin="16"/>
+    </net>
+    <net code="12" name="Net-(D1-Pad4)">
+      <node ref="R2" pin="2"/>
+      <node ref="D1" pin="4"/>
+    </net>
+    <net code="13" name="Net-(J1-Pad15)">
+      <node ref="J1" pin="15"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="14" name="Net-(D1-Pad3)">
+      <node ref="R3" pin="2"/>
+      <node ref="D1" pin="3"/>
+    </net>
+    <net code="15" name="Net-(J1-Pad11)">
+      <node ref="R1" pin="1"/>
+      <node ref="J1" pin="11"/>
+    </net>
+    <net code="16" name="Net-(J1-Pad13)">
+      <node ref="J1" pin="13"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="17" name="Net-(D2-Pad1)">
+      <node ref="D2" pin="1"/>
+      <node ref="EC2" pin="1"/>
+      <node ref="J1" pin="22"/>
+    </net>
+    <net code="18" name="Net-(J1-Pad24)">
+      <node ref="J1" pin="24"/>
+      <node ref="NHD1" pin="15"/>
+    </net>
+    <net code="19" name="Net-(J1-Pad27)">
+      <node ref="J1" pin="27"/>
+      <node ref="NHD1" pin="16"/>
+    </net>
+    <net code="20" name="/3.3V">
+      <node ref="R4" pin="2"/>
+      <node ref="NHD1" pin="2"/>
+      <node ref="J1" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="DS1" pin="3"/>
+    </net>
+    <net code="21" name="Net-(D1-Pad1)">
+      <node ref="R1" pin="2"/>
+      <node ref="D1" pin="1"/>
+    </net>
+    <net code="22" name="Net-(J1-Pad35)">
+      <node ref="J1" pin="35"/>
+    </net>
+    <net code="23" name="Net-(J1-Pad26)">
+      <node ref="J1" pin="26"/>
+    </net>
+    <net code="24" name="Net-(J1-Pad36)">
+      <node ref="J1" pin="36"/>
+    </net>
+    <net code="25" name="Net-(J1-Pad17)">
+      <node ref="J1" pin="17"/>
+    </net>
+    <net code="26" name="Net-(J1-Pad37)">
+      <node ref="J1" pin="37"/>
+    </net>
+    <net code="27" name="Net-(J1-Pad28)">
+      <node ref="J1" pin="28"/>
+    </net>
+    <net code="28" name="Net-(J1-Pad38)">
+      <node ref="J1" pin="38"/>
+    </net>
+    <net code="29" name="Net-(J1-Pad29)">
+      <node ref="J1" pin="29"/>
+    </net>
+    <net code="30" name="Net-(J1-Pad39)">
+      <node ref="J1" pin="39"/>
+    </net>
+    <net code="31" name="Net-(J1-Pad25)">
+      <node ref="J1" pin="25"/>
+    </net>
+    <net code="32" name="Net-(EC1-Pad3)">
+      <node ref="EC1" pin="3"/>
+    </net>
+    <net code="33" name="Net-(EC1-Pad6)">
+      <node ref="EC1" pin="6"/>
+    </net>
+    <net code="34" name="Net-(EC1-Pad8)">
+      <node ref="EC1" pin="8"/>
+    </net>
+    <net code="35" name="Net-(EC1-Pad9)">
+      <node ref="EC1" pin="9"/>
+    </net>
+    <net code="36" name="Net-(EC1-Pad10)">
+      <node ref="EC1" pin="10"/>
+    </net>
+    <net code="37" name="Net-(J1-Pad2)">
+      <node ref="J1" pin="2"/>
+    </net>
+    <net code="38" name="Net-(J1-Pad3)">
+      <node ref="J1" pin="3"/>
+    </net>
+    <net code="39" name="Net-(J1-Pad4)">
+      <node ref="J1" pin="4"/>
+    </net>
+    <net code="40" name="Net-(J1-Pad5)">
+      <node ref="J1" pin="5"/>
+    </net>
+    <net code="41" name="Net-(J1-Pad7)">
+      <node ref="J1" pin="7"/>
+    </net>
+    <net code="42" name="Net-(J1-Pad8)">
+      <node ref="J1" pin="8"/>
+    </net>
+    <net code="43" name="Net-(J1-Pad9)">
+      <node ref="J1" pin="9"/>
+    </net>
+    <net code="44" name="Net-(J1-Pad10)">
+      <node ref="J1" pin="10"/>
+    </net>
+    <net code="45" name="Net-(J1-Pad20)">
+      <node ref="J1" pin="20"/>
+    </net>
+    <net code="46" name="Net-(J1-Pad30)">
+      <node ref="J1" pin="30"/>
+    </net>
+    <net code="47" name="Net-(J1-Pad40)">
+      <node ref="J1" pin="40"/>
+    </net>
+    <net code="48" name="Net-(J1-Pad31)">
+      <node ref="J1" pin="31"/>
+    </net>
+    <net code="49" name="Net-(J1-Pad32)">
+      <node ref="J1" pin="32"/>
+    </net>
+    <net code="50" name="Net-(J1-Pad33)">
+      <node ref="J1" pin="33"/>
+    </net>
+    <net code="51" name="Net-(J1-Pad14)">
+      <node ref="J1" pin="14"/>
+    </net>
+    <net code="52" name="Net-(J1-Pad34)">
+      <node ref="J1" pin="34"/>
+    </net>
+    <net code="53" name="GNDA">
+      <node ref="R5" pin="2"/>
+    </net>
+    <net code="54" name="Net-(EC2-Pad3)">
+      <node ref="EC2" pin="3"/>
+    </net>
+    <net code="55" name="Net-(EC2-Pad4)">
+      <node ref="EC2" pin="4"/>
+    </net>
+    <net code="56" name="Net-(EC2-Pad5)">
+      <node ref="EC2" pin="5"/>
+    </net>
+    <net code="57" name="Net-(EC2-Pad6)">
+      <node ref="EC2" pin="6"/>
+    </net>
+    <net code="58" name="Net-(EC2-Pad7)">
+      <node ref="EC2" pin="7"/>
+    </net>
+    <net code="59" name="Net-(EC2-Pad10)">
+      <node ref="EC2" pin="10"/>
+    </net>
+    <net code="60" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2"/>
+    </net>
+  </nets>
+</export>
