@@ -2,12 +2,12 @@
 
 ### Update module version and changelog
 
-1. Update version numbers in modules
+* Update version numbers in modules
 ```
 $ $EDITOR lib/<your-module-name>.pm
 ```
 
-2. Update changelog (copy&paste the previous log and modify it) Most
+* Update changelog (copy&paste the previous log and modify it) Most
    important part is to change the version number (this will be used
    by debuild).
 
@@ -30,7 +30,7 @@ libemb-buzzer-perl (0.02-1) UNRELEASED; urgency=low
 Scroll down to the end of this document (Release on Github) for
 learning how to create the version number.
 
-3. Push your changes to Github
+* Push your changes to Github
 ```
 $ git push
 ```
