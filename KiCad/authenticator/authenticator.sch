@@ -28,6 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:RPi_Hat-cache
 LIBS:ds18b20+
 LIBS:ec2-3tnu
 LIBS:at-1220-twt-5v-r
@@ -57,17 +58,6 @@ F 2 "EuroBoard_Outline:EuroBoard_achtel_Type-II_80mmX25mm" H 4450 900 60  0001 C
 F 3 "" H 4450 900 60  0000 C CNN
 	1    4450 900 
 	1    0    0    -1  
-$EndComp
-$Comp
-L DS18B20+ DS1
-U 1 1 57BB7AAF
-P 8500 2400
-F 0 "DS1" H 8450 2000 60  0000 C CNN
-F 1 "DS18B20+" H 8500 2500 60  0000 C CNN
-F 2 "Transistors_OldSowjetAera:OldSowjetaera_Transistor_Type-II_BigPads" H 8500 2400 60  0001 C CNN
-F 3 "" H 8500 2400 60  0001 C CNN
-	1    8500 2400
-	0    -1   -1   0   
 $EndComp
 $Comp
 L EC2-3TNU EC1
@@ -113,7 +103,7 @@ F 3 "" H 3300 3150 60  0001 C CNN
 	1    3300 3150
 	0    1    1    0   
 $EndComp
-Text Label 9000 2000 1    60   ~ 0
+Text Label 8450 2100 1    60   ~ 0
 3.3V
 Text Label 6150 1100 0    60   ~ 0
 GND
@@ -217,25 +207,23 @@ Text Label 3400 2950 0    60   ~ 0
 GND
 Text Label 3400 4250 0    60   ~ 0
 GND
-Text Label 8550 2200 1    60   ~ 0
+Text Label 8800 2100 0    60   ~ 0
 GND
 $Comp
 L R R4
 U 1 1 57BC80CD
-P 8750 1850
-F 0 "R4" V 8830 1850 50  0000 C CNN
-F 1 "4.7k" V 8750 1850 50  0000 C CNN
-F 2 "" V 8680 1850 50  0000 C CNN
-F 3 "" H 8750 1850 50  0000 C CNN
-	1    8750 1850
+P 8550 1900
+F 0 "R4" V 8630 1900 50  0000 C CNN
+F 1 "4.7k" V 8550 1900 50  0000 C CNN
+F 2 "" V 8480 1900 50  0000 C CNN
+F 3 "" H 8550 1900 50  0000 C CNN
+	1    8550 1900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	6900 1400 6150 1400
 Wire Wire Line
-	9550 1600 9550 1900
-Wire Wire Line
-	9550 1900 9550 2000
+	9550 1600 9550 2000
 Wire Wire Line
 	6150 1600 9550 1600
 Wire Wire Line
@@ -258,8 +246,6 @@ Wire Notes Line
 	8350 2950 10250 2950
 Wire Notes Line
 	8350 1300 10250 1300
-Wire Wire Line
-	8650 1700 8650 2200
 Wire Notes Line
 	8350 2950 8350 1200
 Wire Notes Line
@@ -285,9 +271,7 @@ Wire Notes Line
 Wire Wire Line
 	6150 1900 7550 1900
 Wire Wire Line
-	7550 1900 7550 1950
-Wire Wire Line
-	7550 1950 7550 2000
+	7550 1900 7550 2000
 Wire Notes Line
 	8250 3650 8250 1800
 Wire Notes Line
@@ -309,31 +293,21 @@ Wire Wire Line
 Wire Notes Line
 	6850 3650 8250 3650
 Wire Wire Line
-	3200 2650 3450 2650
-Wire Wire Line
-	3450 2650 3600 2650
+	3200 2650 3600 2650
 Wire Wire Line
 	3200 2550 3200 2350
 Wire Wire Line
-	3200 2350 3450 2350
-Wire Wire Line
-	3450 2350 3600 2350
+	3200 2350 3600 2350
 Connection ~ 3450 2350
 Connection ~ 3450 2650
 Wire Wire Line
 	3200 2750 3300 2750
 Wire Wire Line
-	3300 2750 3300 2850
-Wire Wire Line
-	3300 2850 3300 2950
-Wire Wire Line
-	3300 2950 3300 3050
+	3300 2750 3300 3050
 Wire Wire Line
 	3300 3050 3200 3050
 Wire Wire Line
-	3200 2950 3300 2950
-Wire Wire Line
-	3300 2950 3400 2950
+	3200 2950 3400 2950
 Connection ~ 3300 2950
 Wire Wire Line
 	3300 2850 3200 2850
@@ -359,22 +333,14 @@ Wire Wire Line
 Wire Wire Line
 	3200 3450 3300 3450
 Wire Wire Line
-	3300 3450 3300 3550
-Wire Wire Line
-	3300 3550 3300 3650
-Wire Wire Line
-	3300 3650 3300 3750
-Wire Wire Line
-	3300 3750 3300 3850
+	3300 3450 3300 3850
 Wire Wire Line
 	3300 3850 3200 3850
 Wire Wire Line
 	3200 3750 3300 3750
 Connection ~ 3300 3750
 Wire Wire Line
-	3200 3650 3300 3650
-Wire Wire Line
-	3300 3650 3400 3650
+	3200 3650 3400 3650
 Connection ~ 3300 3650
 Wire Wire Line
 	3200 3550 3300 3550
@@ -394,28 +360,17 @@ Wire Wire Line
 Wire Wire Line
 	3200 4150 3300 4150
 Wire Wire Line
-	3300 4150 3300 4250
-Wire Wire Line
-	3300 4250 3300 4350
-Wire Wire Line
-	3300 4350 3300 4450
+	3300 4150 3300 4450
 Wire Wire Line
 	3300 4450 3200 4450
 Wire Wire Line
 	3200 4350 3300 4350
 Connection ~ 3300 4350
 Wire Wire Line
-	3200 4250 3300 4250
-Wire Wire Line
-	3300 4250 3400 4250
+	3200 4250 3400 4250
 Connection ~ 3300 4250
 Wire Wire Line
-	8750 2200 8750 2000
-Connection ~ 8650 1700
-Wire Wire Line
-	8750 2200 9000 2150
-Wire Wire Line
-	9000 2150 9000 2000
+	8800 2200 8800 2100
 $Comp
 L R R1
 U 1 1 57BC9DFD
@@ -500,9 +455,7 @@ Connection ~ 9550 1900
 Wire Wire Line
 	9200 2550 9200 2900
 Wire Wire Line
-	8950 2900 9200 2900
-Wire Wire Line
-	9200 2900 9550 2900
+	8950 2900 9550 2900
 Connection ~ 9200 2900
 $Comp
 L D D2
@@ -521,9 +474,7 @@ Wire Wire Line
 	7200 1950 7200 2300
 Connection ~ 7550 1950
 Wire Wire Line
-	6900 2900 7200 2900
-Wire Wire Line
-	7200 2900 7550 2900
+	6900 2900 7550 2900
 Wire Wire Line
 	7200 2900 7200 2600
 Connection ~ 7200 2900
@@ -542,7 +493,27 @@ Wire Wire Line
 Wire Wire Line
 	4050 1200 4250 1200
 Wire Wire Line
-	6600 1700 8650 1700
+	6600 1700 8700 1700
+$Comp
+L DS18B20+ DS?
+U 1 1 57BE9EC4
+P 8550 2400
+F 0 "DS?" H 8500 2000 60  0000 C CNN
+F 1 "DS18B20+" H 8550 2500 60  0000 C CNN
+F 2 "" H 8550 2400 60  0001 C CNN
+F 3 "" H 8550 2400 60  0001 C CNN
+	1    8550 2400
+	0    -1   -1   0   
+$EndComp
 Wire Wire Line
-	8650 1700 8750 1700
+	8700 1700 8700 2200
+Wire Wire Line
+	8600 2200 8450 2100
+Wire Wire Line
+	8600 2200 8600 2050
+Wire Wire Line
+	8600 2050 8550 2050
+Wire Wire Line
+	8550 1750 8550 1700
+Connection ~ 8550 1700
 $EndSCHEMATC
