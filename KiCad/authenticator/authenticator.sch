@@ -33,6 +33,7 @@ LIBS:ds18b20+
 LIBS:ec2-3tnu
 LIBS:at-1220-twt-5v-r
 LIBS:nhd-0420cw-ab3
+LIBS:ec2-nu
 LIBS:authenticator-cache
 EELAYER 25 0
 EELAYER END
@@ -62,13 +63,13 @@ $EndComp
 $Comp
 L EC2-3TNU EC1
 U 1 1 57BB815A
-P 9250 2200
-F 0 "EC1" V 10200 1950 60  0000 C CNN
-F 1 "EC2-3TNU" V 9400 1950 60  0000 C CNN
-F 2 "Relays_ThroughHole:Relay_SPDT_Schrack-RT1_RM5mm" H 9250 2200 60  0001 C CNN
-F 3 "" H 9250 2200 60  0001 C CNN
-	1    9250 2200
-	1    0    0    -1  
+P 10350 2700
+F 0 "EC1" V 11300 2450 60  0000 C CNN
+F 1 "EC2-3TNU" V 10500 2450 60  0000 C CNN
+F 2 "Relays_ThroughHole:Relay_SPDT_Schrack-RT1_RM5mm" H 10350 2700 60  0001 C CNN
+F 3 "" H 10350 2700 60  0001 C CNN
+	1    10350 2700
+	-1   0    0    1   
 $EndComp
 $Comp
 L AT-1220-TWT-5V-R AT1
@@ -107,85 +108,61 @@ Text Label 8450 2100 1    60   ~ 0
 3.3V
 Text Label 6150 1100 0    60   ~ 0
 GND
-Text Label 4250 900  0    60   ~ 0
+Text Label 4250 900  1    60   ~ 0
 3.3V
-Text Label 2500 1550 0    60   ~ 0
+Text Label 2500 1500 1    60   ~ 0
 GND
 Text Label 7000 900  3    60   ~ 0
 GND
 Text Label 8950 2900 0    60   ~ 0
 GND
-Text Label 10050 2900 0    60   ~ 0
+Text Label 10550 2900 0    60   ~ 0
 GND
 $Comp
-L +12V #PWR01
+L +12V #PWR1
 U 1 1 57BBB20E
-P 9800 1650
-F 0 "#PWR01" H 9800 1500 50  0001 C CNN
-F 1 "+12V" H 9800 1790 50  0000 C CNN
-F 2 "" H 9800 1650 50  0000 C CNN
-F 3 "" H 9800 1650 50  0000 C CNN
-	1    9800 1650
+P 9900 1000
+F 0 "#PWR1" H 9900 850 50  0001 C CNN
+F 1 "+12V" H 9900 1140 50  0000 C CNN
+F 2 "" H 9900 1000 50  0000 C CNN
+F 3 "" H 9900 1000 50  0000 C CNN
+	1    9900 1000
 	1    0    0    -1  
 $EndComp
-Text Notes 8850 1300 0    60   ~ 0
+Text Notes 8850 700  0    60   ~ 0
 12V heater
 $Comp
 L R R5
 U 1 1 57BBB4BD
-P 10000 1750
-F 0 "R5" V 10080 1750 50  0000 C CNN
-F 1 "12V" V 10000 1750 50  0000 C CNN
-F 2 "" V 9930 1750 50  0000 C CNN
-F 3 "" H 10000 1750 50  0000 C CNN
-	1    10000 1750
+P 10100 1100
+F 0 "R5" V 10180 1100 50  0000 C CNN
+F 1 "12V" V 10100 1100 50  0000 C CNN
+F 2 "" V 10030 1100 50  0000 C CNN
+F 3 "" H 10100 1100 50  0000 C CNN
+	1    10100 1100
 	-1   0    0    1   
 $EndComp
 $Comp
-L GNDA #PWR02
+L GNDA #PWR2
 U 1 1 57BBB6AC
-P 10000 1600
-F 0 "#PWR02" H 10000 1350 50  0001 C CNN
-F 1 "GNDA" H 10000 1450 50  0000 C CNN
-F 2 "" H 10000 1600 50  0000 C CNN
-F 3 "" H 10000 1600 50  0000 C CNN
-	1    10000 1600
+P 10100 950
+F 0 "#PWR2" H 10100 700 50  0001 C CNN
+F 1 "GNDA" H 10100 800 50  0000 C CNN
+F 2 "" H 10100 950 50  0000 C CNN
+F 3 "" H 10100 950 50  0000 C CNN
+	1    10100 950 
 	-1   0    0    1   
 $EndComp
 Text Notes 6200 1400 0    60   ~ 0
-PWM
+PWM PIEZO
 Text Notes 2600 1000 0    60   ~ 0
 Signal LED
 Text Notes 7000 600  0    60   ~ 0
 Piezo beeper
-$Comp
-L EC2-3TNU EC2
-U 1 1 57BC1B74
-P 7250 2200
-F 0 "EC2" V 8200 1950 60  0000 C CNN
-F 1 "EC2-3TNU" V 7400 1950 60  0000 C CNN
-F 2 "Relays_ThroughHole:Relay_SPDT_Schrack-RT1_RM5mm" H 7250 2200 60  0001 C CNN
-F 3 "" H 7250 2200 60  0001 C CNN
-	1    7250 2200
-	1    0    0    -1  
-$EndComp
-Text Label 6900 2900 0    60   ~ 0
+Text Label 7200 1900 0    60   ~ 0
 GND
 Text Notes 7550 1900 0    60   ~ 0
 Door relay
-$Comp
-L LED D3
-U 1 1 57BC2AAE
-P 7800 3200
-F 0 "D3" H 7800 3300 50  0000 C CNN
-F 1 "LED" H 7800 3100 50  0000 C CNN
-F 2 "" H 7800 3200 50  0000 C CNN
-F 3 "" H 7800 3200 50  0000 C CNN
-	1    7800 3200
-	1    0    0    -1  
-$EndComp
-Text Notes 8100 3600 2    39   ~ 0
-LED not connected\njust a marker to\nshow where to\nconnect door control
 $Comp
 L CP C1
 U 1 1 57BC47D3
@@ -223,31 +200,15 @@ $EndComp
 Wire Wire Line
 	6900 1400 6150 1400
 Wire Wire Line
-	9550 1600 9550 2000
-Wire Wire Line
-	6150 1600 9550 1600
-Wire Wire Line
 	6900 800  6900 1400
 Wire Wire Line
 	6900 800  7000 800 
-Wire Wire Line
-	9800 1650 9800 1900
-Wire Wire Line
-	9800 1900 9850 1900
-Wire Wire Line
-	9850 1900 9850 2000
-Wire Wire Line
-	9950 2000 9950 1900
-Wire Wire Line
-	9950 1900 10000 1900
 Wire Notes Line
-	10250 2950 10250 1200
+	8350 2950 10750 2950
 Wire Notes Line
-	8350 2950 10250 2950
+	8350 700  10750 700 
 Wire Notes Line
-	8350 1300 10250 1300
-Wire Notes Line
-	8350 2950 8350 1200
+	8350 600  8350 2950
 Wire Notes Line
 	2400 1950 3700 1950
 Wire Notes Line
@@ -268,28 +229,12 @@ Wire Notes Line
 	6800 1100 6800 500 
 Wire Notes Line
 	6800 500  7800 500 
-Wire Wire Line
-	6150 1900 7550 1900
-Wire Wire Line
-	7550 1900 7550 2000
 Wire Notes Line
 	8250 3650 8250 1800
 Wire Notes Line
 	8250 1800 7350 1800
 Wire Notes Line
 	8250 1900 7600 1900
-Wire Wire Line
-	7600 3200 7600 3000
-Wire Wire Line
-	7600 3000 7850 3000
-Wire Wire Line
-	7850 3000 7850 2900
-Wire Wire Line
-	7950 2900 7950 3000
-Wire Wire Line
-	7950 3000 8000 3000
-Wire Wire Line
-	8000 3000 8000 3200
 Wire Notes Line
 	6850 3650 8250 3650
 Wire Wire Line
@@ -445,18 +390,8 @@ F 1 "D" H 9200 2300 50  0000 C CNN
 F 2 "" H 9200 2400 50  0000 C CNN
 F 3 "" H 9200 2400 50  0000 C CNN
 	1    9200 2400
-	0    1    1    0   
+	0    1    -1   0   
 $EndComp
-Wire Wire Line
-	9550 1900 9200 1900
-Wire Wire Line
-	9200 1900 9200 2250
-Connection ~ 9550 1900
-Wire Wire Line
-	9200 2550 9200 2900
-Wire Wire Line
-	8950 2900 9550 2900
-Connection ~ 9200 2900
 $Comp
 L D D2
 U 1 1 57BC211D
@@ -466,39 +401,23 @@ F 1 "D" H 7200 2350 50  0000 C CNN
 F 2 "" H 7200 2450 50  0000 C CNN
 F 3 "" H 7200 2450 50  0000 C CNN
 	1    7200 2450
-	0    1    1    0   
+	0    1    -1   0   
 $EndComp
-Wire Wire Line
-	7550 1950 7200 1950
-Wire Wire Line
-	7200 1950 7200 2300
-Connection ~ 7550 1950
-Wire Wire Line
-	6900 2900 7550 2900
-Wire Wire Line
-	7200 2900 7200 2600
-Connection ~ 7200 2900
 Wire Notes Line
-	8350 1200 10250 1200
+	8350 600  10750 600 
 Wire Notes Line
 	6850 3650 6850 1800
 Wire Notes Line
 	6850 1800 7400 1800
 Wire Wire Line
-	6600 1700 6600 550 
+	3850 1200 4250 1200
 Wire Wire Line
-	6600 550  4050 550 
-Wire Wire Line
-	4050 550  4050 1200
-Wire Wire Line
-	4050 1200 4250 1200
-Wire Wire Line
-	6600 1700 8700 1700
+	7850 1700 8700 1700
 $Comp
-L DS18B20+ DS?
+L DS18B20+ DS1
 U 1 1 57BE9EC4
 P 8550 2400
-F 0 "DS?" H 8500 2000 60  0000 C CNN
+F 0 "DS1" H 8500 2000 60  0000 C CNN
 F 1 "DS18B20+" H 8550 2500 60  0000 C CNN
 F 2 "" H 8550 2400 60  0001 C CNN
 F 3 "" H 8550 2400 60  0001 C CNN
@@ -516,4 +435,106 @@ Wire Wire Line
 Wire Wire Line
 	8550 1750 8550 1700
 Connection ~ 8550 1700
+Text Label 7850 1700 0    60   ~ 0
+RPi_pin7
+Text Label 3850 1200 1    60   ~ 0
+RPi_pin7
+Wire Wire Line
+	7300 1400 10050 1400
+Wire Wire Line
+	9650 1250 9900 1250
+Wire Wire Line
+	9900 1250 9900 1000
+$Comp
+L D D5
+U 1 1 57C45C51
+P 10450 2400
+F 0 "D5" H 10450 2500 50  0000 C CNN
+F 1 "D" H 10450 2300 50  0000 C CNN
+F 2 "" H 10450 2400 50  0000 C CNN
+F 3 "" H 10450 2400 50  0000 C CNN
+	1    10450 2400
+	0    1    -1   0   
+$EndComp
+Wire Notes Line
+	10750 600  10750 2950
+Text GLabel 10150 1100 2    60   Input ~ 0
+12V2A_heater
+Wire Wire Line
+	6150 1900 7000 1900
+Wire Wire Line
+	7000 1900 7000 2900
+Wire Wire Line
+	7000 2900 7550 2900
+Wire Wire Line
+	7200 2600 7200 2900
+Connection ~ 7200 2900
+Wire Wire Line
+	7200 1900 7200 2300
+Wire Wire Line
+	7550 2000 7200 2000
+Connection ~ 7200 2000
+$Comp
+L EC2-NU NU?
+U 1 1 57C4B3AC
+P 7250 2200
+F 0 "NU?" V 8200 1950 60  0000 C CNN
+F 1 "EC2-NU" V 7400 1950 60  0000 C CNN
+F 2 "" H 7250 2200 60  0001 C CNN
+F 3 "" H 7250 2200 60  0001 C CNN
+	1    7250 2200
+	1    0    0    -1  
+$EndComp
+Connection ~ 10450 2900
+Wire Wire Line
+	10050 2900 10550 2900
+Wire Wire Line
+	10450 2550 10450 2900
+Connection ~ 9200 2900
+Wire Wire Line
+	8950 2900 9550 2900
+Wire Wire Line
+	9200 2550 9200 2900
+Wire Wire Line
+	9200 1900 9200 2250
+Wire Wire Line
+	9550 1500 9550 2000
+Connection ~ 9550 1900
+Wire Wire Line
+	9550 1900 9200 1900
+Connection ~ 10050 1900
+Wire Wire Line
+	10050 1400 10050 2000
+Wire Wire Line
+	10050 1900 10450 1900
+Wire Wire Line
+	10450 1900 10450 2250
+Wire Wire Line
+	9650 2000 9650 1250
+Wire Wire Line
+	10100 1250 10100 1300
+Wire Wire Line
+	10100 1300 9750 1300
+Wire Wire Line
+	9750 1300 9750 2000
+Wire Wire Line
+	6150 1600 7300 1600
+Wire Wire Line
+	7300 1600 7300 1400
+Wire Wire Line
+	6150 1700 7400 1700
+Wire Wire Line
+	7400 1700 7400 1500
+Wire Wire Line
+	7400 1500 9550 1500
+Text Notes 6200 1600 0    60   ~ 0
+SET HEATER
+Text Notes 6200 1700 0    60   ~ 0
+RESET HEATER
+Text Notes 6200 1900 0    60   ~ 0
+DOOR RELAY
+Text Notes 3950 1200 1    60   ~ 0
+READ TEMPS
+Text Notes 2550 1100 0    60   ~ 0
+WP154A4SUREQBFZGC
 $EndSCHEMATC
