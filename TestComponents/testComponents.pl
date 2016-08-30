@@ -19,11 +19,20 @@ use Modern::Perl;
 
 use GPIO;
 use Buzzer;
+use Relay::DoubleLatch;
+use Time::HiRes;
+use HiPi::Interface::DS18X20
 
 # GPIO ports taken from KiCad project file 'authenticator.sch'
 use constant {
     WARMER => 16,
+    GREEN => 22,
+    BLUE => 27,
+    RED => 17,
+    DOOR => 25,
     BUZZER => 18,
+    SWITCH_WARMER_ON_GPIO => 23,
+    SWITCH_WARMER_OFF_GPIO => 24,
 };
 
 
@@ -35,20 +44,65 @@ sub buzz {
 
 sub warm {
     my ($seconds) = @_;
-    my $warmer = GPIO->new(16);
-    $warmer->turnOn();
-    sleep $seconds;
-    $warmer->turnOff();
+
+    my $warmerRelay = Relay::DoubleLatch->new(SWITCH_WARMER_ON_GPIO,
+					      SWITCH_WARMER_OFF_GPIO);
+
+    $warmerRelay->switchOn();
+    say "Warming pad should now be on – sleeping for few seconds";
+    $warmerRelay->switchOff();
 }
 
+sub getTemperature {
+    my $tempSensor = HiPi::Interface::DS18X20->new(
+	id         => getTemperatureSensorID(),
+	correction => -4000,
+	divider    => 1000,
+	);
+    return $tempSensor->temperature();
+}
+
+sub getTemperatureSensorID {
+    opendir(my $dirHandle, "/sys/bus/w1/devices")
+	|| exitWithError("Couldn't open temperature sensor dir");
+    my @files = readdir($dirHandle);
+    my @tempSensors = grep (/^28.*/, @files);
+
+    if (! scalar @tempSensors) {
+	exitWithError("Couldn't connect to a temperature sensor");
+    }
+
+    return $tempSensors[0];
+}
+
+sub turnGPIOOn {
+    my ($GPIO_PORT, $seconds) = @_;
+    my $gpio = new GPIO->new($GPIO_PORT);
+    $gpio->turnOn();
+    sleep $seconds;
+    $gpio->turnOff();
+}
 
 sub main {
     say "Buzzing beeper at 3100Hz for ~1 second";
     buzz(3100, 1);
 
-    say "Warming warming pad for 10 seconds";
-    warm(10);
-    
+    say "Warming warming pad for 4 seconds";
+    warm(4);
+
+    say "Temperature sensor: ", getTemperature, "°C";
+
+    say "Turning blue led on for 1 second";
+    turnGPIOOn(BLUE, 1);
+
+    say "Turning red led on for 1 second";
+    turnGPIOOn(RED, 1);
+
+    say "Turning green led on for 1 second";
+    turnGPIOOn(GREEN, 1);
+
+    say "Turning door relay on for 1 second";
+    turnGPIOOn(DOOR, 1);
 }
 
 main();
