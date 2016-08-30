@@ -111,6 +111,8 @@ function prepareChroot {
 }
 
 function printInstallationInfo {
+    echo "Writable image for sd card has been created and placed on the current directory"
+
     if [ $SSH_KEY_COPIED -eq "1" ]
     then
 	echo "You can login with the user pi using your ssh key"
