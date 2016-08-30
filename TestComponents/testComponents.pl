@@ -21,7 +21,7 @@ use GPIO;
 use Buzzer;
 use Relay::DoubleLatch;
 use Time::HiRes;
-use HiPi::Interface::DS18X20
+use HiPi::Interface::DS18X20;
 
 # GPIO ports taken from KiCad project file 'authenticator.sch'
 use constant {
@@ -49,8 +49,11 @@ sub warm {
 					      SWITCH_WARMER_OFF_GPIO);
 
     $warmerRelay->switchOn();
-    say "Warming pad should now be on – sleeping for few seconds";
-    $warmerRelay->switchOff();
+    say "Warming pad should now be on – sleeping for $seconds seconds";
+    sleep $seconds;
+	$warmerRelay->switchOff();
+    say "Warming pad should now be off";
+    
 }
 
 sub getTemperature {
@@ -77,7 +80,8 @@ sub getTemperatureSensorID {
 
 sub turnGPIOOn {
     my ($GPIO_PORT, $seconds) = @_;
-    my $gpio = new GPIO->new($GPIO_PORT);
+
+    my $gpio = GPIO->new($GPIO_PORT);
     $gpio->turnOn();
     sleep $seconds;
     $gpio->turnOff();
