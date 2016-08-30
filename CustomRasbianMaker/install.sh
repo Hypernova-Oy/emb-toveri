@@ -29,6 +29,29 @@ function getRasbianIMG {
     unzip raspbian_lite_latest.zip
 }
 
+function addKernelGPIODeviceTree {
+    mountBootFS
+    echo "dtoverlay=w1-gpio" >> boot/config.txt
+    unmountBootFS
+}
+
+function unmountBootFS {
+    umount boot
+    rm boot -r
+}
+
+function mountBootFS {
+    mkdir boot
+
+    START=$( fdisk -l *.img -o Start | tail -2 | head -1 )
+
+    SECTOR_SIZE=$( fdisk -l *.img -o Sectors \
+			 | grep Units | sed "s/.*= //" | sed "s/ .*//" )
+
+    OFFSET=$(( $START * $SECTOR_SIZE ))
+    sudo mount -v -o offset=$OFFSET -t vfat *.img boot
+}
+
 function mountRootFS {
     mkdir rootfs
 
@@ -69,38 +92,30 @@ function restoreChrootsOriginalState {
     rm rootfs/chroot-script.sh
 }
 
+function addModulesForTempSensor {
+    echo "w1-gpio" >> rootfs/etc/modules
+    echo "w1-therm" >> rootfs/etc/modules
+}
+
 function customizeImage {
-    if [ -f $SSH_AUTHORIZED_KEY ]
-    then
-       cp $SSH_AUTHORIZED_KEY rootfs/home/pi/authorized_keys
-       SSH_KEY_COPIED=1
-    fi
+    addKernelGPIODeviceTree
+    addModulesForTempSensor
+    cpSSHPubKey
 
     chroot rootfs ./chroot-script.sh
 }
 
-function cleanFiles {
-    rm rootfs -R
+function cpSSHPubKey {
+    if [ "$SSH_AUTHORIZED_KEY" != "" ]
+    then
+	echo "key is $SSH_AUTHORIZED_KEY"
+	cp $SSH_AUTHORIZED_KEY rootfs/home/pi/authorized_keys
+	SSH_KEY_COPIED=1
+    fi
 }
 
-function parseArgs {
-    while getopts "s:" option; do
-	case $option in
-	    s)
-		SSH_AUTHORIZED_KEY=="$OPTARG"
-		if [ ! -f $SSH_AUTHORIZED_KEY ]
-		then
-		    echo "File given to argument -s doesn't exist!"
-		    exit 1
-		fi
-		;;
-	    ?)
-	        echo "Usage: program [-s [ssh_pub_key_path]]"
-		exit 1
-	    ;;
-	    
-	esac
-    done
+function cleanFiles {
+    rm rootfs -R
 }
 
 function prepareChroot {
@@ -113,14 +128,13 @@ function prepareChroot {
 function printInstallationInfo {
     echo "Writable image for sd card has been created and placed on the current directory"
 
-    if [ $SSH_KEY_COPIED -eq "1" ]
+    if [ $SSH_KEY_COPIED == "1" ]
     then
 	echo "You can login with the user pi using your ssh key"
     fi
 }
 			
 function main {
-    parseArgs
     installQemu
     prepareChroot
     customizeImage
@@ -128,5 +142,23 @@ function main {
     cleanFiles
     printInstallationInfo
 }
+
+while getopts "s:" option; do
+    case $option in
+	s)
+	    SSH_AUTHORIZED_KEY="$OPTARG"
+	    echo "key is : $SSH_AUTHORIZED_KEY"
+	    if [ ! -f $SSH_AUTHORIZED_KEY ]
+	    then
+		echo "File given to argument -s doesn't exist!"
+		exit 2
+	    fi
+	    ;;
+	?)
+	echo "Usage: install.sh [-s [ssh_pub_key_path]]"
+	exit 2
+	;;
+    esac
+done
 
 main

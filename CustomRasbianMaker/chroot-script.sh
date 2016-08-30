@@ -21,6 +21,7 @@ function downloadSSLibraryPackages {
     getLatestDebianPackage $user emb-buzzer
     getLatestDebianPackage $user emb-gpio
     getLatestDebianPackage $user HiPi
+    getLatestDebianPackage $user emb-relays
 }
 
 function getLatestDebianPackage {
