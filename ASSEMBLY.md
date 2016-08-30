@@ -28,15 +28,31 @@ WP154A4SUREQBFZGC | Standard LEDs - Through Hole RGB 630/525/465nm 750/420/750mc
 NHD-0420CW-AB3 | OLED Displays & Accessories 4x20 Blue Slim Character OLED | 1
 SML1083 | 5mm LEDKEHYS/O-RENG./LINSSI, KROMI | 1
 GZI0801 | PLASTIC LED HOLDER SML1083&SMX1083 | 1
+
 -DEVICES- | |
  | Raspberry Pi 3+ | 1
 GFS4400 | Datalogic Gryphon GFS4400 USB | 1
+
+-CABLING- | |
+ | 28AWG 20-30 napainen lattakaapeli | 30m
+08-50-0114 | Headers & Wire Housings CRIMP TERM 22-30 TIN | 100
+22-01-2107 | Headers & Wire Housings HSG 10P W/LKG RAMP | 2
+22-01-3067 | Headers & Wire Housings HSG 6P W/RAMP/RIBS | 2
+22-01-3057 | Headers & Wire Housings HSG 5P W/RAMP/RIBS | 5
+22-01-3047 | Headers & Wire Housings HSG 4P W/RAMP/RIBS | 2
+22-01-2037 | Headers & Wire Housings HSG 3P WITH LKG RAMP | 2
+22-01-3027 | Headers & Wire Housings HSG 2P W/RAMP/RIBS | 5
+22-05-2081 | Headers & Wire Housings R/A PCB HDR 8P TIN PLATING | 2
+22-05-2111 | Headers & Wire Housings R/A PCB HDR 11P TIN PLATING | 1
+22-03-2051 | Headers & Wire Housings VERT PCB HDR 5P TIN PLATING | 2
+22-03-2031 | Headers & Wire Housings VERT PCB HDR 3P TIN PLATING | 2
+
 -TOOLS- | |
 76650-0009 | Headers & Wire Housings .100KK CONNECTOR KIT PREM CRIMPTOOL 184PC  | 1
 8PK-3001D | Wire peelers 0,2-0,8mm2 AWG 20-30 | 1
- | 28AWG 20-30 napainen lattakaapeli | 30m
  | 30mm saw drill for making a hole in the enclosure | 1
  | 25mm diameter pipe to pass through the exterior wall and protect cabling |
+
 -ACCESSORIES- | |
  | M3 bolts 10mm and accessories | 10
  | M3 bolts 25mm and accessories | 7

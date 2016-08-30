@@ -1,4 +1,4 @@
-update=ma 29. elokuuta 2016 11.01.19
+update=ti 30. elokuuta 2016 14.19.26
 version=1
 last_client=kicad
 [pcbnew]
@@ -64,3 +64,4 @@ LibName32=libraries/ec2-3tnu
 LibName33=libraries/at-1220-twt-5v-r
 LibName34=libraries/nhd-0420cw-ab3
 LibName35=libraries/ec2-nu
+LibName36=libraries/headers
