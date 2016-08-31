@@ -39,6 +39,14 @@ $ git push
 
 The following commands will show you how to generate .deb archive.
 
+Dependencies: debuild program, which you can get with
+
+```
+$ sudo apt install devscripts
+```
+
+Packaging:
+
 ```
 $ git clone https://github.com/KohaSuomi/<repository-name>
 
