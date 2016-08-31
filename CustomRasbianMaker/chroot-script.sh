@@ -45,9 +45,14 @@ function installSSLibraryPackages {
     rm packages -r
 }
 
-function installAdministrationPackages {
-    yes | apt install openssh-server
+function installMiscPackages {
+    yes | apt install openssh-server git
     service ssh stop # We cannot unmount rootfs if daemon is running
+}
+
+function installTestSuite {
+    git clone https://github.com/KohaSuomi/emb-toveri /home/pi/emb-toveri \
+	--depth 1
 }
 
 function configurePackages {
@@ -63,5 +68,6 @@ function configurePackages {
 }
 
 installSSLibraryPackages
-installAdministrationPackages
+installMiscPackages
+installTestSuite
 configurePackages

@@ -36,7 +36,7 @@ function addKernelGPIODeviceTree {
 }
 
 function unmountBootFS {
-    umount boot
+    if ! umount boot; then exit 1; fi
     rm boot -r
 }
 
@@ -109,7 +109,8 @@ function cpSSHPubKey {
     if [ "$SSH_AUTHORIZED_KEY" != "" ]
     then
 	echo "key is $SSH_AUTHORIZED_KEY"
-	cp $SSH_AUTHORIZED_KEY rootfs/home/pi/authorized_keys
+	mkdir rootfs/home/pi/.ssh
+	cp $SSH_AUTHORIZED_KEY rootfs/home/pi/.ssh/authorized_keys
 	SSH_KEY_COPIED=1
     fi
 }
