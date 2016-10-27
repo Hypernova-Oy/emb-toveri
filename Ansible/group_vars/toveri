@@ -1,0 +1,7 @@
+---
+
+repositories:
+  - url: https://github.com/KohaSuomi/emb-rtttl.git
+    name: emb-rtttl
+  - url: https://github.com/KohaSuomi/emb-oled.git
+    name: emb-oled

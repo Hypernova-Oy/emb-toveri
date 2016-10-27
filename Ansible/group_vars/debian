@@ -1,0 +1,21 @@
+---
+# Variables here are applicable to all debian-based linuxes
+
+#Where local services are put for systemd to find them?
+systemdServiceDir: /etc/systemd/system
+
+#Where perl libraries are put for system to find them?
+systemPerlIncludeDir: /usr/local/lib/site_perl
+
+#Where is the system configurations base dir?
+systemConfigBaseDir: /etc
+
+#Where is the system pid-file directory?
+systemPidDir: /var/run
+
+#Where is the home directory of ansible user?
+systemHomeDir: /home/pi
+
+#Writable system temp dir
+systemTmpDir: /tmp
+

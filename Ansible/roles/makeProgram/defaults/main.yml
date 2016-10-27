@@ -1,0 +1,6 @@
+---
+
+programName: "Default value for variable 'programName'"
+programHome: /home/user/programName
+gitRepository: https://git.example.com/yourGitRepo.git
+
