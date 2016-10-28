@@ -43,6 +43,7 @@ Mouser | WP154A4SUREQBFZGC | Standard LEDs - Through Hole RGB 630/525/465nm 750/
 Mouser | NHD-0420CW-AB3 | OLED Displays & Accessories 4x20 Blue Slim Character OLED | 1
 yeint  | SML1083 | 5mm LEDKEHYS/O-RENG./LINSSI, KROMI | 1
 Triopak | GZI0801 | PLASTIC LED HOLDER SML1083&SMX1083 | 1
+yeint | 5-826629-0 | 1X50NAP SUORA, KULTA | 1
 
 -DEVICES- | | |
 RS | 896-8660 | Raspberry Pi 3 Model B | 1
@@ -50,6 +51,7 @@ RS | 909-8138 | Official Raspberry Pi 3 B Development Board Case, Black, Grey | 
 RS | 909-8135 | Official Pi 3 Power Supply Black | 1
 RS | 917-6317 | Sandisk Micro SD Card NOOBS Raspberry Pi | 1
 Signalpartners | GFS4470 | Datalogic Gryphon GFS4400 USB | 1
+yeint | MW 3IP25GS | HAKKURITEHOLÄHDE 100-240V/3-12V/27W | 1
 
 -CABLING- | | |
 yeint | 135.2802.326 | 26-NAP. AWG28 7/0 VÄRIKOOD. 30.5m | 3m
@@ -66,6 +68,7 @@ Mouser | 22-03-2051 | Headers & Wire Housings VERT PCB HDR 5P TIN PLATING | 2
 Mouser | 22-03-2031 | Headers & Wire Housings VERT PCB HDR 3P TIN PLATING | 2
 yeint | USB2-AAMF180M | USB2.0 JATKOKAAPELI 1.8m | 1
 yeint | CAT6-300SSTP-VA | CAT6 kaapeli sftp valkoinen 3m | 1
+yeint | 810-4605YE | DC Naarasliitin 5.5x2.1mm ruuvil. | 1
 
 -TOOLS- | | |
 -cables- | | |
@@ -102,8 +105,10 @@ Rautakauppa | | Silicone insulation sheet | 48 x 15 x 1mm
 Open KiCad/authenticator/authenticator.pro with KiCad and navigate to the electronic schema. Solder this to the general purpose PCB
 
 ## 3. Manufacturing the Electronic enclosure and connection rails
-Open Blender/enclosure.blend for the layered model of the enclosure, connection rails and electronic components. Take screnshots of the measurements and send it to a CNC workshop for production or you can relatively easily make the connection railings and back plate by hand. Polycarbonate is an easy-to-mold material using a hot air gun and can be acquired rather cheaply from for ex http://www.joensuunkumiporssi.fi/etusivu/
-You can also send measurements to a CNC-workshop or print them using a 3d printer.
+Open Blender/enclosure.blend for the layered model of the enclosure, connection rails and electronic components.
+Easiest way is to order 3D-prints of the internal plastic pieces from Shapeways.com.
+You can also extract the measurements and send it to a CNC workshop for production,
+or you can relatively easily make the connection railings and back plate by hand. Polycarbonate is an easy-to-mold material using a hot air gun and can be acquired rather cheaply from for ex http://www.joensuunkumiporssi.fi/etusivu/
 
 ## 4. Making the cabling
 Find nice instructables in youtube on how to make Molex headers. Use search words like "Assembling a Molex Connector"
