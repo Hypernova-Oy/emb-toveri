@@ -1,16 +1,17 @@
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
+country=FI
 
 {% for nw in pi_wifi_networks %}
 network={
-    country="{{nw.country}}"
     ssid="{{nw.ssid}}"
     psk="{{nw.psk}}"
 }
 {% endfor %}
 
-{% if pi_wifi_networks_roaming == "true" %}
+{% if pi_wifi_networks_roaming %}
 network={
         key_mgmt=NONE
 }
 {% endif %}
+

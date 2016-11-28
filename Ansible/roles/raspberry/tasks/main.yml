@@ -16,7 +16,7 @@
 
 - name: 'Configure WIFI to roaming'
   template: src=wpa_supplicant.j2
-            dest={{systemConfigBaseDir}}/wpa_supplicant/wpa_supplicant.conf \
+            dest=/etc/wpa_supplicant/wpa_supplicant.conf \
             mode=0600 \
             owner=root
   become: yes
@@ -63,18 +63,18 @@
   notify: Restart raspberry pi
 
 - name: Set hostname
-  hostname: name="raspberry{{inventory_hostname}}"
+  hostname: name="{{inventory_hostname}}"
   become: yes
   notify: Restart raspberry pi
 
 - name: Set hosts
   lineinfile: dest=/etc/hosts \
-              regexp=raspberry
-              line="127.0.1.1       raspberry{{inventory_hostname}}"
+              regexp=(raspberry|{{inventory_hostname}})
+              line="127.0.1.1       {{inventory_hostname}}"
   become: yes
   notify: Restart raspberry pi
 
-- name: 'Upgrade APT to the latest packages'
+- name: 'Upgrade to the newest apt packages'
   apt: upgrade=safe \
        update_cache=yes
   become: yes

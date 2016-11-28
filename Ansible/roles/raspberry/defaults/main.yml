@@ -1,4 +1,5 @@
 ---
+
 raspberry_pi_boot_config_options:
   # Set the GPU memory split value.
   - regexp: "^#?gpu_mem"
@@ -6,6 +7,9 @@ raspberry_pi_boot_config_options:
   # Enable 1200ma USB current on newer model Pis.
   - regexp: "^#?max_usb_current"
     line: "max_usb_current=1"
+  # Disable audio device to save power/cpu - We can still play from the emb-rtttl :)
+  - regexp: "^#?dtparam=audio="
+    line: "dtparam=audio=off"
 
 raspberry_pi_rc_local_options:
   # Disable HDMI on startup (for power savings).
@@ -21,4 +25,16 @@ raspberry_pi_keyboard_layout:
   # Enable locales
   - regexp: "^XKBLAYOUT"
     line: "XKBLAYOUT=\"fi\""
+
+pi_password: "Overload me from a secure vault"
+
+pi_ssh_keys_string: "SSH-keys from /home/*/.ssh/id_rsa.pub separated by \n"
+
+pi_wifi_networks_roaming: false
+
+#Top definition is looked for first
+pi_wifi_networks:
+  - ssid: "Joensuu_Free_Wifi"
+    psk:  ""
+
 
