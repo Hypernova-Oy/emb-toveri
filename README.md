@@ -10,3 +10,11 @@ Weatherproof embedded user authenticator and authorizator device
 * ASSEMBLY.md: Component manifest and supplier list.
 
 * barcodeReaderManualConfigurationCodes.png: Use these codes to set the initial state for the barcode readed, so it can be autoconfigured.
+
+
+# Some pics about the finished Toveri
+
+![toveri_top](Pictures/Assembled/toveri_iso.png)
+![toveri_bottom](Pictures/Assembled/toveri_iso2.png)
+![toveri_front](Pictures/Assembled/toveri_front.png)
+
