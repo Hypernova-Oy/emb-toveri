@@ -5,20 +5,20 @@ Weatherproof embedded user authenticator and authorizator device
 
 From front-end to backend
 
-[GNU gettext](https://www.gnu.org/software/gettext/)
-[Perl](https://www.perl.org/)
-[REST API](http://www.restapitutorial.com/)
-[HiPi](http://raspberrypi.znix.com/hipidocs/)
-[Swig](http://www.swig.org/papers/Perl98/swigperl.htm)
-[C](http://www.cprogramming.com/)
-[SPI](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus)
-[Ansible](http://docs.ansible.com/)
-[Raspberry Pi](https://www.raspberrypi.org/)
-[Linux](https://www.linuxfoundation.org/)
-[KiCad](http://kicad-pcb.org/)
-[Blender](https://www.blender.org/)
-[Soldering](https://www.youtube.com/watch?v=vIT4ra6Mo0s)
-[Electronic assembly](https://duckduckgo.com/?q=genuino+starter+kit&t=canonical&ia=products)
+- [GNU gettext](https://www.gnu.org/software/gettext/)
+- [Perl](https://www.perl.org/)
+- [REST API](http://www.restapitutorial.com/)
+- [HiPi](http://raspberrypi.znix.com/hipidocs/)
+- [Swig](http://www.swig.org/papers/Perl98/swigperl.htm)
+- [C](http://www.cprogramming.com/)
+- [SPI](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus)
+- [Ansible](http://docs.ansible.com/)
+- [Raspberry Pi](https://www.raspberrypi.org/)
+- [Linux](https://www.linuxfoundation.org/)
+- [KiCad](http://kicad-pcb.org/)
+- [Blender](https://www.blender.org/)
+- [Soldering](https://www.youtube.com/watch?v=vIT4ra6Mo0s)
+- [Electronic assembly](https://duckduckgo.com/?q=genuino+starter+kit&t=canonical&ia=products)
 
 ## Estimated steps to production
 
@@ -37,12 +37,12 @@ From front-end to backend
 * Running hardware diagnostics
 * Running software diagnostics
 * Planning the deployment location
-** Proper accessible position
-** Network access
-** Power utility access
-** Maximum distance between the exterior barcode reader and Raspberry Pi is 4m of cable.
-** Safe location for the Raspberry Pi in the interior space.
-** How to attach the device to the exterior wall?
+  - Proper accessible position
+  - Network access
+  - Power utility access
+  - Maximum distance between the exterior barcode reader and Raspberry Pi is 4m of cable.
+  - Safe location for the Raspberry Pi in the interior space.
+  - How to attach the device to the exterior wall?
 * Executing the deployment plan
 * Monitoring performance and logs
 * Getting reports of device usage
