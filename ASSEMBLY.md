@@ -16,7 +16,6 @@ These suppliers should have access to the desired components:
 - www.mouser.fi
 - www.yeint.fi
 - fi.rsdelivers.com      (Raspberry Pis)
-- www.triopak.fi         (Led placer)
 - www.signalpartners.fi  (GFS4400)
 - www.wurthelektronik.fi (ohutlevykiinnikkeet)
 
@@ -42,7 +41,6 @@ Mouser | 1N4154TAP | Diodes - General Purpose, Power, Switching Vr/35v Io/150mA 
 Mouser | WP154A4SUREQBFZGC | Standard LEDs - Through Hole RGB 630/525/465nm 750/420/750mcd 60Deg | 1
 Mouser | NHD-0420CW-AB3 | OLED Displays & Accessories 4x20 Blue Slim Character OLED | 1
 yeint  | SML1083 | 5mm LEDKEHYS/O-RENG./LINSSI, KROMI | 1
-Triopak | GZI0801 | PLASTIC LED HOLDER SML1083&SMX1083 | 1
 yeint | 5-826629-0 | 1X50NAP SUORA, KULTA | 1
 
 -DEVICES- | | |
