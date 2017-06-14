@@ -66,6 +66,7 @@ From front-end to backend
 
 ## Some pics about the finished Toveri
 
+![Toveri_in_Eno](Pictures/Assembled/Eno.png)
 ![toveri_top](Pictures/Assembled/toveri_iso.png)
 ![toveri_bottom](Pictures/Assembled/toveri_iso2.png)
 ![toveri_front](Pictures/Assembled/toveri_front.png)
