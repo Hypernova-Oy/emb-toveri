@@ -39,6 +39,9 @@ From front-end to backend
 * Planning the deployment location
   - Proper accessible position
   - Network access
+    Toveri has a remote maintenance connection using ssh, typically this requires some firewall rules to allow inbound traffic to Toveri's port :TCP22
+    Toveri needs access to the Koha's REST API, typically at port :TCP443
+    Additionally a monitoring solution, such as Zabbix, needs extra inbound/outbound ports to be forwarded. This is outside the scope of this project.
   - Power utility access
   - Maximum distance between the exterior barcode reader and Raspberry Pi is 4m of cable.
   - Safe location for the Raspberry Pi in the interior space.
