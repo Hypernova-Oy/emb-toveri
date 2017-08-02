@@ -1,0 +1,33 @@
+##   IN THIS FILE   ##
+#
+# Try to answer some common problems when assembling the Toveri
+#
+
+When a component (OLED-display mainly) fails to work, the problem can be hard to find.
+
+-The problem can be in the component.
+  * Component is broken
+
+-In the way the headers are soldered.
+  * You broke the component
+
+-Cabling is broken.
+  * Molex-connectors are poorly attached
+  * A pre-assembled dupont-cable is missing the conduction core (trust me this can happen!)
+  * Test cables for capacitance, cables can break if twisted too much. Test the connections for capacitance.
+
+-Headers do not contact properly to the PCB
+  * Check soldering!
+
+-Cabling or PCB is wired wrong.
+  * OLED starts to heat quickly if +3.3V is somewhere else than where it should be.
+  * This will brick the device
+  * Check correct wiring from the KiCad schematic
+
+-Raspberry Pi has a faulty GPIO-pin or the software version is buggy
+  * Use the Raspberry Pi GPIO tester (RaspberryPiGPIOTester) to test that GPIO pins and software work as expected.
+
+-Raspberry Pi cannot properly drive the SPI-pins
+  * Run emb-oled -project's clib/test as bare-metal test suite.
+  * Use the Arduino test bed (Arduino-dir) to verify the component is not broken.
+
