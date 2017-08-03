@@ -28,7 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:RPi_Hat-cache
 LIBS:ds18b20+
 LIBS:ec2-3tnu
 LIBS:at-1220-twt-5v-r
@@ -1077,4 +1076,10 @@ Wire Wire Line
 	7950 2700 7950 2950
 Wire Wire Line
 	7950 2950 8050 2950
+Text Notes 4000 2850 0    60   ~ 0
+OLED\n...\nOLED\nOLED\nOLED\nOLED\ndoor - GPIO\ndoor - GND
+Text Notes 4050 1600 0    60   ~ 0
+PIEZO\nempty\nDQ TEMP\nHEAT on\nHEAT off
+Text Notes 4000 2000 0    60   ~ 0
+LED R\nLED B\nLED G
 $EndSCHEMATC
