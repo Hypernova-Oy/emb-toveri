@@ -69,5 +69,6 @@ From front-end to backend
 ![Toveri_in_Eno](Pictures/Assembled/Eno.jpg)
 ![toveri_top](Pictures/Assembled/toveri_iso.png)
 ![toveri_bottom](Pictures/Assembled/toveri_iso2.png)
-![toveri_front](Pictures/Assembled/toveri_front.png)
+![toveri_bottom](Pictures/Assembled/toveri_bottom.jpg)
+![toveri_bottom+card](Pictures/Assembled/toveri_bottom+card.jpg)
 
