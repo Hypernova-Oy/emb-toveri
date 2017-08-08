@@ -66,13 +66,13 @@ OLED display over SPI
 $Comp
 L HEADER_S_1X07 H4
 U 1 1 598B3472
-P 4950 3500
-F 0 "H4" H 4950 4050 50  0000 C CNN
-F 1 "HEADER_S_1X07" V 5050 3650 50  0000 C CNN
-F 2 "Koha-Suomi:Pin_Header_Straight_1x07_Pitch2.54mm" H 4950 3500 50  0001 C CNN
-F 3 "" H 4950 3500 50  0000 C CNN
-	1    4950 3500
-	1    0    0    -1  
+P 4950 3200
+F 0 "H4" H 4950 3750 50  0000 C CNN
+F 1 "HEADER_S_1X07" V 5050 3350 50  0000 C CNN
+F 2 "Koha-Suomi:Pin_Header_Straight_1x07_Pitch2.54mm" H 4950 3200 50  0001 C CNN
+F 3 "" H 4950 3200 50  0000 C CNN
+	1    4950 3200
+	1    0    0    1   
 $EndComp
 Text Notes 5100 3700 0    68   ~ 0
 To PCB\n3V3\nGND\nD0\nD1\nD2\nCS\nRES
@@ -156,4 +156,18 @@ Wire Wire Line
 Connection ~ 4300 3950
 Connection ~ 4300 4550
 Connection ~ 4300 2650
+Text Label 4450 3050 0    68   ~ 0
+3V3
+Text Label 4450 3150 0    68   ~ 0
+GND
+Text Label 4450 3250 0    68   ~ 0
+D0
+Text Label 4450 3350 0    68   ~ 0
+D1
+Text Label 4450 3450 0    68   ~ 0
+D2
+Text Label 4550 3550 0    68   ~ 0
+CS
+Text Label 4800 3650 2    68   ~ 0
+RES
 $EndSCHEMATC

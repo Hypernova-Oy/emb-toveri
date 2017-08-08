@@ -156,4 +156,18 @@ Wire Wire Line
 Connection ~ 4300 3950
 Connection ~ 4300 4550
 Connection ~ 4300 2650
+Text Label 4450 3050 0    68   ~ 0
+3V3
+Text Label 4450 3150 0    68   ~ 0
+GND
+Text Label 4450 3250 0    68   ~ 0
+D0
+Text Label 4450 3350 0    68   ~ 0
+D1
+Text Label 4450 3450 0    68   ~ 0
+D2
+Text Label 4550 3550 0    68   ~ 0
+CS
+Text Label 4750 3650 2    68   ~ 0
+RES
 $EndSCHEMATC
