@@ -1,0 +1,34 @@
+Raspberry Pi is notoriously bad with it's SD card getting corrupted.
+
+To alleviate this, one can boot from SD to USB.
+
+The important thing to understand doing this type of configuration, are two files:
+
+- /boot/cmdline.txt
+  GRUB boot instructions.
+  This file must be loaded from the SD-card, and be modified to find the root partition from the USB
+  device.
+
+- /etc/fstab
+  On the USB device, this controls how the / and /boot -partitions are mounted when the OS is booted.
+  This needs to be modified in addition the GRUB instructions on the SD-card.
+  /boot entry points to the Partition UUID of the SD-card
+  / entry points to the USB-device's Partition UUID
+
+
+A good guide to establishing this:
+
+  https://nastanir.wordpress.com/2016/04/03/booting-raspberry-pi-from-usb-stick/
+
+
+Beware of bad advice in the internetz describing only the GRUB modification, and not the OS /etc/fstab
+changes.
+
+Look forward to running Raspberry Pi 3+ > directly from USB/Ethernet without a fail-easy SD-card.
+
+
+
+Note:
+So far the problems have been with non-NOOBS-SD-cards.
+NOOBS-branded cards have operated well, when sustaining only light logging.
+
