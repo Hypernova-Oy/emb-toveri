@@ -196,7 +196,7 @@ F 3 "" H 1250 1650 60  0001 C CNN
 	1    1250 1650
 	1    0    0    -1  
 $EndComp
-Text Notes 7000 4300 0    60   ~ 0
+Text Notes 7000 3700 0    60   ~ 0
 PCB
 Text Notes 1000 850  0    60   ~ 0
 PCB DOOR
@@ -567,6 +567,84 @@ F 3 "" H 2050 8800 50  0000 C CNN
 $EndComp
 NoConn ~ 1850 2350
 NoConn ~ 1950 2350
+$Sheet
+S 1500 6000 1000 1750
+U 598B2508
+F0 "NHD0420CW_over_SPI" 60
+F1 "NHD0420CW_over_SPI.sch" 60
+$EndSheet
+Text Notes 2500 7350 0    68   ~ 0
+To PCB\n-3V3\n-GND\n-D0\n-D1\n-D2\n-CS\n-RES
+$Comp
+L Auxiliary_pin AU6
+U 1 1 598DE5DD
+P 7200 4100
+F 0 "AU6" H 7200 4000 60  0000 C CNN
+F 1 "Auxiliary_pin" H 7200 4200 60  0000 C CNN
+F 2 "Koha-Suomi:Auxiliary_pin" H 7200 4100 60  0001 C CNN
+F 3 "" H 7200 4100 60  0000 C CNN
+	1    7200 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Auxiliary_pin AU5
+U 1 1 598DE6DA
+P 6550 4100
+F 0 "AU5" H 6550 4000 60  0000 C CNN
+F 1 "Auxiliary_pin" H 6550 4200 60  0000 C CNN
+F 2 "Koha-Suomi:Auxiliary_pin" H 6550 4100 60  0001 C CNN
+F 3 "" H 6550 4100 60  0000 C CNN
+	1    6550 4100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Auxiliary_pin AU4
+U 1 1 598DE78A
+P 6100 4100
+F 0 "AU4" H 6100 4000 60  0000 C CNN
+F 1 "Auxiliary_pin" H 6100 4200 60  0000 C CNN
+F 2 "Koha-Suomi:Auxiliary_pin" H 6100 4100 60  0001 C CNN
+F 3 "" H 6100 4100 60  0000 C CNN
+	1    6100 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Auxiliary_pin AU3
+U 1 1 598DE84C
+P 4700 4100
+F 0 "AU3" H 4700 4000 60  0000 C CNN
+F 1 "Auxiliary_pin" H 4700 4200 60  0000 C CNN
+F 2 "Koha-Suomi:Auxiliary_pin" H 4700 4100 60  0001 C CNN
+F 3 "" H 4700 4100 60  0000 C CNN
+	1    4700 4100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Auxiliary_pin AU2
+U 1 1 598DFB21
+P 4700 3900
+F 0 "AU2" H 4700 3800 60  0000 C CNN
+F 1 "Auxiliary_pin" H 4700 4000 60  0000 C CNN
+F 2 "Koha-Suomi:Auxiliary_pin" H 4700 3900 60  0001 C CNN
+F 3 "" H 4700 3900 60  0000 C CNN
+	1    4700 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Auxiliary_pin AU1
+U 1 1 598E0335
+P 4700 4300
+F 0 "AU1" H 4700 4200 60  0000 C CNN
+F 1 "Auxiliary_pin" H 4700 4400 60  0000 C CNN
+F 2 "Koha-Suomi:Auxiliary_pin" H 4700 4300 60  0001 C CNN
+F 3 "" H 4700 4300 60  0000 C CNN
+	1    4700 4300
+	-1   0    0    1   
+$EndComp
+Text Label 4900 4300 0    68   ~ 0
+GND
+Text Notes 5050 3800 0    60   ~ 0
+Auxiliary pins for\na small addon
 Wire Wire Line
 	2350 1450 1950 1450
 Wire Wire Line
@@ -609,15 +687,15 @@ Wire Wire Line
 Wire Notes Line
 	8100 8200 8100 7950
 Wire Notes Line
-	4450 8200 4450 6200
+	4450 6000 4450 8200
 Wire Notes Line
-	8050 4200 8050 4600
+	8050 3600 8050 4600
 Wire Notes Line
-	5100 4300 4600 4300
+	4450 3700 5100 3700
 Wire Notes Line
-	4600 4200 5100 4200
+	4450 3600 5100 3600
 Wire Notes Line
-	4600 4600 4600 4200
+	4450 4000 4450 3600
 Wire Notes Line
 	10300 4900 9050 4900
 Wire Notes Line
@@ -718,11 +796,11 @@ Wire Wire Line
 Wire Wire Line
 	6750 5850 7000 5850
 Wire Wire Line
-	6600 5150 6000 5150
+	6000 5150 6600 5150
 Wire Wire Line
-	6600 5950 6600 5150
+	6600 5150 6600 5950
 Wire Wire Line
-	7000 5950 6600 5950
+	6600 5950 7000 5950
 Wire Notes Line
 	1600 950  2700 950 
 Connection ~ 6450 5800
@@ -831,9 +909,9 @@ Wire Notes Line
 Wire Notes Line
 	700  850  1850 850 
 Wire Notes Line
-	5050 4300 8050 4300
+	5050 3700 8050 3700
 Wire Notes Line
-	5050 4200 8050 4200
+	5050 3600 8050 3600
 Wire Wire Line
 	2500 8650 2500 8700
 Wire Wire Line
@@ -848,12 +926,71 @@ Wire Wire Line
 	2400 9050 2500 9050
 Wire Wire Line
 	5650 7800 5650 7750
-$Sheet
-S 1500 6000 1000 1750
-U 598B2508
-F0 "NHD0420CW_over_SPI" 60
-F1 "NHD0420CW_over_SPI.sch" 60
-$EndSheet
-Text Notes 2500 7350 0    68   ~ 0
-To PCB\n-3V3\n-GND\n-D0\n-D1\n-D2\n-CS\n-RES
+Wire Notes Line
+	4450 4400 4450 4650
+Wire Notes Line
+	4450 5000 4450 5300
+Wire Notes Line
+	8050 5200 8050 5650
+Wire Notes Line
+	8050 6450 8050 6650
+Wire Wire Line
+	4900 4100 5900 4100
+Wire Wire Line
+	6750 4100 7000 4100
+Text Label 6850 4100 0    60   ~ 0
+A1.1
+Text Label 5450 4100 0    60   ~ 0
+A1.2
+$Comp
+L Auxiliary_pin AU7
+U 1 1 598ED5C1
+P 6100 3900
+F 0 "AU7" H 6100 3800 60  0000 C CNN
+F 1 "Auxiliary_pin" H 6100 4000 60  0000 C CNN
+F 2 "Koha-Suomi:Auxiliary_pin" H 6100 3900 60  0001 C CNN
+F 3 "" H 6100 3900 60  0000 C CNN
+	1    6100 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Auxiliary_pin AU8
+U 1 1 598ED69D
+P 6550 3900
+F 0 "AU8" H 6550 3800 60  0000 C CNN
+F 1 "Auxiliary_pin" H 6550 4000 60  0000 C CNN
+F 2 "Koha-Suomi:Auxiliary_pin" H 6550 3900 60  0001 C CNN
+F 3 "" H 6550 3900 60  0000 C CNN
+	1    6550 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Auxiliary_pin AU9
+U 1 1 598ED72C
+P 7200 3900
+F 0 "AU9" H 7200 3800 60  0000 C CNN
+F 1 "Auxiliary_pin" H 7200 4000 60  0000 C CNN
+F 2 "Koha-Suomi:Auxiliary_pin" H 7200 3900 60  0001 C CNN
+F 3 "" H 7200 3900 60  0000 C CNN
+	1    7200 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 3900 6750 3900
+Wire Wire Line
+	5900 3900 4900 3900
+Text Label 5450 3900 0    60   ~ 0
+A2.2
+Text Label 6850 3900 0    60   ~ 0
+A2.1
+Text Notes 6150 3800 0    60   ~ 0
+Put any \ncompo-\nnent here
+Wire Notes Line
+	6200 3900 6450 3900
+Wire Notes Line
+	6450 4100 6200 4100
+Wire Notes Line
+	6400 4150 6400 3850
+Wire Notes Line
+	6250 3850 6250 4150
 $EndSCHEMATC

@@ -1,5 +1,9 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP Auxiliary_pin
+D Generic pin on the PCB, can be used for anything
+$ENDCMP
+#
 $CMP HEADER_A_1X02
 D Connector 01x10
 $ENDCMP

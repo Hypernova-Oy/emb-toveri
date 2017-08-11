@@ -1,6 +1,22 @@
 EESchema-LIBRARY Version 2.3
 #encoding utf-8
 #
+# Auxiliary_pin
+#
+DEF Auxiliary_pin AU 0 40 Y Y 1 F N
+F0 "AU" 0 -100 60 H V C CNN
+F1 "Auxiliary_pin" 0 100 60 H V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+$FPLIST
+ Auxiliary_pin
+$ENDFPLIST
+DRAW
+S -50 50 50 -50 0 1 0 N
+X ~ 1 -200 0 148 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # HEADER_A_1X02
 #
 DEF HEADER_A_1X02 H 0 40 Y N 1 F N
