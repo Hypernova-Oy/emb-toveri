@@ -1,4 +1,14 @@
 ---
 
-toveri_ip: 1.2.3.4
+## Koha API base url to talk to.
+#toveri_api_base_url:
+
+## Koha API key
+toveri_api_key: "{{vault_toveri_api_key}}"
+
+## Koha API username
+#toveri_api_username
+
+## Temperature correction for the specific Toveri-device's temperature sensors
+#toveri_temperature_correction: 0
 

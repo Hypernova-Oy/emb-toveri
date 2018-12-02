@@ -74,7 +74,7 @@ After=network.target
 Type=simple
 User=toveri
 Environment='AUTOSSH_GATETIME=0'
-ExecStart=/usr/bin/autossh -NT -R {{toveri_cc_ssh_remote_port}}:localhost:22 toveri@toveri-cc
+ExecStart=/usr/bin/autossh -M 0 -o "ServerAliveInterval 120" -o "ServerAliveCountMax 0" -o "ExitOnForwardFailure yes" -NT -R {{toveri_cc_ssh_remote_port}}:localhost:22 toveri@toveri-cc
 Restart=always
 RestartSec=3
 

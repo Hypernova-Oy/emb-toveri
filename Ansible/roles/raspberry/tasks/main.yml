@@ -1,26 +1,22 @@
 ---
 
-- name: SSH authorized keys - Set the ssh authorized_keys
-  authorized_key: user=pi \
-                  key="{{pi_ssh_keys_string}}"
-                  manage_dir=yes \
-                  state=present \
-                  exclusive=yes
-
+  #This is a major security concern, as the openssh-server is enabled and the default raspbien is well-known
 - name: Harden the default user password
-  user: name=pi \
-        password={{ pi_password }}
-        system=yes
-        state=present
+  user:
+    name: pi
+    password: "{{ pi_password | password_hash('sha512', 999999 | random) }}"
+    system: yes
+    state: present
   become: yes
 
-- name: 'Configure WIFI to roaming'
-  template: src=wpa_supplicant.j2
-            dest=/etc/wpa_supplicant/wpa_supplicant.conf \
-            mode=0600 \
-            owner=root
-  become: yes
-  notify: Restart raspberry pi
+# use raspi-config instead
+#- name: 'Configure WIFI to roaming'
+#  template: src=wpa_supplicant.j2
+#            dest=/etc/wpa_supplicant/wpa_supplicant.conf \
+#            mode=0600 \
+#            owner=root
+#  become: yes
+#  notify: Restart raspberry pi
 
 - name: Configure options in /boot/config.txt.
   lineinfile:

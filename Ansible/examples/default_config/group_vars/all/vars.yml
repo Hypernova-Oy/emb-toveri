@@ -1,0 +1,4 @@
+---
+
+ansible_sudo_pass:  "{{vault_ansible_sudo_pass}}"
+

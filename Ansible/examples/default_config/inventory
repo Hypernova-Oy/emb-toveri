@@ -4,6 +4,6 @@ ansible_controller    ansible_host=localhost ansible_connection=local
 toverrii              ansible_host=192.168.100.22 ansible_user=pi location=JOE_REI
 
 [toveri]
-toverrii
+toverrii              toveri_location=JOE_VII
 
 

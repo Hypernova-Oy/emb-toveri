@@ -1,6 +1,6 @@
 ---
 
-- hosts: all
+- hosts: toveri
   roles:
   - role: raspberry
     tags: ['raspberry']
@@ -13,62 +13,69 @@
 
   - role: makeProgram
     programName: "emb-gpio"
-    programHome: "{{systemHomeDir}}/emb-gpio"
-    gitRepository: "{{toveri_git_server}}/emb-gpio.git"
+    programHome: "/home/toveri/emb-gpio"
+    gitRepository: "https://github.com/Hypernova-Oy/emb-gpio.git"
+    programUser: toveri
     configurations: []
     tags: ['emb-gpio']
 
   - role: makeProgram
     programName: "emb-rtttl"
-    programHome: "{{systemHomeDir}}/emb-rtttl"
-    gitRepository: "{{toveri_git_server}}/emb-rtttl.git"
+    programHome: "/home/toveri/emb-rtttl"
+    gitRepository: "https://github.com/KohaSuomi/emb-rtttl.git"
+    programUser: toveri
     configurations:
     - file: "/etc/cron.d/emb-rtttl"
       directive: "rtttl-player"
       value: "57 8,12,14 * * *    root    /usr/local/bin/rtttl-player -o random"
+      create: yes
     tags: ['emb-rtttl']
 
   - role: makeProgram
     programName: "emb-US2066"
-    programHome: "{{systemHomeDir}}/emb-US2066"
-    gitRepository: "{{toveri_git_server}}/emb-US2066.git"
+    programHome: "/home/toveri/emb-US2066"
+    gitRepository: "https://github.com/KohaSuomi/emb-US2066.git"
+    programUser: toveri
     configurations: []
     tags: ['emb-US2066']
 
   - role: makeProgram
     programName: "emb-oled"
-    programHome: "{{systemHomeDir}}/emb-oled"
-    gitRepository: "{{toveri_git_server}}/emb-oled.git"
+    programHome: "/home/toveri/emb-oled"
+    gitRepository: "https://github.com/KohaSuomi/emb-oled.git"
+    programUser: toveri
     configurations: []
     tags: ['emb-oled']
 
   - role: makeProgram
     programName: "SSAuthenticator"
-    programHome: "{{systemHomeDir}}/SSAuthenticator"
-    gitRepository: "{{toveri_git_server}}/SSAuthenticator.git"
+    programHome: "/home/toveri/SSAuthenticator"
+    gitRepository: "https://github.com/KohaSuomi/SSAuthenticator.git"
+    programUser: toveri
     configurations:
     - file: "/etc/ssauthenticator/daemon.conf"
       directive: "ApiBaseUrl"
-      value: "ApiBaseUrl {{hostvars[inventory_hostname]['toveri']['apiBaseUrl']}}"
+      value: "ApiBaseUrl {{hostvars[inventory_hostname]['toveri_api_base_url']}}"
     - file: "/etc/ssauthenticator/daemon.conf"
       directive: "LibraryName"
-      value: "LibraryName {{location}}"
+      value: "LibraryName {{toveri_location}}"
     - file: "/etc/ssauthenticator/daemon.conf"
       directive: "ApiKey"
-      value: "ApiKey {{hostvars[inventory_hostname]['toveri']['apiKey']}}"
+      value: "ApiKey {{hostvars[inventory_hostname]['toveri_api_key']}}"
     - file: "/etc/ssauthenticator/daemon.conf"
       directive: "ApiUserName"
-      value: "ApiUserName {{hostvars[inventory_hostname]['toveri']['apiUserName']}}"
+      value: "ApiUserName {{hostvars[inventory_hostname]['toveri_api_username']}}"
     tags: ['SSAuthenticator']
 
   - role: makeProgram
     programName: "emb-heater"
-    programHome: "{{systemHomeDir}}/emb-heater"
-    gitRepository: "{{toveri_git_server}}/emb-heater.git"
+    programHome: "/home/toveri/emb-heater"
+    gitRepository: "https://github.com/KohaSuomi/emb-heater.git"
+    programUser: toveri
     configurations:
     - file: "/etc/emb-heater/daemon.conf"
       directive: "TemperatureCorrection"
-      value: "TemperatureCorrection {{hostvars[inventory_hostname]['toveri']['temperatureCorrection']}}"
+      value: "TemperatureCorrection {{hostvars[inventory_hostname]['toveri_temperature_correction']}}"
     tags: ['emb-heater']
 
 

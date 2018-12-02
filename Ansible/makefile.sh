@@ -23,7 +23,7 @@ pip3 install ansible
 echo ""
 echo "INSTALLING ANSIBLE ROLES FROM GALAXY"
 echo "------------------------------------"
-ansible-galaxy install $ansibleRolesFromGalaxy
+su -c "ansible-galaxy install $ansibleRolesFromGalaxy" ansible
 
 echo ""
 echo "CREATING ansible-USER"

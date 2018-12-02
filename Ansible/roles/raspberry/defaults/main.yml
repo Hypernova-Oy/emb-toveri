@@ -11,10 +11,11 @@ raspberry_pi_boot_config_options:
   - regexp: "^#?dtparam=audio="
     line: "dtparam=audio=off"
 
-raspberry_pi_rc_local_options:
+raspberry_pi_rc_local_options: []
+#This is not a good idea. It makes maintenance a pain if network is down.
   # Disable HDMI on startup (for power savings).
-  - regexp: "^/usr/bin/tvservice"
-    line: "/usr/bin/tvservice -o"
+#  - regexp: "^/usr/bin/tvservice"
+#    line: "/usr/bin/tvservice -o"
 
 raspberry_pi_locales:
   # Enable locales

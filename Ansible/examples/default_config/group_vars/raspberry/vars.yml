@@ -1,9 +1,25 @@
 ---
 
 pi_password: "{{vault_pi_password}}"
-pi_ssh_keys_string: "{{vault_pi_ssh_keys_string}}"
-pi_wifi_networks: "{{vault_pi_wifi_networks}}"
 
-#Roaming is "true" or it isnt
-pi_wifi_networks_roaming: true
+
+# Variables here are applicable to all debian-based linuxes
+
+#Where local services are put for systemd to find them?
+systemdServiceDir: /etc/systemd/system
+
+#Where perl libraries are put for system to find them?
+systemPerlIncludeDir: /usr/local/lib/site_perl
+
+#Where is the system configurations base dir?
+systemConfigBaseDir: /etc
+
+#Where is the system pid-file directory?
+systemPidDir: /var/run
+
+#Where is the home directory?
+systemHomeDir: /home
+
+#Writable system temp dir
+systemTmpDir: /tmp
 

@@ -1,38 +1,39 @@
 ---
 
-- debug: msg="Upstalling {{ programName }}"
-
-- name: Install dependencies
-  apt: name={{item}} \
-       state=present \
-       cache_valid_time=3000
-  with_items:
-    - git
-    - make
-    - gcc
-    - swig
-    - cpanminus
-    - libmodern-perl-perl
-    - libmodule-build-perl
+- name: "{{programName}} - Install dependencies"
+  apt:
+    name:
+      - git
+      - make
+      - gcc
+      - swig
+      - cpanminus
+      - libmodern-perl-perl
+      - libmodule-build-perl
+    state: present
+    cache_valid_time: 3000
   become: yes
 
-- name: Configure cpan
+- name: "{{programName}} - Configure cpan"
   shell: 'echo "yes\nyes\n" | cpan -v'
   register: conf_cpan_result
   changed_when: "'yes' in conf_cpan_result.stderr"
   become: yes
 
-- name: Get the Git repo
+- name: "{{programName}} - Get the Git repo"
   git: repo={{gitRepository}} \
        update=yes \
        clone=yes \
        dest={{programHome}}
   register: get_git_repo
+  become: yes
+  become_user: "{{programUser}}"
 
-- set_fact: reinstall=1
+- name: "{{programName}} - reinstall?"
+  set_fact: reinstall=1
   when: "get_git_repo.changed"
 
-- name: Rebuild services via make
+- name: "{{programName}} - Rebuild services via make"
   make:
     chdir: "{{programHome}}"
     target: install
@@ -41,21 +42,24 @@
   when: reinstall is defined
 
 #Overwrite configurations created by the make install
-- name: Deploy master configuration
+- name: "{{programName}} - Deploy master configuration"
   lineinfile: dest="{{item.file}}" \
               regexp="{{item.directive}}" \
               line="{{item.value}}" \
               state=present
+              create="{{item.create|d('no')}}"
   with_items: "{{configurations}}"
   register: master_configuration_output
   become: yes
 
-- set_fact: reinstall=1
+- name: "{{programName}} - reinstall?"
+  set_fact: reinstall=1
   when: "master_configuration_output.changed"
 
-- name: Restart services
+- name: "{{programName}} - Restart services"
   make:
     chdir: "{{programHome}}"
     target: restart
   become: yes
   when: reinstall is defined
+
