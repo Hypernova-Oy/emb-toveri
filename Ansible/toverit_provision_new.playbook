@@ -25,7 +25,7 @@
           - "'_' not in  toveri_inventory_hostname" # _ Makes havoc with domain names
           - "'-' not in  toveri_inventory_hostname" # - Makes havoc with Ansible
           - "'toveri' in toveri_inventory_hostname" # simple naming convention enforcement
-        msg: "toveri_inventory_hostname contains 'toveri'"
+        msg: "toveri_inventory_hostname contains 'toveri' and not '-' or '_'"
 
     - name: Check toveri_cc_ssh_remote_port is valid
       assert:
@@ -65,7 +65,8 @@
 
     - name: Cleanup new toveri keys
       shell: "rm /home/ansible/id_rsa*"
-      warn=False
+      args:
+        warn: False
 
     - name: Provide a template host_vars
       command: cp -rT {{ansible_config_dir}}/host_vars/toverrii {{ansible_config_dir}}/host_vars/{{toveri_inventory_hostname}}

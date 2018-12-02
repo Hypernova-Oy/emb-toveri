@@ -61,6 +61,10 @@ echo "{{lookup('file', '/home/ansible/id_rsa.pub')}}" > /home/toveri/.ssh/id_rsa
 chmod 644 /home/toveri/.ssh/id_rsa.pub
 chown -R toveri:toveri /home/toveri/.ssh
 echo ""
+echo "+-----------------------------+"
+echo "| Deploy toveri-cc-ssh-tunnel |"
+echo "+-----------------------------+"
+echo ""
 echo "
 [Unit]
 Description=Toveri dynamic AutoSSH reverse ssh tunnel service
@@ -78,6 +82,8 @@ RestartSec=3
 WantedBy=multi-user.target
 
 " > $SYSTEMD_SRV_AUTOSSH_FILE
+systemctl enable toveri-cc-ssh-tunnel
+systemctl start toveri-cc-ssh-tunnel
 echo ""
 echo "Thank you!"
 echo ""
