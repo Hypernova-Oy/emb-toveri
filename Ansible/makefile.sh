@@ -5,25 +5,20 @@
 # Builds a complete and configured Ansible master controller for Toveris
 #
 
-debianPackages="python-pip python-pip"  #A list of packages
+debianPackages="python3-pip python3-pip"  #A list of packages
 ansibleRolesFromGalaxy="geerlingguy.ntp geerlingguy.ntp"  #A list of roles
 
 ansibleSystemConfigPath="/etc/ansible"
 ansibleVaultPasswordFile="$ansibleSystemConfigPath/passwd"
 ansibleConfigFile="$ansibleSystemConfigPath/ansible.cfg"
-
-function createDefaultConfig {
-  file=$1
-
-  echo "[defaults]" >> $file
-  echo "vault_password_file = $ansibleVaultPasswordFile" >> $file
-}
+ansibleExampleConfigurationsDir="examples/default_config"
+ansiblePlaybookConfigDir="/home/ansible/ToveriConfig"
 
 echo ""
 echo "INSTALLING ANSIBLE"
 echo "------------------"
-apt-get install -y $debianPackages
-pip install ansible
+apt install -y $debianPackages
+pip3 install ansible
 
 echo ""
 echo "INSTALLING ANSIBLE ROLES FROM GALAXY"
@@ -31,21 +26,40 @@ echo "------------------------------------"
 ansible-galaxy install $ansibleRolesFromGalaxy
 
 echo ""
+echo "CREATING ansible-USER"
+echo "---------------------"
+sudo useradd -d /home/ansible -m -s /bin/bash ansible
+sudo addgroup ansible sudo
+echo "Enter the ansible_sudo_pass: "
+read -s ansible_sudo_pass
+echo "Thank you!"
+sudo su -c "echo 'ansible:$ansible_sudo_pass' | chpasswd" root
+sudo su -c "echo 'y' | /usr/bin/ssh-keygen -f /home/ansible/.ssh/id_rsa -t rsa -N ''" ansible
+ansible_public_key=$(cat /home/ansible/.ssh/id_rsa.pub)
+
+echo ""
 echo "INSTALLING VAULT PASSWORD FILE STUB"
 echo "-----------------------------------"
 mkdir -p $ansibleSystemConfigPath
 touch $ansibleVaultPasswordFile
-echo "Write your vault password to '$ansibleVaultPasswordFile'"
+chown ansible:root $ansibleVaultPasswordFile
+chmod 600 $ansibleVaultPasswordFile
 
 echo ""
-echo "INSTALL CONFIG"
-echo "--------------"
-if [ ! -e $ansibleConfigFile ]
-then
-  echo "Ansible config '$ansibleConfigFile' missing. Creating it for you!"
-  createDefaultConfig $ansibleConfigFile
-else
-  echo "Ansible config '$ansibleConfigFile' exists. So not ramming it up."
-  echo "If you want me to recreate it for you, you must nuke it first with"
-  echo "    sudo rm $ansibleConfigFile"
-fi
+echo "COPYING EXAMPLE CONFIGURATIONS"
+echo "------------------------------"
+cp -r $ansibleExampleConfigurationsDir $ansiblePlaybookConfigDir
+echo "ansible_sudo_pass:  \"$ansible_sudo_pass\""        >> $ansiblePlaybookConfigDir/group_vars/all
+echo "ansible_config_dir: \"$ansiblePlaybookConfigDir\"" >> $ansiblePlaybookConfigDir/group_vars/all
+echo "ansible_public_key: \"$ansible_public_key\""       >> $ansiblePlaybookConfigDir/group_vars/all
+
+echo ""
+echo "POST INSTALLATION TASKS"
+echo "-----------------------"
+echo ""
+echo "- ansible-vault your ansible sudo password for security."
+echo "  It has been appended to $ansiblePlaybookConfigDir/group_vars/all"
+echo ""
+echo "- Write your vault password to '$ansibleVaultPasswordFile'"
+echo ""
+

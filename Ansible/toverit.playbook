@@ -14,14 +14,14 @@
   - role: makeProgram
     programName: "emb-gpio"
     programHome: "{{systemHomeDir}}/emb-gpio"
-    gitRepository: "https://github.com/KohaSuomi/emb-gpio.git"
+    gitRepository: "{{toveri_git_server}}/emb-gpio.git"
     configurations: []
     tags: ['emb-gpio']
 
   - role: makeProgram
     programName: "emb-rtttl"
     programHome: "{{systemHomeDir}}/emb-rtttl"
-    gitRepository: "https://github.com/KohaSuomi/emb-rtttl.git"
+    gitRepository: "{{toveri_git_server}}/emb-rtttl.git"
     configurations:
     - file: "/etc/cron.d/emb-rtttl"
       directive: "rtttl-player"
@@ -31,21 +31,21 @@
   - role: makeProgram
     programName: "emb-US2066"
     programHome: "{{systemHomeDir}}/emb-US2066"
-    gitRepository: "https://github.com/KohaSuomi/emb-US2066.git"
+    gitRepository: "{{toveri_git_server}}/emb-US2066.git"
     configurations: []
     tags: ['emb-US2066']
 
   - role: makeProgram
     programName: "emb-oled"
     programHome: "{{systemHomeDir}}/emb-oled"
-    gitRepository: "https://github.com/KohaSuomi/emb-oled.git"
+    gitRepository: "{{toveri_git_server}}/emb-oled.git"
     configurations: []
     tags: ['emb-oled']
 
   - role: makeProgram
     programName: "SSAuthenticator"
     programHome: "{{systemHomeDir}}/SSAuthenticator"
-    gitRepository: "https://github.com/KohaSuomi/SSAuthenticator.git"
+    gitRepository: "{{toveri_git_server}}/SSAuthenticator.git"
     configurations:
     - file: "/etc/ssauthenticator/daemon.conf"
       directive: "ApiBaseUrl"
@@ -64,7 +64,7 @@
   - role: makeProgram
     programName: "emb-heater"
     programHome: "{{systemHomeDir}}/emb-heater"
-    gitRepository: "https://github.com/KohaSuomi/emb-heater.git"
+    gitRepository: "{{toveri_git_server}}/emb-heater.git"
     configurations:
     - file: "/etc/emb-heater/daemon.conf"
       directive: "TemperatureCorrection"

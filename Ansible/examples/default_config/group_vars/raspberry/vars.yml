@@ -6,3 +6,4 @@ pi_wifi_networks: "{{vault_pi_wifi_networks}}"
 
 #Roaming is "true" or it isnt
 pi_wifi_networks_roaming: true
+

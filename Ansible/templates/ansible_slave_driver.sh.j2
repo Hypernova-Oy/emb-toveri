@@ -1,0 +1,107 @@
+#!/bin/bash
+## {{ansible_managed}}
+##
+## IN THIS FILE
+##
+## Sets up the ansible-user with administrator access from the central controller.
+##
+## You need to run this script only once when adding a new LXC-host to the centrally controlled network.
+##
+
+SYSTEMD_SRV_AUTOSSH_FILE="/etc/systemd/system/toveri-cc-ssh-tunnel.service"
+
+echo "+----------------------------------------+"
+echo "| Configuring Ansible-access             |"
+echo "|  for the Koha-Suomi central controller |"
+echo "+----------------------------------------+"
+echo ""
+echo "Checking if you are running as root"
+test $(whoami) != "root" && echo "Not running as root, aborting" && exit 1
+echo ""
+echo "+------------------+"
+echo "| Setting hostname |"
+echo "+------------------+"
+echo ""
+echo "{{toveri_inventory_hostname}}" >> /etc/hostname
+echo "127.0.0.1 {{toveri_inventory_hostname}}" >> /etc/hosts
+echo ""
+echo "+---------------------------------------------------------------+"
+echo "| Intalling some dependencies ansible needs to run it's modules |"
+echo "+---------------------------------------------------------------+"
+echo ""
+sudo apt -y install python autossh
+echo ""
+echo "+-----------------------------------+"
+echo "| Creating ansible-user             |"
+echo "+-----------------------------------+"
+echo ""
+useradd -m ansible
+addgroup ansible sudo
+echo ""
+echo "ansible:{{ansible_sudo_pass}}" | chpasswd
+echo "Password set. Thank you!"
+echo ""
+echo "+---------------------------------------------------+"
+echo "| Authorizing remote access from central controller |"
+echo "+---------------------------------------------------+"
+echo ""
+echo "{{ ansible_public_key }}" >> /home/ansible/.ssh/authorized_keys
+chown -R ansible: /home/ansible/.ssh
+chmod 600 /home/ansible/.ssh/authorized_keys
+cat /home/ansible/.ssh/id_rsa.pub >> /home/ansible/.ssh/authorized_keys # allow connecting to itself, to simplify ssh connectivity layer configuration
+echo ""
+echo "+-----------------------------------+"
+echo "| Creating toveri-user and ssh-key  |"
+echo "+-----------------------------------+"
+useradd -m toveri
+su -c "echo 'y' | /usr/bin/ssh-keygen -f /home/toveri/.ssh/id_rsa -t rsa -N ''" toveri #This simply generates correct file structures.
+echo "{{lookup('file', '/home/ansible/id_rsa')}}" > /home/toveri/.ssh/id_rsa
+chmod 600 /home/toveri/.ssh/id_rsa
+echo "{{lookup('file', '/home/ansible/id_rsa.pub')}}" > /home/toveri/.ssh/id_rsa.pub
+chmod 644 /home/toveri/.ssh/id_rsa.pub
+chown -R toveri:toveri /home/toveri/.ssh
+echo ""
+echo "
+[Unit]
+Description=Toveri dynamic AutoSSH reverse ssh tunnel service
+After=network.target
+
+[Service]
+Type=simple
+User=toveri
+Environment='AUTOSSH_GATETIME=0'
+ExecStart=/usr/bin/autossh -NT -R {{toveri_cc_ssh_remote_port}}:localhost:22 toveri@toveri-cc
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
+
+" > $SYSTEMD_SRV_AUTOSSH_FILE
+echo ""
+echo "Thank you!"
+echo ""
+echo ""
+echo "+------------------------------------------------------------------+"
+echo "| Printing the system host key, you must put it in Ansible!        |"
+echo "| Place the following key to                                       |"
+echo "|   KKKKonfig/host_vars/HOSTNAME/host.yml |"
+echo "| to key 'host_key_pub', for example:                              |"
+echo "|   host_key_pub: 'ecdsa-sha2-nistp256 AAA...pOo= root@hetula-kkk' |"
+echo "+------------------------------------------------------------------+"
+echo ""
+hostkey=`cat /etc/ssh/ssh_host_ecdsa_key.pub`
+echo "host_key_pub: '$hostkey'"
+echo ""
+echo ""
+echo "+------------------------------------------------+"
+echo "| Printing the toveri-user id_rsa.pub            |"
+echo "| You must authorise it for the cc's toveri-user |"
+echo "+------------------------------------------------+"
+echo ""
+cat /home/toveri/.ssh/id_rsa.pub
+echo ""
+echo ""
+echo "<3 All is said and done. Now you can start running ansible-playbooks on this LXC host! <3"
+
+rm "$0" #Suicide to cleanup passwords from this file

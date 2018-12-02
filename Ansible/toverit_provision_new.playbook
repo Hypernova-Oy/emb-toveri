@@ -1,0 +1,90 @@
+---
+
+## IN THIS FILE
+#
+# This playbook creates a bash script to run in a remote host which needs to be allowed direct access from the Ansible central controller
+#
+# For example virtualization hosts or externally provisioned virtual machines need to have this script ran on them
+#
+
+- hosts: localhost
+
+  vars_prompt:
+    - name: "toveri_inventory_hostname"
+      prompt: "Give the toveri inventory_hostname"
+      private: no
+    - name: "toveri_cc_ssh_remote_port"
+      prompt: "Give the toveri central controller port to forward to Toveri ssh-server, eg. 535XX"
+      private: no
+
+  tasks:
+
+    - name: Check toveri_inventory_hostname
+      assert:
+        that:
+          - "'_' not in  toveri_inventory_hostname" # _ Makes havoc with domain names
+          - "'-' not in  toveri_inventory_hostname" # - Makes havoc with Ansible
+          - "'toveri' in toveri_inventory_hostname" # simple naming convention enforcement
+        msg: "toveri_inventory_hostname contains 'toveri'"
+
+    - name: Check toveri_cc_ssh_remote_port is valid
+      assert:
+        that:
+          - "toveri_cc_ssh_remote_port is defined"
+        msg: "toveri_cc_ssh_remote_port must be a valid number"
+
+    - name: Create toveri-user
+      user:
+        name: toveri
+        create_home: yes
+        generate_ssh_key: yes
+        password_lock: yes
+      become: yes
+
+    # The keypair needs to be created in advance, so it can be immediately accepted for the central controller.
+    # Otherwise if the key is created in the Toveri-device, it must be manually moved away from there first.
+    # Now this key-exchange is automated.
+    - name: Create ssh-keypair for the new toveri
+      shell: ssh-keygen -b 2048 -t rsa -f /home/ansible/id_rsa -q -N "" -C "toveri@{{toveri_inventory_hostname}}"
+      args:
+        creates: /home/ansible/id_rsa
+
+    - name: Create a provisioning script
+      template:
+        src:  "templates/ansible_slave_driver.sh.j2"
+        dest: "~/ansible_slave_driver.sh"
+        mode: 0700
+        force: yes
+
+    - name: Authorize toveri public key
+      authorized_key:
+        user: toveri
+        state: present
+        key: "{{lookup('file', '/home/ansible/id_rsa.pub')}}"
+      become: yes
+
+    - name: Cleanup new toveri keys
+      shell: "rm /home/ansible/id_rsa*"
+      warn=False
+
+    - name: Provide a template host_vars
+      command: cp -rT {{ansible_config_dir}}/host_vars/toverrii {{ansible_config_dir}}/host_vars/{{toveri_inventory_hostname}}
+
+    - name: Create a inventory entry with connection parameters
+      lineinfile:
+        path:   "{{ansible_config_dir}}/inventory"
+        regexp: "^{{toveri_inventory_hostname}}"
+        line:   "{{toveri_inventory_hostname}} ansible_host={{toveri_inventory_hostname}} ansible_port={{toveri_cc_ssh_remote_port}}"
+
+    - name: Add /etc/hosts entry
+      lineinfile:
+        path:   "/etc/hosts"
+        regexp: "\b{{toveri_inventory_hostname}}\b"
+        line:   "127.0.0.1 {{toveri_inventory_hostname}}"
+      become: yes
+
+    - debug: msg="Dynamic inventory updated. Check version control for changes."
+
+    - debug: msg="Script to allow ansible to remotely operate a host is found at '~/ansible_slave_driver.sh'. Run the script in your remote host.\nTHIS SCRIPT CONTAINS THE ANSIBLE SUDO PASSWORD!\nREMOVE THE SCRIPT AFTER USE!"
+
+
