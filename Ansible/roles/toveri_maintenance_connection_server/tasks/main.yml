@@ -1,0 +1,39 @@
+---
+
+- name: Create the toveri-user to receive remote port forwards from
+  user:
+    name: toveri
+    create_home: yes
+    password_lock: yes
+    state: present
+  become: yes
+
+- name: Harden ssh
+  blockinfile:
+    block: |
+      Match User toveri
+         AllowTcpForwarding yes
+         X11Forwarding no
+         PermitTunnel no
+         GatewayPorts no
+         AllowAgentForwarding no
+         PermitOpen localhost:53500
+         PermitOpen localhost:53501
+         PermitOpen localhost:53502
+         PermitOpen localhost:53503
+         PermitOpen localhost:53504
+         PermitOpen localhost:53505
+         PermitOpen localhost:53506
+         PermitOpen localhost:53507
+         PermitOpen localhost:53508
+         PermitOpen localhost:53509
+         PermitOpen localhost:53510
+         PermitOpen localhost:53511
+         ForceCommand echo 'This account can only be used for reverse port forwarding to a local ssh server'
+
+    marker: toveri_maintenance_connection_server
+    path: /etc/ssh/sshd_config
+    state: present
+  become: yes
+  notify: Reload sshd
+

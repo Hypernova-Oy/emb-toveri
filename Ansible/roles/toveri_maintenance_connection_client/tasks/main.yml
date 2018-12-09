@@ -1,0 +1,26 @@
+---
+
+- name: Install APT packages
+  apt: name={{item}} \
+       cache_valid_time=3600
+  with_items:
+    - autossh
+  become: yes
+
+- name: Deploy systemd service
+  template:
+    src: toveri-cc-ssh-tunnel.service
+    dest: /etc/systemd/system/toveri-cc-ssh-tunnel.service
+    owner: root
+    group: root
+    mode: 0644
+  become: yes
+
+- name: Enable systemd service
+  systemd:
+    name: toveri-cc-ssh-tunnel
+    daemon_reload: yes
+    enabled: yes
+    state: started
+  become: yes
+

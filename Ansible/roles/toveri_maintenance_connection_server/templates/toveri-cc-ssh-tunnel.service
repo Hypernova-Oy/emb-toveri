@@ -1,0 +1,17 @@
+#{{ansible_managed}}
+
+[Unit]
+Description=Toveri dynamic AutoSSH reverse ssh tunnel service
+After=network.target
+
+[Service]
+Type=simple
+User=toveri
+Environment="AUTOSSH_GATETIME=0"
+ExecStart=/usr/bin/autossh -NT -R {{toveri_reverse_ssh_port}}:localhost:22 toveri@toveri-cc
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
+
