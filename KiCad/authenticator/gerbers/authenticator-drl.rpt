@@ -1,5 +1,5 @@
 Drill report for /home/kivilahtio/work/emb-toveri/KiCad/authenticator/authenticator.kicad_pcb
-Created on su  9. joulukuuta 2018 15.38.54
+Created on ma 10. joulukuuta 2018 06.00.06
 
 Copper Layer Stackup:
     =============================================================
@@ -19,5 +19,6 @@ Drill file 'authenticator.drl' contains
 Drill file 'authenticator-NPTH.drl' contains
     unplated through holes:
     =============================================================
+    T1  0,90mm  0,035"  (10 holes)
 
-    Total unplated holes count 0
+    Total unplated holes count 10
