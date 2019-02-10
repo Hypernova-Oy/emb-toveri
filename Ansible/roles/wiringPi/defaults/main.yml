@@ -1,0 +1,7 @@
+---
+
+programName: wiringPi
+programHome: /home/pi/{{programName}}
+gitRepository: git://git.drogon.net/wiringPi
+programUser: pi
+

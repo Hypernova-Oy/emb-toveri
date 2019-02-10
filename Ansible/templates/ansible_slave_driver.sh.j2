@@ -24,6 +24,7 @@ echo "+------------------+"
 echo ""
 echo "{{toveri_inventory_hostname}}" >> /etc/hostname
 echo "127.0.0.1 {{toveri_inventory_hostname}}" >> /etc/hosts
+echo "{{ansible_host}} toveri-cc" >> /etc/hosts
 echo ""
 echo "+---------------------------------------------------------------+"
 echo "| Intalling some dependencies ansible needs to run it's modules |"
@@ -45,8 +46,10 @@ echo "+---------------------------------------------------+"
 echo "| Authorizing remote access from central controller |"
 echo "+---------------------------------------------------+"
 echo ""
+mkdir /home/ansible/.ssh
+chmod 700 /home/ansible/.ssh
 echo "{{ ansible_public_key }}" >> /home/ansible/.ssh/authorized_keys
-chown -R ansible: /home/ansible/.ssh
+chown -R ansible:ansible /home/ansible/.ssh
 chmod 600 /home/ansible/.ssh/authorized_keys
 cat /home/ansible/.ssh/id_rsa.pub >> /home/ansible/.ssh/authorized_keys # allow connecting to itself, to simplify ssh connectivity layer configuration
 echo ""
@@ -74,7 +77,7 @@ After=network.target
 Type=simple
 User=toveri
 Environment='AUTOSSH_GATETIME=0'
-ExecStart=/usr/bin/autossh -M 0 -o "ServerAliveInterval 120" -o "ServerAliveCountMax 0" -o "ExitOnForwardFailure yes" -NT -R {{toveri_cc_ssh_remote_port}}:localhost:22 toveri@toveri-cc
+ExecStart=/usr/bin/autossh -M 0 -o 'ServerAliveInterval 120' -o 'ServerAliveCountMax 0' -o 'ExitOnForwardFailure yes' -NT -R {{toveri_cc_ssh_remote_port}}:localhost:22 toveri@toveri-cc
 Restart=always
 RestartSec=3
 

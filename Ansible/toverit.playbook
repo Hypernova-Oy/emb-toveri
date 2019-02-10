@@ -11,6 +11,10 @@
     become: yes
     tags: ['ntp']
 
+  - role: wiringPi
+    programHome: "/home/toveri/wiringPi"
+    programUser: toveri
+
   - role: makeProgram
     programName: "emb-gpio"
     programHome: "/home/toveri/emb-gpio"
@@ -22,7 +26,7 @@
   - role: makeProgram
     programName: "emb-rtttl"
     programHome: "/home/toveri/emb-rtttl"
-    gitRepository: "https://github.com/KohaSuomi/emb-rtttl.git"
+    gitRepository: "https://github.com/Hypernova-Oy/emb-rtttl.git"
     programUser: toveri
     configurations:
     - file: "/etc/cron.d/emb-rtttl"
@@ -34,7 +38,7 @@
   - role: makeProgram
     programName: "emb-US2066"
     programHome: "/home/toveri/emb-US2066"
-    gitRepository: "https://github.com/KohaSuomi/emb-US2066.git"
+    gitRepository: "https://github.com/Hypernova-Oy/emb-US2066.git"
     programUser: toveri
     configurations: []
     tags: ['emb-US2066']
@@ -42,7 +46,7 @@
   - role: makeProgram
     programName: "emb-oled"
     programHome: "/home/toveri/emb-oled"
-    gitRepository: "https://github.com/KohaSuomi/emb-oled.git"
+    gitRepository: "https://github.com/Hypernova-Oy/emb-oled.git"
     programUser: toveri
     configurations: []
     tags: ['emb-oled']
@@ -50,7 +54,7 @@
   - role: makeProgram
     programName: "SSAuthenticator"
     programHome: "/home/toveri/SSAuthenticator"
-    gitRepository: "https://github.com/KohaSuomi/SSAuthenticator.git"
+    gitRepository: "https://github.com/Hypernova-Oy/SSAuthenticator.git"
     programUser: toveri
     configurations:
     - file: "/etc/ssauthenticator/daemon.conf"
@@ -70,7 +74,7 @@
   - role: makeProgram
     programName: "emb-heater"
     programHome: "/home/toveri/emb-heater"
-    gitRepository: "https://github.com/KohaSuomi/emb-heater.git"
+    gitRepository: "https://github.com/Hypernova-Oy/emb-heater.git"
     programUser: toveri
     configurations:
     - file: "/etc/emb-heater/daemon.conf"

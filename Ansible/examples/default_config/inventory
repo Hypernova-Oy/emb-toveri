@@ -1,4 +1,4 @@
-ansible_controller    ansible_host=localhost ansible_connection=local
+ansible_controller    ansible_host=10.11.12.13 ansible_connection=local
 
 [raspberry]
 toverrii              ansible_host=192.168.100.22 ansible_user=pi location=JOE_REI
