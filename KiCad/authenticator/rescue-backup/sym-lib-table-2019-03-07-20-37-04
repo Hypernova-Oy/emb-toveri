@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name authenticator-rescue)(type Legacy)(uri ${KIPRJMOD}/authenticator-rescue.lib)(options "")(descr ""))
+)

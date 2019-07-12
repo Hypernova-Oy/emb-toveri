@@ -1,0 +1,10 @@
+(sym_lib_table
+  (lib (name authenticator-rescue)(type Legacy)(uri ${KIPRJMOD}/authenticator-rescue.lib)(options "")(descr ""))
+  (lib (name ds18b20+)(type Legacy)(uri ${KIPRJMOD}/libraries/ds18b20+.lib)(options "")(descr ""))
+  (lib (name ec2-3tnu)(type Legacy)(uri ${KIPRJMOD}/libraries/ec2-3tnu.lib)(options "")(descr ""))
+  (lib (name at-1220-twt-5v-r)(type Legacy)(uri ${KIPRJMOD}/libraries/at-1220-twt-5v-r.lib)(options "")(descr ""))
+  (lib (name nhd-0420cw-ab3)(type Legacy)(uri ${KIPRJMOD}/libraries/nhd-0420cw-ab3.lib)(options "")(descr ""))
+  (lib (name ec2-nu)(type Legacy)(uri ${KIPRJMOD}/libraries/ec2-nu.lib)(options "")(descr ""))
+  (lib (name headers)(type Legacy)(uri ${KIPRJMOD}/libraries/headers.lib)(options "")(descr ""))
+  (lib (name Koha-Suomi)(type Legacy)(uri ${KIPRJMOD}/libraries/Koha-Suomi.lib)(options "")(descr ""))
+)

@@ -1,0 +1,942 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:ds18b20+
+LIBS:ec2-3tnu
+LIBS:at-1220-twt-5v-r
+LIBS:nhd-0420cw-ab3
+LIBS:ec2-nu
+LIBS:headers
+LIBS:Koha-Suomi
+LIBS:authenticator-cache
+EELAYER 25 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 2
+Title "Authenticator"
+Date ""
+Rev "0.1"
+Comp "Vaara-kirjastot"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L +12V #PWR01
+U 1 1 57BBB20E
+P 9500 4550
+F 0 "#PWR01" H 9500 4400 50  0001 C CNN
+F 1 "+12V" H 9500 4690 50  0000 C CNN
+F 2 "" H 9500 4550 50  0000 C CNN
+F 3 "" H 9500 4550 50  0000 C CNN
+	1    9500 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L R R5
+U 1 1 57BBB4BD
+P 9650 5400
+F 0 "R5" V 9730 5400 50  0000 C CNN
+F 1 "12V" V 9650 5400 50  0000 C CNN
+F 2 "" V 9580 5400 50  0001 C CNN
+F 3 "" H 9650 5400 50  0000 C CNN
+	1    9650 5400
+	-1   0    0    1   
+$EndComp
+$Comp
+L GNDA #PWR02
+U 1 1 57BBB6AC
+P 9550 4750
+F 0 "#PWR02" H 9550 4500 50  0001 C CNN
+F 1 "GNDA" H 9550 4600 50  0000 C CNN
+F 2 "" H 9550 4750 50  0000 C CNN
+F 3 "" H 9550 4750 50  0000 C CNN
+	1    9550 4750
+	0    -1   -1   0   
+$EndComp
+Text Notes 1900 8350 0    60   ~ 0
+Signal LED
+Text Notes 2000 950  0    60   ~ 0
+Door relay
+$Comp
+L CP C1
+U 1 1 57BC47D3
+P 5900 6650
+F 0 "C1" H 5925 6750 50  0000 L CNN
+F 1 "CP" H 5925 6550 50  0000 L CNN
+F 2 "Koha-Suomi:UMW0G101MDD" H 5938 6500 50  0001 C CNN
+F 3 "" H 5900 6650 50  0000 C CNN
+	1    5900 6650
+	1    0    0    -1  
+$EndComp
+Text Label 6100 6800 0    60   ~ 0
+GND
+Text Label 6100 6500 0    60   ~ 0
+3V3
+$Comp
+L R R4
+U 1 1 57BC80CD
+P 5800 5700
+F 0 "R4" V 5880 5700 50  0000 C CNN
+F 1 "4.7k" V 5800 5700 50  0000 C CNN
+F 2 "Koha-Suomi:Resistor_ThroughHole_6.3x2.3mm_Spacing2.54mm" V 5730 5700 50  0001 C CNN
+F 3 "" H 5800 5700 50  0000 C CNN
+	1    5800 5700
+	0    1    1    0   
+$EndComp
+$Comp
+L R R1
+U 1 1 57BC9DFD
+P 5800 7600
+F 0 "R1" V 5880 7600 50  0000 C CNN
+F 1 "110" V 5800 7600 50  0000 C CNN
+F 2 "Koha-Suomi:Resistor_ThroughHole_6.3x2.3mm_Spacing2.54mm" V 5730 7600 50  0001 C CNN
+F 3 "" H 5800 7600 50  0000 C CNN
+	1    5800 7600
+	0    1    1    0   
+$EndComp
+Text Notes 2250 8600 0    60   ~ 0
+R 1.9V
+$Comp
+L R R2
+U 1 1 57BC9FE5
+P 5800 7750
+F 0 "R2" V 5880 7750 50  0000 C CNN
+F 1 "220" V 5800 7750 50  0000 C CNN
+F 2 "Koha-Suomi:Resistor_ThroughHole_6.3x2.3mm_Spacing2.54mm" V 5730 7750 50  0001 C CNN
+F 3 "" H 5800 7750 50  0000 C CNN
+	1    5800 7750
+	0    1    1    0   
+$EndComp
+Text Notes 2250 8800 0    60   ~ 0
+B 3.4V
+$Comp
+L R R3
+U 1 1 57BCA0AF
+P 5800 7900
+F 0 "R3" V 5880 7900 50  0000 C CNN
+F 1 "220" V 5800 7900 50  0000 C CNN
+F 2 "Koha-Suomi:Resistor_ThroughHole_6.3x2.3mm_Spacing2.54mm" V 5730 7900 50  0001 C CNN
+F 3 "" H 5800 7900 50  0000 C CNN
+	1    5800 7900
+	0    1    1    0   
+$EndComp
+Text Notes 2250 9000 0    60   ~ 0
+G 3.3V
+$Comp
+L DS18B20+ DS1
+U 1 1 57BE9EC4
+P 5300 5650
+F 0 "DS1" H 5250 5250 60  0000 C CNN
+F 1 "DS18B20+" H 5300 5750 60  0000 C CNN
+F 2 "Koha-Suomi:TO-92_Inline_Wide" H 5300 5650 60  0001 C CNN
+F 3 "" H 5300 5650 60  0001 C CNN
+	1    5300 5650
+	1    0    0    -1  
+$EndComp
+Text Notes 7000 3700 0    60   ~ 0
+-- Utility PCB --
+Text Notes 1000 850  0    60   ~ 0
+PCB DOOR
+Text Label 5500 7700 0    60   ~ 0
+GND
+Text Notes 7250 7650 0    63   ~ 0
+To Raspberry GPIO\nD0 (SCLK)\nD1 (SDIN)\nD2 (SDOUT)\nCS (CS)\nRES (RES)\nLED R\nLED B\nLED G
+Text Notes 4400 2600 2    62   ~ 0
+CLK/SCLK/D0\nMOSI/SDI/D1\nMISO/SDO/D2\nCE0/CS\nRES\nLED R\nLED B\nLED G
+Text Notes 4550 7350 0    68   ~ 0
+To OLED\nVSS <- 7\nVDD <- 6\nD0 <- 5\nD1 <- 4\nD2 <- 3\nCS <- 2\nRES <- 1
+Text Notes 4550 7950 0    68   ~ 0
+To Signal LED\nRed <- 4\nGND <- 3\nBlue <- 2\nGreen <- 1
+$Comp
+L AST-1732MR-R AST1
+U 1 1 59892846
+P 6200 6000
+F 0 "AST1" H 5900 5600 60  0000 C CNN
+F 1 "AST-1732MR-R" H 5900 6000 60  0000 C CNN
+F 2 "Koha-Suomi:AST-1732MR-R" H 6200 6000 60  0001 C CNN
+F 3 "" H 6200 6000 60  0001 C CNN
+	1    6200 6000
+	1    0    0    -1  
+$EndComp
+Text Notes 7250 6500 0    63   ~ 0
+To Raspberry GPIO\nHEAT OFF\nHEAT ON\nDS18B20\nGND\nPIEZO\n3V3\nGND
+Text Label 6200 6250 0    68   ~ 0
+GND
+Text Label 6800 6350 2    68   ~ 0
+3V3
+Text Label 6800 6450 2    68   ~ 0
+GND
+Text Label 6800 6150 2    68   ~ 0
+GND
+Text Label 5550 5900 0    68   ~ 0
+GND
+Text Label 5600 5600 0    68   ~ 0
+3V3
+$Comp
+L EC2-3TNU EC1
+U 1 1 5989C2BB
+P 5300 5450
+F 0 "EC1" V 6250 5200 60  0000 C CNN
+F 1 "EC2-3TNU" V 5450 5200 60  0000 C CNN
+F 2 "Koha-Suomi:EC2-3TNU" H 5300 5450 60  0001 C CNN
+F 3 "" H 5300 5450 60  0001 C CNN
+	1    5300 5450
+	0    -1   -1   0   
+$EndComp
+Text Label 4900 5150 2    68   ~ 0
+GND
+Text Label 4900 4650 2    68   ~ 0
+GND
+$Comp
+L D D4
+U 1 1 5989E068
+P 5900 5400
+F 0 "D4" H 5900 5500 50  0000 C CNN
+F 1 "D" H 5900 5300 50  0000 C CNN
+F 2 "Koha-Suomi:1N4154TAP" H 5900 5400 50  0001 C CNN
+F 3 "" H 5900 5400 50  0000 C CNN
+	1    5900 5400
+	-1   0    0    1   
+$EndComp
+$Comp
+L D D3
+U 1 1 5989E791
+P 5900 4400
+F 0 "D3" H 5900 4500 50  0000 C CNN
+F 1 "D" H 5900 4300 50  0000 C CNN
+F 2 "Koha-Suomi:1N4154TAP" H 5900 4400 50  0001 C CNN
+F 3 "" H 5900 4400 50  0000 C CNN
+	1    5900 4400
+	-1   0    0    1   
+$EndComp
+Text Notes 3900 4950 0    56   ~ 0
+Double latch relay.\nNormal closed.\nEnclosure heater controller
+$Comp
+L DS18B20+ DS2
+U 1 1 598A2056
+P 1650 4850
+F 0 "DS2" H 1600 4450 60  0000 C CNN
+F 1 "DS18B20+" H 1650 4950 60  0000 C CNN
+F 2 "Koha-Suomi:TO-92_Inline_Wide" H 1650 4850 60  0001 C CNN
+F 3 "" H 1650 4850 60  0001 C CNN
+	1    1650 4850
+	1    0    0    -1  
+$EndComp
+Text Notes 1800 4650 0    60   ~ 0
+Heater temperature sensor
+Text Notes 4100 5950 0    68   ~ 0
+To external \nheater temp\nsensor\n3 -> 3\n2 -> 2\n1 -> 1
+Text Notes 7350 5100 0    68   ~ 0
+- To Heater PSU +\n- To Heater PSU -\n- To Heater +\n- To Heater -
+Text Notes 9750 5500 0    68   ~ 0
+Flex heater\nC3200-6136A
+Text Notes 9250 5100 0    60   ~ 0
+Enclosure heating pad
+Text Notes 9800 4750 0    68   ~ 0
+Heater\n12V 1.5A\nPSU\n
+Text Notes 9100 4350 0    60   ~ 0
+Heater PSU
+NoConn ~ 6000 4950
+NoConn ~ 5100 4750
+NoConn ~ 5100 4850
+NoConn ~ 5100 4950
+NoConn ~ 8300 2900
+NoConn ~ 8300 2800
+NoConn ~ 8300 2700
+NoConn ~ 8300 2600
+NoConn ~ 8300 2400
+NoConn ~ 8300 2500
+NoConn ~ 8300 1400
+NoConn ~ 8300 1300
+NoConn ~ 8300 1100
+NoConn ~ 8300 1000
+$Comp
+L HEADER_S_1X04 H3
+U 1 1 59895FEB
+P 2850 8550
+F 0 "H3" H 2850 9100 50  0000 C CNN
+F 1 "HEADER_S_1X04" V 2950 8850 50  0000 C CNN
+F 2 "Koha-Suomi:Pin_Header_Straight_1x04_Pitch2.54mm" H 2850 8550 50  0001 C CNN
+F 3 "" H 2850 8550 50  0000 C CNN
+	1    2850 8550
+	1    0    0    1   
+$EndComp
+$Comp
+L HEADER_S_1X04 H10
+U 1 1 598963E2
+P 5300 7450
+F 0 "H10" H 5300 8000 50  0000 C CNN
+F 1 "HEADER_S_1X04" V 5400 7750 50  0000 C CNN
+F 2 "Koha-Suomi:Pin_Header_Straight_1x04_Pitch2.54mm" H 5300 7450 50  0001 C CNN
+F 3 "" H 5300 7450 50  0000 C CNN
+	1    5300 7450
+	-1   0    0    1   
+$EndComp
+$Comp
+L HEADER_S_1X03 H8
+U 1 1 59897297
+P 4700 5450
+F 0 "H8" H 4700 6000 50  0000 C CNN
+F 1 "HEADER_S_1X03" V 4800 5800 50  0000 C CNN
+F 2 "Koha-Suomi:Pin_Header_Straight_1x03_Pitch2.54mm" H 4700 5450 50  0001 C CNN
+F 3 "" H 4700 5450 50  0000 C CNN
+	1    4700 5450
+	-1   0    0    1   
+$EndComp
+$Comp
+L HEADER_S_1X03 H2
+U 1 1 59897338
+P 2700 4650
+F 0 "H2" H 2700 5200 50  0000 C CNN
+F 1 "HEADER_S_1X03" V 2800 5000 50  0000 C CNN
+F 2 "Koha-Suomi:Pin_Header_Straight_1x03_Pitch2.54mm" H 2700 4650 50  0001 C CNN
+F 3 "" H 2700 4650 50  0000 C CNN
+	1    2700 4650
+	1    0    0    1   
+$EndComp
+$Comp
+L HEADER_A_1X04 H14
+U 1 1 59897E7A
+P 7200 4600
+F 0 "H14" H 7200 5150 50  0000 C CNN
+F 1 "HEADER_A_1X04" V 7300 4900 50  0000 C CNN
+F 2 "Koha-Suomi:Pin_Header_Angled_1x04_Pitch2.54mm" H 7200 4600 50  0001 C CNN
+F 3 "" H 7200 4600 50  0000 C CNN
+	1    7200 4600
+	1    0    0    1   
+$EndComp
+$Comp
+L HEADER_A_1X07 H15
+U 1 1 598981D9
+P 7000 6000
+F 0 "H15" H 7000 6550 50  0000 C CNN
+F 1 "HEADER_A_1X07" V 7100 6150 50  0000 C CNN
+F 2 "Koha-Suomi:Pin_Header_Angled_1x07_Pitch2.54mm" H 7000 6000 50  0001 C CNN
+F 3 "" H 7000 6000 50  0000 C CNN
+	1    7000 6000
+	-1   0    0    1   
+$EndComp
+$Comp
+L HEADER_A_1X08 H16
+U 1 1 598989F8
+P 7000 7150
+F 0 "H16" H 7000 7700 50  0000 C CNN
+F 1 "HEADER_A_1X08" V 7100 7250 50  0000 C CNN
+F 2 "Koha-Suomi:Pin_Header_Angled_1x08_Pitch2.54mm" H 7000 7150 50  0001 C CNN
+F 3 "" H 7000 7150 50  0000 C CNN
+	1    7000 7150
+	-1   0    0    1   
+$EndComp
+$Comp
+L HEADER_S_1X02 H17
+U 1 1 598999F9
+P 9200 4250
+F 0 "H17" H 9200 4800 50  0000 C CNN
+F 1 "HEADER_S_1X02" V 9300 4650 50  0000 C CNN
+F 2 "Koha-Suomi:Pin_Header_Straight_1x02_Pitch2.54mm" H 9200 4250 50  0001 C CNN
+F 3 "" H 9200 4250 50  0000 C CNN
+	1    9200 4250
+	-1   0    0    1   
+$EndComp
+$Comp
+L HEADER_S_1X02 H18
+U 1 1 59899C0E
+P 9200 5000
+F 0 "H18" H 9200 5550 50  0000 C CNN
+F 1 "HEADER_S_1X02" V 9300 5400 50  0000 C CNN
+F 2 "Koha-Suomi:Pin_Header_Straight_1x02_Pitch2.54mm" H 9200 5000 50  0001 C CNN
+F 3 "" H 9200 5000 50  0000 C CNN
+	1    9200 5000
+	-1   0    0    1   
+$EndComp
+$Comp
+L HEADER_S_1X07 H9
+U 1 1 598A60F0
+P 5300 6850
+F 0 "H9" H 5300 7400 50  0000 C CNN
+F 1 "HEADER_S_1X07" V 5400 7000 50  0000 C CNN
+F 2 "Koha-Suomi:Pin_Header_Straight_1x07_Pitch2.54mm" H 5300 6850 50  0001 C CNN
+F 3 "" H 5300 6850 50  0000 C CNN
+	1    5300 6850
+	-1   0    0    1   
+$EndComp
+Text Label 6650 7300 2    60   ~ 0
+OLED_RES
+Text Label 6550 6250 0    60   ~ 0
+PIEZO
+Text Label 6500 6050 0    60   ~ 0
+DS18B20
+Text Label 6600 5950 0    60   ~ 0
+HEAT_ON
+Text Label 6750 5800 0    60   ~ 0
+HEAT_OFF
+$Comp
+L WP154A4SUREQBFZGC LED1
+U 1 1 598ADADE
+P 2100 8850
+F 0 "LED1" H 2100 9200 50  0000 C CNN
+F 1 "WP154A4SUREQBFZGC" H 2075 8500 50  0000 C CNN
+F 2 "Koha-Suomi:WP154A4SUREQBFZGC" H 2050 8800 50  0001 C CNN
+F 3 "" H 2050 8800 50  0000 C CNN
+	1    2100 8850
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 1500 6000 1000 1750
+U 598B2508
+F0 "NHD0420CW_over_SPI" 60
+F1 "NHD0420CW_over_SPI.sch" 60
+$EndSheet
+Text Notes 2500 7350 0    68   ~ 0
+To PCB\n-3V3\n-GND\n-D0\n-D1\n-D2\n-CS\n-RES
+NoConn ~ 8300 1200
+Text Notes 4400 1750 2    63   ~ 0
+To utility board\nHEAT OFF\nHEAT ON\nDS18B20\nGND\nPIEZO\n3V3\nGND
+$Comp
+L HEADER_A_1X07 H20
+U 1 1 5C0A49D7
+P 5100 1550
+F 0 "H20" H 5100 2100 50  0000 C CNN
+F 1 "HEADER_A_1X07" V 5200 1700 50  0000 C CNN
+F 2 "Koha-Suomi:Pin_Header_Angled_1x07_Pitch2.54mm" H 5100 1550 50  0001 C CNN
+F 3 "" H 5100 1550 50  0000 C CNN
+	1    5100 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D1
+U 1 1 5C0CCD9B
+P 1150 1150
+F 0 "D1" H 1150 1250 50  0000 C CNN
+F 1 "D" H 1150 1050 50  0000 C CNN
+F 2 "Koha-Suomi:1N4154TAP" H 1150 1150 50  0001 C CNN
+F 3 "" H 1150 1150 50  0000 C CNN
+	1    1150 1150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L D D2
+U 1 1 5C0CD021
+P 1150 2150
+F 0 "D2" H 1150 2250 50  0000 C CNN
+F 1 "D" H 1150 2050 50  0000 C CNN
+F 2 "Koha-Suomi:1N4154TAP" H 1150 2150 50  0001 C CNN
+F 3 "" H 1150 2150 50  0000 C CNN
+	1    1150 2150
+	-1   0    0    -1  
+$EndComp
+Text Notes 8450 800  0    61   ~ 0
+-- Pi Hat --
+$Comp
+L EC2-3TNU EC2
+U 1 1 5C0CC6F5
+P 1250 2200
+F 0 "EC2" V 2200 1950 60  0000 C CNN
+F 1 "EC2-3TNU" V 1400 1950 60  0000 C CNN
+F 2 "Koha-Suomi:EC2-3TNU" H 1250 2200 60  0001 C CNN
+F 3 "" H 1250 2200 60  0001 C CNN
+	1    1250 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L HEADER_A_1X08 H19
+U 1 1 5C09D9B8
+P 5100 2350
+F 0 "H19" H 5100 2900 50  0000 C CNN
+F 1 "HEADER_A_1X08" V 5200 2450 50  0000 C CNN
+F 2 "Koha-Suomi:Pin_Header_Angled_1x08_Pitch2.54mm" H 5100 2350 50  0001 C CNN
+F 3 "" H 5100 2350 50  0000 C CNN
+	1    5100 2350
+	1    0    0    -1  
+$EndComp
+Text Notes 8350 1550 0    39   ~ 0
+PIEZO must be in GPIO 18\ndue to hardware PWM
+NoConn ~ 8300 2200
+$Comp
+L RPi_GPIO J1
+U 1 1 57BB6E59
+P 6600 1000
+F 0 "J1" H 7350 1250 60  0000 C CNN
+F 1 "RPi_GPIO" H 7350 1150 60  0000 C CNN
+F 2 "Koha-Suomi:PI_GPIO_Header_F_2x20" H 6600 1000 60  0001 C CNN
+F 3 "" H 6600 1000 60  0000 C CNN
+	1    6600 1000
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8300 2300
+NoConn ~ 6400 1800
+NoConn ~ 6400 2200
+NoConn ~ 6400 1500
+NoConn ~ 6400 1600
+NoConn ~ 6400 1700
+NoConn ~ 8300 2000
+NoConn ~ 8300 1900
+NoConn ~ 8300 1800
+NoConn ~ 8300 1700
+Text Label 5600 2800 2    61   ~ 0
+PiHat_35_doorOFF
+Text Label 5600 2900 2    61   ~ 0
+PiHat_37_doorON
+Text Label 5600 3000 2    61   ~ 0
+PiHat_39_doorGND
+NoConn ~ 1050 1700
+NoConn ~ 1050 1600
+Wire Wire Line
+	2450 8800 2650 8800
+Wire Wire Line
+	2450 9250 2450 8800
+Wire Wire Line
+	2400 8900 2650 8900
+Wire Wire Line
+	2400 8850 2400 8900
+Wire Wire Line
+	5500 5900 5550 5900
+Wire Wire Line
+	5500 6000 5500 5900
+Wire Wire Line
+	2500 4900 1850 4900
+Wire Wire Line
+	1850 5000 2500 5000
+Wire Wire Line
+	2500 5100 1850 5100
+Wire Notes Line
+	8100 8200 8100 7950
+Wire Notes Line
+	4450 6000 4450 8200
+Wire Notes Line
+	8050 3600 8050 4600
+Wire Notes Line
+	4450 3700 5100 3700
+Wire Notes Line
+	4450 3600 5100 3600
+Wire Notes Line
+	4450 4000 4450 3600
+Wire Notes Line
+	10300 4900 9050 4900
+Wire Notes Line
+	10300 4350 9050 4350
+Wire Notes Line
+	10300 4250 10300 4900
+Wire Notes Line
+	9050 4250 10300 4250
+Wire Notes Line
+	9050 4900 9050 4250
+Wire Wire Line
+	9400 4550 9500 4550
+Wire Wire Line
+	9400 4600 9400 4550
+Wire Wire Line
+	9400 4750 9400 4700
+Wire Wire Line
+	9550 4750 9400 4750
+Wire Notes Line
+	10550 5700 9050 5700
+Wire Notes Line
+	10550 5000 10550 5700
+Wire Notes Line
+	9050 5000 10550 5000
+Wire Notes Line
+	9050 5700 9050 5000
+Wire Notes Line
+	10550 5100 9050 5100
+Wire Wire Line
+	9400 5250 9650 5250
+Wire Wire Line
+	9400 5350 9400 5250
+Wire Wire Line
+	9400 5550 9400 5450
+Wire Wire Line
+	9650 5550 9400 5550
+Wire Notes Line
+	3050 5350 1300 5350
+Wire Notes Line
+	3050 4550 3050 5350
+Wire Notes Line
+	1300 4550 3050 4550
+Wire Notes Line
+	1300 5350 1300 4550
+Wire Notes Line
+	1300 4650 3050 4650
+Connection ~ 6450 6050
+Wire Wire Line
+	5000 5800 4900 5800
+Wire Wire Line
+	5000 6050 5000 5800
+Wire Wire Line
+	4900 5600 4900 5700
+Wire Wire Line
+	5500 5600 4900 5600
+Wire Wire Line
+	5500 5700 5500 5600
+Wire Wire Line
+	4900 6000 4900 5900
+Wire Wire Line
+	5500 6000 4900 6000
+Wire Wire Line
+	6600 4850 6000 4850
+Wire Wire Line
+	6600 4950 6600 4850
+Wire Wire Line
+	7000 4950 6600 4950
+Wire Wire Line
+	7000 4750 6000 4750
+Wire Wire Line
+	6900 5050 7000 5050
+Wire Wire Line
+	6900 4850 6900 5050
+Wire Wire Line
+	7000 4850 6900 4850
+Connection ~ 6050 4650
+Wire Wire Line
+	6050 4650 6050 4400
+Connection ~ 6050 5150
+Wire Wire Line
+	6050 5400 6050 5150
+Wire Wire Line
+	5100 4400 5100 4650
+Wire Wire Line
+	5750 4400 5100 4400
+Wire Wire Line
+	5100 5400 5100 5150
+Wire Wire Line
+	5750 5400 5100 5400
+Wire Wire Line
+	5100 5150 4900 5150
+Wire Wire Line
+	5100 4650 4900 4650
+Wire Wire Line
+	6000 4650 6750 4650
+Wire Wire Line
+	6750 4650 6750 5850
+Wire Wire Line
+	6750 5850 7000 5850
+Wire Wire Line
+	6000 5150 6600 5150
+Wire Wire Line
+	6600 5150 6600 5950
+Wire Wire Line
+	6600 5950 7000 5950
+Wire Notes Line
+	1600 950  2700 950 
+Connection ~ 6450 5800
+Wire Wire Line
+	5950 5700 6450 5700
+Wire Wire Line
+	5650 5700 5500 5700
+Wire Wire Line
+	5000 6050 7000 6050
+Wire Wire Line
+	6450 5700 6450 6050
+Wire Wire Line
+	5500 5800 6450 5800
+Wire Wire Line
+	5500 5700 5600 5600
+Wire Wire Line
+	6500 6250 7000 6250
+Wire Wire Line
+	6500 6150 6500 6250
+Wire Wire Line
+	6200 6150 6500 6150
+Wire Wire Line
+	6150 7600 7000 7600
+Wire Wire Line
+	6150 7900 6150 7600
+Wire Wire Line
+	5950 7900 6150 7900
+Wire Wire Line
+	6050 7500 7000 7500
+Wire Wire Line
+	6050 7750 6050 7500
+Wire Wire Line
+	5950 7750 6050 7750
+Wire Wire Line
+	5950 7400 7000 7400
+Wire Notes Line
+	3150 9300 3150 8250
+Wire Wire Line
+	5500 7300 7000 7300
+Wire Wire Line
+	7000 7200 5500 7200
+Wire Wire Line
+	5500 7100 7000 7100
+Wire Wire Line
+	7000 7000 5500 7000
+Wire Wire Line
+	5500 6900 7000 6900
+Wire Wire Line
+	5750 6700 5750 6500
+Wire Wire Line
+	5500 6700 5750 6700
+Connection ~ 5900 6500
+Connection ~ 5900 6800
+Wire Wire Line
+	5750 6500 6100 6500
+Wire Wire Line
+	5500 6800 6100 6800
+Wire Wire Line
+	2500 8700 2650 8700
+Wire Wire Line
+	2500 9000 2650 9000
+Wire Wire Line
+	5650 7600 5500 7600
+Wire Wire Line
+	5500 7800 5650 7800
+Wire Wire Line
+	5650 7900 5500 7900
+Wire Notes Line
+	4450 8200 8100 8200
+Wire Notes Line
+	2700 750  700  750 
+Wire Notes Line
+	700  750  700  2500
+Wire Notes Line
+	1700 9300 3150 9300
+Wire Notes Line
+	1700 8350 3150 8350
+Wire Notes Line
+	3150 8250 1700 8250
+Wire Notes Line
+	1700 8250 1700 9300
+Wire Notes Line
+	2700 2500 2700 750 
+Wire Notes Line
+	2700 850  1800 850 
+Wire Notes Line
+	700  2500 2700 2500
+Wire Notes Line
+	700  850  1850 850 
+Wire Notes Line
+	5050 3700 8050 3700
+Wire Notes Line
+	5050 3600 8050 3600
+Wire Wire Line
+	2500 8650 2500 8700
+Wire Wire Line
+	2500 9050 2500 9000
+Wire Wire Line
+	1800 8850 1800 9250
+Wire Wire Line
+	1800 9250 2450 9250
+Wire Wire Line
+	2400 8650 2500 8650
+Wire Wire Line
+	2400 9050 2500 9050
+Wire Wire Line
+	5650 7800 5650 7750
+Wire Notes Line
+	4450 4400 4450 4650
+Wire Notes Line
+	4450 5000 4450 5300
+Wire Notes Line
+	8050 5200 8050 5650
+Wire Notes Line
+	8050 6450 8050 6650
+Wire Wire Line
+	1300 1150 2000 1150
+Wire Wire Line
+	1300 2150 2000 2150
+Wire Wire Line
+	1950 2150 1950 1900
+Wire Wire Line
+	950  1800 2050 1800
+Wire Wire Line
+	950  1150 950  2150
+Wire Wire Line
+	950  1900 1050 1900
+Connection ~ 950  1900
+Wire Wire Line
+	950  2150 1000 2150
+Wire Wire Line
+	1000 1150 950  1150
+Wire Wire Line
+	950  1400 1050 1400
+Connection ~ 950  1800
+Connection ~ 950  1400
+Wire Notes Line
+	4500 3300 4500 700 
+Wire Wire Line
+	8300 2100 6150 2200
+Wire Wire Line
+	7300 1600 8300 1600
+Wire Wire Line
+	8300 1500 7350 1400
+Wire Wire Line
+	7350 1400 6000 1500
+Wire Wire Line
+	6400 1000 6300 1000
+Wire Wire Line
+	6300 1000 6300 1600
+Wire Wire Line
+	6300 1600 5100 1600
+Wire Wire Line
+	6400 1100 5100 1100
+Wire Wire Line
+	6400 1200 5100 1200
+Wire Wire Line
+	6400 1300 5100 1300
+Wire Wire Line
+	6400 1400 5100 1400
+Wire Wire Line
+	6000 1500 5100 1500
+Wire Wire Line
+	6400 2300 5100 2300
+Wire Wire Line
+	6400 2400 5100 2400
+Wire Wire Line
+	6400 2500 5100 2500
+Wire Wire Line
+	6400 2600 5100 2600
+Wire Wire Line
+	6400 2700 5600 2800
+Wire Wire Line
+	6400 2800 5600 2900
+Wire Wire Line
+	6400 2900 5600 3000
+Wire Notes Line
+	9200 700  9200 3300
+Wire Notes Line
+	4500 700  9200 700 
+Wire Notes Line
+	9200 800  4500 800 
+Wire Notes Line
+	9200 3300 4500 3300
+Wire Wire Line
+	1950 1150 1950 1400
+Wire Wire Line
+	1950 1500 2350 1500
+Wire Wire Line
+	1950 1600 2350 1600
+$Comp
+L HEADER_A_1X02 H1
+U 1 1 5C138EEE
+P 2350 1150
+F 0 "H1" H 2350 1700 50  0000 C CNN
+F 1 "HEADER_A_1X02" V 2450 1550 50  0000 C CNN
+F 2 "Koha-Suomi:Pin_Header_Straight_1x02_Pitch2.54mm" H 2350 1150 50  0001 C CNN
+F 3 "" H 2350 1150 50  0000 C CNN
+	1    2350 1150
+	-1   0    0    1   
+$EndComp
+Text Notes 2200 1450 0    61   ~ 0
+Electric lock\nnormal open\n
+Connection ~ 1950 1150
+Text Label 2000 1150 0    61   ~ 0
+PiHat_35_doorOFF
+Connection ~ 1950 2150
+Text Label 2000 2150 0    61   ~ 0
+PiHat_37_doorON
+Wire Wire Line
+	2050 1800 2050 2000
+Wire Wire Line
+	2050 2000 2100 2000
+Text Label 2100 2000 0    61   ~ 0
+PiHat_39_doorGND
+NoConn ~ 1050 1500
+NoConn ~ 1950 1700
+Text Label 6650 7200 2    60   ~ 0
+OLED_CS
+Text Label 6650 7100 2    60   ~ 0
+OLED_D2
+Text Label 6650 7000 2    60   ~ 0
+OLED_D1
+Text Label 6650 6900 2    60   ~ 0
+OLED_D0
+Text Label 6300 7400 2    61   ~ 0
+LED_R
+Text Label 6400 7500 2    61   ~ 0
+LED_B
+Text Label 6500 7600 2    61   ~ 0
+LED_G
+Wire Wire Line
+	5950 7400 5950 7600
+Wire Wire Line
+	7000 6150 6800 6150
+Wire Wire Line
+	7000 6350 6800 6350
+Wire Wire Line
+	7000 6450 6800 6450
+Text Label 6050 4750 0    61   ~ 0
+HeaterPSU+
+Text Label 6050 4850 0    61   ~ 0
+Heater+
+Text Label 6900 5000 3    61   ~ 0
+Heater-
+Wire Wire Line
+	7300 1600 6000 1700
+Wire Wire Line
+	6000 1700 5100 1700
+Wire Wire Line
+	6400 2100 6150 1900
+Wire Wire Line
+	6150 1900 5100 1900
+Wire Wire Line
+	6400 1900 6150 2000
+Wire Wire Line
+	6150 2000 5100 2000
+Wire Wire Line
+	6400 2000 6150 2100
+Wire Wire Line
+	6150 2100 5100 2100
+Wire Wire Line
+	6150 2200 5100 2200
+Text Label 5300 1100 0    61   ~ 0
+PiHat_HEAT_OFF
+Text Label 5300 1200 0    61   ~ 0
+PiHat_HEAT_ON
+Text Label 5300 1300 0    61   ~ 0
+PiHat_DS18B20
+Text Label 5300 1400 0    61   ~ 0
+PiHat_GND2
+Text Label 5300 1500 0    61   ~ 0
+PiHat_PIEZO
+Text Label 5300 1600 0    61   ~ 0
+PiHat_3V3
+Text Label 5300 1700 0    61   ~ 0
+PiHat_GND1
+Text Label 5300 1900 0    61   ~ 0
+PiHat_CLK/SCLK/D0
+Text Label 5300 2000 0    61   ~ 0
+PiHat_MOSI/SDI/D1
+Text Label 5300 2100 0    61   ~ 0
+PiHat_MISO/SDO/D2
+Text Label 5300 2200 0    61   ~ 0
+PiHat_CE0/CS
+Text Label 5300 2300 0    61   ~ 0
+PiHat_RES
+Text Label 5300 2400 0    61   ~ 0
+PiHat_LED_R
+Text Label 5300 2500 0    61   ~ 0
+PiHat_LED_B
+Text Label 5300 2600 0    61   ~ 0
+PiHat_LED_G
+$EndSCHEMATC
