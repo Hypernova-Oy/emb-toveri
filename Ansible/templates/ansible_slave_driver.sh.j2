@@ -18,6 +18,9 @@ echo ""
 echo "Checking if you are running as root"
 test $(whoami) != "root" && echo "Not running as root, aborting" && exit 1
 echo ""
+echo "Installing OpenSSH-Server"
+sudo apt -y install openssh-server
+echo ""
 echo "+------------------+"
 echo "| Setting hostname |"
 echo "+------------------+"
