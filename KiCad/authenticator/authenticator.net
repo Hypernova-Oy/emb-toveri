@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/kivilahtio/work/emb-toveri/KiCad/authenticator/authenticator.sch)
-    (date "pe 12. heinäkuuta 2019 14.33.42")
+    (date "ti 30. heinäkuuta 2019 13.15.44")
     (tool "Eeschema 5.0.2-bee76a0~70~ubuntu18.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -308,9 +308,10 @@
       (footprint Koha-Suomi:PI_GPIO_Header_F_2x20)
       (datasheet https://www.mouser.fi/datasheet/2/1/ts0815-31700.pdf)
       (fields
-        (field (name Manufacturer) 3M)
-        (field (name Model) 929852-01-10-RA)
-        (field (name Title) "Headers & Wire Housings BOARDMT SKT HDR/20POS/2 ROW"))
+        (field (name Manufacturer) Adafruit)
+        (field (name Model) ADA1992)
+        (field (name Supplier) thepihut.com)
+        (field (name Title) "Adafruit GPIO Header for RaspberryPi A+/B+/Pi 2/Pi 3"))
       (libsource (lib Koha-Suomi) (part RPi_GPIO) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 57BB6E59))
@@ -614,6 +615,17 @@
       (libsource (lib Koha-Suomi) (part O-Ring) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 5D29687A))
+    (comp (ref STO1)
+      (value "Standoff x2")
+      (footprint Koha-Suomi:Bad_board_tag)
+      (fields
+        (field (name Manufacturer) Adafruit)
+        (field (name Model) "Adafruit Brass M2.5 Standoffs 16mm tall - Black Plated - Pack of 2")
+        (field (name Supplier) thepihut.com)
+        (field (name Title) ADA2337))
+      (libsource (lib Koha-Suomi) (part Standoff) (description ""))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5D416427))
     (comp (ref NHD1)
       (value NHD-0420CW-AB3)
       (footprint Koha-Suomi:Pin_Header_Straight_1x20_Pitch2.54mm)
@@ -846,6 +858,10 @@
       (fields
         (field (name Reference) SOC)
         (field (name Value) SoC)))
+    (libpart (lib Koha-Suomi) (part Standoff)
+      (fields
+        (field (name Reference) STO)
+        (field (name Value) Standoff)))
     (libpart (lib Koha-Suomi) (part USB-Stick)
       (fields
         (field (name Reference) US)

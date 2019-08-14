@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:authenticator-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
@@ -678,7 +678,7 @@ Wire Wire Line
 Wire Wire Line
 	13950 1600 14900 1600
 $Comp
-L Koha-Suomi:RJ45_2xPort RJ2
+L authenticator-rescue:RJ45_2xPort-Koha-Suomi RJ2
 U 1 1 5D45EC40
 P 10750 1450
 F 0 "RJ2" H 11750 2800 50  0000 R CNN
@@ -694,7 +694,7 @@ $EndComp
 NoConn ~ 11500 2800
 NoConn ~ 11500 800 
 $Comp
-L Koha-Suomi:RJ45_2xPort RJ1
+L authenticator-rescue:RJ45_2xPort-Koha-Suomi RJ1
 U 1 1 5D471255
 P 8250 6450
 F 0 "RJ1" H 9050 6850 50  0000 R CNN
@@ -726,7 +726,7 @@ Heater-
 Text Label 7500 7800 0    50   ~ 0
 Heater-
 $Comp
-L Koha-Suomi:HEADER_A_1X07_F H6
+L authenticator-rescue:HEADER_A_1X07_F-Koha-Suomi H6
 U 1 1 5D4F0EDB
 P 4050 7100
 F 0 "H6" H 3950 7600 50  0000 L CNN
@@ -740,7 +740,7 @@ F 6 "Molex" H 4050 7100 50  0001 C CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Koha-Suomi:HEADER_A_1X07_F H5
+L authenticator-rescue:HEADER_A_1X07_F-Koha-Suomi H5
 U 1 1 5D4FFA2B
 P 2650 6900
 F 0 "H5" H 2550 6600 50  0000 L CNN
@@ -839,7 +839,7 @@ Wire Wire Line
 Wire Wire Line
 	6850 4000 6350 4000
 $Comp
-L Koha-Suomi:Dupont_Cable_3-pin DUP2
+L authenticator-rescue:Dupont_Cable_3-pin-Koha-Suomi DUP2
 U 1 1 5D2B92A9
 P 3950 5900
 F 0 "DUP2" H 3950 5950 50  0000 C CNN
@@ -852,7 +852,7 @@ F 5 "2.54 pitch 3-wire cable" H 3950 5900 50  0001 C CNN "Model"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Koha-Suomi:Dupont_Cable_4-pin DUP1
+L authenticator-rescue:Dupont_Cable_4-pin-Koha-Suomi DUP1
 U 1 1 5D306F9D
 P 3750 8250
 F 0 "DUP1" H 3750 8200 50  0000 C CNN
@@ -869,7 +869,7 @@ Wire Notes Line
 Text Notes 8350 3100 0    39   ~ 0
 This model of\nPTC heater has\ncable built-in
 $Comp
-L Koha-Suomi:Cabinet_cable_2-pin CC1
+L authenticator-rescue:Cabinet_cable_2-pin-Koha-Suomi CC1
 U 1 1 5D3574CC
 P 9300 4250
 F 0 "CC1" H 8950 4250 50  0000 C CNN
@@ -883,7 +883,7 @@ F 6 "Cabinet cable 2-wire" H 9300 4250 50  0001 C CNN "Model"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Koha-Suomi:Cat-cable CAT1
+L authenticator-rescue:Cat-cable-Koha-Suomi CAT1
 U 1 1 5D3638A4
 P 9300 6400
 F 0 "CAT1" H 8850 6300 50  0000 C CNN
@@ -899,7 +899,7 @@ F 8 "RS PRO" H 9300 6400 50  0001 C CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Koha-Suomi:Cat-cable CAT2
+L authenticator-rescue:Cat-cable-Koha-Suomi CAT2
 U 1 1 5D363C6D
 P 9300 7200
 F 0 "CAT2" H 8850 7100 50  0000 C CNN
@@ -956,16 +956,18 @@ Wire Wire Line
 Wire Wire Line
 	10550 4150 10550 3950
 $Comp
-L Koha-Suomi:RPi_GPIO RPi1
+L authenticator-rescue:RPi_GPIO-Koha-Suomi RPi1
 U 1 1 57BB6E59
 P 13250 1000
 F 0 "RPi1" H 14000 1250 60  0000 C CNN
 F 1 "RPi_GPIO" H 14000 1150 60  0000 C CNN
 F 2 "Koha-Suomi:PI_GPIO_Header_F_2x20" H 13250 1000 60  0001 C CNN
 F 3 "https://www.mouser.fi/datasheet/2/1/ts0815-31700.pdf" H 13250 1000 60  0001 C CNN
-F 4 "929852-01-10-RA" H 13250 1000 50  0001 C CNN "Model"
-F 5 "Headers & Wire Housings BOARDMT SKT HDR/20POS/2 ROW" H 13250 1000 50  0001 C CNN "Title"
-F 6 "3M" H 13250 1000 50  0001 C CNN "Manufacturer"
+F 4 "" H 13250 1000 50  0001 C CNN "Model"
+F 5 "40 Pin Extra Tall Header (Push Fit Version)" H 13250 1000 50  0001 C CNN "Title"
+F 6 "Adafruit" H 13250 1000 50  0001 C CNN "Manufacturer"
+F 7 "thepihut.com" H 13250 1000 50  0001 C CNN "Supplier"
+F 8 "13.5mm" H 13250 1000 50  0001 C CNN "BodyHeight"
 	1    13250 1000
 	1    0    0    -1  
 $EndComp
@@ -1252,7 +1254,7 @@ PiHat_BTN1
 Text Notes 8350 5300 0    35   ~ 0
 Includes 30cm wire
 $Comp
-L Koha-Suomi:HEADER_A_1X04 H1
+L authenticator-rescue:HEADER_A_1X04-Koha-Suomi H1
 U 1 1 5D8D405C
 P 7850 5300
 F 0 "H1" H 7800 5850 50  0000 L CNN
@@ -1288,7 +1290,7 @@ F 6 "Molex" H 3200 5450 50  0001 C CNN "Manufacturer"
 	1    0    0    1   
 $EndComp
 $Comp
-L Koha-Suomi:Led_Holder_SML1083 LH1
+L authenticator-rescue:Led_Holder_SML1083-Koha-Suomi LH1
 U 1 1 5D2B05DC
 P 2200 8900
 F 0 "LH1" H 2050 9000 50  0000 L CNN
@@ -1305,7 +1307,7 @@ $EndComp
 Wire Notes Line
 	3350 7600 3350 9400
 $Comp
-L Koha-Suomi:LED_Holder_SML1083_fitting LHI1
+L authenticator-rescue:LED_Holder_SML1083_fitting-Koha-Suomi LHI1
 U 1 1 5D2D2617
 P 2900 8900
 F 0 "LHI1" H 2850 9000 50  0000 L CNN
@@ -1331,7 +1333,7 @@ F 6 "Hammond Manufacturing" H 7600 900 50  0001 C CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Koha-Suomi:Enclosure_Gasket_1550KSGASKET EG1
+L authenticator-rescue:Enclosure_Gasket_1550KSGASKET-Koha-Suomi EG1
 U 1 1 5D2E9E16
 P 7150 1000
 F 0 "EG1" H 7100 1100 50  0000 L CNN
@@ -1349,7 +1351,7 @@ Wire Wire Line
 Wire Wire Line
 	6900 4950 6900 6000
 $Comp
-L Koha-Suomi:PV4T_hex_nut PV4HN1
+L authenticator-rescue:PV4T_hex_nut-Koha-Suomi PV4HN1
 U 1 1 5D308460
 P 8500 5450
 F 0 "PV4HN1" H 8350 5450 50  0000 L CNN
@@ -1363,7 +1365,7 @@ F 6 "Switch Hardware Hardware Hexnut for PV1, PV4 and PV Anti-Vandal Family" H 8
 	1    0    0    -1  
 $EndComp
 $Comp
-L Koha-Suomi:SoC SOC1
+L authenticator-rescue:SoC-Koha-Suomi SOC1
 U 1 1 5D33119C
 P 15100 1150
 F 0 "SOC1" H 15000 1050 50  0000 L CNN
@@ -1378,7 +1380,7 @@ F 7 "Raspberry Pi 3 Model B+" H 15100 1150 50  0001 C CNN "Title"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Koha-Suomi:SD_Card SD1
+L authenticator-rescue:SD_Card-Koha-Suomi SD1
 U 1 1 5D333748
 P 15400 1150
 F 0 "SD1" H 15350 1100 50  0000 L CNN
@@ -1393,7 +1395,7 @@ F 7 "Raspberry Pi" H 15400 1150 50  0001 C CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Koha-Suomi:Wall_PSU_5V U1
+L authenticator-rescue:Wall_PSU_5V-Koha-Suomi U1
 U 1 1 5D3356C2
 P 15800 1300
 F 0 "U1" H 15700 1400 50  0000 L CNN
@@ -1408,7 +1410,7 @@ F 7 "fi.rsdelivers.com" H 15800 1300 50  0001 C CNN "Supplier"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Koha-Suomi:RPi_Enclosure RPE1
+L authenticator-rescue:RPi_Enclosure-Koha-Suomi RPE1
 U 1 1 5D336DF3
 P 15250 1600
 F 0 "RPE1" H 15500 1600 50  0000 L CNN
@@ -1423,7 +1425,7 @@ F 7 "fi.rsdelivers.com" H 15250 1600 50  0001 C CNN "Supplier"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Koha-Suomi:USB-Stick US1
+L authenticator-rescue:USB-Stick-Koha-Suomi US1
 U 1 1 5D338938
 P 15200 1850
 F 0 "US1" H 15528 1896 50  0000 L CNN
@@ -1438,7 +1440,7 @@ F 7 "fi.rsdelivers.com" H 15200 1850 50  0001 C CNN "Supplier"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Koha-Suomi:Barcode_Reader BCR1
+L authenticator-rescue:Barcode_Reader-Koha-Suomi BCR1
 U 1 1 5D33FBB5
 P 15150 1900
 F 0 "BCR1" H 15050 1700 50  0000 L CNN
@@ -1451,7 +1453,7 @@ F 5 "Datalogic" H 15150 1900 50  0001 C CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Koha-Suomi:Cable_USB_TypeA_F_M U2
+L authenticator-rescue:Cable_USB_TypeA_F_M-Koha-Suomi U2
 U 1 1 5D34BCD9
 P 15350 2400
 F 0 "U2" H 15200 2450 50  0000 C CNN
@@ -1466,7 +1468,7 @@ F 7 "fi.rsdelivers.com" H 15350 2400 50  0001 C CNN "Supplier"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Koha-Suomi:O-Ring OR1
+L authenticator-rescue:O-Ring-Koha-Suomi OR1
 U 1 1 5D29687A
 P 8750 5450
 F 0 "OR1" H 8700 5450 50  0000 L CNN
@@ -1478,6 +1480,21 @@ F 5 "E-Switch" H 8750 5450 50  0001 C CNN "Manufacturer"
 F 6 "www.mouser.fi" H 8750 5450 50  0001 C CNN "Supplier"
 F 7 "Switch Hardware SWITCH O-RING" H 8750 5450 50  0001 C CNN "Title"
 	1    8750 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L authenticator-rescue:Standoff-Koha-Suomi STO1
+U 1 1 5D416427
+P 13200 3100
+F 0 "STO1" V 13200 2850 50  0000 L CNN
+F 1 "Standoff x2" H 13100 2750 50  0000 L CNN
+F 2 "Koha-Suomi:Bad_board_tag" H 13200 3100 50  0001 C CNN
+F 3 "" H 13200 3100 50  0001 C CNN
+F 4 "Adafruit Brass M2.5 Standoffs 16mm tall - Black Plated - Pack of 2" V 13200 3100 50  0001 C CNN "Model"
+F 5 "ADA2337" V 13200 3100 50  0001 C CNN "Title"
+F 6 "Adafruit" V 13200 3100 50  0001 C CNN "Manufacturer"
+F 7 "thepihut.com" V 13200 3100 50  0001 C CNN "Supplier"
+	1    13200 3100
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

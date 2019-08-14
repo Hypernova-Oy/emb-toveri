@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/kivilahtio/work/emb-toveri/KiCad/authenticator/authenticator.sch</source>
-    <date>ma 15. heinäkuuta 2019 17.41.03</date>
+    <date>ti 30. heinäkuuta 2019 13.15.56</date>
     <tool>Eeschema 5.0.2-bee76a0~70~ubuntu18.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -364,9 +364,10 @@
       <footprint>Koha-Suomi:PI_GPIO_Header_F_2x20</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/1/ts0815-31700.pdf</datasheet>
       <fields>
-        <field name="Manufacturer">3M</field>
-        <field name="Model">929852-01-10-RA</field>
-        <field name="Title">Headers &amp; Wire Housings BOARDMT SKT HDR/20POS/2 ROW</field>
+        <field name="Manufacturer">Adafruit</field>
+        <field name="Model">ADA1992</field>
+        <field name="Supplier">thepihut.com</field>
+        <field name="Title">Adafruit GPIO Header for RaspberryPi A+/B+/Pi 2/Pi 3</field>
       </fields>
       <libsource lib="Koha-Suomi" part="RPi_GPIO" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -728,6 +729,19 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D29687A</tstamp>
     </comp>
+    <comp ref="STO1">
+      <value>Standoff x2</value>
+      <footprint>Koha-Suomi:Bad_board_tag</footprint>
+      <fields>
+        <field name="Manufacturer">Adafruit</field>
+        <field name="Model">Adafruit Brass M2.5 Standoffs 16mm tall - Black Plated - Pack of 2</field>
+        <field name="Supplier">thepihut.com</field>
+        <field name="Title">ADA2337</field>
+      </fields>
+      <libsource lib="Koha-Suomi" part="Standoff" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D416427</tstamp>
+    </comp>
     <comp ref="NHD1">
       <value>NHD-0420CW-AB3</value>
       <footprint>Koha-Suomi:Pin_Header_Straight_1x20_Pitch2.54mm</footprint>
@@ -1022,6 +1036,12 @@
       <fields>
         <field name="Reference">SOC</field>
         <field name="Value">SoC</field>
+      </fields>
+    </libpart>
+    <libpart lib="Koha-Suomi" part="Standoff">
+      <fields>
+        <field name="Reference">STO</field>
+        <field name="Value">Standoff</field>
       </fields>
     </libpart>
     <libpart lib="Koha-Suomi" part="USB-Stick">
