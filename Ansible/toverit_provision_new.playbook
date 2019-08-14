@@ -7,7 +7,7 @@
 # For example virtualization hosts or externally provisioned virtual machines need to have this script ran on them
 #
 
-- hosts: localhost
+- hosts: ansible_controller
 
   vars_prompt:
     - name: "toveri_inventory_hostname"
