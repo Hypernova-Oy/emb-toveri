@@ -10,6 +10,18 @@
 
 SYSTEMD_SRV_AUTOSSH_FILE="/etc/systemd/system/toveri-cc-ssh-tunnel.service"
 
+TOVERI_CC_HOSTNAME="toveri-cc"
+TOVERI_CC_IP="{{ansible_host}}"
+TOVERI_CC_HOST_KEY_PUB="ecdsa-sha2-nistp256 {{ansible_ssh_host_key_ecdsa_public}}"
+TOVERI_CC_SSH_REVERSE_SHELL_REMOTE_PORT="{{toveri_cc_ssh_remote_port}}"
+
+TOVERI_HOSTNAME="{{toveri_inventory_hostname}}"
+TOVERI_ID_RSA="{{lookup('file', secret+'/id_rsa.'+toveri_inventory_hostname)}}"
+TOVERI_ID_RSA_PUB="{{lookup('file', secret+'/id_rsa.'+toveri_inventory_hostname+'.pub')}}"
+
+ANSIBLE_SUDO_PASS="{{ansible_sudo_pass}}"
+ANSIBLE_PUBLIC_KEY="{{ansible_public_key}}"
+
 echo "+----------------------------------------+"
 echo "| Configuring Ansible-access             |"
 echo "|  for the Koha-Suomi central controller |"
@@ -25,9 +37,9 @@ echo "+------------------+"
 echo "| Setting hostname |"
 echo "+------------------+"
 echo ""
-echo "{{toveri_inventory_hostname}}" >> /etc/hostname
-echo "127.0.0.1 {{toveri_inventory_hostname}}" >> /etc/hosts
-echo "{{ansible_host}} toveri-cc" >> /etc/hosts
+echo "$TOVERI_HOSTNAME" >> /etc/hostname
+echo "127.0.0.1 $TOVERI_HOSTNAME" >> /etc/hosts
+echo "$TOVERI_CC_IP toveri-cc" >> /etc/hosts
 echo ""
 echo "+---------------------------------------------------------------+"
 echo "| Intalling some dependencies ansible needs to run it's modules |"
@@ -42,7 +54,7 @@ echo ""
 useradd -m ansible
 addgroup ansible sudo
 echo ""
-echo "ansible:{{ansible_sudo_pass}}" | chpasswd
+echo "ansible:$ANSIBLE_SUDO_PASS" | chpasswd
 echo "Password set. Thank you!"
 echo ""
 echo "+---------------------------------------------------+"
@@ -51,20 +63,21 @@ echo "+---------------------------------------------------+"
 echo ""
 mkdir /home/ansible/.ssh
 chmod 700 /home/ansible/.ssh
-echo "{{ ansible_public_key }}" >> /home/ansible/.ssh/authorized_keys
+echo "$ANSIBLE_PUBLIC_KEY" >> /home/ansible/.ssh/authorized_keys
 chown -R ansible:ansible /home/ansible/.ssh
 chmod 600 /home/ansible/.ssh/authorized_keys
-cat /home/ansible/.ssh/id_rsa.pub >> /home/ansible/.ssh/authorized_keys # allow connecting to itself, to simplify ssh connectivity layer configuration
 echo ""
 echo "+-----------------------------------+"
 echo "| Creating toveri-user and ssh-key  |"
 echo "+-----------------------------------+"
 useradd -m toveri
 su -c "echo 'y' | /usr/bin/ssh-keygen -f /home/toveri/.ssh/id_rsa -t rsa -N ''" toveri #This simply generates correct file structures.
-echo "{{lookup('file', '/home/ansible/id_rsa')}}" > /home/toveri/.ssh/id_rsa
+echo "$TOVERI_ID_RSA" > /home/toveri/.ssh/id_rsa
 chmod 600 /home/toveri/.ssh/id_rsa
-echo "{{lookup('file', '/home/ansible/id_rsa.pub')}}" > /home/toveri/.ssh/id_rsa.pub
+echo "$TOVERI_ID_RSA_PUB" > /home/toveri/.ssh/id_rsa.pub
 chmod 644 /home/toveri/.ssh/id_rsa.pub
+echo "$TOVERI_CC_HOSTNAME $TOVERI_CC_HOST_KEY_PUB" >> /home/toveri/.ssh/known_hosts
+chmod 644 /home/toveri/.ssh/known_hosts
 chown -R toveri:toveri /home/toveri/.ssh
 echo ""
 echo "+-----------------------------+"
@@ -80,7 +93,7 @@ After=network.target
 Type=simple
 User=toveri
 Environment='AUTOSSH_GATETIME=0'
-ExecStart=/usr/bin/autossh -M 0 -o 'ServerAliveInterval 120' -o 'ServerAliveCountMax 0' -o 'ExitOnForwardFailure yes' -NT -R {{toveri_cc_ssh_remote_port}}:localhost:22 toveri@toveri-cc
+ExecStart=/usr/bin/autossh -M 0 -o 'ServerAliveInterval 120' -o 'ServerAliveCountMax 2' -o 'ExitOnForwardFailure yes' -NT -R $TOVERI_CC_SSH_REVERSE_SHELL_REMOTE_PORT:localhost:22 toveri@toveri-cc
 Restart=always
 RestartSec=3
 

@@ -45,9 +45,9 @@
     # Otherwise if the key is created in the Toveri-device, it must be manually moved away from there first.
     # Now this key-exchange is automated.
     - name: Create ssh-keypair for the new toveri
-      shell: ssh-keygen -b 2048 -t rsa -f /home/ansible/id_rsa -q -N "" -C "toveri@{{toveri_inventory_hostname}}"
+      shell: ssh-keygen -b 2048 -t rsa -f {{secret}}/id_rsa.{{toveri_inventory_hostname}} -q -N "" -C "toveri@{{toveri_inventory_hostname}}"
       args:
-        creates: /home/ansible/id_rsa
+        creates: "{{secret}}/id_rsa.{{toveri_inventory_hostname}}"
 
     - name: Create a provisioning script
       template:
@@ -60,11 +60,11 @@
       authorized_key:
         user: toveri
         state: present
-        key: "{{lookup('file', '/home/ansible/id_rsa.pub')}}"
+        key: "{{lookup('file', secret+'/id_rsa.'+toveri_inventory_hostname+'.pub')}}"
       become: yes
 
     - name: Cleanup new toveri keys
-      shell: "rm /home/ansible/id_rsa*"
+      shell: "rm {{secret}}/id_rsa.{{toveri_inventory_hostname}}*"
       args:
         warn: False
 
@@ -83,6 +83,16 @@
         regexp: "\b{{toveri_inventory_hostname}}\b"
         line:   "127.0.0.1 {{toveri_inventory_hostname}}"
       become: yes
+
+    - name: Add ssh_config entry
+      blockinfile:
+        create: "yes"
+        mode:   "640"
+        marker: "# {mark} {{toveri_inventory_hostname}} ANSIBLE MANAGED BLOCK"
+        block: |
+          Host {{toveri_inventory_hostname}}
+            HostName {{toveri_inventory_hostname}}
+            Port {{toveri_cc_ssh_remote_port}}
 
     - debug: msg="Dynamic inventory updated. Check version control for changes."
 

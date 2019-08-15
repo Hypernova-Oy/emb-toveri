@@ -13,6 +13,7 @@ ansibleVaultPasswordFile="$ansibleSystemConfigPath/passwd"
 ansibleConfigFile="$ansibleSystemConfigPath/ansible.cfg"
 ansibleExampleConfigurationsDir="examples/default_config"
 ansiblePlaybookConfigDir="/home/ansible/ToveriConfig"
+ansibleSecretDir="/home/ansible/secret"
 
 echo ""
 echo "INSTALLING ANSIBLE"
@@ -52,6 +53,13 @@ cp -r $ansibleExampleConfigurationsDir $ansiblePlaybookConfigDir
 echo "ansible_sudo_pass:  \"$ansible_sudo_pass\""        >> $ansiblePlaybookConfigDir/group_vars/all
 echo "ansible_config_dir: \"$ansiblePlaybookConfigDir\"" >> $ansiblePlaybookConfigDir/group_vars/all
 echo "ansible_public_key: \"$ansible_public_key\""       >> $ansiblePlaybookConfigDir/group_vars/all
+
+echo ""
+echo "MAKE SECRET DIRECTORY FOR TEMP USE"
+echo "__________________________________"
+mkdir $ansibleSecretDir
+chown ansible:root $ansibleSecretDir
+chmod 700 $ansibleSecretDir
 
 echo ""
 echo "POST INSTALLATION TASKS"
