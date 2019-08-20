@@ -1,31 +1,9 @@
 ---
 
-- name: "Install dependencies"
+- name: "Install WiringPi from packages"
   apt:
     name:
-      - git
+      - wiringpi
     state: present
     cache_valid_time: 3000
   become: yes
-
-- name: "Get the Git repo"
-  git: repo={{gitRepository}} \
-       update=yes \
-       clone=yes \
-       dest={{programHome}}
-  register: get_git_repo
-  become: yes
-  become_user: "{{programUser}}"
-
-- name: "reinstall?"
-  set_fact: reinstall=1
-  when: "get_git_repo.changed"
-
-- name: "Rebuild"
-  command: "./build"
-  args:
-    chdir: "{{programHome}}"
-  register: rebuild_services_make
-  become: yes
-  when: reinstall is defined
-
