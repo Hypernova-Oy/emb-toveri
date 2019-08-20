@@ -52,7 +52,7 @@
     - name: Create a provisioning script
       template:
         src:  "templates/ansible_slave_driver.sh.j2"
-        dest: "~/ansible_slave_driver.sh"
+        dest: "{{secret}}/ansible_slave_driver.sh"
         mode: 0700
         force: yes
 
@@ -86,6 +86,7 @@
 
     - name: Add ssh_config entry
       blockinfile:
+        path:   "~/.ssh/config"
         create: "yes"
         mode:   "640"
         marker: "# {mark} {{toveri_inventory_hostname}} ANSIBLE MANAGED BLOCK"
