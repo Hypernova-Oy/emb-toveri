@@ -109,14 +109,25 @@ def selected_to_techdraw(cutterDiameter):
         clone = Draft.clone(sel)
         clone.Label = sel.Label + "_clone"
         clone.ViewObject.Visibility=False
+
+        # Automatically fix possible issues with the cloned shape
+        clone_fixed = doc.addObject('Part::Feature',clone.Name)
+        clone_fixed.Shape=clone.Shape.removeSplitter()
+        clone_fixed.Label = clone.Label + "_fixed"
+        clone_fixed.ViewObject.Visibility=False
+#        clone_fixed.ShapeColor = clone.ShapeColor
+#        clone_fixed.LineColor = clone.LineColor
+#        clone_fixed.PointColor = clone.PointColor
+        doc.removeObject(clone.Name)
+
         doc.recompute()
-        face = get_biggest_face(clone)
-        rotate_face_up(clone, face)
-        rotate_biggest_side_up(clone, face)
+        face = get_biggest_face(clone_fixed)
+        rotate_face_up(clone_fixed, face)
+        rotate_biggest_side_up(clone_fixed, face)
 
         # create a contour line object for every selected object
         offset = doc.addObject("Part::Offset", sel.Label + "_offset")
-        offset.Source = clone
+        offset.Source = clone_fixed
         offset.Value = cutterDiameter / 2
         offset.Mode = 0
         offset.Join = 2
