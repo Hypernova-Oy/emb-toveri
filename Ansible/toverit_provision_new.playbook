@@ -56,6 +56,9 @@
         mode: 0700
         force: yes
 
+    - name: Encrypt the provisioning script for transport
+      command: gpg -c --pinentry-mode=loopback --passphrase "{{ansible_slave_driver_passphrase}}" "{{secret}}/ansible_slave_driver.sh"
+
     - name: Authorize toveri public key
       authorized_key:
         user: toveri
@@ -69,7 +72,7 @@
         warn: False
 
     - name: Provide a template host_vars
-      command: cp -rT {{ansible_config_dir}}/host_vars/toverrii {{ansible_config_dir}}/host_vars/{{toveri_inventory_hostname}}
+      command: cp -rT examples/default_config/host_vars/toverrii {{ansible_config_dir}}/host_vars/{{toveri_inventory_hostname}}
 
     - name: Create a inventory entry with connection parameters
       lineinfile:

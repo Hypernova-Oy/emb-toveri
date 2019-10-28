@@ -32,6 +32,9 @@ test $(whoami) != "root" && echo "Not running as root, aborting" && exit 1
 echo ""
 echo "Installing OpenSSH-Server"
 sudo apt -y install openssh-server
+#Raspberry Pi might have openssh-server installed but masked
+sudo systemctl enable ssh
+sudo systemctl start ssh
 echo ""
 echo "+------------------+"
 echo "| Setting hostname |"
