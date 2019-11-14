@@ -72,6 +72,9 @@
     - file: "/etc/ssauthenticator/daemon.conf"
       directive: "BarcodeReaderModel"
       value: "BarcodeReaderModel {{hostvars[inventory_hostname]['toveri_barcode_reader_model']}}"
+    - file: "/etc/ssauthenticator/daemon.conf"
+      directive: "DoorOpenDuration"
+      value: "DoorOpenDuration {{hostvars[inventory_hostname]['toveri_door_open_duration']}}"
     tags: ['SSAuthenticator']
 
   - role: makeProgram
