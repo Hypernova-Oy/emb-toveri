@@ -24,6 +24,7 @@
   git: repo={{gitRepository}} \
        update=yes \
        clone=yes \
+       force=yes \
        dest={{programHome}}
   register: get_git_repo
   become: yes
