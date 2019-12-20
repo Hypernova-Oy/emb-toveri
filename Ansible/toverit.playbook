@@ -75,6 +75,9 @@
     - file: "/etc/ssauthenticator/daemon.conf"
       directive: "DoorOpenDuration"
       value: "DoorOpenDuration {{hostvars[inventory_hostname]['toveri_door_open_duration']}}"
+    - file: "/etc/ssauthenticator/daemon.conf"
+      directive: "RandomGreetingChance"
+      value: "RandomGreetingChance {{hostvars[inventory_hostname]['random_greeting_chance']}}"
     tags: ['SSAuthenticator']
 
   - role: makeProgram

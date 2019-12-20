@@ -2,3 +2,5 @@
 
 toveri_git_server: "https://github.com/Hypernova-Oy"
 
+random_greeting_chance: 25
+
