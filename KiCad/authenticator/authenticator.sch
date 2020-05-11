@@ -1,10 +1,9 @@
 EESchema Schematic File Version 4
-LIBS:authenticator-cache
 EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 1 2
+Sheet 1 1
 Title "Authenticator"
 Date ""
 Rev "0.1"
@@ -14,8 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 2100 7700 0    60   ~ 0
-Signal LED
 Text Notes 15150 3650 0    60   ~ 0
 Door relay
 $Comp
@@ -29,6 +26,7 @@ F 3 "https://www.mouser.fi/datasheet/2/293/e-umw-1219455.pdf" H 5900 6650 50  00
 F 4 "UMW0G101MDD" H 5900 6650 50  0001 C CNN "Model"
 F 5 "Aluminium Electrolytic Capacitors - Radial Leaded 4volts 100uF 85c 5x5 2LS" H 5900 6650 50  0001 C CNN "Title"
 F 6 "Nichicon" H 5900 6650 50  0001 C CNN "Manufacturer"
+F 7 "0.297" H 5900 6650 50  0001 C CNN "ALV0%€"
 	1    5900 6650
 	1    0    0    -1  
 $EndComp
@@ -47,6 +45,7 @@ F 3 "https://www.mouser.fi/datasheet/2/219/MF-MFS-RK-18760.pdf" H 5800 5700 50  
 F 4 "MF1/4DC4701F" H 5800 5700 50  0001 C CNN "Model"
 F 5 "Metal Film Resistors - Through Hole 4.7K 1% 100PPM" H 5800 5700 50  0001 C CNN "Title"
 F 6 "KOE Speer" V 5800 5700 50  0001 C CNN "Manufacturer"
+F 7 "0.231" V 5800 5700 50  0001 C CNN "ALV0%€"
 	1    5800 5700
 	0    1    1    0   
 $EndComp
@@ -61,6 +60,7 @@ F 3 "https://www.mouser.fi/datasheet/2/219/MF-MFS-RK-18760.pdf" H 5800 7600 50  
 F 4 "MF1/4DC1000F" H 5800 7600 50  0001 C CNN "Model"
 F 5 "Metal Film Resistors - Through Hole 100ohm 1% 100PPM" H 5800 7600 50  0001 C CNN "Title"
 F 6 "KOA Speer" V 5800 7600 50  0001 C CNN "Manufacturer"
+F 7 "0.231" V 5800 7600 50  0001 C CNN "ALV0%€"
 	1    5800 7600
 	0    1    1    0   
 $EndComp
@@ -75,6 +75,7 @@ F 3 "https://www.mouser.fi/datasheet/2/219/MF-MFS-RK-18760.pdf" H 5800 7750 50  
 F 4 "MF1/4CCT52R2200F" H 5800 7750 50  0001 C CNN "Model"
 F 5 "Metal Film Resistors - Through Hole 1/4 WATT 220 OHM 1%" H 5800 7750 50  0001 C CNN "Title"
 F 6 "KOA Speer" V 5800 7750 50  0001 C CNN "Manufacturer"
+F 7 "0.191" V 5800 7750 50  0001 C CNN "ALV0%€"
 	1    5800 7750
 	0    1    1    0   
 $EndComp
@@ -89,6 +90,7 @@ F 3 "https://www.mouser.fi/datasheet/2/256/DS18B20-370043.pdf" H 5300 5650 60  0
 F 4 "DS18B20+" H 5300 5650 50  0001 C CNN "Model"
 F 5 "Board Mount Temperature Sensors Prgmble Resolution 1-Wire Parasite Pwr" H 5300 5650 50  0001 C CNN "Title"
 F 6 "Maxim Integrated" H 5300 5650 50  0001 C CNN "Manufacturer"
+F 7 "3.53" H 5300 5650 50  0001 C CNN "ALV0%€"
 	1    5300 5650
 	1    0    0    -1  
 $EndComp
@@ -117,6 +119,7 @@ F 3 "https://www.mouser.fi/datasheet/2/334/AST-1732MR-R-72511.pdf" H 6200 6000 6
 F 4 "AST-1732MR-R" H 6200 6000 50  0001 C CNN "Model"
 F 5 "Speakers & Transducers SPEAKER 32OHM" H 6200 6000 50  0001 C CNN "Title"
 F 6 "PUI Audio" H 6200 6000 50  0001 C CNN "Manufacturer"
+F 7 "3.50" H 6200 6000 50  0001 C CNN "ALV0%€"
 	1    6200 6000
 	1    0    0    -1  
 $EndComp
@@ -140,9 +143,9 @@ Text Label 4900 4650 2    68   ~ 0
 GND
 Text Notes 3900 4950 0    56   ~ 0
 Double latch relay.\nNormal closed.\nEnclosure heater controller
-Text Notes 2150 5450 0    60   ~ 0
+Text Notes 2200 5450 0    60   ~ 0
 Heater temperature sensor
-Text Notes 3750 6250 0    68   ~ 0
+Text Notes 3800 6250 0    68   ~ 0
 To external \nheater temp\nsensor
 Text Notes 7150 4350 0    68   ~ 0
 - To Heater PSU +\n- To Heater PSU -\n- To Heater + (pin 2)\n- To Heater - (pin 1)
@@ -175,6 +178,7 @@ F 3 "https://www.mouser.fi/datasheet/2/276/0022032041_PCB_HEADERS-158390.pdf" H 
 F 4 "22-03-2041" H 5300 7450 50  0001 C CNN "Model"
 F 5 "Headers & Wire Housings VERT PCB HDR 4P TIN PLATING" H 5300 7450 50  0001 C CNN "Title"
 F 6 "Molex" H 5300 7450 50  0001 C CNN "Manufacturer"
+F 7 "0.297" H 5300 7450 50  0001 C CNN "ALV0%€"
 	1    5300 7450
 	-1   0    0    1   
 $EndComp
@@ -189,6 +193,7 @@ F 3 "https://www.mouser.fi/datasheet/2/276/0022102031_PCB_HEADERS-158469.pdf" H 
 F 4 "22-10-2031" H 4700 5450 50  0001 C CNN "Model"
 F 5 "Headers & Wire Housings VERT PCB HDR 3P GOLD PLATING" H 4700 5450 50  0001 C CNN "Title"
 F 6 "Molex" H 4700 5450 50  0001 C CNN "Manufacturer"
+F 7 "0.459" H 4700 5450 50  0001 C CNN "ALV0%€"
 	1    4700 5450
 	-1   0    0    1   
 $EndComp
@@ -204,6 +209,7 @@ F 4 "22-10-2074" H 5300 6850 50  0001 C CNN "Model"
 F 5 "www.mouser.fi" H 5300 6850 50  0001 C CNN "Supplier"
 F 6 "Headers & Wire Housings KK 100 Hdr Flat VERT 20 Au 7Ckt" H 5300 6850 50  0001 C CNN "Title"
 F 7 "Molex" H 5300 6850 50  0001 C CNN "Manufacturer"
+F 8 "1.52" H 5300 6850 50  0001 C CNN "ALV0%€"
 	1    5300 6850
 	-1   0    0    1   
 $EndComp
@@ -217,28 +223,6 @@ Text Label 6700 6200 0    60   ~ 0
 HEAT_ON
 Text Label 6750 5850 1    60   ~ 0
 HEAT_OFF
-$Comp
-L authenticator-rescue:WP154A4SUREQBFZGC LED1
-U 1 1 598ADADE
-P 2300 8200
-F 0 "LED1" H 2350 8300 50  0000 C CNN
-F 1 "WP154A4SUREQBFZGC" H 2350 8550 50  0000 C CNN
-F 2 "Koha-Suomi:WP154A4SUREQBFZGC" H 2250 8150 50  0001 C CNN
-F 3 "https://www.mouser.fi/datasheet/2/216/WP154A4SUREQBFZGC-1173568.pdf" H 2250 8150 50  0001 C CNN
-F 4 "WP154A4SUREQBFZGC" H 2300 8200 50  0001 C CNN "Model"
-F 5 "Standard LEDs - Through Hole RGB 630/525/465nm 750/420/750mcd 60Deg" H 2300 8200 50  0001 C CNN "Title"
-F 6 "Kingbright" H 2300 8200 50  0001 C CNN "Manufacturer"
-	1    2300 8200
-	1    0    0    -1  
-$EndComp
-$Sheet
-S 700  6000 1000 1750
-U 598B2508
-F0 "NHD0420CW_over_SPI" 60
-F1 "NHD0420CW_over_SPI.sch" 60
-$EndSheet
-Text Notes 1300 7350 0    68   ~ 0
-To PCB\n-3V3\n-GND\n-D0\n-D1\n-D2\n-CS\n-RES
 NoConn ~ 14900 1200
 Text Notes 10900 1750 2    63   ~ 0
 To utility board\nBTN1\nHEAT OFF\nHEAT ON\nDS18B20\nGND\nPIEZO\n3V3\nGND
@@ -253,6 +237,7 @@ F 3 "https://www.mouser.fi/datasheet/2/427/1n4154-241332.pdf" H 14300 3850 50  0
 F 4 "1N4154TAP" H 14300 3850 50  0001 C CNN "Model"
 F 5 "Diodes - General Purpose, Power, Switching Vr/35v Io/150mA" H 14300 3850 50  0001 C CNN "Title"
 F 6 "Vishay Semiconductors" H 14300 3850 50  0001 C CNN "Manufacturer"
+F 7 "0.135" H 14300 3850 50  0001 C CNN "ALV0%€"
 	1    14300 3850
 	-1   0    0    -1  
 $EndComp
@@ -267,6 +252,7 @@ F 3 "https://www.mouser.fi/datasheet/2/427/1n4154-241332.pdf" H 14300 4850 50  0
 F 4 "1N4154TAP" H 14300 4850 50  0001 C CNN "Model"
 F 5 "Diodes - General Purpose, Power, Switching Vr/35v Io/150mA" H 14300 4850 50  0001 C CNN "Title"
 F 6 "Vishay Semiconductors" H 14300 4850 50  0001 C CNN "Manufacturer"
+F 7 "0.135" H 14300 4850 50  0001 C CNN "ALV0%€"
 	1    14300 4850
 	-1   0    0    -1  
 $EndComp
@@ -283,6 +269,7 @@ F 3 "https://www.mouser.fi/datasheet/2/212/KEM_R7002_EC2_EE2-1104574.pdf" H 1440
 F 4 "EC2-3TNU" H 14400 4900 50  0001 C CNN "Model"
 F 5 "Low Signal Relays - PCB 3V 2A Dbl Latching LL=3.2mm" H 14400 4900 50  0001 C CNN "Title"
 F 6 "KEMET" V 14400 4900 50  0001 C CNN "Manufacturer"
+F 7 "2.42" V 14400 4900 50  0001 C CNN "ALV0%€"
 	1    14400 4900
 	0    -1   -1   0   
 $EndComp
@@ -307,23 +294,15 @@ PiHat_39_doorGND
 NoConn ~ 14200 4400
 NoConn ~ 14200 4300
 Wire Wire Line
-	2650 8150 2850 8150
-Wire Wire Line
-	2650 8600 2650 8150
-Wire Wire Line
-	2600 8250 2850 8250
-Wire Wire Line
-	2600 8200 2600 8250
-Wire Wire Line
 	5500 5900 5550 5900
 Wire Wire Line
 	5500 6000 5500 5900
 Wire Wire Line
-	3000 5700 2650 5700
+	3050 5700 2700 5700
 Wire Wire Line
-	2650 5800 3000 5800
+	2700 5800 3050 5800
 Wire Wire Line
-	3000 5900 2650 5900
+	3050 5900 2700 5900
 Wire Notes Line
 	8100 8200 8100 7950
 Wire Notes Line
@@ -345,15 +324,15 @@ Wire Notes Line
 Wire Notes Line
 	8850 2650 7700 2650
 Wire Notes Line
-	3550 6150 2100 6150
+	3600 6150 2150 6150
 Wire Notes Line
-	3550 5350 3550 6150
+	3600 5350 3600 6150
 Wire Notes Line
-	2100 5350 3550 5350
+	2150 5350 3600 5350
 Wire Notes Line
-	2100 6150 2100 5350
+	2150 6150 2150 5350
 Wire Notes Line
-	2100 5450 3550 5450
+	2150 5450 3600 5450
 Connection ~ 6450 6050
 Wire Wire Line
 	5000 5800 4900 5800
@@ -459,10 +438,6 @@ Wire Wire Line
 Wire Wire Line
 	5500 6800 5900 6800
 Wire Wire Line
-	2700 8050 2850 8050
-Wire Wire Line
-	2700 8350 2850 8350
-Wire Wire Line
 	5650 7600 5500 7600
 Wire Wire Line
 	5500 7800 5650 7800
@@ -474,26 +449,6 @@ Wire Notes Line
 	15850 3450 13850 3450
 Wire Notes Line
 	13850 3450 13850 5200
-Wire Notes Line
-	1900 9400 3350 9400
-Wire Notes Line
-	1900 7700 3350 7700
-Wire Notes Line
-	3350 7600 1900 7600
-Wire Notes Line
-	1900 7600 1900 9400
-Wire Wire Line
-	2700 8000 2700 8050
-Wire Wire Line
-	2700 8400 2700 8350
-Wire Wire Line
-	2000 8200 2000 8600
-Wire Wire Line
-	2000 8600 2650 8600
-Wire Wire Line
-	2600 8000 2700 8000
-Wire Wire Line
-	2600 8400 2700 8400
 Wire Wire Line
 	5650 7800 5650 7750
 Wire Notes Line
@@ -688,6 +643,7 @@ F 3 "https://katalog.we-online.com/em/datasheet/615016137621.pdf" H 10750 1450 5
 F 4 "615016137621" H 10750 1450 50  0001 C CNN "Model"
 F 5 "Modular Connectors / Ethernet Connectors WR-MJ Feml Shielded 8P8C Hztl Dual Port" H 10750 1450 50  0001 C CNN "Title"
 F 6 "Wurth Elektronik" H 10750 1450 50  0001 C CNN "Manufacturer"
+F 7 "3.51" H 10750 1450 50  0001 C CNN "ALV0%€"
 	1    10750 1450
 	1    0    0    1   
 $EndComp
@@ -704,6 +660,7 @@ F 3 "https://katalog.we-online.com/em/datasheet/615016137621.pdf" H 8250 6450 50
 F 4 "615016137621" H 8250 6450 50  0001 C CNN "Model"
 F 5 "Modular Connectors / Ethernet Connectors WR-MJ Feml Shielded 8P8C Hztl Dual Port" H 8250 6450 50  0001 C CNN "Title"
 F 6 "Wurth Elektronik" H 8250 6450 50  0001 C CNN "Manufacturer"
+F 7 "3.51" H 8250 6450 50  0001 C CNN "ALV0%€"
 	1    8250 6450
 	-1   0    0    1   
 $EndComp
@@ -728,35 +685,37 @@ Heater-
 $Comp
 L authenticator-rescue:HEADER_A_1X07_F-Koha-Suomi H6
 U 1 1 5D4F0EDB
-P 4050 7100
-F 0 "H6" H 3950 7600 50  0000 L CNN
-F 1 "HEADER_A_1X07_F" V 4100 6850 50  0000 L CNN
-F 2 "Koha-Suomi:Header-1x7-F (Molex 38-00-1337)" H 4050 7100 50  0001 C CNN
-F 3 "https://www.mouser.fi/datasheet/2/276/0038001337_PCB_RECEPTACLES-159893.pdf" H 4050 7100 50  0001 C CNN
-F 4 "38-00-1337" H 4050 7100 50  0001 C CNN "Model"
-F 5 "Mouser" H 4050 7100 50  0001 C CNN "Supplier"
-F 6 "Molex" H 4050 7100 50  0001 C CNN "Manufacturer"
-	1    4050 7100
+P 4200 7100
+F 0 "H6" H 4100 7600 50  0000 L CNN
+F 1 "HEADER_A_1X07_F" V 4250 6850 50  0000 L CNN
+F 2 "Koha-Suomi:Header-1x7-F (Molex 38-00-1337)" H 4200 7100 50  0001 C CNN
+F 3 "https://www.mouser.fi/datasheet/2/276/0038001337_PCB_RECEPTACLES-159893.pdf" H 4200 7100 50  0001 C CNN
+F 4 "38-00-1337" H 4200 7100 50  0001 C CNN "Model"
+F 5 "Mouser" H 4200 7100 50  0001 C CNN "Supplier"
+F 6 "Molex" H 4200 7100 50  0001 C CNN "Manufacturer"
+F 7 "1.22" H 4200 7100 50  0001 C CNN "ALV0%€"
+	1    4200 7100
 	1    0    0    -1  
 $EndComp
 $Comp
 L authenticator-rescue:HEADER_A_1X07_F-Koha-Suomi H5
 U 1 1 5D4FFA2B
-P 2650 6900
-F 0 "H5" H 2550 6600 50  0000 L CNN
-F 1 "HEADER_A_1X07_F" V 2700 6650 50  0000 L CNN
-F 2 "Koha-Suomi:Header-1x7-F (Molex 38-00-1337)" H 2650 6900 50  0001 C CNN
-F 3 "https://www.mouser.fi/datasheet/2/276/0038001337_PCB_RECEPTACLES-159893.pdf" H 2650 6900 50  0001 C CNN
-F 4 "38-00-1337" H 2650 6900 50  0001 C CNN "Model"
-F 5 "Mouser" H 2650 6900 50  0001 C CNN "Supplier"
-F 6 "Molex" H 2650 6900 50  0001 C CNN "Manufacturer"
-	1    2650 6900
+P 3200 6900
+F 0 "H5" H 3100 6600 50  0000 L CNN
+F 1 "HEADER_A_1X07_F" V 3250 6650 50  0000 L CNN
+F 2 "Koha-Suomi:Header-1x7-F (Molex 38-00-1337)" H 3200 6900 50  0001 C CNN
+F 3 "https://www.mouser.fi/datasheet/2/276/0038001337_PCB_RECEPTACLES-159893.pdf" H 3200 6900 50  0001 C CNN
+F 4 "38-00-1337" H 3200 6900 50  0001 C CNN "Model"
+F 5 "Mouser" H 3200 6900 50  0001 C CNN "Supplier"
+F 6 "Molex" H 3200 6900 50  0001 C CNN "Manufacturer"
+F 7 "1.22" H 3200 6900 50  0001 C CNN "ALV0%€"
+	1    3200 6900
 	-1   0    0    1   
 $EndComp
-Text Notes 2550 6550 0    50   ~ 0
+Text Notes 3300 6550 0    50   ~ 0
 OLED PCB Cable/pcb
 Wire Notes Line
-	1700 7400 1700 6450
+	2950 7400 2950 6450
 $Comp
 L Device:Thermistor_PTC TH1
 U 1 1 5D53D764
@@ -769,55 +728,50 @@ F 4 "HPG-2/08-75X35-12-30" H 7900 3150 50  0001 C CNN "Model"
 F 5 "fi.rsdelivers.com" H 7900 3150 50  0001 C CNN "Supplier"
 F 6 "Enclosure Heating Element, 18W, 80°C, 12 → 30 V ac/dc" H 7900 3150 50  0001 C CNN "Title"
 F 7 "DBK Enclosures" H 7900 3150 50  0001 C CNN "Manufacturer"
+F 8 "15.30" H 7900 3150 50  0001 C CNN "ALV0%€"
 	1    7900 3150
 	1    0    0    -1  
 $EndComp
-Text Label 2600 8000 0    50   ~ 0
-R1,9V
-Text Label 2600 8200 0    50   ~ 0
-B3,4V
-Text Label 2600 8400 0    50   ~ 0
-G3,3V
-Text Label 2700 5900 0    50   ~ 0
+Text Label 2750 5900 0    50   ~ 0
 HT_GND
-Text Label 2700 5800 0    50   ~ 0
+Text Label 2750 5800 0    50   ~ 0
 HT_DQ
-Text Label 2700 5700 0    50   ~ 0
+Text Label 2750 5700 0    50   ~ 0
 HT_VDD
-Text Label 3300 7300 0    50   ~ 0
+Text Label 3450 7300 0    50   ~ 0
 Cable_RES
-Text Label 3300 7200 0    50   ~ 0
+Text Label 3450 7200 0    50   ~ 0
 Cable_CS
-Text Label 3300 7100 0    50   ~ 0
+Text Label 3450 7100 0    50   ~ 0
 Cable_D2
-Text Label 3300 7000 0    50   ~ 0
+Text Label 3450 7000 0    50   ~ 0
 Cable_D1
-Text Label 3300 6900 0    50   ~ 0
+Text Label 3450 6900 0    50   ~ 0
 Cable_D0
-Text Label 3300 6800 0    50   ~ 0
+Text Label 3450 6800 0    50   ~ 0
 Cable_VDD
-Text Label 3300 6700 0    50   ~ 0
+Text Label 3450 6700 0    50   ~ 0
 Cable__VSS
 Wire Wire Line
-	2850 6700 3850 6700
+	3400 6700 4000 6700
 Wire Wire Line
-	3850 6800 2850 6800
+	4000 6800 3400 6800
 Wire Wire Line
-	2850 6900 3850 6900
+	3400 6900 4000 6900
 Wire Wire Line
-	2850 7000 3850 7000
+	3400 7000 4000 7000
 Wire Wire Line
-	3850 7100 2850 7100
+	4000 7100 3400 7100
 Wire Wire Line
-	2850 7200 3850 7200
+	3400 7200 4000 7200
 Wire Wire Line
-	3850 7300 2850 7300
+	4000 7300 3400 7300
 Wire Notes Line
-	1700 6450 4450 6450
+	2950 6450 4450 6450
 Wire Notes Line
-	1700 6550 4450 6550
+	2950 6550 4450 6550
 Wire Notes Line
-	1700 7400 4450 7400
+	2950 7400 4450 7400
 $Comp
 L Connector:Screw_Terminal_01x04 T1
 U 1 1 5D5CBF3B
@@ -829,6 +783,7 @@ F 3 "https://www.molex.com/pdm_docs/sd/398800304_sd.pdf" H 7050 4200 50  0001 C 
 F 4 "39880-0304" H 7050 4200 50  0001 C CNN "Model"
 F 5 "Fixed Terminal Blocks LOW PROFILE 5.08 4 A W PROFILE 5.08 4 ASY" H 7050 4200 50  0001 C CNN "Title"
 F 6 "Molex" H 7050 4200 50  0001 C CNN "Manufacturer"
+F 7 "1.16" H 7050 4200 50  0001 C CNN "ALV0%€"
 	1    7050 4200
 	1    0    0    1   
 $EndComp
@@ -841,27 +796,15 @@ Wire Wire Line
 $Comp
 L authenticator-rescue:Dupont_Cable_3-pin-Koha-Suomi DUP2
 U 1 1 5D2B92A9
-P 3950 5900
-F 0 "DUP2" H 3950 5950 50  0000 C CNN
-F 1 "Dupont_Cable_3-pin" H 3950 6250 50  0000 C CNN
-F 2 "Koha-Suomi:Bad_board_tag" H 3950 5900 50  0001 C CNN
-F 3 "" H 3950 5900 50  0001 C CNN
-F 4 "20cm" H 3950 6150 50  0000 C CNN "Length"
-F 5 "2.54 pitch 3-wire cable" H 3950 5900 50  0001 C CNN "Model"
-	1    3950 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L authenticator-rescue:Dupont_Cable_4-pin-Koha-Suomi DUP1
-U 1 1 5D306F9D
-P 3750 8250
-F 0 "DUP1" H 3750 8200 50  0000 C CNN
-F 1 "Dupont_Cable_4-pin" H 3750 8600 50  0000 C CNN
-F 2 "Koha-Suomi:Bad_board_tag" H 3750 8250 50  0001 C CNN
-F 3 "" H 3750 8250 50  0001 C CNN
-F 4 "20cm" H 3750 8500 50  0000 C CNN "Length"
-F 5 "2.54 pitch 4-wire cable" H 3750 8250 50  0001 C CNN "Model"
-	1    3750 8250
+P 4000 5900
+F 0 "DUP2" H 4000 5950 50  0000 C CNN
+F 1 "Dupont_Cable_3-pin" H 4000 6250 50  0000 C CNN
+F 2 "Koha-Suomi:Bad_board_tag" H 4000 5900 50  0001 C CNN
+F 3 "" H 4000 5900 50  0001 C CNN
+F 4 "20cm" H 4000 6150 50  0000 C CNN "Length"
+F 5 "2.54 pitch 3-wire cable" H 4000 5900 50  0001 C CNN "Model"
+F 6 "2" H 4000 5900 50  0001 C CNN "ALV0%€"
+	1    4000 5900
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
@@ -879,6 +822,7 @@ F 3 "" H 9300 4250 50  0001 C CNN
 F 4 "5m" H 9650 4250 50  0000 C CNN "Length"
 F 5 "Cabinet cable 2-wire" H 9300 4250 50  0001 C CNN "Title"
 F 6 "Cabinet cable 2-wire" H 9300 4250 50  0001 C CNN "Model"
+F 7 "5" H 9300 4250 50  0001 C CNN "ALV0%€"
 	1    9300 4250
 	1    0    0    -1  
 $EndComp
@@ -895,6 +839,7 @@ F 5 "557-345" H 9300 6400 50  0001 C CNN "Model"
 F 6 "RS Pro Red Cat6 Cable F/UTP LSZH, 5m" H 9300 6400 50  0001 C CNN "Title"
 F 7 "fi.rsdelivers.com" H 9300 6400 50  0001 C CNN "Supplier"
 F 8 "RS PRO" H 9300 6400 50  0001 C CNN "Manufacturer"
+F 9 "9.80" H 9300 6400 50  0001 C CNN "ALV0%€"
 	1    9300 6400
 	1    0    0    -1  
 $EndComp
@@ -911,6 +856,7 @@ F 5 "557-317" H 9300 7200 50  0001 C CNN "Model"
 F 6 "RS Pro Blue Cat6 Cable F/UTP LSZH, 5m" H 9300 7200 50  0001 C CNN "Title"
 F 7 "fi.rsdelivers.com" H 9300 7200 50  0001 C CNN "Supplier"
 F 8 "RS PRO" H 9300 7200 50  0001 C CNN "Manufacturer"
+F 9 "9.80" H 9300 7200 50  0001 C CNN "ALV0%€"
 	1    9300 7200
 	1    0    0    -1  
 $EndComp
@@ -948,6 +894,7 @@ F 4 "CLB-JL-8118" H 10250 4250 50  0001 C CNN "Model"
 F 5 "fi.rsdelivers.com" H 10250 4250 50  0001 C CNN "Supplier"
 F 6 "CIE CLB-JL Series, Cable Mount Jack Adapter[Blank] Socket, 2 Pole, 5A" H 10250 4250 50  0001 C CNN "Title"
 F 7 "CIE" H 10250 4250 50  0001 C CNN "Manufacturer"
+F 8 "3.25" H 10250 4250 50  0001 C CNN "ALV0%€"
 	1    10250 4250
 	1    0    0    -1  
 $EndComp
@@ -968,6 +915,7 @@ F 5 "40 Pin Extra Tall Header (Push Fit Version)" H 13250 1000 50  0001 C CNN "T
 F 6 "Adafruit" H 13250 1000 50  0001 C CNN "Manufacturer"
 F 7 "thepihut.com" H 13250 1000 50  0001 C CNN "Supplier"
 F 8 "13.5mm" H 13250 1000 50  0001 C CNN "BodyHeight"
+F 9 "2.27" H 13250 1000 50  0001 C CNN "ALV0%€"
 	1    13250 1000
 	1    0    0    -1  
 $EndComp
@@ -986,6 +934,7 @@ F 3 "https://www.mouser.fi/datasheet/2/276/0398800302_TERMINAL_BLOCKS-167600.pdf
 F 4 "39880-0302" H 15400 4200 50  0001 C CNN "Model"
 F 5 "Fixed Terminal Blocks 2 CKT TERM. BLOCK 5.08mm" H 15400 4200 50  0001 C CNN "Title"
 F 6 "Molex" H 15400 4200 50  0001 C CNN "Manufacturer"
+F 7 "0.648" H 15400 4200 50  0001 C CNN "ALV0%€"
 	1    15400 4200
 	1    0    0    -1  
 $EndComp
@@ -1004,6 +953,7 @@ F 3 "https://www.mouser.fi/datasheet/2/427/1n4154-241332.pdf" H 5900 4400 50  00
 F 4 "1N4154TAP" H 5900 4400 50  0001 C CNN "Model"
 F 5 "Diodes - General Purpose, Power, Switching Vr/35v Io/150mA" H 5900 4400 50  0001 C CNN "Title"
 F 6 "Vishay Semiconductors" H 5900 4400 50  0001 C CNN "Manufacturer"
+F 7 "0.135" H 5900 4400 50  0001 C CNN "ALV0%€"
 	1    5900 4400
 	-1   0    0    -1  
 $EndComp
@@ -1018,6 +968,7 @@ F 3 "https://www.mouser.fi/datasheet/2/427/1n4154-241332.pdf" H 5900 5400 50  00
 F 4 "1N4154TAP" H 5900 5400 50  0001 C CNN "Model"
 F 5 "Diodes - General Purpose, Power, Switching Vr/35v Io/150mA" H 5900 5400 50  0001 C CNN "Title"
 F 6 "Vishay Semiconductors" H 5900 5400 50  0001 C CNN "Manufacturer"
+F 7 "0.135" H 5900 5400 50  0001 C CNN "ALV0%€"
 	1    5900 5400
 	-1   0    0    -1  
 $EndComp
@@ -1032,6 +983,7 @@ F 3 "https://www.mouser.fi/datasheet/2/212/KEM_R7002_EC2_EE2-1104574.pdf" H 5300
 F 4 "EC2-3TNU" H 5300 5450 50  0001 C CNN "Model"
 F 5 "Low Signal Relays - PCB 3V 2A Dbl Latching LL=3.2mm" H 5300 5450 50  0001 C CNN "Title"
 F 6 "KEMET" V 5300 5450 50  0001 C CNN "Manufacturer"
+F 7 "2.42" V 5300 5450 50  0001 C CNN "ALV0%€"
 	1    5300 5450
 	0    -1   -1   0   
 $EndComp
@@ -1048,6 +1000,7 @@ F 3 "https://www.mouser.fi/datasheet/2/2/Aavid-Board-Level-Heatsinks-Catalog-201
 F 4 "374624B00032G" H 8200 2950 50  0001 C CNN "Model"
 F 5 "Heat Sinks Heatsink for Metal/Ceramic BGA Packages, Black Anodized, 35x35x10mm, IC Pkg Size = 35 x 35, Tape #32" H 8200 2950 50  0001 C CNN "Title"
 F 6 "Aavid" H 8200 2950 50  0001 C CNN "Manufacturer"
+F 7 "5.49" H 8200 2950 50  0001 C CNN "ALV0%€"
 	1    8200 2950
 	1    0    0    -1  
 $EndComp
@@ -1062,36 +1015,24 @@ F 3 "https://www.mouser.fi/datasheet/2/2/Aavid-Board-Level-Heatsinks-Catalog-201
 F 4 "374624B00032G" H 7900 2950 50  0001 C CNN "Model"
 F 5 "Heat Sinks Heatsink for Metal/Ceramic BGA Packages, Black Anodized, 35x35x10mm, IC Pkg Size = 35 x 35, Tape #32" H 7900 2950 50  0001 C CNN "Title"
 F 6 "Aavid" H 7900 2950 50  0001 C CNN "Manufacturer"
+F 7 "5.49" H 7900 2950 50  0001 C CNN "ALV0%€"
 	1    7900 2950
 	1    0    0    -1  
 $EndComp
 $Comp
 L authenticator-rescue:DS18B20+ DS2
 U 1 1 5D586CB7
-P 2450 5650
-F 0 "DS2" H 2400 5250 60  0000 C CNN
-F 1 "DS18B20+" H 2450 5750 60  0000 C CNN
-F 2 "Koha-Suomi:TO-92_Inline_Wide" H 2450 5650 60  0001 C CNN
-F 3 "https://www.mouser.fi/datasheet/2/256/DS18B20-370043.pdf" H 2450 5650 60  0001 C CNN
-F 4 "DS18B20+" H 2450 5650 50  0001 C CNN "Model"
-F 5 "Board Mount Temperature Sensors Prgmble Resolution 1-Wire Parasite Pwr" H 2450 5650 50  0001 C CNN "Title"
-F 6 "Maxim Integrated" H 2450 5650 50  0001 C CNN "Manufacturer"
-	1    2450 5650
+P 2500 5650
+F 0 "DS2" H 2450 5250 60  0000 C CNN
+F 1 "DS18B20+" H 2500 5750 60  0000 C CNN
+F 2 "Koha-Suomi:TO-92_Inline_Wide" H 2500 5650 60  0001 C CNN
+F 3 "https://www.mouser.fi/datasheet/2/256/DS18B20-370043.pdf" H 2500 5650 60  0001 C CNN
+F 4 "DS18B20+" H 2500 5650 50  0001 C CNN "Model"
+F 5 "Board Mount Temperature Sensors Prgmble Resolution 1-Wire Parasite Pwr" H 2500 5650 50  0001 C CNN "Title"
+F 6 "Maxim Integrated" H 2500 5650 50  0001 C CNN "Manufacturer"
+F 7 "3.53" H 2500 5650 50  0001 C CNN "ALV0%€"
+	1    2500 5650
 	1    0    0    -1  
-$EndComp
-$Comp
-L authenticator-rescue:HEADER_S_1X04 H3
-U 1 1 5D58B626
-P 3050 7900
-F 0 "H3" H 3050 8450 50  0000 C CNN
-F 1 "HEADER_S_1X04" V 3150 8200 50  0000 C CNN
-F 2 "Koha-Suomi:Pin_Header_Straight_1x04_Pitch2.54mm" H 3050 7900 50  0001 C CNN
-F 3 "https://www.mouser.fi/datasheet/2/276/0022032041_PCB_HEADERS-158390.pdf" H 3050 7900 50  0001 C CNN
-F 4 "22-03-2041" H 3050 7900 50  0001 C CNN "Model"
-F 5 "Headers & Wire Housings VERT PCB HDR 4P TIN PLATING" H 3050 7900 50  0001 C CNN "Title"
-F 6 "Molex" H 3050 7900 50  0001 C CNN "Manufacturer"
-	1    3050 7900
-	1    0    0    1   
 $EndComp
 $Comp
 L authenticator-rescue:R R3
@@ -1104,6 +1045,7 @@ F 3 "https://www.mouser.fi/datasheet/2/219/MF-MFS-RK-18760.pdf" H 5800 7900 50  
 F 4 "MF1/4CCT52R2200F" H 5800 7900 50  0001 C CNN "Model"
 F 5 "Metal Film Resistors - Through Hole 1/4 WATT 220 OHM 1%" H 5800 7900 50  0001 C CNN "Title"
 F 6 "KOA Speer" V 5800 7900 50  0001 C CNN "Manufacturer"
+F 7 "0.191" V 5800 7900 50  0001 C CNN "ALV0%€"
 	1    5800 7900
 	0    1    1    0   
 $EndComp
@@ -1119,6 +1061,7 @@ F 4 "175-3316" H 10950 4250 50  0001 C CNN "Model"
 F 5 "fi.rsdelivers.com" H 10950 4250 50  0001 C CNN "Supplier"
 F 6 "RS PRO, 18W Plug Adapter 12V dc, 1.5A, Level VI Efficiency, 1 Output Power Adapter" H 10950 4250 50  0001 C CNN "Title"
 F 7 "RS PRO" H 10950 4250 50  0001 C CNN "Manufacturer"
+F 8 "9.10" H 10950 4250 50  0001 C CNN "ALV0%€"
 	1    10950 4250
 	1    0    0    -1  
 $EndComp
@@ -1147,6 +1090,7 @@ F 3 "https://www.mouser.com/datasheet/2/140/E-Switch_06082018_PVT4_(003)-1500408
 F 4 "PVT4FW4SS311" H 8500 5050 50  0001 C CNN "Model"
 F 5 "Pushbutton Switches Pushbutton Anti-vandal 19mm Illuminated Crisp Tactile Response 50mA, 24VDC, SPST Off-(On), 490gf, IP65, Wire leads 300mm, Red LED" H 8500 5050 50  0001 C CNN "Title"
 F 6 "E-Switch" H 8500 5050 50  0001 C CNN "Manufacturer"
+F 7 "15.77" H 8500 5050 50  0001 C CNN "ALV0%€"
 	1    8500 5050
 	-1   0    0    -1  
 $EndComp
@@ -1216,6 +1160,7 @@ F 3 "https://www.mouser.fi/datasheet/2/219/MF-MFS-RK-18760.pdf" H 7100 5100 50  
 F 4 "MF1/4DC4701F" H 7100 5100 50  0001 C CNN "Model"
 F 5 "Metal Film Resistors - Through Hole 4.7K 1% 100PPM" H 7100 5100 50  0001 C CNN "Title"
 F 6 "KOE Speer" V 7100 5100 50  0001 C CNN "Manufacturer"
+F 7 "0.231" V 7100 5100 50  0001 C CNN "ALV0%€"
 	1    7100 5100
 	-1   0    0    1   
 $EndComp
@@ -1240,6 +1185,7 @@ F 3 "https://www.mouser.fi/datasheet/2/219/MF-MFS-RK-18760.pdf" H 7500 5050 50  
 F 4 "MF1/4DC1000F" H 7500 5050 50  0001 C CNN "Model"
 F 5 "Metal Film Resistors - Through Hole 100ohm 1% 100PPM" H 7500 5050 50  0001 C CNN "Title"
 F 6 "KOE Speer" V 7500 5050 50  0001 C CNN "Manufacturer"
+F 7 "0.231" V 7500 5050 50  0001 C CNN "ALV0%€"
 	1    7500 5050
 	0    1    1    0   
 $EndComp
@@ -1264,6 +1210,7 @@ F 3 "https://www.mouser.com/datasheet/2/276/0022122041_PCB_HEADERS-158542.pdf" H
 F 4 "22-12-2041" H 7850 5300 50  0001 C CNN "Model"
 F 5 "Headers & Wire Housings 4 CKT R/A HEADER" H 7850 5300 50  0001 C CNN "Title"
 F 6 "Molex" H 7850 5300 50  0001 C CNN "Manufacturer"
+F 7 "0.639" H 7850 5300 50  0001 C CNN "ALV0%€"
 	1    7850 5300
 	1    0    0    -1  
 $EndComp
@@ -1278,73 +1225,17 @@ Wire Notes Line
 $Comp
 L authenticator-rescue:HEADER_S_1X03 H2
 U 1 1 5D29BFB2
-P 3200 5450
-F 0 "H2" H 3200 6000 50  0000 C CNN
-F 1 "HEADER_S_1X03" V 3300 5800 50  0000 C CNN
-F 2 "Koha-Suomi:Pin_Header_Straight_1x03_Pitch2.54mm" H 3200 5450 50  0001 C CNN
-F 3 "https://www.mouser.fi/datasheet/2/276/0022102031_PCB_HEADERS-158469.pdf" H 3200 5450 50  0001 C CNN
-F 4 "22-10-2031" H 3200 5450 50  0001 C CNN "Model"
-F 5 "Headers & Wire Housings VERT PCB HDR 3P GOLD PLATING" H 3200 5450 50  0001 C CNN "Title"
-F 6 "Molex" H 3200 5450 50  0001 C CNN "Manufacturer"
-	1    3200 5450
+P 3250 5450
+F 0 "H2" H 3250 6000 50  0000 C CNN
+F 1 "HEADER_S_1X03" V 3350 5800 50  0000 C CNN
+F 2 "Koha-Suomi:Pin_Header_Straight_1x03_Pitch2.54mm" H 3250 5450 50  0001 C CNN
+F 3 "https://www.mouser.fi/datasheet/2/276/0022102031_PCB_HEADERS-158469.pdf" H 3250 5450 50  0001 C CNN
+F 4 "22-10-2031" H 3250 5450 50  0001 C CNN "Model"
+F 5 "Headers & Wire Housings VERT PCB HDR 3P GOLD PLATING" H 3250 5450 50  0001 C CNN "Title"
+F 6 "Molex" H 3250 5450 50  0001 C CNN "Manufacturer"
+F 7 "0.459" H 3250 5450 50  0001 C CNN "ALV0%€"
+	1    3250 5450
 	1    0    0    1   
-$EndComp
-$Comp
-L authenticator-rescue:Led_Holder_SML1083-Koha-Suomi LH1
-U 1 1 5D2B05DC
-P 2200 8900
-F 0 "LH1" H 2050 9000 50  0000 L CNN
-F 1 "Led_Holder_SML1083" H 2000 8650 50  0000 L CNN
-F 2 "Koha-Suomi:Bad_board_tag" H 2200 8900 50  0001 C CNN
-F 3 "" H 2200 8900 50  0001 C CNN
-F 4 " SML1083" H 2200 8900 50  0001 C CNN "Model"
-F 5 "5mm LEDKEHYS/O-RENG./LINSSI, KROMI" H 2200 8900 50  0001 C CNN "Title"
-F 6 "?" H 2200 8900 50  0001 C CNN "Manufacturer"
-F 7 "www.yeint.fi" H 2200 8900 50  0001 C CNN "Supplier"
-	1    2200 8900
-	1    0    0    -1  
-$EndComp
-Wire Notes Line
-	3350 7600 3350 9400
-$Comp
-L authenticator-rescue:LED_Holder_SML1083_fitting-Koha-Suomi LHI1
-U 1 1 5D2D2617
-P 2900 8900
-F 0 "LHI1" H 2850 9000 50  0000 L CNN
-F 1 "LED_Holder_SML1083_fitting" H 2500 9100 50  0000 L CNN
-F 2 "Koha-Suomi:Bad_board_tag" H 2900 8900 50  0001 C CNN
-F 3 "" H 2900 8900 50  0001 C CNN
-F 4 "3D printed" H 2900 8900 50  0001 C CNN "Supplier"
-	1    2900 8900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:Housing N1
-U 1 1 5D2E0360
-P 7600 900
-F 0 "N1" H 7500 1000 50  0000 L CNN
-F 1 "Housing" H 7400 650 50  0000 L CNN
-F 2 "" H 7650 950 50  0001 C CNN
-F 3 "https://www.mouser.fi/datasheet/2/177/1550-1389792.pdf" H 7650 950 50  0001 C CNN
-F 4 "1550KBK" H 7600 900 50  0001 C CNN "Model"
-F 5 "Enclosures, Boxes & Cases Diecast Aluminum Box 5.51x2.9x4.02\" Black" H 7600 900 50  0001 C CNN "Title"
-F 6 "Hammond Manufacturing" H 7600 900 50  0001 C CNN "Manufacturer"
-	1    7600 900 
-	1    0    0    -1  
-$EndComp
-$Comp
-L authenticator-rescue:Enclosure_Gasket_1550KSGASKET-Koha-Suomi EG1
-U 1 1 5D2E9E16
-P 7150 1000
-F 0 "EG1" H 7100 1100 50  0000 L CNN
-F 1 "Enclosure_Gasket_1550KSGASKET" H 6650 1350 50  0000 L CNN
-F 2 "Koha-Suomi:Bad_board_tag" H 7150 1000 50  0001 C CNN
-F 3 "https://www.mouser.fi/datasheet/2/177/1550-1389792.pdf" H 7150 1000 50  0001 C CNN
-F 4 "1550KSGASKET" H 7150 1000 50  0001 C CNN "Model"
-F 5 "Hammond Manufacturing" H 7150 1000 50  0001 C CNN "Manufacturer"
-F 6 "Enclosures, Boxes & Cases IP68 GasketKit/Pack2 For use with 1550K" H 7150 1000 50  0001 C CNN "Title"
-	1    7150 1000
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	6900 6000 7100 6000
@@ -1376,6 +1267,7 @@ F 4 "Raspberry Pi 3 Model B+" H 15100 1150 50  0001 C CNN "Model"
 F 5 "Raspberry Pi" H 15100 1150 50  0001 C CNN "Manufacturer"
 F 6 "fi.rsdelivers.com" H 15100 1150 50  0001 C CNN "Supplier"
 F 7 "Raspberry Pi 3 Model B+" H 15100 1150 50  0001 C CNN "Title"
+F 8 "39.30" H 15100 1150 50  0001 C CNN "ALV0%€"
 	1    15100 1150
 	1    0    0    -1  
 $EndComp
@@ -1391,6 +1283,7 @@ F 4 "NOOBS_32GB_Retail" H 15400 1150 50  0001 C CNN "Model"
 F 5 "SD Card preloaded with NOOBS - 32GB" H 15400 1150 50  0001 C CNN "Title"
 F 6 "fi.rsdelivers.com" H 15400 1150 50  0001 C CNN "Supplier"
 F 7 "Raspberry Pi" H 15400 1150 50  0001 C CNN "Manufacturer"
+F 8 "12" H 15400 1150 50  0001 C CNN "ALV0%€"
 	1    15400 1150
 	1    0    0    -1  
 $EndComp
@@ -1406,6 +1299,7 @@ F 4 "T6716DV" H 15800 1300 50  0001 C CNN "Model"
 F 5 "Raspberry Pi" H 15800 1300 50  0001 C CNN "Manufacturer"
 F 6 "Raspberry Pi, 13W Plug In Power Supply 5.1V, 2.5A, 1 Output, 2-Pin Type C - EuroPlug" H 15800 1300 50  0001 C CNN "Title"
 F 7 "fi.rsdelivers.com" H 15800 1300 50  0001 C CNN "Supplier"
+F 8 "6.90" H 15800 1300 50  0001 C CNN "ALV0%€"
 	1    15800 1300
 	1    0    0    -1  
 $EndComp
@@ -1421,6 +1315,7 @@ F 4 "ASM-1900036-12_Bulk" H 15250 1600 50  0001 C CNN "Model"
 F 5 "Raspberry Pi 3 Enclosure, White (bulk)" H 15250 1600 50  0001 C CNN "Title"
 F 6 "DesignSpark" H 15250 1600 50  0001 C CNN "Manufacturer"
 F 7 "fi.rsdelivers.com" H 15250 1600 50  0001 C CNN "Supplier"
+F 8 "5.40" H 15250 1600 50  0001 C CNN "ALV0%€"
 	1    15250 1600
 	1    0    0    -1  
 $EndComp
@@ -1436,6 +1331,7 @@ F 4 "THN-U401S0320E4" H 15200 1850 50  0001 C CNN "Model"
 F 5 "Toshiba 32GB TransMemory USB2.0 Metal" H 15200 1850 50  0001 C CNN "Title"
 F 6 "Toshiba" H 15200 1850 50  0001 C CNN "Manufacturer"
 F 7 "fi.rsdelivers.com" H 15200 1850 50  0001 C CNN "Supplier"
+F 8 "17.20" H 15200 1850 50  0001 C CNN "ALV0%€"
 	1    15200 1850
 	1    0    0    -1  
 $EndComp
@@ -1447,8 +1343,9 @@ F 0 "BCR1" H 15050 1700 50  0000 L CNN
 F 1 "Barcode_Reader" H 15350 1600 50  0000 L CNN
 F 2 "Koha-Suomi:Bad_board_tag" H 15150 1900 50  0001 C CNN
 F 3 "" H 15150 1900 50  0001 C CNN
-F 4 "GFS-4400" H 15150 1900 50  0001 C CNN "Model"
-F 5 "Datalogic" H 15150 1900 50  0001 C CNN "Manufacturer"
+F 4 "WGC300Usb_At" H 15150 1900 50  0001 C CNN "Model"
+F 5 "WinsonChina" H 15150 1900 50  0001 C CNN "Manufacturer"
+F 6 "44.78" H 15150 1900 50  0001 C CNN "ALV0%€"
 	1    15150 1900
 	1    0    0    -1  
 $EndComp
@@ -1464,6 +1361,7 @@ F 4 "11.02.8960-100" H 15350 2400 50  0001 C CNN "Model"
 F 5 "Roline" H 15350 2400 50  0001 C CNN "Manufacturer"
 F 6 "Roline Male USB A to Female USB A USB Extension Cable, 3m" H 15350 2400 50  0001 C CNN "Title"
 F 7 "fi.rsdelivers.com" H 15350 2400 50  0001 C CNN "Supplier"
+F 8 "7.90" H 15350 2400 50  0001 C CNN "ALV0%€"
 	1    15350 2400
 	1    0    0    -1  
 $EndComp
@@ -1494,7 +1392,354 @@ F 4 "Adafruit Brass M2.5 Standoffs 16mm tall - Black Plated - Pack of 2" V 13200
 F 5 "ADA2337" V 13200 3100 50  0001 C CNN "Title"
 F 6 "Adafruit" V 13200 3100 50  0001 C CNN "Manufacturer"
 F 7 "thepihut.com" V 13200 3100 50  0001 C CNN "Supplier"
+F 8 "1.14" V 13200 3100 50  0001 C CNN "ALV0%€"
 	1    13200 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L authenticator-rescue:LED_Holder_SML1083_fitting-Koha-Suomi LHI1
+U 1 1 5D2D2617
+P 3800 9350
+F 0 "LHI1" H 3750 9450 50  0000 L CNN
+F 1 "LED_Holder_SML1083_fitting" H 3400 9550 50  0000 L CNN
+F 2 "Koha-Suomi:Bad_board_tag" H 3800 9350 50  0001 C CNN
+F 3 "" H 3800 9350 50  0001 C CNN
+F 4 "3D printed" H 3800 9350 50  0001 C CNN "Supplier"
+F 5 "10" H 3800 9350 50  0001 C CNN "ALV0%€"
+	1    3800 9350
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	4250 8050 4250 9850
+$Comp
+L authenticator-rescue:Led_Holder_SML1083-Koha-Suomi LH1
+U 1 1 5D2B05DC
+P 3100 9350
+F 0 "LH1" H 2950 9450 50  0000 L CNN
+F 1 "Led_Holder_SML1083" H 2900 9100 50  0000 L CNN
+F 2 "Koha-Suomi:Bad_board_tag" H 3100 9350 50  0001 C CNN
+F 3 "" H 3100 9350 50  0001 C CNN
+F 4 " SML1083" H 3100 9350 50  0001 C CNN "Model"
+F 5 "5mm LEDKEHYS/O-RENG./LINSSI, KROMI" H 3100 9350 50  0001 C CNN "Title"
+F 6 "?" H 3100 9350 50  0001 C CNN "Manufacturer"
+F 7 "www.yeint.fi" H 3100 9350 50  0001 C CNN "Supplier"
+F 8 "2.19" H 3100 9350 50  0001 C CNN "ALV0%€"
+	1    3100 9350
+	1    0    0    -1  
+$EndComp
+$Comp
+L authenticator-rescue:HEADER_S_1X04 H3
+U 1 1 5D58B626
+P 3950 8350
+F 0 "H3" H 3950 8900 50  0000 C CNN
+F 1 "HEADER_S_1X04" V 4050 8650 50  0000 C CNN
+F 2 "Koha-Suomi:Pin_Header_Straight_1x04_Pitch2.54mm" H 3950 8350 50  0001 C CNN
+F 3 "https://www.mouser.fi/datasheet/2/276/0022032041_PCB_HEADERS-158390.pdf" H 3950 8350 50  0001 C CNN
+F 4 "22-03-2041" H 3950 8350 50  0001 C CNN "Model"
+F 5 "Headers & Wire Housings VERT PCB HDR 4P TIN PLATING" H 3950 8350 50  0001 C CNN "Title"
+F 6 "Molex" H 3950 8350 50  0001 C CNN "Manufacturer"
+F 7 "0.297" H 3950 8350 50  0001 C CNN "ALV0%€"
+	1    3950 8350
+	1    0    0    1   
+$EndComp
+$Comp
+L authenticator-rescue:Dupont_Cable_4-pin-Koha-Suomi DUP1
+U 1 1 5D306F9D
+P 4650 8700
+F 0 "DUP1" H 4650 8650 50  0000 C CNN
+F 1 "Dupont_Cable_4-pin" H 4650 9050 50  0000 C CNN
+F 2 "Koha-Suomi:Bad_board_tag" H 4650 8700 50  0001 C CNN
+F 3 "" H 4650 8700 50  0001 C CNN
+F 4 "20cm" H 4650 8950 50  0000 C CNN "Length"
+F 5 "2.54 pitch 4-wire cable" H 4650 8700 50  0001 C CNN "Model"
+F 6 "2" H 4650 8700 50  0001 C CNN "ALV0%€"
+	1    4650 8700
+	1    0    0    -1  
+$EndComp
+Text Label 3500 8850 0    50   ~ 0
+G3,3V
+Text Label 3500 8650 0    50   ~ 0
+B3,4V
+Text Label 3500 8450 0    50   ~ 0
+R1,9V
+Wire Wire Line
+	3500 8850 3600 8850
+Wire Wire Line
+	3500 8450 3600 8450
+Wire Wire Line
+	2900 9050 3550 9050
+Wire Wire Line
+	2900 8650 2900 9050
+Wire Wire Line
+	3600 8850 3600 8800
+Wire Wire Line
+	3600 8450 3600 8500
+Wire Notes Line
+	2800 8050 2800 9850
+Wire Notes Line
+	4250 8050 2800 8050
+Wire Notes Line
+	2800 8150 4250 8150
+Wire Notes Line
+	2800 9850 4250 9850
+Wire Wire Line
+	3600 8800 3750 8800
+Wire Wire Line
+	3600 8500 3750 8500
+Wire Wire Line
+	3500 8650 3500 8700
+Wire Wire Line
+	3500 8700 3750 8700
+Wire Wire Line
+	3550 9050 3550 8600
+Wire Wire Line
+	3550 8600 3750 8600
+$Comp
+L authenticator-rescue:WP154A4SUREQBFZGC LED1
+U 1 1 598ADADE
+P 3200 8650
+F 0 "LED1" H 3250 8750 50  0000 C CNN
+F 1 "WP154A4SUREQBFZGC" H 3250 9000 50  0000 C CNN
+F 2 "Koha-Suomi:WP154A4SUREQBFZGC" H 3150 8600 50  0001 C CNN
+F 3 "https://www.mouser.fi/datasheet/2/216/WP154A4SUREQBFZGC-1173568.pdf" H 3150 8600 50  0001 C CNN
+F 4 "WP154A4SUREQBFZGC" H 3200 8650 50  0001 C CNN "Model"
+F 5 "Standard LEDs - Through Hole RGB 630/525/465nm 750/420/750mcd 60Deg" H 3200 8650 50  0001 C CNN "Title"
+F 6 "Kingbright" H 3200 8650 50  0001 C CNN "Manufacturer"
+F 7 "1.65" H 3200 8650 50  0001 C CNN "ALV0%€"
+	1    3200 8650
+	1    0    0    -1  
+$EndComp
+Text Notes 3000 8150 0    60   ~ 0
+Signal LED
+Wire Wire Line
+	1700 7200 2000 7200
+$Comp
+L authenticator-rescue:NHD-0420CW-AB3 NHD?
+U 1 1 5EC143A1
+P 1500 6900
+AR Path="/598B2508/5EC143A1" Ref="NHD?"  Part="1" 
+AR Path="/5EC143A1" Ref="NHD1"  Part="1" 
+F 0 "NHD1" H 2700 6050 60  0000 C CNN
+F 1 "NHD-0420CW-AB3" H 1300 6050 60  0000 C CNN
+F 2 "Koha-Suomi:Pin_Header_Straight_1x20_Pitch2.54mm" H 1500 6900 60  0001 C CNN
+F 3 "https://www.mouser.fi/datasheet/2/291/NHD-0420CW-AY3-587980.pdf" H 1500 6900 60  0001 C CNN
+F 4 "NHD-0420CW-AY3" H 1500 6900 50  0001 C CNN "Model"
+F 5 "OLED Displays & Accessories 4x20 Yellow Slim Character OLED" H 1500 6900 50  0001 C CNN "Title"
+F 6 "Newhaven Display" H 1500 6900 50  0001 C CNN "Manufacturer"
+F 7 "25.06" H 1500 6900 50  0001 C CNN "ALV0%€"
+	1    1500 6900
+	0    1    1    0   
+$EndComp
+Text Notes 600  6150 0    60   ~ 0
+OLED display over SPI
+$Comp
+L authenticator-rescue:HEADER_S_1X07 H?
+U 1 1 5EC143AC
+P 2200 6850
+AR Path="/598B2508/5EC143AC" Ref="H?"  Part="1" 
+AR Path="/5EC143AC" Ref="H4"  Part="1" 
+F 0 "H4" H 2200 7400 50  0000 C CNN
+F 1 "HEADER_S_1X07" V 2300 7000 50  0000 C CNN
+F 2 "Koha-Suomi:Pin_Header_Straight_1x07_Pitch2.54mm" H 2200 6850 50  0001 C CNN
+F 3 "https://www.mouser.fi/datasheet/2/276/022102074_sd-589973.pdf" H 2200 6850 50  0001 C CNN
+F 4 "22-10-2074" H 2200 6850 50  0001 C CNN "Model"
+F 5 "www.mouser.fi" H 2200 6850 50  0001 C CNN "Supplier"
+F 6 "Headers & Wire Housings KK 100 Hdr Flat VERT 20 Au 7Ckt" H 2200 6850 50  0001 C CNN "Title"
+F 7 "Molex" H 2200 6850 50  0001 C CNN "Manufacturer"
+F 8 "1.52" H 2200 6850 50  0001 C CNN "ALV0%€"
+	1    2200 6850
+	1    0    0    1   
+$EndComp
+Text Notes 2150 7350 0    68   ~ 0
+To PCB\n    3V3\n    GND\n    D0\n    D1\n    D2\n    CS\n    RES
+Wire Notes Line
+	550  6050 550  8350
+Wire Wire Line
+	1400 6800 1600 6800
+Wire Wire Line
+	1600 6300 1600 6500
+Wire Wire Line
+	1600 8200 1400 8200
+Wire Wire Line
+	1600 6300 1400 6300
+Connection ~ 1600 6800
+Wire Wire Line
+	1400 6400 1700 6400
+Wire Wire Line
+	1700 6400 1700 6700
+Wire Wire Line
+	1700 6700 2000 6700
+Wire Wire Line
+	1400 6500 1600 6500
+Connection ~ 1600 6500
+Wire Wire Line
+	1400 6600 1600 6600
+Connection ~ 1600 6600
+Wire Wire Line
+	1400 6700 1600 6700
+Connection ~ 1600 6700
+Wire Wire Line
+	1400 6900 2000 6900
+Wire Wire Line
+	1400 7000 2000 7000
+Wire Wire Line
+	1400 7100 2000 7100
+Wire Wire Line
+	1400 7200 1600 7200
+Connection ~ 1600 7200
+Wire Wire Line
+	1400 7300 1600 7300
+Connection ~ 1600 7300
+Wire Wire Line
+	1400 7700 1700 7700
+Wire Wire Line
+	1700 7700 1700 7200
+Wire Wire Line
+	1400 7800 1800 7800
+Wire Wire Line
+	1800 7800 1800 7300
+Wire Wire Line
+	1800 7300 2000 7300
+Wire Wire Line
+	1400 7900 1600 7900
+Connection ~ 1600 7900
+Wire Wire Line
+	1400 8000 1600 8000
+Connection ~ 1600 8000
+Wire Wire Line
+	1400 8100 1600 8100
+Connection ~ 1600 8100
+Wire Wire Line
+	1400 7400 1600 7400
+Connection ~ 1600 7400
+Wire Wire Line
+	1400 7500 1600 7500
+Connection ~ 1600 7500
+Wire Wire Line
+	1400 7600 1600 7600
+Connection ~ 1600 7600
+Text Label 1800 6700 0    68   ~ 0
+3V3
+Text Label 1800 6800 0    68   ~ 0
+GND
+Text Label 1800 6900 0    68   ~ 0
+D0
+Text Label 1800 7000 0    68   ~ 0
+D1
+Text Label 1800 7100 0    68   ~ 0
+D2
+Text Label 1800 7200 0    68   ~ 0
+CS
+Text Label 1800 7300 0    68   ~ 0
+RES
+Wire Wire Line
+	1600 6800 2000 6800
+Wire Wire Line
+	1600 6800 1600 7200
+Wire Wire Line
+	1600 6500 1600 6600
+Wire Wire Line
+	1600 6600 1600 6700
+Wire Wire Line
+	1600 6700 1600 6800
+Wire Wire Line
+	1600 7200 1600 7300
+Wire Wire Line
+	1600 7300 1600 7400
+Wire Wire Line
+	1600 7900 1600 8000
+Wire Wire Line
+	1600 8000 1600 8100
+Wire Wire Line
+	1600 8100 1600 8200
+Wire Wire Line
+	1600 7400 1600 7500
+Wire Wire Line
+	1600 7500 1600 7600
+Wire Wire Line
+	1600 7600 1600 7900
+Wire Notes Line
+	550  6150 1700 6150
+Wire Notes Line
+	1700 6050 550  6050
+Wire Notes Line
+	1700 6300 1800 6300
+Wire Notes Line
+	1800 6300 1800 6400
+Wire Notes Line
+	1800 6400 2600 6400
+Wire Notes Line
+	1700 6050 1700 6300
+Wire Notes Line
+	550  8350 1700 8350
+Wire Notes Line
+	1700 8350 1700 7900
+Wire Notes Line
+	1700 7900 1900 7900
+Wire Notes Line
+	1900 7900 1900 7450
+Wire Notes Line
+	1900 7450 2600 7450
+Wire Notes Line
+	2600 7450 2600 6400
+$Comp
+L authenticator-rescue:Enclosure_Gasket_1550KSGASKET-Koha-Suomi EG1
+U 1 1 5D2E9E16
+P 7150 1000
+F 0 "EG1" H 7100 1100 50  0000 L CNN
+F 1 "DIY Gasket" H 6900 850 50  0000 L CNN
+F 2 "Koha-Suomi:Bad_board_tag" H 7150 1000 50  0001 C CNN
+F 3 "" H 7150 1000 50  0001 C CNN
+F 4 "" H 7150 1000 50  0001 C CNN "Model"
+F 5 "Joensuun Kumipörssi" H 7150 1000 50  0001 C CNN "Manufacturer"
+F 6 "Tiivistenauha mahd. kapea" H 7150 1000 50  0001 C CNN "Title"
+F 7 "10" H 7150 1000 50  0001 C CNN "ALV0%€"
+	1    7150 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Housing N1
+U 1 1 5D2E0360
+P 9800 1050
+F 0 "N1" H 9700 1150 50  0000 L CNN
+F 1 "Internal enclosure" H 9450 800 50  0000 L CNN
+F 2 "" H 9850 1100 50  0001 C CNN
+F 3 "https://www.ikea.com/fi/fi/p/lixhult-kaappi-metalli-valkoinen-50328665/" H 9850 1100 50  0001 C CNN
+F 4 "LIXHULT" H 9800 1050 50  0001 C CNN "Model"
+F 5 "LIXHULT Kaappi, metalli, valkoinen, 25x25 cm" H 9800 1050 50  0001 C CNN "Title"
+F 6 "IKEA" H 9800 1050 50  0001 C CNN "Manufacturer"
+F 7 "12.10" H 9800 1050 50  0001 C CNN "ALV0%€"
+	1    9800 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Housing N2
+U 1 1 5F1B1EB0
+P 7700 900
+F 0 "N2" H 7600 1000 50  0000 L CNN
+F 1 "External enclosure" H 7350 650 50  0000 L CNN
+F 2 "" H 7750 950 50  0001 C CNN
+F 3 "" H 7750 950 50  0001 C CNN
+F 4 "" H 7700 900 50  0001 C CNN "Model"
+F 5 "Laser cut enclosure sheets that are glued together. Price varies based on customer needs." H 7700 900 50  0001 C CNN "Title"
+F 6 "cotter.co" H 7700 900 50  0001 C CNN "Manufacturer"
+F 7 "100" H 7700 900 50  0001 C CNN "ALV0%€"
+	1    7700 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Housing N3
+U 1 1 5F237B60
+P 9350 1700
+F 0 "N3" H 9250 1800 50  0000 L CNN
+F 1 "PCB printing and shipping" H 8850 1450 50  0000 L CNN
+F 2 "" H 9400 1750 50  0001 C CNN
+F 3 "" H 9400 1750 50  0001 C CNN
+F 4 "" H 9350 1700 50  0001 C CNN "Model"
+F 5 "PCB printing and shipping (constant R&D no batch orders)" H 9350 1700 50  0001 C CNN "Title"
+F 6 "allpcb.com" H 9350 1700 50  0001 C CNN "Manufacturer"
+F 7 "20" H 9350 1700 50  0001 C CNN "ALV0%€"
+	1    9350 1700
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

@@ -2,8 +2,8 @@
 <export version="D">
   <design>
     <source>/home/kivilahtio/work/emb-toveri/KiCad/authenticator/authenticator.sch</source>
-    <date>ti 30. heinäkuuta 2019 13.15.56</date>
-    <tool>Eeschema 5.0.2-bee76a0~70~ubuntu18.04.1</tool>
+    <date>ma 11. toukokuuta 2020 12.23.39</date>
+    <tool>Eeschema 5.1.5-52549c5~86~ubuntu19.10.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>Authenticator</title>
@@ -17,19 +17,6 @@
         <comment number="4" value=""/>
       </title_block>
     </sheet>
-    <sheet number="2" name="/NHD0420CW_over_SPI/" tstamps="/598B2508/">
-      <title_block>
-        <title/>
-        <company/>
-        <rev/>
-        <date/>
-        <source>NHD0420CW_over_SPI.sch</source>
-        <comment number="1" value=""/>
-        <comment number="2" value=""/>
-        <comment number="3" value=""/>
-        <comment number="4" value=""/>
-      </title_block>
-    </sheet>
   </design>
   <components>
     <comp ref="C1">
@@ -37,6 +24,7 @@
       <footprint>Koha-Suomi:UMW0G101MDD</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/293/e-umw-1219455.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">0.297</field>
         <field name="Manufacturer">Nichicon</field>
         <field name="Model">UMW0G101MDD</field>
         <field name="Title">Aluminium Electrolytic Capacitors - Radial Leaded 4volts 100uF 85c 5x5 2LS</field>
@@ -50,6 +38,7 @@
       <footprint>Koha-Suomi:Resistor_ThroughHole_6.3x2.3mm_Spacing2.54mm</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/219/MF-MFS-RK-18760.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">0.231</field>
         <field name="Manufacturer">KOE Speer</field>
         <field name="Model">MF1/4DC4701F</field>
         <field name="Title">Metal Film Resistors - Through Hole 4.7K 1% 100PPM</field>
@@ -63,6 +52,7 @@
       <footprint>Koha-Suomi:Resistor_ThroughHole_6.3x2.3mm_Spacing2.54mm</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/219/MF-MFS-RK-18760.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">0.231</field>
         <field name="Manufacturer">KOA Speer</field>
         <field name="Model">MF1/4DC1000F</field>
         <field name="Title">Metal Film Resistors - Through Hole 100ohm 1% 100PPM</field>
@@ -76,6 +66,7 @@
       <footprint>Koha-Suomi:Resistor_ThroughHole_6.3x2.3mm_Spacing2.54mm</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/219/MF-MFS-RK-18760.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">0.191</field>
         <field name="Manufacturer">KOA Speer</field>
         <field name="Model">MF1/4CCT52R2200F</field>
         <field name="Title">Metal Film Resistors - Through Hole 1/4 WATT 220 OHM 1%</field>
@@ -89,6 +80,7 @@
       <footprint>Koha-Suomi:TO-92_Inline_Wide</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/256/DS18B20-370043.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">3.53</field>
         <field name="Manufacturer">Maxim Integrated</field>
         <field name="Model">DS18B20+</field>
         <field name="Title">Board Mount Temperature Sensors Prgmble Resolution 1-Wire Parasite Pwr</field>
@@ -102,6 +94,7 @@
       <footprint>Koha-Suomi:AST-1732MR-R</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/334/AST-1732MR-R-72511.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">3.50</field>
         <field name="Manufacturer">PUI Audio</field>
         <field name="Model">AST-1732MR-R</field>
         <field name="Title">Speakers &amp; Transducers SPEAKER 32OHM</field>
@@ -115,6 +108,7 @@
       <footprint>Koha-Suomi:Pin_Header_Straight_1x04_Pitch2.54mm</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/276/0022032041_PCB_HEADERS-158390.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">0.297</field>
         <field name="Manufacturer">Molex</field>
         <field name="Model">22-03-2041</field>
         <field name="Title">Headers &amp; Wire Housings VERT PCB HDR 4P TIN PLATING</field>
@@ -128,6 +122,7 @@
       <footprint>Koha-Suomi:Pin_Header_Straight_1x03_Pitch2.54mm</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/276/0022102031_PCB_HEADERS-158469.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">0.459</field>
         <field name="Manufacturer">Molex</field>
         <field name="Model">22-10-2031</field>
         <field name="Title">Headers &amp; Wire Housings VERT PCB HDR 3P GOLD PLATING</field>
@@ -141,6 +136,7 @@
       <footprint>Koha-Suomi:Pin_Header_Straight_1x07_Pitch2.54mm</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/276/022102074_sd-589973.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">1.52</field>
         <field name="Manufacturer">Molex</field>
         <field name="Model">22-10-2074</field>
         <field name="Supplier">www.mouser.fi</field>
@@ -150,24 +146,12 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>598A60F0</tstamp>
     </comp>
-    <comp ref="LED1">
-      <value>WP154A4SUREQBFZGC</value>
-      <footprint>Koha-Suomi:WP154A4SUREQBFZGC</footprint>
-      <datasheet>https://www.mouser.fi/datasheet/2/216/WP154A4SUREQBFZGC-1173568.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Kingbright</field>
-        <field name="Model">WP154A4SUREQBFZGC</field>
-        <field name="Title">Standard LEDs - Through Hole RGB 630/525/465nm 750/420/750mcd 60Deg</field>
-      </fields>
-      <libsource lib="authenticator-rescue" part="WP154A4SUREQBFZGC" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>598ADADE</tstamp>
-    </comp>
     <comp ref="D1">
       <value>D</value>
       <footprint>Koha-Suomi:1N4154TAP</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/427/1n4154-241332.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">0.135</field>
         <field name="Manufacturer">Vishay Semiconductors</field>
         <field name="Model">1N4154TAP</field>
         <field name="Title">Diodes - General Purpose, Power, Switching Vr/35v Io/150mA</field>
@@ -181,6 +165,7 @@
       <footprint>Koha-Suomi:1N4154TAP</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/427/1n4154-241332.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">0.135</field>
         <field name="Manufacturer">Vishay Semiconductors</field>
         <field name="Model">1N4154TAP</field>
         <field name="Title">Diodes - General Purpose, Power, Switching Vr/35v Io/150mA</field>
@@ -194,6 +179,7 @@
       <footprint>Koha-Suomi:EC2-3TNU</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/212/KEM_R7002_EC2_EE2-1104574.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">2.42</field>
         <field name="Manufacturer">KEMET</field>
         <field name="Model">EC2-3TNU</field>
         <field name="Title">Low Signal Relays - PCB 3V 2A Dbl Latching LL=3.2mm</field>
@@ -207,11 +193,12 @@
       <footprint>Koha-Suomi:RJ45 dual port - WE-15016137621</footprint>
       <datasheet>https://katalog.we-online.com/em/datasheet/615016137621.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">3.51</field>
         <field name="Manufacturer">Wurth Elektronik</field>
         <field name="Model">615016137621</field>
         <field name="Title">Modular Connectors / Ethernet Connectors WR-MJ Feml Shielded 8P8C Hztl Dual Port</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="RJ45_2xPort" description=""/>
+      <libsource lib="authenticator-rescue" part="RJ45_2xPort-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D45EC40</tstamp>
     </comp>
@@ -220,11 +207,12 @@
       <footprint>Koha-Suomi:RJ45 dual port - WE-15016137621</footprint>
       <datasheet>https://katalog.we-online.com/em/datasheet/615016137621.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">3.51</field>
         <field name="Manufacturer">Wurth Elektronik</field>
         <field name="Model">615016137621</field>
         <field name="Title">Modular Connectors / Ethernet Connectors WR-MJ Feml Shielded 8P8C Hztl Dual Port</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="RJ45_2xPort" description=""/>
+      <libsource lib="authenticator-rescue" part="RJ45_2xPort-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D471255</tstamp>
     </comp>
@@ -233,11 +221,12 @@
       <footprint>Koha-Suomi:Header-1x7-F (Molex 38-00-1337)</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/276/0038001337_PCB_RECEPTACLES-159893.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">1.22</field>
         <field name="Manufacturer">Molex</field>
         <field name="Model">38-00-1337</field>
         <field name="Supplier">Mouser</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="HEADER_A_1X07_F" description="Connector 01x10"/>
+      <libsource lib="authenticator-rescue" part="HEADER_A_1X07_F-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D4F0EDB</tstamp>
     </comp>
@@ -246,11 +235,12 @@
       <footprint>Koha-Suomi:Header-1x7-F (Molex 38-00-1337)</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/276/0038001337_PCB_RECEPTACLES-159893.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">1.22</field>
         <field name="Manufacturer">Molex</field>
         <field name="Model">38-00-1337</field>
         <field name="Supplier">Mouser</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="HEADER_A_1X07_F" description="Connector 01x10"/>
+      <libsource lib="authenticator-rescue" part="HEADER_A_1X07_F-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D4FFA2B</tstamp>
     </comp>
@@ -259,6 +249,7 @@
       <footprint>Koha-Suomi:1N4154TAP</footprint>
       <datasheet>https://docs-emea.rs-online.com/webdocs/0f72/0900766b80f72deb.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">15.30</field>
         <field name="Manufacturer">DBK Enclosures</field>
         <field name="Model">HPG-2/08-75X35-12-30</field>
         <field name="Supplier">fi.rsdelivers.com</field>
@@ -273,6 +264,7 @@
       <footprint>Koha-Suomi:Terminal 1x4 (Molex-398800304)</footprint>
       <datasheet>https://www.molex.com/pdm_docs/sd/398800304_sd.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">1.16</field>
         <field name="Manufacturer">Molex</field>
         <field name="Model">39880-0304</field>
         <field name="Title">Fixed Terminal Blocks LOW PROFILE 5.08 4 A W PROFILE 5.08 4 ASY</field>
@@ -285,33 +277,24 @@
       <value>Dupont_Cable_3-pin</value>
       <footprint>Koha-Suomi:Bad_board_tag</footprint>
       <fields>
+        <field name="ALV0%€">2</field>
         <field name="Length">20cm</field>
         <field name="Model">2.54 pitch 3-wire cable</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="Dupont_Cable_3-pin" description=""/>
+      <libsource lib="authenticator-rescue" part="Dupont_Cable_3-pin-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D2B92A9</tstamp>
-    </comp>
-    <comp ref="DUP1">
-      <value>Dupont_Cable_4-pin</value>
-      <footprint>Koha-Suomi:Bad_board_tag</footprint>
-      <fields>
-        <field name="Length">20cm</field>
-        <field name="Model">2.54 pitch 4-wire cable</field>
-      </fields>
-      <libsource lib="Koha-Suomi" part="Dupont_Cable_4-pin" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5D306F9D</tstamp>
     </comp>
     <comp ref="CC1">
       <value>Cabinet_cable_2-wire</value>
       <footprint>Koha-Suomi:Bad_board_tag</footprint>
       <fields>
+        <field name="ALV0%€">5</field>
         <field name="Length">5m</field>
         <field name="Model">Cabinet cable 2-wire</field>
         <field name="Title">Cabinet cable 2-wire</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="Cabinet_cable_2-pin" description=""/>
+      <libsource lib="authenticator-rescue" part="Cabinet_cable_2-pin-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D3574CC</tstamp>
     </comp>
@@ -320,13 +303,14 @@
       <footprint>Koha-Suomi:Bad_board_tag</footprint>
       <datasheet>~</datasheet>
       <fields>
+        <field name="ALV0%€">9.80</field>
         <field name="Length">5m</field>
         <field name="Manufacturer">RS PRO</field>
         <field name="Model">557-345</field>
         <field name="Supplier">fi.rsdelivers.com</field>
         <field name="Title">RS Pro Red Cat6 Cable F/UTP LSZH, 5m</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="Cat-cable" description=""/>
+      <libsource lib="authenticator-rescue" part="Cat-cable-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D3638A4</tstamp>
     </comp>
@@ -335,13 +319,14 @@
       <footprint>Koha-Suomi:Bad_board_tag</footprint>
       <datasheet>~</datasheet>
       <fields>
+        <field name="ALV0%€">9.80</field>
         <field name="Length">5m</field>
         <field name="Manufacturer">RS PRO</field>
         <field name="Model">557-317</field>
         <field name="Supplier">fi.rsdelivers.com</field>
         <field name="Title">RS Pro Blue Cat6 Cable F/UTP LSZH, 5m</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="Cat-cable" description=""/>
+      <libsource lib="authenticator-rescue" part="Cat-cable-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D363C6D</tstamp>
     </comp>
@@ -350,6 +335,7 @@
       <footprint>Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight</footprint>
       <datasheet>~</datasheet>
       <fields>
+        <field name="ALV0%€">3.25</field>
         <field name="Manufacturer">CIE</field>
         <field name="Model">CLB-JL-8118</field>
         <field name="Supplier">fi.rsdelivers.com</field>
@@ -364,12 +350,13 @@
       <footprint>Koha-Suomi:PI_GPIO_Header_F_2x20</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/1/ts0815-31700.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">2.27</field>
+        <field name="BodyHeight">13.5mm</field>
         <field name="Manufacturer">Adafruit</field>
-        <field name="Model">ADA1992</field>
         <field name="Supplier">thepihut.com</field>
-        <field name="Title">Adafruit GPIO Header for RaspberryPi A+/B+/Pi 2/Pi 3</field>
+        <field name="Title">40 Pin Extra Tall Header (Push Fit Version)</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="RPi_GPIO" description=""/>
+      <libsource lib="authenticator-rescue" part="RPi_GPIO-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57BB6E59</tstamp>
     </comp>
@@ -378,6 +365,7 @@
       <footprint>Koha-Suomi:Screw_Terminal_01x02 (Molex)</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/276/0398800302_TERMINAL_BLOCKS-167600.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">0.648</field>
         <field name="Manufacturer">Molex</field>
         <field name="Model">39880-0302</field>
         <field name="Title">Fixed Terminal Blocks 2 CKT TERM. BLOCK 5.08mm</field>
@@ -391,6 +379,7 @@
       <footprint>Koha-Suomi:1N4154TAP</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/427/1n4154-241332.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">0.135</field>
         <field name="Manufacturer">Vishay Semiconductors</field>
         <field name="Model">1N4154TAP</field>
         <field name="Title">Diodes - General Purpose, Power, Switching Vr/35v Io/150mA</field>
@@ -404,6 +393,7 @@
       <footprint>Koha-Suomi:1N4154TAP</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/427/1n4154-241332.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">0.135</field>
         <field name="Manufacturer">Vishay Semiconductors</field>
         <field name="Model">1N4154TAP</field>
         <field name="Title">Diodes - General Purpose, Power, Switching Vr/35v Io/150mA</field>
@@ -417,6 +407,7 @@
       <footprint>Koha-Suomi:EC2-3TNU</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/212/KEM_R7002_EC2_EE2-1104574.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">2.42</field>
         <field name="Manufacturer">KEMET</field>
         <field name="Model">EC2-3TNU</field>
         <field name="Title">Low Signal Relays - PCB 3V 2A Dbl Latching LL=3.2mm</field>
@@ -430,6 +421,7 @@
       <footprint>Koha-Suomi:Bad_board_tag</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/2/Aavid-Board-Level-Heatsinks-Catalog-2018-1507171.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">5.49</field>
         <field name="Manufacturer">Aavid</field>
         <field name="Model">374624B00032G</field>
         <field name="Title">Heat Sinks Heatsink for Metal/Ceramic BGA Packages, Black Anodized, 35x35x10mm, IC Pkg Size = 35 x 35, Tape #32</field>
@@ -443,6 +435,7 @@
       <footprint>Koha-Suomi:Bad_board_tag</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/2/Aavid-Board-Level-Heatsinks-Catalog-2018-1507171.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">5.49</field>
         <field name="Manufacturer">Aavid</field>
         <field name="Model">374624B00032G</field>
         <field name="Title">Heat Sinks Heatsink for Metal/Ceramic BGA Packages, Black Anodized, 35x35x10mm, IC Pkg Size = 35 x 35, Tape #32</field>
@@ -456,6 +449,7 @@
       <footprint>Koha-Suomi:TO-92_Inline_Wide</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/256/DS18B20-370043.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">3.53</field>
         <field name="Manufacturer">Maxim Integrated</field>
         <field name="Model">DS18B20+</field>
         <field name="Title">Board Mount Temperature Sensors Prgmble Resolution 1-Wire Parasite Pwr</field>
@@ -464,24 +458,12 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D586CB7</tstamp>
     </comp>
-    <comp ref="H3">
-      <value>HEADER_S_1X04</value>
-      <footprint>Koha-Suomi:Pin_Header_Straight_1x04_Pitch2.54mm</footprint>
-      <datasheet>https://www.mouser.fi/datasheet/2/276/0022032041_PCB_HEADERS-158390.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Molex</field>
-        <field name="Model">22-03-2041</field>
-        <field name="Title">Headers &amp; Wire Housings VERT PCB HDR 4P TIN PLATING</field>
-      </fields>
-      <libsource lib="authenticator-rescue" part="HEADER_S_1X04" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5D58B626</tstamp>
-    </comp>
     <comp ref="R3">
       <value>220</value>
       <footprint>Koha-Suomi:Resistor_ThroughHole_6.3x2.3mm_Spacing2.54mm</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/219/MF-MFS-RK-18760.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">0.191</field>
         <field name="Manufacturer">KOA Speer</field>
         <field name="Model">MF1/4CCT52R2200F</field>
         <field name="Title">Metal Film Resistors - Through Hole 1/4 WATT 220 OHM 1%</field>
@@ -495,6 +477,7 @@
       <footprint>Koha-Suomi:1N4154TAP</footprint>
       <datasheet>~</datasheet>
       <fields>
+        <field name="ALV0%€">9.10</field>
         <field name="Manufacturer">RS PRO</field>
         <field name="Model">175-3316</field>
         <field name="Supplier">fi.rsdelivers.com</field>
@@ -509,6 +492,7 @@
       <footprint>Connectors_Molex:Molex_KK-6410-04_04x2.54mm_Straight</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/140/E-Switch_06082018_PVT4_(003)-1500408.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">15.77</field>
         <field name="Manufacturer">E-Switch</field>
         <field name="Model">PVT4FW4SS311</field>
         <field name="Title">Pushbutton Switches Pushbutton Anti-vandal 19mm Illuminated Crisp Tactile Response 50mA, 24VDC, SPST Off-(On), 490gf, IP65, Wire leads 300mm, Red LED</field>
@@ -522,6 +506,7 @@
       <footprint>Koha-Suomi:Resistor_ThroughHole_6.3x2.3mm_Spacing2.54mm</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/219/MF-MFS-RK-18760.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">0.231</field>
         <field name="Manufacturer">KOE Speer</field>
         <field name="Model">MF1/4DC4701F</field>
         <field name="Title">Metal Film Resistors - Through Hole 4.7K 1% 100PPM</field>
@@ -535,6 +520,7 @@
       <footprint>Koha-Suomi:Resistor_ThroughHole_6.3x2.3mm_Spacing2.54mm</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/219/MF-MFS-RK-18760.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">0.231</field>
         <field name="Manufacturer">KOE Speer</field>
         <field name="Model">MF1/4DC1000F</field>
         <field name="Title">Metal Film Resistors - Through Hole 100ohm 1% 100PPM</field>
@@ -548,11 +534,12 @@
       <footprint>Koha-Suomi:Pin_Header_Angled_1x04_Pitch2.54mm</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/276/0022122041_PCB_HEADERS-158542.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">0.639</field>
         <field name="Manufacturer">Molex</field>
         <field name="Model">22-12-2041</field>
         <field name="Title">Headers &amp; Wire Housings 4 CKT R/A HEADER</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="HEADER_A_1X04" description="Connector 01x10"/>
+      <libsource lib="authenticator-rescue" part="HEADER_A_1X04-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D8D405C</tstamp>
     </comp>
@@ -561,6 +548,7 @@
       <footprint>Koha-Suomi:Pin_Header_Straight_1x03_Pitch2.54mm</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/276/0022102031_PCB_HEADERS-158469.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">0.459</field>
         <field name="Manufacturer">Molex</field>
         <field name="Model">22-10-2031</field>
         <field name="Title">Headers &amp; Wire Housings VERT PCB HDR 3P GOLD PLATING</field>
@@ -568,54 +556,6 @@
       <libsource lib="authenticator-rescue" part="HEADER_S_1X03" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D29BFB2</tstamp>
-    </comp>
-    <comp ref="LH1">
-      <value>Led_Holder_SML1083</value>
-      <footprint>Koha-Suomi:Bad_board_tag</footprint>
-      <fields>
-        <field name="Manufacturer">?</field>
-        <field name="Model"> SML1083</field>
-        <field name="Supplier">www.yeint.fi</field>
-        <field name="Title">5mm LEDKEHYS/O-RENG./LINSSI, KROMI</field>
-      </fields>
-      <libsource lib="Koha-Suomi" part="Led_Holder_SML1083" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5D2B05DC</tstamp>
-    </comp>
-    <comp ref="LHI1">
-      <value>LED_Holder_SML1083_fitting</value>
-      <footprint>Koha-Suomi:Bad_board_tag</footprint>
-      <fields>
-        <field name="Supplier">3D printed</field>
-      </fields>
-      <libsource lib="Koha-Suomi" part="LED_Holder_SML1083_fitting" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5D2D2617</tstamp>
-    </comp>
-    <comp ref="N1">
-      <value>Housing</value>
-      <datasheet>https://www.mouser.fi/datasheet/2/177/1550-1389792.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Hammond Manufacturing</field>
-        <field name="Model">1550KBK</field>
-        <field name="Title">Enclosures, Boxes &amp; Cases Diecast Aluminum Box 5.51x2.9x4.02" Black</field>
-      </fields>
-      <libsource lib="Mechanical" part="Housing" description="Housing"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5D2E0360</tstamp>
-    </comp>
-    <comp ref="EG1">
-      <value>Enclosure_Gasket_1550KSGASKET</value>
-      <footprint>Koha-Suomi:Bad_board_tag</footprint>
-      <datasheet>https://www.mouser.fi/datasheet/2/177/1550-1389792.pdf</datasheet>
-      <fields>
-        <field name="Manufacturer">Hammond Manufacturing</field>
-        <field name="Model">1550KSGASKET</field>
-        <field name="Title">Enclosures, Boxes &amp; Cases IP68 GasketKit/Pack2 For use with 1550K</field>
-      </fields>
-      <libsource lib="Koha-Suomi" part="Enclosure_Gasket_1550KSGASKET" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5D2E9E16</tstamp>
     </comp>
     <comp ref="PV4HN1">
       <value>PV4T_hex_nut</value>
@@ -625,7 +565,7 @@
         <field name="Model">PV1PV4HEXNUT19</field>
         <field name="Title">Switch Hardware Hardware Hexnut for PV1, PV4 and PV Anti-Vandal Family</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="PV4T_hex_nut" description=""/>
+      <libsource lib="authenticator-rescue" part="PV4T_hex_nut-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D308460</tstamp>
     </comp>
@@ -633,12 +573,13 @@
       <value>SoC</value>
       <footprint>Koha-Suomi:Bad_board_tag</footprint>
       <fields>
+        <field name="ALV0%€">39.30</field>
         <field name="Manufacturer">Raspberry Pi</field>
         <field name="Model">Raspberry Pi 3 Model B+</field>
         <field name="Supplier">fi.rsdelivers.com</field>
         <field name="Title">Raspberry Pi 3 Model B+</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="SoC" description=""/>
+      <libsource lib="authenticator-rescue" part="SoC-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D33119C</tstamp>
     </comp>
@@ -646,12 +587,13 @@
       <value>SD_Card</value>
       <footprint>Koha-Suomi:Bad_board_tag</footprint>
       <fields>
+        <field name="ALV0%€">12</field>
         <field name="Manufacturer">Raspberry Pi</field>
         <field name="Model">NOOBS_32GB_Retail</field>
         <field name="Supplier">fi.rsdelivers.com</field>
         <field name="Title">SD Card preloaded with NOOBS - 32GB</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="SD_Card" description=""/>
+      <libsource lib="authenticator-rescue" part="SD_Card-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D333748</tstamp>
     </comp>
@@ -659,12 +601,13 @@
       <value>Wall_PSU_5V</value>
       <footprint>Koha-Suomi:Bad_board_tag</footprint>
       <fields>
+        <field name="ALV0%€">6.90</field>
         <field name="Manufacturer">Raspberry Pi</field>
         <field name="Model">T6716DV</field>
         <field name="Supplier">fi.rsdelivers.com</field>
         <field name="Title">Raspberry Pi, 13W Plug In Power Supply 5.1V, 2.5A, 1 Output, 2-Pin Type C - EuroPlug</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="Wall_PSU_5V" description=""/>
+      <libsource lib="authenticator-rescue" part="Wall_PSU_5V-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D3356C2</tstamp>
     </comp>
@@ -672,24 +615,26 @@
       <value>RPi_Enclosure</value>
       <footprint>Koha-Suomi:Bad_board_tag</footprint>
       <fields>
+        <field name="ALV0%€">5.40</field>
         <field name="Manufacturer">DesignSpark</field>
         <field name="Model">ASM-1900036-12_Bulk</field>
         <field name="Supplier">fi.rsdelivers.com</field>
         <field name="Title">Raspberry Pi 3 Enclosure, White (bulk)</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="RPi_Enclosure" description=""/>
+      <libsource lib="authenticator-rescue" part="RPi_Enclosure-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D336DF3</tstamp>
     </comp>
     <comp ref="US1">
       <value>USB-Stick</value>
       <fields>
+        <field name="ALV0%€">17.20</field>
         <field name="Manufacturer">Toshiba</field>
         <field name="Model">THN-U401S0320E4</field>
         <field name="Supplier">fi.rsdelivers.com</field>
         <field name="Title">Toshiba 32GB TransMemory USB2.0 Metal</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="USB-Stick" description=""/>
+      <libsource lib="authenticator-rescue" part="USB-Stick-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D338938</tstamp>
     </comp>
@@ -697,22 +642,24 @@
       <value>Barcode_Reader</value>
       <footprint>Koha-Suomi:Bad_board_tag</footprint>
       <fields>
-        <field name="Manufacturer">Datalogic</field>
-        <field name="Model">GFS-4400</field>
+        <field name="ALV0%€">44.78</field>
+        <field name="Manufacturer">WinsonChina</field>
+        <field name="Model">WGC300Usb_At</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="Barcode_Reader" description=""/>
+      <libsource lib="authenticator-rescue" part="Barcode_Reader-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D33FBB5</tstamp>
     </comp>
     <comp ref="U2">
       <value>Cable_USB_TypeA_F_M</value>
       <fields>
+        <field name="ALV0%€">7.90</field>
         <field name="Manufacturer">Roline</field>
         <field name="Model">11.02.8960-100</field>
         <field name="Supplier">fi.rsdelivers.com</field>
         <field name="Title">Roline Male USB A to Female USB A USB Extension Cable, 3m</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="Cable_USB_TypeA_F_M" description=""/>
+      <libsource lib="authenticator-rescue" part="Cable_USB_TypeA_F_M-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D34BCD9</tstamp>
     </comp>
@@ -725,7 +672,7 @@
         <field name="Supplier">www.mouser.fi</field>
         <field name="Title">Switch Hardware SWITCH O-RING</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="O-Ring" description=""/>
+      <libsource lib="authenticator-rescue" part="O-Ring-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D29687A</tstamp>
     </comp>
@@ -733,41 +680,156 @@
       <value>Standoff x2</value>
       <footprint>Koha-Suomi:Bad_board_tag</footprint>
       <fields>
+        <field name="ALV0%€">1.14</field>
         <field name="Manufacturer">Adafruit</field>
         <field name="Model">Adafruit Brass M2.5 Standoffs 16mm tall - Black Plated - Pack of 2</field>
         <field name="Supplier">thepihut.com</field>
         <field name="Title">ADA2337</field>
       </fields>
-      <libsource lib="Koha-Suomi" part="Standoff" description=""/>
+      <libsource lib="authenticator-rescue" part="Standoff-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D416427</tstamp>
+    </comp>
+    <comp ref="LHI1">
+      <value>LED_Holder_SML1083_fitting</value>
+      <footprint>Koha-Suomi:Bad_board_tag</footprint>
+      <fields>
+        <field name="ALV0%€">10</field>
+        <field name="Supplier">3D printed</field>
+      </fields>
+      <libsource lib="authenticator-rescue" part="LED_Holder_SML1083_fitting-Koha-Suomi" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2D2617</tstamp>
+    </comp>
+    <comp ref="LH1">
+      <value>Led_Holder_SML1083</value>
+      <footprint>Koha-Suomi:Bad_board_tag</footprint>
+      <fields>
+        <field name="ALV0%€">2.19</field>
+        <field name="Manufacturer">?</field>
+        <field name="Model"> SML1083</field>
+        <field name="Supplier">www.yeint.fi</field>
+        <field name="Title">5mm LEDKEHYS/O-RENG./LINSSI, KROMI</field>
+      </fields>
+      <libsource lib="authenticator-rescue" part="Led_Holder_SML1083-Koha-Suomi" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2B05DC</tstamp>
+    </comp>
+    <comp ref="H3">
+      <value>HEADER_S_1X04</value>
+      <footprint>Koha-Suomi:Pin_Header_Straight_1x04_Pitch2.54mm</footprint>
+      <datasheet>https://www.mouser.fi/datasheet/2/276/0022032041_PCB_HEADERS-158390.pdf</datasheet>
+      <fields>
+        <field name="ALV0%€">0.297</field>
+        <field name="Manufacturer">Molex</field>
+        <field name="Model">22-03-2041</field>
+        <field name="Title">Headers &amp; Wire Housings VERT PCB HDR 4P TIN PLATING</field>
+      </fields>
+      <libsource lib="authenticator-rescue" part="HEADER_S_1X04" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D58B626</tstamp>
+    </comp>
+    <comp ref="DUP1">
+      <value>Dupont_Cable_4-pin</value>
+      <footprint>Koha-Suomi:Bad_board_tag</footprint>
+      <fields>
+        <field name="ALV0%€">2</field>
+        <field name="Length">20cm</field>
+        <field name="Model">2.54 pitch 4-wire cable</field>
+      </fields>
+      <libsource lib="authenticator-rescue" part="Dupont_Cable_4-pin-Koha-Suomi" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D306F9D</tstamp>
+    </comp>
+    <comp ref="LED1">
+      <value>WP154A4SUREQBFZGC</value>
+      <footprint>Koha-Suomi:WP154A4SUREQBFZGC</footprint>
+      <datasheet>https://www.mouser.fi/datasheet/2/216/WP154A4SUREQBFZGC-1173568.pdf</datasheet>
+      <fields>
+        <field name="ALV0%€">1.65</field>
+        <field name="Manufacturer">Kingbright</field>
+        <field name="Model">WP154A4SUREQBFZGC</field>
+        <field name="Title">Standard LEDs - Through Hole RGB 630/525/465nm 750/420/750mcd 60Deg</field>
+      </fields>
+      <libsource lib="authenticator-rescue" part="WP154A4SUREQBFZGC" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>598ADADE</tstamp>
     </comp>
     <comp ref="NHD1">
       <value>NHD-0420CW-AB3</value>
       <footprint>Koha-Suomi:Pin_Header_Straight_1x20_Pitch2.54mm</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/291/NHD-0420CW-AY3-587980.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">25.06</field>
         <field name="Manufacturer">Newhaven Display</field>
         <field name="Model">NHD-0420CW-AY3</field>
         <field name="Title">OLED Displays &amp; Accessories 4x20 Yellow Slim Character OLED</field>
       </fields>
       <libsource lib="authenticator-rescue" part="NHD-0420CW-AB3" description=""/>
-      <sheetpath names="/NHD0420CW_over_SPI/" tstamps="/598B2508/"/>
-      <tstamp>598B2F34</tstamp>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EC143A1</tstamp>
     </comp>
     <comp ref="H4">
       <value>HEADER_S_1X07</value>
       <footprint>Koha-Suomi:Pin_Header_Straight_1x07_Pitch2.54mm</footprint>
       <datasheet>https://www.mouser.fi/datasheet/2/276/022102074_sd-589973.pdf</datasheet>
       <fields>
+        <field name="ALV0%€">1.52</field>
         <field name="Manufacturer">Molex</field>
         <field name="Model">22-10-2074</field>
         <field name="Supplier">www.mouser.fi</field>
         <field name="Title">Headers &amp; Wire Housings KK 100 Hdr Flat VERT 20 Au 7Ckt</field>
       </fields>
       <libsource lib="authenticator-rescue" part="HEADER_S_1X07" description=""/>
-      <sheetpath names="/NHD0420CW_over_SPI/" tstamps="/598B2508/"/>
-      <tstamp>598B3472</tstamp>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EC143AC</tstamp>
+    </comp>
+    <comp ref="EG1">
+      <value>DIY Gasket</value>
+      <footprint>Koha-Suomi:Bad_board_tag</footprint>
+      <fields>
+        <field name="ALV0%€">10</field>
+        <field name="Manufacturer">Joensuun Kumipörssi</field>
+        <field name="Title">Tiivistenauha mahd. kapea</field>
+      </fields>
+      <libsource lib="authenticator-rescue" part="Enclosure_Gasket_1550KSGASKET-Koha-Suomi" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2E9E16</tstamp>
+    </comp>
+    <comp ref="N1">
+      <value>Internal enclosure</value>
+      <datasheet>https://www.ikea.com/fi/fi/p/lixhult-kaappi-metalli-valkoinen-50328665/</datasheet>
+      <fields>
+        <field name="ALV0%€">12.10</field>
+        <field name="Manufacturer">IKEA</field>
+        <field name="Model">LIXHULT</field>
+        <field name="Title">LIXHULT Kaappi, metalli, valkoinen, 25x25 cm</field>
+      </fields>
+      <libsource lib="Mechanical" part="Housing" description="Housing"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2E0360</tstamp>
+    </comp>
+    <comp ref="N2">
+      <value>External enclosure</value>
+      <fields>
+        <field name="ALV0%€">100</field>
+        <field name="Manufacturer">cotter.co</field>
+        <field name="Title">Laser cut enclosure sheets that are glued together. Price varies based on customer needs.</field>
+      </fields>
+      <libsource lib="Mechanical" part="Housing" description="Housing"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1B1EB0</tstamp>
+    </comp>
+    <comp ref="N3">
+      <value>PCB printing and shipping</value>
+      <fields>
+        <field name="ALV0%€">20</field>
+        <field name="Manufacturer">allpcb.com</field>
+        <field name="Title">PCB printing and shipping (constant R&amp;D no batch orders)</field>
+      </fields>
+      <libsource lib="Mechanical" part="Housing" description="Housing"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F237B60</tstamp>
     </comp>
   </components>
   <libparts>
@@ -840,224 +902,12 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Koha-Suomi" part="Barcode_Reader">
-      <fields>
-        <field name="Reference">BCR</field>
-        <field name="Value">Barcode_Reader</field>
-      </fields>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="Cabinet_cable_2-pin">
-      <fields>
-        <field name="Reference">CC</field>
-        <field name="Value">Cabinet_cable_2-pin</field>
-      </fields>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="Cable_USB_TypeA_F_M">
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">Cable_USB_TypeA_F_M</field>
-      </fields>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="Cat-cable">
-      <fields>
-        <field name="Reference">CAT</field>
-        <field name="Value">Cat-cable</field>
-      </fields>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="Dupont_Cable_3-pin">
-      <fields>
-        <field name="Reference">DUP</field>
-        <field name="Value">Dupont_Cable_3-pin</field>
-      </fields>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="Dupont_Cable_4-pin">
-      <fields>
-        <field name="Reference">DUP</field>
-        <field name="Value">Dupont_Cable_4-pin</field>
-      </fields>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="Enclosure_Gasket_1550KSGASKET">
-      <fields>
-        <field name="Reference">EG</field>
-        <field name="Value">Enclosure_Gasket_1550KSGASKET</field>
-      </fields>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="HEADER_A_1X04">
-      <description>Connector 01x10</description>
-      <footprints>
-        <fp>Pin_Header_Straight_1X10</fp>
-        <fp>Pin_Header_Angled_1X10</fp>
-        <fp>Socket_Strip_Straight_1X10</fp>
-        <fp>Socket_Strip_Angled_1X10</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">H</field>
-        <field name="Value">HEADER_A_1X04</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-        <pin num="3" name="P3" type="passive"/>
-        <pin num="4" name="P4" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="HEADER_A_1X07_F">
-      <description>Connector 01x10</description>
-      <footprints>
-        <fp>Pin_Header_Straight_1X10</fp>
-        <fp>Pin_Header_Angled_1X10</fp>
-        <fp>Socket_Strip_Straight_1X10</fp>
-        <fp>Socket_Strip_Angled_1X10</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">H</field>
-        <field name="Value">HEADER_A_1X07_F</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-        <pin num="3" name="~" type="passive"/>
-        <pin num="4" name="~" type="passive"/>
-        <pin num="5" name="~" type="passive"/>
-        <pin num="6" name="~" type="passive"/>
-        <pin num="7" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="LED_Holder_SML1083_fitting">
-      <fields>
-        <field name="Reference">LHI</field>
-        <field name="Value">LED_Holder_SML1083_fitting</field>
-      </fields>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="Led_Holder_SML1083">
-      <fields>
-        <field name="Reference">LH</field>
-        <field name="Value">Led_Holder_SML1083</field>
-      </fields>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="O-Ring">
-      <fields>
-        <field name="Reference">OR</field>
-        <field name="Value">O-Ring</field>
-      </fields>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="PV4T_hex_nut">
-      <fields>
-        <field name="Reference">PV4HN</field>
-        <field name="Value">PV4T_hex_nut</field>
-      </fields>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="RJ45_2xPort">
-      <fields>
-        <field name="Reference">RJ</field>
-        <field name="Value">RJ45_2xPort</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-        <pin num="3" name="~" type="passive"/>
-        <pin num="4" name="~" type="passive"/>
-        <pin num="5" name="~" type="passive"/>
-        <pin num="6" name="~" type="passive"/>
-        <pin num="7" name="~" type="passive"/>
-        <pin num="8" name="~" type="passive"/>
-        <pin num="9" name="~" type="passive"/>
-        <pin num="10" name="~" type="passive"/>
-        <pin num="11" name="~" type="passive"/>
-        <pin num="12" name="~" type="passive"/>
-        <pin num="13" name="~" type="passive"/>
-        <pin num="14" name="~" type="passive"/>
-        <pin num="15" name="~" type="passive"/>
-        <pin num="16" name="~" type="passive"/>
-        <pin num="SH" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="RPi_Enclosure">
-      <fields>
-        <field name="Reference">RPE</field>
-        <field name="Value">RPi_Enclosure</field>
-      </fields>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="RPi_GPIO">
-      <fields>
-        <field name="Reference">RPi</field>
-        <field name="Value">RPi_GPIO</field>
-      </fields>
-      <pins>
-        <pin num="1" name="3.3V" type="power_out"/>
-        <pin num="2" name="5V" type="power_out"/>
-        <pin num="3" name="GPIO02_SDA1_I2C" type="BiDi"/>
-        <pin num="4" name="5V" type="power_out"/>
-        <pin num="5" name="GPIO03_SCL1_I2C" type="BiDi"/>
-        <pin num="6" name="GND" type="power_in"/>
-        <pin num="7" name="GPIO04_GCLK" type="BiDi"/>
-        <pin num="8" name="GPIO14_TXD0" type="BiDi"/>
-        <pin num="9" name="GND" type="power_in"/>
-        <pin num="10" name="GPIO15_RXD0" type="BiDi"/>
-        <pin num="11" name="GPIO17" type="BiDi"/>
-        <pin num="12" name="GPIO18" type="BiDi"/>
-        <pin num="13" name="GPIO27" type="BiDi"/>
-        <pin num="14" name="GND" type="power_in"/>
-        <pin num="15" name="GPIO22" type="BiDi"/>
-        <pin num="16" name="GPIO23" type="BiDi"/>
-        <pin num="17" name="3.3V" type="power_out"/>
-        <pin num="18" name="GPIO24" type="BiDi"/>
-        <pin num="19" name="GPIO10_SPI_MOSI" type="BiDi"/>
-        <pin num="20" name="GND" type="power_in"/>
-        <pin num="21" name="GPIO09_SPI_MISO" type="BiDi"/>
-        <pin num="22" name="GPIO25" type="BiDi"/>
-        <pin num="23" name="GPIO11_SPI_CLK" type="BiDi"/>
-        <pin num="24" name="GPIO08_SPI_CE0_N" type="BiDi"/>
-        <pin num="25" name="GND" type="power_in"/>
-        <pin num="26" name="GPIO07_SPI_CE1_N" type="BiDi"/>
-        <pin num="27" name="ID_SD" type="BiDi"/>
-        <pin num="28" name="ID_SC" type="BiDi"/>
-        <pin num="29" name="GPIO05" type="BiDi"/>
-        <pin num="30" name="GND" type="power_in"/>
-        <pin num="31" name="GPIO06" type="BiDi"/>
-        <pin num="32" name="GPIO12" type="BiDi"/>
-        <pin num="33" name="GPIO13" type="BiDi"/>
-        <pin num="34" name="GND" type="power_in"/>
-        <pin num="35" name="GPIO19" type="BiDi"/>
-        <pin num="36" name="GPIO16" type="BiDi"/>
-        <pin num="37" name="GPIO26" type="BiDi"/>
-        <pin num="38" name="GPIO20" type="BiDi"/>
-        <pin num="39" name="GND" type="power_in"/>
-        <pin num="40" name="GPIO21" type="BiDi"/>
-      </pins>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="SD_Card">
-      <fields>
-        <field name="Reference">SD</field>
-        <field name="Value">SD_Card</field>
-      </fields>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="SoC">
-      <fields>
-        <field name="Reference">SOC</field>
-        <field name="Value">SoC</field>
-      </fields>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="Standoff">
-      <fields>
-        <field name="Reference">STO</field>
-        <field name="Value">Standoff</field>
-      </fields>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="USB-Stick">
-      <fields>
-        <field name="Reference">US</field>
-        <field name="Value">USB-Stick</field>
-      </fields>
-    </libpart>
-    <libpart lib="Koha-Suomi" part="Wall_PSU_5V">
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">Wall_PSU_5V</field>
-      </fields>
-    </libpart>
     <libpart lib="Mechanical" part="Heatsink">
       <description>Heatsink</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Heatsink:*</fp>
+      </footprints>
       <fields>
         <field name="Reference">HS</field>
         <field name="Value">Heatsink</field>
@@ -1077,6 +927,7 @@
     </libpart>
     <libpart lib="Switch" part="SW_Push_LED">
       <description>Push button switch with LED, generic</description>
+      <docs>~</docs>
       <fields>
         <field name="Reference">SW</field>
         <field name="Value">SW_Push_LED</field>
@@ -1098,6 +949,12 @@
         <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="authenticator-rescue" part="Barcode_Reader-Koha-Suomi">
+      <fields>
+        <field name="Reference">BCR</field>
+        <field name="Value">Barcode_Reader-Koha-Suomi</field>
+      </fields>
+    </libpart>
     <libpart lib="authenticator-rescue" part="CP">
       <footprints>
         <fp>CP_*</fp>
@@ -1110,6 +967,24 @@
         <pin num="1" name="~" type="passive"/>
         <pin num="2" name="~" type="passive"/>
       </pins>
+    </libpart>
+    <libpart lib="authenticator-rescue" part="Cabinet_cable_2-pin-Koha-Suomi">
+      <fields>
+        <field name="Reference">CC</field>
+        <field name="Value">Cabinet_cable_2-pin-Koha-Suomi</field>
+      </fields>
+    </libpart>
+    <libpart lib="authenticator-rescue" part="Cable_USB_TypeA_F_M-Koha-Suomi">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Cable_USB_TypeA_F_M-Koha-Suomi</field>
+      </fields>
+    </libpart>
+    <libpart lib="authenticator-rescue" part="Cat-cable-Koha-Suomi">
+      <fields>
+        <field name="Reference">CAT</field>
+        <field name="Value">Cat-cable-Koha-Suomi</field>
+      </fields>
     </libpart>
     <libpart lib="authenticator-rescue" part="D">
       <footprints>
@@ -1139,6 +1014,18 @@
         <pin num="3" name="VDD" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="authenticator-rescue" part="Dupont_Cable_3-pin-Koha-Suomi">
+      <fields>
+        <field name="Reference">DUP</field>
+        <field name="Value">Dupont_Cable_3-pin-Koha-Suomi</field>
+      </fields>
+    </libpart>
+    <libpart lib="authenticator-rescue" part="Dupont_Cable_4-pin-Koha-Suomi">
+      <fields>
+        <field name="Reference">DUP</field>
+        <field name="Value">Dupont_Cable_4-pin-Koha-Suomi</field>
+      </fields>
+    </libpart>
     <libpart lib="authenticator-rescue" part="EC2-3TNU">
       <fields>
         <field name="Reference">EC</field>
@@ -1155,6 +1042,51 @@
         <pin num="9" name="~" type="passive"/>
         <pin num="10" name="~" type="passive"/>
         <pin num="12" name="SET-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="authenticator-rescue" part="Enclosure_Gasket_1550KSGASKET-Koha-Suomi">
+      <fields>
+        <field name="Reference">EG</field>
+        <field name="Value">Enclosure_Gasket_1550KSGASKET-Koha-Suomi</field>
+      </fields>
+    </libpart>
+    <libpart lib="authenticator-rescue" part="HEADER_A_1X04-Koha-Suomi">
+      <footprints>
+        <fp>Pin_Header_Straight_1X10</fp>
+        <fp>Pin_Header_Angled_1X10</fp>
+        <fp>Socket_Strip_Straight_1X10</fp>
+        <fp>Socket_Strip_Angled_1X10</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">HEADER_A_1X04-Koha-Suomi</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="authenticator-rescue" part="HEADER_A_1X07_F-Koha-Suomi">
+      <footprints>
+        <fp>Pin_Header_Straight_1X10</fp>
+        <fp>Pin_Header_Angled_1X10</fp>
+        <fp>Socket_Strip_Straight_1X10</fp>
+        <fp>Socket_Strip_Angled_1X10</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">HEADER_A_1X07_F-Koha-Suomi</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+        <pin num="7" name="~" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="authenticator-rescue" part="HEADER_S_1X03">
@@ -1213,6 +1145,18 @@
         <pin num="7" name="P7" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="authenticator-rescue" part="LED_Holder_SML1083_fitting-Koha-Suomi">
+      <fields>
+        <field name="Reference">LHI</field>
+        <field name="Value">LED_Holder_SML1083_fitting-Koha-Suomi</field>
+      </fields>
+    </libpart>
+    <libpart lib="authenticator-rescue" part="Led_Holder_SML1083-Koha-Suomi">
+      <fields>
+        <field name="Reference">LH</field>
+        <field name="Value">Led_Holder_SML1083-Koha-Suomi</field>
+      </fields>
+    </libpart>
     <libpart lib="authenticator-rescue" part="NHD-0420CW-AB3">
       <fields>
         <field name="Reference">NHD</field>
@@ -1241,6 +1185,18 @@
         <pin num="20" name="VSS(Frame)" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="authenticator-rescue" part="O-Ring-Koha-Suomi">
+      <fields>
+        <field name="Reference">OR</field>
+        <field name="Value">O-Ring-Koha-Suomi</field>
+      </fields>
+    </libpart>
+    <libpart lib="authenticator-rescue" part="PV4T_hex_nut-Koha-Suomi">
+      <fields>
+        <field name="Reference">PV4HN</field>
+        <field name="Value">PV4T_hex_nut-Koha-Suomi</field>
+      </fields>
+    </libpart>
     <libpart lib="authenticator-rescue" part="R">
       <footprints>
         <fp>R_*</fp>
@@ -1255,6 +1211,109 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="authenticator-rescue" part="RJ45_2xPort-Koha-Suomi">
+      <fields>
+        <field name="Reference">RJ</field>
+        <field name="Value">RJ45_2xPort-Koha-Suomi</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+        <pin num="7" name="~" type="passive"/>
+        <pin num="8" name="~" type="passive"/>
+        <pin num="9" name="~" type="passive"/>
+        <pin num="10" name="~" type="passive"/>
+        <pin num="11" name="~" type="passive"/>
+        <pin num="12" name="~" type="passive"/>
+        <pin num="13" name="~" type="passive"/>
+        <pin num="14" name="~" type="passive"/>
+        <pin num="15" name="~" type="passive"/>
+        <pin num="16" name="~" type="passive"/>
+        <pin num="SH" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="authenticator-rescue" part="RPi_Enclosure-Koha-Suomi">
+      <fields>
+        <field name="Reference">RPE</field>
+        <field name="Value">RPi_Enclosure-Koha-Suomi</field>
+      </fields>
+    </libpart>
+    <libpart lib="authenticator-rescue" part="RPi_GPIO-Koha-Suomi">
+      <fields>
+        <field name="Reference">RPi</field>
+        <field name="Value">RPi_GPIO-Koha-Suomi</field>
+      </fields>
+      <pins>
+        <pin num="1" name="3.3V" type="power_out"/>
+        <pin num="2" name="5V" type="power_out"/>
+        <pin num="3" name="GPIO02_SDA1_I2C" type="BiDi"/>
+        <pin num="4" name="5V" type="power_out"/>
+        <pin num="5" name="GPIO03_SCL1_I2C" type="BiDi"/>
+        <pin num="6" name="GND" type="power_in"/>
+        <pin num="7" name="GPIO04_GCLK" type="BiDi"/>
+        <pin num="8" name="GPIO14_TXD0" type="BiDi"/>
+        <pin num="9" name="GND" type="power_in"/>
+        <pin num="10" name="GPIO15_RXD0" type="BiDi"/>
+        <pin num="11" name="GPIO17" type="BiDi"/>
+        <pin num="12" name="GPIO18" type="BiDi"/>
+        <pin num="13" name="GPIO27" type="BiDi"/>
+        <pin num="14" name="GND" type="power_in"/>
+        <pin num="15" name="GPIO22" type="BiDi"/>
+        <pin num="16" name="GPIO23" type="BiDi"/>
+        <pin num="17" name="3.3V" type="power_out"/>
+        <pin num="18" name="GPIO24" type="BiDi"/>
+        <pin num="19" name="GPIO10_SPI_MOSI" type="BiDi"/>
+        <pin num="20" name="GND" type="power_in"/>
+        <pin num="21" name="GPIO09_SPI_MISO" type="BiDi"/>
+        <pin num="22" name="GPIO25" type="BiDi"/>
+        <pin num="23" name="GPIO11_SPI_CLK" type="BiDi"/>
+        <pin num="24" name="GPIO08_SPI_CE0_N" type="BiDi"/>
+        <pin num="25" name="GND" type="power_in"/>
+        <pin num="26" name="GPIO07_SPI_CE1_N" type="BiDi"/>
+        <pin num="27" name="ID_SD" type="BiDi"/>
+        <pin num="28" name="ID_SC" type="BiDi"/>
+        <pin num="29" name="GPIO05" type="BiDi"/>
+        <pin num="30" name="GND" type="power_in"/>
+        <pin num="31" name="GPIO06" type="BiDi"/>
+        <pin num="32" name="GPIO12" type="BiDi"/>
+        <pin num="33" name="GPIO13" type="BiDi"/>
+        <pin num="34" name="GND" type="power_in"/>
+        <pin num="35" name="GPIO19" type="BiDi"/>
+        <pin num="36" name="GPIO16" type="BiDi"/>
+        <pin num="37" name="GPIO26" type="BiDi"/>
+        <pin num="38" name="GPIO20" type="BiDi"/>
+        <pin num="39" name="GND" type="power_in"/>
+        <pin num="40" name="GPIO21" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="authenticator-rescue" part="SD_Card-Koha-Suomi">
+      <fields>
+        <field name="Reference">SD</field>
+        <field name="Value">SD_Card-Koha-Suomi</field>
+      </fields>
+    </libpart>
+    <libpart lib="authenticator-rescue" part="SoC-Koha-Suomi">
+      <fields>
+        <field name="Reference">SOC</field>
+        <field name="Value">SoC-Koha-Suomi</field>
+      </fields>
+    </libpart>
+    <libpart lib="authenticator-rescue" part="Standoff-Koha-Suomi">
+      <fields>
+        <field name="Reference">STO</field>
+        <field name="Value">Standoff-Koha-Suomi</field>
+      </fields>
+    </libpart>
+    <libpart lib="authenticator-rescue" part="USB-Stick-Koha-Suomi">
+      <fields>
+        <field name="Reference">US</field>
+        <field name="Value">USB-Stick-Koha-Suomi</field>
+      </fields>
+    </libpart>
     <libpart lib="authenticator-rescue" part="WP154A4SUREQBFZGC">
       <fields>
         <field name="Reference">LED</field>
@@ -1266,6 +1325,12 @@
         <pin num="3" name="BLUE_CATHODE" type="passive"/>
         <pin num="4" name="GREEN_CATHODE" type="passive"/>
       </pins>
+    </libpart>
+    <libpart lib="authenticator-rescue" part="Wall_PSU_5V-Koha-Suomi">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Wall_PSU_5V-Koha-Suomi</field>
+      </fields>
     </libpart>
     <libpart lib="pspice" part="VSOURCE">
       <description>Voltage source symbol for simulation only</description>
@@ -1287,9 +1352,6 @@
     <library logical="Device">
       <uri>/usr/share/kicad/library/Device.lib</uri>
     </library>
-    <library logical="Koha-Suomi">
-      <uri>/home/kivilahtio/work/emb-toveri/KiCad/authenticator/libraries/Koha-Suomi.lib</uri>
-    </library>
     <library logical="Mechanical">
       <uri>/usr/share/kicad/library/Mechanical.lib</uri>
     </library>
@@ -1304,423 +1366,419 @@
     </library>
   </libraries>
   <nets>
-    <net code="1" name="Net-(TH1-Pad2)">
-      <node ref="TH1" pin="2"/>
-    </net>
-    <net code="2" name="Net-(TH1-Pad1)">
-      <node ref="TH1" pin="1"/>
-    </net>
-    <net code="3" name="/HEAT_ON">
-      <node ref="EC1" pin="1"/>
-      <node ref="RJ1" pin="14"/>
-      <node ref="D4" pin="1"/>
-    </net>
-    <net code="4" name="/Heater-">
-      <node ref="T1" pin="3"/>
-      <node ref="RJ1" pin="SH"/>
-      <node ref="T1" pin="1"/>
-      <node ref="RJ1" pin="SH"/>
-    </net>
-    <net code="5" name="Net-(J1-Pad2)">
-      <node ref="V1" pin="2"/>
-      <node ref="J1" pin="2"/>
-    </net>
-    <net code="6" name="Net-(EC1-Pad5)">
-      <node ref="EC1" pin="5"/>
-      <node ref="T1" pin="4"/>
-    </net>
-    <net code="7" name="Net-(EC1-Pad4)">
-      <node ref="T1" pin="2"/>
-      <node ref="EC1" pin="4"/>
-    </net>
-    <net code="8" name="/Cable__VSS">
-      <node ref="H6" pin="1"/>
-      <node ref="H5" pin="7"/>
-    </net>
-    <net code="9" name="/Cable_VDD">
-      <node ref="H6" pin="2"/>
-      <node ref="H5" pin="6"/>
-    </net>
-    <net code="10" name="/Cable_D0">
-      <node ref="H5" pin="5"/>
-      <node ref="H6" pin="3"/>
-    </net>
-    <net code="11" name="/Cable_D1">
-      <node ref="H5" pin="4"/>
-      <node ref="H6" pin="4"/>
-    </net>
-    <net code="12" name="/Cable_D2">
-      <node ref="H6" pin="5"/>
-      <node ref="H5" pin="3"/>
-    </net>
-    <net code="13" name="/Cable_CS">
-      <node ref="H6" pin="6"/>
-      <node ref="H5" pin="2"/>
-    </net>
-    <net code="14" name="/Cable_RES">
-      <node ref="H5" pin="1"/>
-      <node ref="H6" pin="7"/>
-    </net>
-    <net code="15" name="Net-(RJ2-PadSH)">
-      <node ref="RJ2" pin="SH"/>
-    </net>
-    <net code="16" name="Net-(RJ2-PadSH)">
-      <node ref="RJ2" pin="SH"/>
-    </net>
-    <net code="17" name="Net-(J1-Pad1)">
-      <node ref="V1" pin="1"/>
-      <node ref="J1" pin="1"/>
-    </net>
-    <net code="18" name="/3V3">
-      <node ref="RJ1" pin="10"/>
-      <node ref="H1" pin="1"/>
-      <node ref="H8" pin="3"/>
-      <node ref="R4" pin="2"/>
-      <node ref="H9" pin="7"/>
-      <node ref="C1" pin="1"/>
-      <node ref="DS1" pin="3"/>
-    </net>
-    <net code="19" name="Net-(SW1-Pad4)">
-      <node ref="SW1" pin="4"/>
-    </net>
-    <net code="20" name="Net-(SW1-Pad3)">
-      <node ref="SW1" pin="3"/>
-    </net>
-    <net code="21" name="Net-(SW1-Pad2)">
-      <node ref="SW1" pin="2"/>
-    </net>
-    <net code="22" name="Net-(SW1-Pad1)">
-      <node ref="SW1" pin="1"/>
-    </net>
-    <net code="23" name="/LED_G">
-      <node ref="R3" pin="1"/>
-      <node ref="RJ1" pin="1"/>
-    </net>
-    <net code="24" name="Net-(EC1-Pad9)">
-      <node ref="EC1" pin="9"/>
-    </net>
-    <net code="25" name="Net-(EC1-Pad8)">
-      <node ref="EC1" pin="8"/>
-    </net>
-    <net code="26" name="Net-(H1-Pad3)">
-      <node ref="H1" pin="3"/>
-      <node ref="R6" pin="1"/>
-    </net>
-    <net code="27" name="/HT_VDD">
-      <node ref="H2" pin="3"/>
-      <node ref="DS2" pin="3"/>
-    </net>
-    <net code="28" name="/HT_DQ">
-      <node ref="H2" pin="2"/>
-      <node ref="DS2" pin="2"/>
-    </net>
-    <net code="29" name="/HT_GND">
-      <node ref="H2" pin="1"/>
-      <node ref="DS2" pin="1"/>
-    </net>
-    <net code="30" name="/PiHat_BTN1">
-      <node ref="RPi1" pin="11"/>
-      <node ref="RJ2" pin="16"/>
-    </net>
-    <net code="31" name="/GND">
-      <node ref="D3" pin="2"/>
-      <node ref="D4" pin="2"/>
-      <node ref="EC1" pin="12"/>
-      <node ref="R5" pin="1"/>
-      <node ref="H1" pin="4"/>
-      <node ref="EC1" pin="7"/>
-      <node ref="H8" pin="1"/>
-      <node ref="H10" pin="3"/>
-      <node ref="H9" pin="6"/>
-      <node ref="DS1" pin="1"/>
-      <node ref="AST1" pin="2"/>
-      <node ref="RJ1" pin="9"/>
-      <node ref="RJ1" pin="12"/>
-      <node ref="C1" pin="2"/>
-    </net>
-    <net code="32" name="/BTN1">
-      <node ref="RJ1" pin="16"/>
-      <node ref="R5" pin="2"/>
-      <node ref="R6" pin="2"/>
-      <node ref="H1" pin="2"/>
-    </net>
-    <net code="33" name="Net-(RPi1-Pad22)">
-      <node ref="RPi1" pin="22"/>
-    </net>
-    <net code="34" name="/PiHat_35_doorOFF">
-      <node ref="EC2" pin="6"/>
-      <node ref="RPi1" pin="35"/>
-      <node ref="D1" pin="1"/>
-    </net>
-    <net code="35" name="Net-(RPi1-Pad34)">
-      <node ref="RPi1" pin="34"/>
-    </net>
-    <net code="36" name="/PiHat_LED_G">
-      <node ref="RJ2" pin="1"/>
-      <node ref="RPi1" pin="33"/>
-    </net>
-    <net code="37" name="Net-(RPi1-Pad32)">
-      <node ref="RPi1" pin="32"/>
-    </net>
-    <net code="38" name="/PiHat_LED_B">
-      <node ref="RPi1" pin="31"/>
-      <node ref="RJ2" pin="2"/>
-    </net>
-    <net code="39" name="Net-(RPi1-Pad30)">
-      <node ref="RPi1" pin="30"/>
-    </net>
-    <net code="40" name="/PiHat_LED_R">
-      <node ref="RPi1" pin="29"/>
-      <node ref="RJ2" pin="3"/>
-    </net>
-    <net code="41" name="Net-(RPi1-Pad28)">
-      <node ref="RPi1" pin="28"/>
-    </net>
-    <net code="42" name="Net-(RPi1-Pad26)">
-      <node ref="RPi1" pin="26"/>
-    </net>
-    <net code="43" name="Net-(RPi1-Pad25)">
-      <node ref="RPi1" pin="25"/>
-    </net>
-    <net code="44" name="Net-(RPi1-Pad36)">
-      <node ref="RPi1" pin="36"/>
-    </net>
-    <net code="45" name="Net-(RPi1-Pad20)">
-      <node ref="RPi1" pin="20"/>
-    </net>
-    <net code="46" name="Net-(RPi1-Pad2)">
-      <node ref="RPi1" pin="2"/>
-    </net>
-    <net code="47" name="Net-(RPi1-Pad18)">
-      <node ref="RPi1" pin="18"/>
-    </net>
-    <net code="48" name="Net-(RPi1-Pad17)">
-      <node ref="RPi1" pin="17"/>
-    </net>
-    <net code="49" name="Net-(RPi1-Pad16)">
-      <node ref="RPi1" pin="16"/>
-    </net>
-    <net code="50" name="Net-(RPi1-Pad15)">
-      <node ref="RPi1" pin="15"/>
-    </net>
-    <net code="51" name="Net-(RPi1-Pad13)">
-      <node ref="RPi1" pin="13"/>
-    </net>
-    <net code="52" name="Net-(RPi1-Pad10)">
-      <node ref="RPi1" pin="10"/>
-    </net>
-    <net code="53" name="Net-(EC2-Pad4)">
-      <node ref="EC2" pin="4"/>
-      <node ref="T2" pin="2"/>
-    </net>
-    <net code="54" name="Net-(EC1-Pad3)">
-      <node ref="EC1" pin="3"/>
-    </net>
-    <net code="55" name="Net-(EC1-Pad10)">
-      <node ref="EC1" pin="10"/>
-    </net>
-    <net code="56" name="Net-(EC2-Pad5)">
+    <net code="1" name="Net-(EC2-Pad5)">
       <node ref="T2" pin="1"/>
       <node ref="EC2" pin="5"/>
     </net>
-    <net code="57" name="Net-(RPi1-Pad8)">
-      <node ref="RPi1" pin="8"/>
-    </net>
-    <net code="58" name="Net-(RPi1-Pad6)">
-      <node ref="RPi1" pin="6"/>
-    </net>
-    <net code="59" name="Net-(RPi1-Pad40)">
-      <node ref="RPi1" pin="40"/>
-    </net>
-    <net code="60" name="Net-(RPi1-Pad4)">
+    <net code="2" name="Net-(RPi1-Pad4)">
       <node ref="RPi1" pin="4"/>
     </net>
-    <net code="61" name="/PiHat_39_doorGND">
-      <node ref="D1" pin="2"/>
+    <net code="3" name="Net-(RPi1-Pad40)">
+      <node ref="RPi1" pin="40"/>
+    </net>
+    <net code="4" name="Net-(RPi1-Pad6)">
+      <node ref="RPi1" pin="6"/>
+    </net>
+    <net code="5" name="Net-(RPi1-Pad8)">
+      <node ref="RPi1" pin="8"/>
+    </net>
+    <net code="6" name="/PiHat_39_doorGND">
       <node ref="D2" pin="2"/>
-      <node ref="RPi1" pin="39"/>
+      <node ref="D1" pin="2"/>
       <node ref="EC2" pin="12"/>
+      <node ref="RPi1" pin="39"/>
       <node ref="EC2" pin="7"/>
     </net>
-    <net code="62" name="Net-(RPi1-Pad38)">
-      <node ref="RPi1" pin="38"/>
+    <net code="7" name="Net-(EC2-Pad4)">
+      <node ref="T2" pin="2"/>
+      <node ref="EC2" pin="4"/>
     </net>
-    <net code="63" name="/PiHat_37_doorON">
+    <net code="8" name="Net-(TH1-Pad1)">
+      <node ref="TH1" pin="1"/>
+    </net>
+    <net code="9" name="Net-(TH1-Pad2)">
+      <node ref="TH1" pin="2"/>
+    </net>
+    <net code="10" name="Net-(RPi1-Pad25)">
+      <node ref="RPi1" pin="25"/>
+    </net>
+    <net code="11" name="Net-(RPi1-Pad26)">
+      <node ref="RPi1" pin="26"/>
+    </net>
+    <net code="12" name="Net-(RPi1-Pad28)">
+      <node ref="RPi1" pin="28"/>
+    </net>
+    <net code="13" name="Net-(RPi1-Pad30)">
+      <node ref="RPi1" pin="30"/>
+    </net>
+    <net code="14" name="Net-(RPi1-Pad32)">
+      <node ref="RPi1" pin="32"/>
+    </net>
+    <net code="15" name="Net-(RPi1-Pad34)">
+      <node ref="RPi1" pin="34"/>
+    </net>
+    <net code="16" name="/PiHat_35_doorOFF">
+      <node ref="D1" pin="1"/>
+      <node ref="EC2" pin="6"/>
+      <node ref="RPi1" pin="35"/>
+    </net>
+    <net code="17" name="Net-(RPi1-Pad36)">
+      <node ref="RPi1" pin="36"/>
+    </net>
+    <net code="18" name="/PiHat_37_doorON">
+      <node ref="RPi1" pin="37"/>
       <node ref="D2" pin="1"/>
       <node ref="EC2" pin="1"/>
-      <node ref="RPi1" pin="37"/>
     </net>
-    <net code="64" name="Net-(EC2-Pad9)">
-      <node ref="EC2" pin="9"/>
+    <net code="19" name="Net-(RPi1-Pad38)">
+      <node ref="RPi1" pin="38"/>
     </net>
-    <net code="65" name="Net-(EC2-Pad8)">
-      <node ref="EC2" pin="8"/>
+    <net code="20" name="/3V3">
+      <node ref="H4" pin="7"/>
+      <node ref="H1" pin="1"/>
+      <node ref="NHD1" pin="2"/>
+      <node ref="C1" pin="1"/>
+      <node ref="R4" pin="2"/>
+      <node ref="DS1" pin="3"/>
+      <node ref="RJ1" pin="10"/>
+      <node ref="H8" pin="3"/>
+      <node ref="H9" pin="7"/>
     </net>
-    <net code="66" name="Net-(EC2-Pad3)">
-      <node ref="EC2" pin="3"/>
+    <net code="21" name="Net-(J1-Pad1)">
+      <node ref="J1" pin="1"/>
+      <node ref="V1" pin="1"/>
     </net>
-    <net code="67" name="Net-(EC2-Pad10)">
-      <node ref="EC2" pin="10"/>
+    <net code="22" name="Net-(J1-Pad2)">
+      <node ref="V1" pin="2"/>
+      <node ref="J1" pin="2"/>
     </net>
-    <net code="68" name="/G3,3V">
-      <node ref="LED1" pin="4"/>
-      <node ref="H3" pin="1"/>
+    <net code="23" name="Net-(SW1-Pad1)">
+      <node ref="SW1" pin="1"/>
     </net>
-    <net code="69" name="/B3,4V">
-      <node ref="LED1" pin="3"/>
-      <node ref="H3" pin="2"/>
+    <net code="24" name="Net-(SW1-Pad2)">
+      <node ref="SW1" pin="2"/>
     </net>
-    <net code="70" name="Net-(H3-Pad3)">
-      <node ref="H3" pin="3"/>
-      <node ref="LED1" pin="2"/>
+    <net code="25" name="Net-(SW1-Pad3)">
+      <node ref="SW1" pin="3"/>
     </net>
-    <net code="71" name="/PIEZO">
-      <node ref="RJ1" pin="11"/>
-      <node ref="AST1" pin="1"/>
+    <net code="26" name="Net-(SW1-Pad4)">
+      <node ref="SW1" pin="4"/>
     </net>
-    <net code="72" name="/DS18B20">
-      <node ref="DS1" pin="2"/>
-      <node ref="R4" pin="1"/>
-      <node ref="H8" pin="2"/>
-      <node ref="RJ1" pin="13"/>
+    <net code="27" name="Net-(EC1-Pad8)">
+      <node ref="EC1" pin="8"/>
     </net>
-    <net code="73" name="Net-(H10-Pad2)">
-      <node ref="H10" pin="2"/>
-      <node ref="R2" pin="2"/>
+    <net code="28" name="Net-(EC1-Pad10)">
+      <node ref="EC1" pin="10"/>
     </net>
-    <net code="74" name="/LED_B">
-      <node ref="R2" pin="1"/>
-      <node ref="RJ1" pin="2"/>
+    <net code="29" name="Net-(EC1-Pad3)">
+      <node ref="EC1" pin="3"/>
     </net>
-    <net code="75" name="/R1,9V">
-      <node ref="LED1" pin="1"/>
-      <node ref="H3" pin="4"/>
+    <net code="30" name="/PiHat_CLK/SCLK/D0">
+      <node ref="RJ2" pin="8"/>
+      <node ref="RPi1" pin="23"/>
     </net>
-    <net code="76" name="/HEAT_OFF">
-      <node ref="RJ1" pin="15"/>
-      <node ref="EC1" pin="6"/>
-      <node ref="D3" pin="1"/>
+    <net code="31" name="Net-(EC1-Pad9)">
+      <node ref="EC1" pin="9"/>
     </net>
-    <net code="77" name="/OLED_RES">
-      <node ref="RJ1" pin="4"/>
-      <node ref="H9" pin="1"/>
+    <net code="32" name="/Cable__VSS">
+      <node ref="H5" pin="7"/>
+      <node ref="H6" pin="1"/>
     </net>
-    <net code="78" name="/PiHat_CE0/CS">
-      <node ref="RPi1" pin="24"/>
-      <node ref="RJ2" pin="5"/>
+    <net code="33" name="/Cable_VDD">
+      <node ref="H5" pin="6"/>
+      <node ref="H6" pin="2"/>
     </net>
-    <net code="79" name="Net-(H10-Pad4)">
-      <node ref="H10" pin="4"/>
-      <node ref="R1" pin="2"/>
+    <net code="34" name="/Cable_D0">
+      <node ref="H6" pin="3"/>
+      <node ref="H5" pin="5"/>
     </net>
-    <net code="80" name="Net-(H10-Pad1)">
-      <node ref="R3" pin="2"/>
-      <node ref="H10" pin="1"/>
+    <net code="35" name="/Cable_D1">
+      <node ref="H5" pin="4"/>
+      <node ref="H6" pin="4"/>
     </net>
-    <net code="81" name="/OLED_D2">
-      <node ref="RJ1" pin="6"/>
-      <node ref="H9" pin="3"/>
+    <net code="36" name="/Cable_D2">
+      <node ref="H5" pin="3"/>
+      <node ref="H6" pin="5"/>
     </net>
-    <net code="82" name="/OLED_CS">
-      <node ref="H9" pin="2"/>
-      <node ref="RJ1" pin="5"/>
+    <net code="37" name="/Cable_CS">
+      <node ref="H5" pin="2"/>
+      <node ref="H6" pin="6"/>
     </net>
-    <net code="83" name="/OLED_D1">
-      <node ref="H9" pin="4"/>
-      <node ref="RJ1" pin="7"/>
+    <net code="38" name="/Cable_RES">
+      <node ref="H6" pin="7"/>
+      <node ref="H5" pin="1"/>
     </net>
-    <net code="84" name="/PiHat_RES">
-      <node ref="RJ2" pin="4"/>
-      <node ref="RPi1" pin="27"/>
+    <net code="39" name="Net-(RPi1-Pad16)">
+      <node ref="RPi1" pin="16"/>
     </net>
-    <net code="85" name="/PiHat_MISO/SDO/D2">
-      <node ref="RJ2" pin="6"/>
-      <node ref="RPi1" pin="21"/>
+    <net code="40" name="/PiHat_3V3">
+      <node ref="RJ2" pin="10"/>
+      <node ref="RPi1" pin="1"/>
     </net>
-    <net code="86" name="/PiHat_MOSI/SDI/D1">
+    <net code="41" name="Net-(RPi1-Pad10)">
+      <node ref="RPi1" pin="10"/>
+    </net>
+    <net code="42" name="/PiHat_BTN1">
+      <node ref="RPi1" pin="11"/>
+      <node ref="RJ2" pin="16"/>
+    </net>
+    <net code="43" name="Net-(RPi1-Pad13)">
+      <node ref="RPi1" pin="13"/>
+    </net>
+    <net code="44" name="Net-(RPi1-Pad15)">
+      <node ref="RPi1" pin="15"/>
+    </net>
+    <net code="45" name="Net-(RPi1-Pad17)">
+      <node ref="RPi1" pin="17"/>
+    </net>
+    <net code="46" name="Net-(RPi1-Pad18)">
+      <node ref="RPi1" pin="18"/>
+    </net>
+    <net code="47" name="/PiHat_MOSI/SDI/D1">
       <node ref="RJ2" pin="7"/>
       <node ref="RPi1" pin="19"/>
     </net>
-    <net code="87" name="/PiHat_CLK/SCLK/D0">
-      <node ref="RPi1" pin="23"/>
-      <node ref="RJ2" pin="8"/>
+    <net code="48" name="Net-(RPi1-Pad2)">
+      <node ref="RPi1" pin="2"/>
     </net>
-    <net code="88" name="/PiHat_GND1">
-      <node ref="RJ2" pin="9"/>
-      <node ref="RPi1" pin="14"/>
+    <net code="49" name="Net-(RPi1-Pad20)">
+      <node ref="RPi1" pin="20"/>
     </net>
-    <net code="89" name="/PiHat_3V3">
-      <node ref="RPi1" pin="1"/>
-      <node ref="RJ2" pin="10"/>
+    <net code="50" name="/PiHat_MISO/SDO/D2">
+      <node ref="RPi1" pin="21"/>
+      <node ref="RJ2" pin="6"/>
     </net>
-    <net code="90" name="/PiHat_PIEZO">
-      <node ref="RJ2" pin="11"/>
-      <node ref="RPi1" pin="12"/>
+    <net code="51" name="Net-(RPi1-Pad22)">
+      <node ref="RPi1" pin="22"/>
     </net>
-    <net code="91" name="/PiHat_GND2">
-      <node ref="RJ2" pin="12"/>
-      <node ref="RPi1" pin="9"/>
+    <net code="52" name="Net-(EC1-Pad4)">
+      <node ref="T1" pin="2"/>
+      <node ref="EC1" pin="4"/>
     </net>
-    <net code="92" name="/PiHat_DS18B20">
-      <node ref="RPi1" pin="7"/>
-      <node ref="RJ2" pin="13"/>
+    <net code="53" name="Net-(EC1-Pad5)">
+      <node ref="EC1" pin="5"/>
+      <node ref="T1" pin="4"/>
     </net>
-    <net code="93" name="/PiHat_HEAT_ON">
-      <node ref="RPi1" pin="5"/>
-      <node ref="RJ2" pin="14"/>
-    </net>
-    <net code="94" name="/PiHat_HEAT_OFF">
-      <node ref="RPi1" pin="3"/>
-      <node ref="RJ2" pin="15"/>
-    </net>
-    <net code="97" name="/LED_R">
-      <node ref="RJ1" pin="3"/>
-      <node ref="R1" pin="1"/>
-    </net>
-    <net code="98" name="/OLED_D0">
-      <node ref="RJ1" pin="8"/>
-      <node ref="H9" pin="5"/>
-    </net>
-    <net code="99" name="/NHD0420CW_over_SPI/RES">
-      <node ref="NHD1" pin="16"/>
+    <net code="54" name="/RES">
       <node ref="H4" pin="1"/>
+      <node ref="NHD1" pin="16"/>
     </net>
-    <net code="100" name="/NHD0420CW_over_SPI/CS">
-      <node ref="H4" pin="2"/>
-      <node ref="NHD1" pin="15"/>
-    </net>
-    <net code="101" name="/NHD0420CW_over_SPI/D2">
+    <net code="55" name="/D2">
       <node ref="NHD1" pin="9"/>
       <node ref="H4" pin="3"/>
     </net>
-    <net code="102" name="/NHD0420CW_over_SPI/3V3">
-      <node ref="NHD1" pin="2"/>
-      <node ref="H4" pin="7"/>
+    <net code="56" name="/CS">
+      <node ref="H4" pin="2"/>
+      <node ref="NHD1" pin="15"/>
     </net>
-    <net code="103" name="/NHD0420CW_over_SPI/D1">
+    <net code="57" name="/D1">
       <node ref="NHD1" pin="8"/>
       <node ref="H4" pin="4"/>
     </net>
-    <net code="104" name="/NHD0420CW_over_SPI/D0">
+    <net code="58" name="/D0">
       <node ref="NHD1" pin="7"/>
       <node ref="H4" pin="5"/>
     </net>
-    <net code="105" name="/NHD0420CW_over_SPI/GND">
-      <node ref="NHD1" pin="18"/>
-      <node ref="NHD1" pin="14"/>
-      <node ref="NHD1" pin="13"/>
-      <node ref="NHD1" pin="12"/>
-      <node ref="NHD1" pin="11"/>
-      <node ref="NHD1" pin="10"/>
-      <node ref="NHD1" pin="17"/>
-      <node ref="NHD1" pin="1"/>
-      <node ref="NHD1" pin="3"/>
-      <node ref="H4" pin="6"/>
-      <node ref="NHD1" pin="19"/>
-      <node ref="NHD1" pin="6"/>
-      <node ref="NHD1" pin="5"/>
-      <node ref="NHD1" pin="4"/>
+    <net code="59" name="Net-(H1-Pad3)">
+      <node ref="R6" pin="1"/>
+      <node ref="H1" pin="3"/>
+    </net>
+    <net code="60" name="/HT_GND">
+      <node ref="H2" pin="1"/>
+      <node ref="DS2" pin="1"/>
+    </net>
+    <net code="61" name="/HT_DQ">
+      <node ref="H2" pin="2"/>
+      <node ref="DS2" pin="2"/>
+    </net>
+    <net code="62" name="/HT_VDD">
+      <node ref="DS2" pin="3"/>
+      <node ref="H2" pin="3"/>
+    </net>
+    <net code="63" name="/G3,3V">
+      <node ref="LED1" pin="4"/>
+      <node ref="H3" pin="1"/>
+    </net>
+    <net code="64" name="/B3,4V">
+      <node ref="H3" pin="2"/>
+      <node ref="LED1" pin="3"/>
+    </net>
+    <net code="65" name="/BTN1">
+      <node ref="R6" pin="2"/>
+      <node ref="H1" pin="2"/>
+      <node ref="RJ1" pin="16"/>
+      <node ref="R5" pin="2"/>
+    </net>
+    <net code="66" name="/GND">
+      <node ref="D3" pin="2"/>
+      <node ref="RJ1" pin="12"/>
+      <node ref="AST1" pin="2"/>
+      <node ref="RJ1" pin="9"/>
+      <node ref="EC1" pin="12"/>
+      <node ref="H9" pin="6"/>
+      <node ref="H8" pin="1"/>
+      <node ref="H10" pin="3"/>
+      <node ref="EC1" pin="7"/>
+      <node ref="DS1" pin="1"/>
+      <node ref="C1" pin="2"/>
+      <node ref="D4" pin="2"/>
       <node ref="NHD1" pin="20"/>
+      <node ref="NHD1" pin="3"/>
+      <node ref="NHD1" pin="4"/>
+      <node ref="NHD1" pin="5"/>
+      <node ref="H1" pin="4"/>
+      <node ref="NHD1" pin="6"/>
+      <node ref="NHD1" pin="13"/>
+      <node ref="NHD1" pin="10"/>
+      <node ref="NHD1" pin="1"/>
+      <node ref="NHD1" pin="17"/>
+      <node ref="NHD1" pin="11"/>
+      <node ref="NHD1" pin="12"/>
+      <node ref="NHD1" pin="14"/>
+      <node ref="NHD1" pin="18"/>
+      <node ref="NHD1" pin="19"/>
+      <node ref="R5" pin="1"/>
+      <node ref="H4" pin="6"/>
+    </net>
+    <net code="67" name="/R1,9V">
+      <node ref="LED1" pin="1"/>
+      <node ref="H3" pin="4"/>
+    </net>
+    <net code="68" name="Net-(H3-Pad3)">
+      <node ref="LED1" pin="2"/>
+      <node ref="H3" pin="3"/>
+    </net>
+    <net code="69" name="/Heater-">
+      <node ref="RJ1" pin="SH"/>
+      <node ref="T1" pin="1"/>
+      <node ref="T1" pin="3"/>
+      <node ref="RJ1" pin="SH"/>
+    </net>
+    <net code="70" name="Net-(EC2-Pad9)">
+      <node ref="EC2" pin="9"/>
+    </net>
+    <net code="71" name="Net-(EC2-Pad8)">
+      <node ref="EC2" pin="8"/>
+    </net>
+    <net code="72" name="Net-(EC2-Pad10)">
+      <node ref="EC2" pin="10"/>
+    </net>
+    <net code="73" name="/DS18B20">
+      <node ref="RJ1" pin="13"/>
+      <node ref="H8" pin="2"/>
+      <node ref="R4" pin="1"/>
+      <node ref="DS1" pin="2"/>
+    </net>
+    <net code="74" name="/HEAT_OFF">
+      <node ref="D3" pin="1"/>
+      <node ref="RJ1" pin="15"/>
+      <node ref="EC1" pin="6"/>
+    </net>
+    <net code="75" name="/HEAT_ON">
+      <node ref="RJ1" pin="14"/>
+      <node ref="D4" pin="1"/>
+      <node ref="EC1" pin="1"/>
+    </net>
+    <net code="76" name="/PIEZO">
+      <node ref="AST1" pin="1"/>
+      <node ref="RJ1" pin="11"/>
+    </net>
+    <net code="77" name="/OLED_RES">
+      <node ref="H9" pin="1"/>
+      <node ref="RJ1" pin="4"/>
+    </net>
+    <net code="78" name="Net-(EC2-Pad3)">
+      <node ref="EC2" pin="3"/>
+    </net>
+    <net code="79" name="Net-(H10-Pad1)">
+      <node ref="R3" pin="2"/>
+      <node ref="H10" pin="1"/>
+    </net>
+    <net code="80" name="Net-(H10-Pad2)">
+      <node ref="R2" pin="2"/>
+      <node ref="H10" pin="2"/>
+    </net>
+    <net code="81" name="Net-(H10-Pad4)">
+      <node ref="R1" pin="2"/>
+      <node ref="H10" pin="4"/>
+    </net>
+    <net code="82" name="/PiHat_CE0/CS">
+      <node ref="RJ2" pin="5"/>
+      <node ref="RPi1" pin="24"/>
+    </net>
+    <net code="83" name="/PiHat_PIEZO">
+      <node ref="RPi1" pin="12"/>
+      <node ref="RJ2" pin="11"/>
+    </net>
+    <net code="84" name="/PiHat_GND1">
+      <node ref="RJ2" pin="9"/>
+      <node ref="RPi1" pin="14"/>
+    </net>
+    <net code="85" name="/PiHat_GND2">
+      <node ref="RJ2" pin="12"/>
+      <node ref="RPi1" pin="9"/>
+    </net>
+    <net code="86" name="/PiHat_LED_G">
+      <node ref="RJ2" pin="1"/>
+      <node ref="RPi1" pin="33"/>
+    </net>
+    <net code="87" name="/PiHat_DS18B20">
+      <node ref="RJ2" pin="13"/>
+      <node ref="RPi1" pin="7"/>
+    </net>
+    <net code="88" name="/PiHat_LED_B">
+      <node ref="RJ2" pin="2"/>
+      <node ref="RPi1" pin="31"/>
+    </net>
+    <net code="89" name="/PiHat_LED_R">
+      <node ref="RJ2" pin="3"/>
+      <node ref="RPi1" pin="29"/>
+    </net>
+    <net code="90" name="/PiHat_RES">
+      <node ref="RJ2" pin="4"/>
+      <node ref="RPi1" pin="27"/>
+    </net>
+    <net code="91" name="/PiHat_HEAT_ON">
+      <node ref="RJ2" pin="14"/>
+      <node ref="RPi1" pin="5"/>
+    </net>
+    <net code="92" name="Net-(RJ2-PadSH)">
+      <node ref="RJ2" pin="SH"/>
+    </net>
+    <net code="93" name="Net-(RJ2-PadSH)">
+      <node ref="RJ2" pin="SH"/>
+    </net>
+    <net code="94" name="/LED_B">
+      <node ref="R2" pin="1"/>
+      <node ref="RJ1" pin="2"/>
+    </net>
+    <net code="95" name="/LED_G">
+      <node ref="R3" pin="1"/>
+      <node ref="RJ1" pin="1"/>
+    </net>
+    <net code="98" name="/LED_R">
+      <node ref="R1" pin="1"/>
+      <node ref="RJ1" pin="3"/>
+    </net>
+    <net code="99" name="/PiHat_HEAT_OFF">
+      <node ref="RPi1" pin="3"/>
+      <node ref="RJ2" pin="15"/>
+    </net>
+    <net code="100" name="/OLED_CS">
+      <node ref="RJ1" pin="5"/>
+      <node ref="H9" pin="2"/>
+    </net>
+    <net code="101" name="/OLED_D2">
+      <node ref="RJ1" pin="6"/>
+      <node ref="H9" pin="3"/>
+    </net>
+    <net code="102" name="/OLED_D1">
+      <node ref="RJ1" pin="7"/>
+      <node ref="H9" pin="4"/>
+    </net>
+    <net code="103" name="/OLED_D0">
+      <node ref="RJ1" pin="8"/>
+      <node ref="H9" pin="5"/>
     </net>
   </nets>
 </export>
