@@ -1,0 +1,29 @@
+NHD_US2066 KEYWORD1
+
+NHD_TWOLINE_MODE_OFF KEYWORD3
+NHD_TWOLINE_MODE_112 KEYWORD3
+NHD_TWOLINE_MODE_121 KEYWORD3
+NHD_TWOLINE_MODE_22 KEYWORD3
+NHD_TWOLINE_MODE_211 KEYWORD3
+
+clear_display KEYWORD2
+display_on_off KEYWORD2
+double_line_text KEYWORD2
+print_char KEYWORD2
+print_row KEYWORD2
+read_char KEYWORD2
+read_row KEYWORD2
+read_row KEYWORD2
+
+_read_command KEYWORD2
+_read_data KEYWORD2
+_write_command KEYWORD2
+_write_data KEYWORD2
+_move_cursor_to_pos KEYWORD2
+_move_to_row KEYWORD2
+_read_byte KEYWORD2
+_send_byte KEYWORD2
+_slave_select KEYWORD2
+_slave_release KEYWORD2
+_start_byte KEYWORD2
+

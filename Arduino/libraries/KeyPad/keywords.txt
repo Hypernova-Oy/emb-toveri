@@ -1,0 +1,6 @@
+DS18B20 KEYWORD1
+
+DS18B20_READING_SIZE KEYWORD3
+
+refresh_device_count KEYWORD2
+temperatures KEYWORD2
