@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Koha-Suomi)(type KiCad)(uri ${KIPRJMOD}/footprints/Koha-Suomi.pretty)(options "")(descr ""))
+)

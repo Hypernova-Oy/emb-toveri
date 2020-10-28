@@ -1,0 +1,26 @@
+Drill report for /home/kivilahtio/work/emb-toveri/KiCad/authenticator/authenticator2.0.kicad_pcb
+Created on ke 28. lokakuuta 2020 23.58.34
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'authenticator2.0-PTH.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0,76mm  0,030"  (1 hole)
+    T2  0,90mm  0,035"  (237 holes)
+    T3  1,00mm  0,039"  (14 holes)
+    T4  1,60mm  0,063"  (12 holes)
+
+    Total plated holes count 264
+
+
+Drill file 'authenticator2.0-NPTH.drl' contains
+    unplated through holes:
+    =============================================================
+    T1  3,25mm  0,128"  (8 holes)
+
+    Total unplated holes count 8

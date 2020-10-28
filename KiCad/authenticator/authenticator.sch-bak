@@ -1140,10 +1140,9 @@ P 3300 10200
 F 0 "KP1" H 3358 10665 50  0000 C CNN
 F 1 "KeyPad" H 3358 10574 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 3450 10000 50  0001 C CNN
-F 3 "https://www.alibaba.com/product-detail/12-Keys-3x4-Matrix-USB-Industrial_62481305463.html?spm=a2700.galleryofferlist.normal_offer.d_title.60bd3f50WgxjjT" H 3450 10000 50  0001 C CNN
+F 3 "" H 3450 10000 50  0001 C CNN
 F 4 "Davo Electronics" H 3300 10200 50  0001 C CNN "Supplier"
 F 5 "D-8208J" H 3300 10200 50  0001 C CNN "Model"
-F 6 "34" H 3300 10200 50  0001 C CNN "ALV0%€"
 	1    3300 10200
 	1    0    0    -1  
 $EndComp

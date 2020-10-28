@@ -84,6 +84,12 @@ $CMP HEADER_S_1X10
 D Connector 01x10
 $ENDCMP
 #
+$CMP USB_Hub_4port
+D USB Type A connector
+K connector USB
+F  ~
+$ENDCMP
+#
 $CMP WP154A4SUREQBFZGC
 D Common Anode RGB LED
 K RGB LED
