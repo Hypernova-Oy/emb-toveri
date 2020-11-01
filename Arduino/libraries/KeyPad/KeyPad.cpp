@@ -37,7 +37,7 @@ void KeyPad::_init(int code_length_min, int code_length_max, int transaction_tim
 }
 
 int KeyPad::maybe_transaction_complete() {
-  if (KeyPad::maybe_flush_stale_transaction()) { return KEYPAD_TRANSACTION_TIMEOUT; }
+  if (_keys_read_idx >= 0 && KeyPad::maybe_flush_stale_transaction()) { return KEYPAD_TRANSACTION_TIMEOUT; }
 
   char c = KeyPad::check_for_key();
   if (c == -1) { return KEYPAD_TRANSACTION_NOOP; }

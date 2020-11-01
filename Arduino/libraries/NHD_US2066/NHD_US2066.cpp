@@ -3,16 +3,16 @@
 #include <Arduino.h>
 #include <SPI.h>
 
-const unsigned char ROW_N = 4;                 // Number of display rows
-const unsigned char COLUMN_N = 20;             // Number of display columns
+const char ROW_N = 4;                 // Number of display rows
+const char COLUMN_N = 20;             // Number of display columns
 
 // Assign pins
 // SPI
-const unsigned char RES = 9;                 // Arduino's pin assigned to the Reset line (optional, can be always high)
-const unsigned char CS = 10;
+const char RES = 9;                 // Arduino's pin assigned to the Reset line (optional, can be always high)
+const char CS = 10;
 
-unsigned char new_line[4] = {0x80, 0xA0, 0xC0, 0xE0};               // DDRAM address for each line of the display
-const unsigned char char_positions[4][20] = {
+char new_line[4] = {0x80, 0xA0, 0xC0, 0xE0};               // DDRAM address for each line of the display
+const char char_positions[4][20] = {
   {0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F, 0x10, 0x11, 0x12, 0x13},
   {0x20, 0x21, 0x22, 0x23, 0x24, 0x25, 0x26, 0x27, 0x28, 0x29, 0x2A, 0x2B, 0x2C, 0x2D, 0x2E, 0x2F, 0x30, 0x31, 0x32, 0x33},
   {0x40, 0x41, 0x42, 0x43, 0x44, 0x45, 0x46, 0x47, 0x48, 0x49, 0x4A, 0x4B, 0x4C, 0x4D, 0x4E, 0x4F, 0x50, 0x51, 0x52, 0x53},
@@ -23,7 +23,7 @@ NHD_US2066::NHD_US2066() {
   #ifdef NHD_US2066_LOG
   Serial.println("NHD_US2066::NHD_US2066()");
   #endif
-  unsigned char rows;
+  char rows;
 
   /* OLED SPI Setup */
   pinMode(RES, OUTPUT);            // Initializes Arduino pin for the Reset line (optional)
@@ -31,7 +31,7 @@ NHD_US2066::NHD_US2066() {
   pinMode(CS, OUTPUT);
   digitalWrite(CS, HIGH);
   SPI.begin();
-  SPI.beginTransaction(SPISettings(9600, LSBFIRST, SPI_MODE3));
+  SPI.beginTransaction(SPISettings(500000, LSBFIRST, SPI_MODE3));
   //SPI.setBitOrder(LSBFIRST);
   //SPI.setClockDivider(SPI_CLOCK_DIV2);
   //SPI.setDataMode(SPI_MODE3);
@@ -46,7 +46,6 @@ NHD_US2066::NHD_US2066() {
 
   _write_command(0x22 | rows); // Function set: extended command set (RE=1), lines #
   _write_command(0x71);        // Function selection A:
-  //_write_data(0x5C);           //  enable internal Vdd regulator at 5V I/O mode (def. value) (0x00 for disable, 2.8V I/O)
   _write_data(0x00);           //  enable internal Vdd regulator at 5V I/O mode (def. value) (0x00 for disable, 2.8V I/O)
   _write_command(0x20 | rows); // Function set: fundamental command set (RE=0) (exit from extended command set), lines #
   _write_command(0x08);        // Display ON/OFF control: display off, cursor off, blink off (default values)
@@ -89,9 +88,9 @@ NHD_US2066::NHD_US2066() {
     new_line[1] = 0xC0;             // DDRAM address for each line of the display (only for 2-line mode)
 }
 
-unsigned char NHD_US2066::_start_byte(bool dc, bool rw) {
+char NHD_US2066::_start_byte(bool dc, bool rw) {
   //Five concurrent HIGHs
-  unsigned char byte = 0b00011111;
+  char byte = 0b00011111;
 
   //R/W selection
   if (rw) { byte = byte | 0b00100000; }
@@ -105,13 +104,13 @@ unsigned char NHD_US2066::_start_byte(bool dc, bool rw) {
   return byte;
 }
 
-unsigned char NHD_US2066::_read_command(unsigned char c) {
+char NHD_US2066::_read_command(char c) {
   SPI.transfer(NHD_US2066::_start_byte(0, 1));
   //delay(1); // If the cable is longer, this delay might be necessary
   return SPI.transfer(0x00);
 }
 
-void NHD_US2066::_write_command(unsigned char c) {
+void NHD_US2066::_write_command(char c) {
   #ifdef NHD_US2066_LOG
   Serial.println("NHD_US2066::_command():> byte "+c);
   #endif
@@ -119,13 +118,13 @@ void NHD_US2066::_write_command(unsigned char c) {
   NHD_US2066::_send_byte(c);                      // Transmits the byte
 }
 
-unsigned char NHD_US2066::_read_data() {
+char NHD_US2066::_read_data() {
   SPI.transfer(NHD_US2066::_start_byte(1, 1));
   //delay(1); // If the cable is longer, this delay might be necessary
   return SPI.transfer(0x00);
 }
 
-void NHD_US2066::_write_data(unsigned char d) {
+void NHD_US2066::_write_data(char d) {
   #ifdef NHD_US2066_LOG
   Serial.println("NHD_US2066::_data():> byte "+d);
   #endif
@@ -134,13 +133,13 @@ void NHD_US2066::_write_data(unsigned char d) {
 }
 
 // SPI sends and receives at the same time, bit by bit on SCLK beats
-void NHD_US2066::_send_byte(unsigned char tx_b) {
+void NHD_US2066::_send_byte(char tx_b) {
   #ifdef NHD_US2066_LOG
   Serial.println("NHD_US2066::_send_byte():> byte "+tx_b);
   #endif
   //Split the bytes into two and pad the last four bits with 0s
-  unsigned char tx_b1 = tx_b & 0x0F;
-  unsigned char tx_b2 = (tx_b >> 4) & 0x0F;
+  char tx_b1 = tx_b & 0x0F;
+  char tx_b2 = (tx_b >> 4) & 0x0F;
 
   //Or together the bytes
   int tx_int = (tx_b2<<8)|tx_b1;
@@ -156,12 +155,12 @@ void NHD_US2066::_slave_release() {
   digitalWrite(CS, HIGH);
 }
 
-unsigned char NHD_US2066::_read_byte() {
+char NHD_US2066::_read_byte() {
   return SPI.transfer(0x00);
 }
 
 void NHD_US2066::_move_cursor_to_pos(int row_idx, int col_idx) {
-  unsigned char cmd = char_positions[row_idx][col_idx];
+  char cmd = char_positions[row_idx][col_idx];
   cmd |= 128; //Put the 8th bit on to tell the MPU that this is a "Set DDRAM Address"-command
   NHD_US2066::_write_command(cmd);
 }
@@ -179,7 +178,7 @@ void NHD_US2066::clear_display() {
 
 void NHD_US2066::display_on_off(bool on, bool cursor, bool blink) {
   NHD_US2066::_slave_select();
-  unsigned char byte = 0b00001000;
+  char byte = 0b00001000;
 
   if (on) {
       byte |= 4; //Put the 4th bit on
@@ -229,14 +228,14 @@ void NHD_US2066::double_line_text(int mode) {
   NHD_US2066::_slave_release();
 }
 
-void NHD_US2066::print_char(unsigned char c, int row_idx, int col_idx) {
+void NHD_US2066::print_char(char c, int row_idx, int col_idx) {
   NHD_US2066::_slave_select();
   NHD_US2066::_move_cursor_to_pos(row_idx, col_idx);
   NHD_US2066::_write_data(c);
   NHD_US2066::_slave_release();
 }
 
-void NHD_US2066::print_row(int row_idx, unsigned char row[]) {
+void NHD_US2066::print_row(int row_idx, char row[]) {
   NHD_US2066::_slave_select();
   NHD_US2066::_move_cursor_to_pos(row_idx, 0);
   for (int c = 0; c < COLUMN_N; c++) {
@@ -245,11 +244,15 @@ void NHD_US2066::print_row(int row_idx, unsigned char row[]) {
   NHD_US2066::_slave_release();
 }
 
-unsigned char* NHD_US2066::read_row(int row_idx) {
-  unsigned char row[COLUMN_N];
+char row[COLUMN_N] = {"0000000000000000000"};
+char* NHD_US2066::read_row(int row_idx) {
+  Serial.print(row);
+  Serial.println("!");
+  Serial.println("ROWROW");
   return read_row(row_idx, row);
 }
-unsigned char* NHD_US2066::read_row(int row_idx, unsigned char *row) {
+char* NHD_US2066::read_row(int row_idx, char *row) {
+  Serial.println(row);
   NHD_US2066::_slave_select();
   NHD_US2066::_move_cursor_to_pos(row_idx, 0);
   NHD_US2066::_read_data(); //Read columns+1 count of bytes. The first byte is always a bogus-byte needed by the MPU to prepare for the incoming read operations
@@ -257,13 +260,15 @@ unsigned char* NHD_US2066::read_row(int row_idx, unsigned char *row) {
     row[i] = NHD_US2066::_read_byte();
   }
   NHD_US2066::_slave_release();
+  Serial.println(row);
+  Serial.println("!!!!!!");
   return row;
 }
-unsigned char NHD_US2066::read_char(int row_idx, int col_idx) {
+char NHD_US2066::read_char(int row_idx, int col_idx) {
   NHD_US2066::_slave_select();
   NHD_US2066::_move_cursor_to_pos(row_idx, col_idx);
   NHD_US2066::_read_data();
-  unsigned char c = NHD_US2066::_read_byte();
+  char c = NHD_US2066::_read_byte();
   NHD_US2066::_slave_release();
   return c;
 }

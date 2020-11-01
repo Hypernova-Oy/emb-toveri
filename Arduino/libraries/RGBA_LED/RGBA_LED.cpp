@@ -2,7 +2,7 @@
 #include "RGBA_LED.h"
 #include <Arduino.h>
 
-RGBA_LED::RGBA_LED(int mode, int pin_r, int pin_g, int pin_b) {
+RGBA_LED::RGBA_LED(int mode, pin_size_t pin_r, pin_size_t pin_g, pin_size_t pin_b) {
   #ifdef RGBA_LED_LOG
   Serial.println("RGBA_LED::RGBA_LED()");
   #endif
