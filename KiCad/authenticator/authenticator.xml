@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/kivilahtio/work/emb-toveri/KiCad/authenticator/authenticator.sch</source>
-    <date>ke 28. lokakuuta 2020 23.54.37</date>
+    <date>ti  3. marraskuuta 2020 00.16.48</date>
     <tool>Eeschema 5.1.6-c6e7f7d~86~ubuntu19.10.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -520,21 +520,6 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EC143A1</tstamp>
     </comp>
-    <comp ref="H4">
-      <value>HEADER_S_1X07</value>
-      <footprint>Koha-Suomi:Pin_Header_Straight_1x07_Pitch2.54mm</footprint>
-      <datasheet>https://www.mouser.fi/datasheet/2/276/022102074_sd-589973.pdf</datasheet>
-      <fields>
-        <field name="ALV0%€">1.52</field>
-        <field name="Manufacturer">Molex</field>
-        <field name="Model">22-10-2074</field>
-        <field name="Supplier">www.mouser.fi</field>
-        <field name="Title">Headers &amp; Wire Housings KK 100 Hdr Flat VERT 20 Au 7Ckt</field>
-      </fields>
-      <libsource lib="authenticator-rescue" part="HEADER_S_1X07" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5EC143AC</tstamp>
-    </comp>
     <comp ref="EG1">
       <value>DIY Gasket</value>
       <footprint>Koha-Suomi:Bad_board_tag</footprint>
@@ -654,10 +639,12 @@
     <comp ref="R5">
       <value>50</value>
       <footprint>Koha-Suomi:Resistor_ThroughHole_6.3x2.3mm_Spacing2.54mm</footprint>
+      <datasheet>https://www.mouser.fi/datasheet/2/219/MOS-16613.pdf</datasheet>
       <fields>
-        <field name="ALV0%€">0.231</field>
+        <field name="ALV0%€">0.101</field>
         <field name="Manufacturer">KOE Speer</field>
-        <field name="Title">Metal Film Resistors - Through Hole 4.7K 1% 100PPM</field>
+        <field name="Model">MOS1CT528R510J</field>
+        <field name="Title">Metal Oxide Resistors 51 ohm 5% 1W</field>
       </fields>
       <libsource lib="authenticator-rescue" part="R" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -880,13 +867,14 @@
     <comp ref="RPi1">
       <value>RPi_GPIO</value>
       <footprint>Koha-Suomi:PI_GPIO_Header_F_2x20</footprint>
-      <datasheet>https://www.mouser.fi/datasheet/2/1/ts0815-31700.pdf</datasheet>
+      <datasheet>https://www.mouser.fi/datasheet/2/527/esw_th-1369991.pdf</datasheet>
       <fields>
-        <field name="ALV0%€">2.27</field>
-        <field name="BodyHeight">13.5mm</field>
-        <field name="Manufacturer">Adafruit</field>
-        <field name="Supplier">thepihut.com</field>
-        <field name="Title">40 Pin Extra Tall Header (Push Fit Version)</field>
+        <field name="ALV0%€">6.00</field>
+        <field name="BodyHeight">13.59mm</field>
+        <field name="Manufacturer">Samtec</field>
+        <field name="Model">ESW-120-24-L-D</field>
+        <field name="Supplier">Mouser</field>
+        <field name="Title">Samtec, ESQ 2.54mm Pitch 40 Way 2 Row Vertical PCB Socket, Through Hole, Solder Termination</field>
       </fields>
       <libsource lib="authenticator-rescue" part="RPi_GPIO-Koha-Suomi" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -916,6 +904,30 @@
       <libsource lib="authenticator-rescue" part="HEADER_S_1X02" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FA26ECB</tstamp>
+    </comp>
+    <comp ref="H4">
+      <value>HEADER_S_1X07</value>
+      <footprint>Koha-Suomi:Pin_Header_Straight_1x07_Pitch2.54mm</footprint>
+      <datasheet>https://www.mouser.fi/datasheet/2/276/022102074_sd-589973.pdf</datasheet>
+      <fields>
+        <field name="ALV0%€">1.52</field>
+        <field name="Manufacturer">Molex</field>
+        <field name="Model">22-10-2074</field>
+        <field name="Supplier">www.mouser.fi</field>
+        <field name="Title">Headers &amp; Wire Housings KK 100 Hdr Flat VERT 20 Au 7Ckt</field>
+      </fields>
+      <libsource lib="authenticator-rescue" part="HEADER_S_1X07" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EC143AC</tstamp>
+    </comp>
+    <comp ref="H11">
+      <value>HEADER_S_1X20</value>
+      <fields>
+        <field name="Model">HEADER M 1x20</field>
+      </fields>
+      <libsource lib="authenticator-rescue" part="HEADER_S_1X20" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FAC66FB</tstamp>
     </comp>
   </components>
   <libparts>
@@ -1185,6 +1197,40 @@
         <pin num="7" name="P7" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="authenticator-rescue" part="HEADER_S_1X20">
+      <footprints>
+        <fp>Pin_Header_Straight_1X10</fp>
+        <fp>Pin_Header_Angled_1X10</fp>
+        <fp>Socket_Strip_Straight_1X10</fp>
+        <fp>Socket_Strip_Angled_1X10</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">HEADER_S_1X20</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+        <pin num="7" name="P7" type="passive"/>
+        <pin num="8" name="P8" type="passive"/>
+        <pin num="9" name="P9" type="passive"/>
+        <pin num="10" name="P10" type="passive"/>
+        <pin num="11" name="P11" type="passive"/>
+        <pin num="12" name="P12" type="passive"/>
+        <pin num="13" name="P13" type="passive"/>
+        <pin num="14" name="P14" type="passive"/>
+        <pin num="15" name="P15" type="passive"/>
+        <pin num="16" name="P16" type="passive"/>
+        <pin num="17" name="P17" type="passive"/>
+        <pin num="18" name="P18" type="passive"/>
+        <pin num="19" name="P19" type="passive"/>
+        <pin num="20" name="P20" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="authenticator-rescue" part="KeyPad">
       <fields>
         <field name="Reference">KP</field>
@@ -1426,562 +1472,582 @@
     </library>
   </libraries>
   <nets>
-    <net code="1" name="/PiHat_Heater-">
-      <node ref="V1" pin="2"/>
-    </net>
-    <net code="2" name="/PiHat_KeyPad_TX">
-      <node ref="RPi1" pin="8"/>
-      <node ref="RJ4" pin="13"/>
-    </net>
-    <net code="3" name="/PiHat_LED_G">
-      <node ref="RJ4" pin="2"/>
-      <node ref="RPi1" pin="33"/>
-    </net>
-    <net code="4" name="/PiHat_Heater+">
-      <node ref="V1" pin="1"/>
-    </net>
-    <net code="5" name="/PiHat_HEAT_OFF">
-      <node ref="RJ3" pin="16"/>
-      <node ref="RPi1" pin="36"/>
-    </net>
-    <net code="6" name="Net-(RJ3-Pad9)">
-      <node ref="RJ3" pin="9"/>
-    </net>
-    <net code="7" name="Net-(RJ3-PadSH)">
-      <node ref="RJ3" pin="SH"/>
-    </net>
-    <net code="8" name="Net-(RJ3-PadSH)">
-      <node ref="RJ3" pin="SH"/>
-      <node ref="RJ4" pin="SH"/>
-    </net>
-    <net code="9" name="Net-(EC2-Pad9)">
-      <node ref="EC2" pin="9"/>
-    </net>
-    <net code="10" name="Net-(EC2-Pad10)">
-      <node ref="EC2" pin="10"/>
-    </net>
-    <net code="11" name="Net-(EC2-Pad3)">
-      <node ref="EC2" pin="3"/>
-    </net>
-    <net code="12" name="Net-(EC2-Pad4)">
-      <node ref="EC2" pin="4"/>
-      <node ref="T2" pin="1"/>
-    </net>
-    <net code="13" name="Net-(EC2-Pad5)">
-      <node ref="T2" pin="2"/>
-      <node ref="EC2" pin="5"/>
-    </net>
-    <net code="14" name="/PiHat_35_doorOFF">
-      <node ref="D1" pin="1"/>
-      <node ref="RPi1" pin="40"/>
-      <node ref="EC2" pin="6"/>
-    </net>
-    <net code="15" name="Net-(EC2-Pad8)">
-      <node ref="EC2" pin="8"/>
-    </net>
-    <net code="16" name="/PiHat_GND2">
-      <node ref="RJ4" pin="12"/>
-      <node ref="RPi1" pin="9"/>
-    </net>
-    <net code="17" name="/PiHat_HEAT_ON">
-      <node ref="RPi1" pin="35"/>
-      <node ref="RJ3" pin="15"/>
-    </net>
-    <net code="18" name="/Barcode_5V">
-      <node ref="J2" pin="4"/>
-      <node ref="RJ1" pin="11"/>
-    </net>
-    <net code="19" name="/Barcode_D+">
-      <node ref="RJ1" pin="13"/>
-      <node ref="J2" pin="2"/>
-    </net>
-    <net code="20" name="/Barcode_GND">
-      <node ref="RJ1" pin="14"/>
-      <node ref="J2" pin="1"/>
-    </net>
-    <net code="21" name="/Barcode_D-">
-      <node ref="RJ1" pin="12"/>
-      <node ref="J2" pin="3"/>
-    </net>
-    <net code="22" name="Net-(RJ1-Pad9)">
-      <node ref="RJ1" pin="9"/>
-    </net>
-    <net code="23" name="/Heater-">
-      <node ref="RJ2" pin="SH"/>
-      <node ref="J1" pin="4"/>
-      <node ref="RJ1" pin="SH"/>
-      <node ref="RJ2" pin="SH"/>
-      <node ref="RJ1" pin="SH"/>
-      <node ref="J1" pin="2"/>
-    </net>
-    <net code="24" name="Net-(RJ2-Pad1)">
-      <node ref="RJ2" pin="1"/>
-    </net>
-    <net code="25" name="Net-(RJ2-Pad10)">
-      <node ref="RJ2" pin="10"/>
-    </net>
-    <net code="26" name="/KeyPad+">
-      <node ref="R5" pin="1"/>
-      <node ref="H1" pin="1"/>
-    </net>
-    <net code="27" name="Net-(EC3-Pad5)">
-      <node ref="EC3" pin="5"/>
-      <node ref="R5" pin="2"/>
-    </net>
-    <net code="28" name="Net-(BCR1-PadD+)">
-      <node ref="BCR1" pin="D+"/>
-    </net>
-    <net code="29" name="Net-(BCR1-PadD-)">
-      <node ref="BCR1" pin="D-"/>
-    </net>
-    <net code="30" name="Net-(BCR1-PadGND)">
-      <node ref="BCR1" pin="GND"/>
-    </net>
-    <net code="31" name="Net-(BCR1-PadVCC)">
-      <node ref="BCR1" pin="VCC"/>
-    </net>
-    <net code="32" name="/LED_R">
-      <node ref="R1" pin="1"/>
-      <node ref="RJ2" pin="6"/>
-    </net>
-    <net code="33" name="/PiHat_ENCL_DOOR">
-      <node ref="RJ3" pin="10"/>
-      <node ref="RPi1" pin="37"/>
-    </net>
-    <net code="34" name="/PiHat_Barcode_5V">
-      <node ref="RJ3" pin="11"/>
-      <node ref="J5" pin="4"/>
-    </net>
-    <net code="35" name="/PiHat_Barcode_D+">
-      <node ref="J5" pin="2"/>
-      <node ref="RJ3" pin="13"/>
-    </net>
-    <net code="36" name="Net-(RJ2-Pad8)">
-      <node ref="RJ2" pin="8"/>
-    </net>
-    <net code="37" name="/LED_G">
-      <node ref="R3" pin="1"/>
-      <node ref="RJ2" pin="2"/>
-    </net>
-    <net code="38" name="Net-(RJ2-Pad3)">
-      <node ref="RJ2" pin="3"/>
-    </net>
-    <net code="39" name="/LED_B">
-      <node ref="RJ2" pin="4"/>
-      <node ref="R2" pin="1"/>
-    </net>
-    <net code="40" name="Net-(RJ2-Pad5)">
-      <node ref="RJ2" pin="5"/>
-    </net>
-    <net code="41" name="Net-(RJ2-Pad7)">
-      <node ref="RJ2" pin="7"/>
-    </net>
-    <net code="42" name="/PiHat_MOSI/SDI/D1">
-      <node ref="RJ3" pin="2"/>
-      <node ref="RPi1" pin="19"/>
-    </net>
-    <net code="43" name="/PiHat_Barcode_GND">
-      <node ref="J5" pin="1"/>
-      <node ref="RJ3" pin="14"/>
-    </net>
-    <net code="44" name="/PiHat_Barcode_D-">
-      <node ref="RJ3" pin="12"/>
-      <node ref="J5" pin="3"/>
-    </net>
-    <net code="45" name="/PiHat_CLK/SCLK/D0">
-      <node ref="RPi1" pin="23"/>
-      <node ref="RJ3" pin="5"/>
-    </net>
-    <net code="46" name="Net-(ZM1-Pad3)">
-      <node ref="ZM1" pin="3"/>
-    </net>
-    <net code="47" name="/OLED_RES">
-      <node ref="RJ1" pin="3"/>
-      <node ref="H9" pin="1"/>
-    </net>
-    <net code="48" name="/OLED_CS">
-      <node ref="H9" pin="2"/>
-      <node ref="RJ1" pin="6"/>
-    </net>
-    <net code="49" name="/OLED_D2">
-      <node ref="H9" pin="3"/>
-      <node ref="RJ1" pin="4"/>
-    </net>
-    <net code="50" name="Net-(ZM1-Pad1)">
-      <node ref="ZM1" pin="1"/>
-    </net>
-    <net code="51" name="Net-(ZM1-Pad2)">
-      <node ref="ZM1" pin="2"/>
-    </net>
-    <net code="52" name="/3V3">
-      <node ref="H7" pin="1"/>
-      <node ref="H4" pin="7"/>
-      <node ref="RJ1" pin="8"/>
-      <node ref="H8" pin="3"/>
-      <node ref="NHD1" pin="2"/>
-      <node ref="C1" pin="1"/>
-      <node ref="H9" pin="7"/>
-      <node ref="DS1" pin="3"/>
-      <node ref="R4" pin="2"/>
-    </net>
-    <net code="53" name="/ENCL_DOOR">
-      <node ref="RJ1" pin="10"/>
-      <node ref="H7" pin="2"/>
-    </net>
-    <net code="54" name="/PiHat_LED_R">
-      <node ref="RPi1" pin="29"/>
-      <node ref="RJ4" pin="6"/>
-    </net>
-    <net code="55" name="/PiHat_LED_B">
-      <node ref="RPi1" pin="31"/>
-      <node ref="RJ4" pin="4"/>
-    </net>
-    <net code="56" name="/PiHat_RES">
-      <node ref="RPi1" pin="22"/>
-      <node ref="RJ3" pin="3"/>
-    </net>
-    <net code="57" name="/PiHat_MISO/SDO/D2">
-      <node ref="RJ3" pin="4"/>
-      <node ref="RPi1" pin="21"/>
-    </net>
-    <net code="58" name="Net-(RPi1-Pad1)">
+    <net code="1" name="Net-(RPi1-Pad1)">
       <node ref="RPi1" pin="1"/>
     </net>
-    <net code="59" name="/PiHat_KeyPad_RX">
-      <node ref="RJ4" pin="14"/>
-      <node ref="RPi1" pin="10"/>
-    </net>
-    <net code="60" name="Net-(RPi1-Pad11)">
+    <net code="2" name="Net-(RPi1-Pad11)">
       <node ref="RPi1" pin="11"/>
     </net>
-    <net code="61" name="Net-(RPi1-Pad13)">
+    <net code="3" name="Net-(RPi1-Pad13)">
       <node ref="RPi1" pin="13"/>
     </net>
-    <net code="62" name="Net-(RPi1-Pad14)">
+    <net code="4" name="Net-(RPi1-Pad14)">
       <node ref="RPi1" pin="14"/>
     </net>
-    <net code="63" name="Net-(RPi1-Pad15)">
+    <net code="5" name="Net-(RPi1-Pad15)">
       <node ref="RPi1" pin="15"/>
     </net>
-    <net code="64" name="/PiHat_KeyPadOff">
+    <net code="6" name="/PiHat_KeyPadOff">
       <node ref="RJ4" pin="15"/>
       <node ref="RPi1" pin="16"/>
     </net>
-    <net code="65" name="/PiHat_3V3">
-      <node ref="RPi1" pin="17"/>
-      <node ref="RJ3" pin="8"/>
-    </net>
-    <net code="66" name="/PiHAT_5V">
-      <node ref="RPi1" pin="2"/>
-      <node ref="RJ4" pin="16"/>
-    </net>
-    <net code="67" name="Net-(RPi1-Pad20)">
-      <node ref="RPi1" pin="20"/>
-    </net>
-    <net code="68" name="/PiHat_CE0/CS">
-      <node ref="RPi1" pin="24"/>
-      <node ref="RJ3" pin="6"/>
-    </net>
-    <net code="69" name="Net-(RPi1-Pad26)">
-      <node ref="RPi1" pin="26"/>
-    </net>
-    <net code="70" name="Net-(RPi1-Pad27)">
-      <node ref="RPi1" pin="27"/>
-    </net>
-    <net code="71" name="Net-(RPi1-Pad28)">
-      <node ref="RPi1" pin="28"/>
-    </net>
-    <net code="72" name="Net-(RJ4-Pad1)">
-      <node ref="RJ4" pin="1"/>
-    </net>
-    <net code="73" name="Net-(RJ4-Pad10)">
-      <node ref="RJ4" pin="10"/>
-    </net>
-    <net code="74" name="Net-(RJ4-Pad3)">
-      <node ref="RJ4" pin="3"/>
-    </net>
-    <net code="75" name="Net-(RJ4-Pad5)">
-      <node ref="RJ4" pin="5"/>
-    </net>
-    <net code="76" name="Net-(RJ4-Pad7)">
-      <node ref="RJ4" pin="7"/>
-    </net>
-    <net code="77" name="Net-(RJ4-Pad8)">
-      <node ref="RJ4" pin="8"/>
-    </net>
-    <net code="78" name="/PiHat_PIEZO">
-      <node ref="RJ4" pin="9"/>
-      <node ref="RPi1" pin="12"/>
-    </net>
-    <net code="79" name="Net-(RJ4-PadSH)">
+    <net code="7" name="Net-(RJ4-PadSH)">
       <node ref="RJ4" pin="SH"/>
     </net>
-    <net code="80" name="/PiHat_DS18B20">
+    <net code="8" name="Net-(RPi1-Pad20)">
+      <node ref="RPi1" pin="20"/>
+    </net>
+    <net code="9" name="/PiHat_MISO/SDO/D2">
+      <node ref="RPi1" pin="21"/>
+      <node ref="RJ3" pin="4"/>
+    </net>
+    <net code="10" name="/PiHat_CE0/CS">
+      <node ref="RJ3" pin="6"/>
+      <node ref="RPi1" pin="24"/>
+    </net>
+    <net code="11" name="Net-(RPi1-Pad26)">
+      <node ref="RPi1" pin="26"/>
+    </net>
+    <net code="12" name="Net-(RPi1-Pad27)">
+      <node ref="RPi1" pin="27"/>
+    </net>
+    <net code="13" name="Net-(RPi1-Pad28)">
+      <node ref="RPi1" pin="28"/>
+    </net>
+    <net code="14" name="Net-(EC2-Pad8)">
+      <node ref="EC2" pin="8"/>
+    </net>
+    <net code="15" name="Net-(EC2-Pad9)">
+      <node ref="EC2" pin="9"/>
+    </net>
+    <net code="16" name="Net-(RJ4-Pad1)">
+      <node ref="RJ4" pin="1"/>
+    </net>
+    <net code="17" name="Net-(RJ4-Pad10)">
+      <node ref="RJ4" pin="10"/>
+    </net>
+    <net code="18" name="/PiHat_DS18B20">
       <node ref="RPi1" pin="7"/>
       <node ref="RJ4" pin="11"/>
     </net>
-    <net code="81" name="/PiHat_GND1">
+    <net code="19" name="/PiHat_GND2">
+      <node ref="RPi1" pin="9"/>
+      <node ref="RJ4" pin="12"/>
+    </net>
+    <net code="20" name="Net-(RPi1-Pad3)">
+      <node ref="RPi1" pin="3"/>
+    </net>
+    <net code="21" name="Net-(RJ4-Pad3)">
+      <node ref="RJ4" pin="3"/>
+    </net>
+    <net code="22" name="Net-(RJ4-Pad5)">
+      <node ref="RJ4" pin="5"/>
+    </net>
+    <net code="23" name="Net-(RJ4-Pad7)">
+      <node ref="RJ4" pin="7"/>
+    </net>
+    <net code="24" name="Net-(RJ4-Pad8)">
+      <node ref="RJ4" pin="8"/>
+    </net>
+    <net code="25" name="Net-(RJ3-PadSH)">
+      <node ref="RJ4" pin="SH"/>
+      <node ref="RJ3" pin="SH"/>
+    </net>
+    <net code="26" name="/PiHat_HEAT_ON">
+      <node ref="RPi1" pin="35"/>
+      <node ref="RJ3" pin="15"/>
+    </net>
+    <net code="27" name="/PiHat_HEAT_OFF">
+      <node ref="RPi1" pin="36"/>
+      <node ref="RJ3" pin="16"/>
+    </net>
+    <net code="28" name="/PiHat_35_doorOFF">
+      <node ref="RPi1" pin="40"/>
+      <node ref="EC2" pin="6"/>
+      <node ref="D1" pin="1"/>
+    </net>
+    <net code="29" name="Net-(RPi1-Pad30)">
+      <node ref="RPi1" pin="30"/>
+    </net>
+    <net code="30" name="Net-(RPi1-Pad32)">
+      <node ref="RPi1" pin="32"/>
+    </net>
+    <net code="31" name="/PiHat_39_doorGND">
+      <node ref="EC2" pin="7"/>
+      <node ref="EC2" pin="12"/>
+      <node ref="RPi1" pin="34"/>
+      <node ref="D2" pin="2"/>
+      <node ref="D1" pin="2"/>
+    </net>
+    <net code="32" name="/PiHat_37_doorON">
+      <node ref="RPi1" pin="38"/>
+      <node ref="D2" pin="1"/>
+      <node ref="EC2" pin="1"/>
+    </net>
+    <net code="33" name="Net-(RPi1-Pad39)">
+      <node ref="RPi1" pin="39"/>
+    </net>
+    <net code="34" name="Net-(RPi1-Pad4)">
+      <node ref="RPi1" pin="4"/>
+    </net>
+    <net code="35" name="Net-(RPi1-Pad5)">
+      <node ref="RPi1" pin="5"/>
+    </net>
+    <net code="36" name="Net-(RPi1-Pad6)">
+      <node ref="RPi1" pin="6"/>
+    </net>
+    <net code="37" name="/PiHat_Heater-">
+      <node ref="V1" pin="2"/>
+    </net>
+    <net code="38" name="/PiHat_Heater+">
+      <node ref="V1" pin="1"/>
+    </net>
+    <net code="39" name="/PiHat_KeyPad_RX">
+      <node ref="RPi1" pin="10"/>
+      <node ref="RJ4" pin="14"/>
+    </net>
+    <net code="40" name="/PiHat_KeyPad_TX">
+      <node ref="RJ4" pin="13"/>
+      <node ref="RPi1" pin="8"/>
+    </net>
+    <net code="41" name="/PiHAT_5V">
+      <node ref="RJ4" pin="16"/>
+      <node ref="RPi1" pin="2"/>
+    </net>
+    <net code="42" name="/PiHat_KeyPadOn">
+      <node ref="RPi1" pin="18"/>
+      <node ref="RJ3" pin="1"/>
+    </net>
+    <net code="43" name="/PiHat_ENCL_DOOR">
+      <node ref="RJ3" pin="10"/>
+      <node ref="RPi1" pin="37"/>
+    </net>
+    <net code="44" name="/PiHat_Barcode_5V">
+      <node ref="RJ3" pin="11"/>
+      <node ref="J5" pin="4"/>
+    </net>
+    <net code="45" name="/PiHat_Barcode_D+">
+      <node ref="RJ3" pin="13"/>
+      <node ref="J5" pin="2"/>
+    </net>
+    <net code="46" name="Net-(RJ3-Pad9)">
+      <node ref="RJ3" pin="9"/>
+    </net>
+    <net code="47" name="Net-(RJ3-PadSH)">
+      <node ref="RJ3" pin="SH"/>
+    </net>
+    <net code="48" name="Net-(EC2-Pad10)">
+      <node ref="EC2" pin="10"/>
+    </net>
+    <net code="49" name="Net-(EC2-Pad3)">
+      <node ref="EC2" pin="3"/>
+    </net>
+    <net code="50" name="Net-(EC2-Pad4)">
+      <node ref="EC2" pin="4"/>
+      <node ref="T2" pin="1"/>
+    </net>
+    <net code="51" name="Net-(EC2-Pad5)">
+      <node ref="EC2" pin="5"/>
+      <node ref="T2" pin="2"/>
+    </net>
+    <net code="52" name="/PiHat_3V3">
+      <node ref="RPi1" pin="17"/>
+      <node ref="RJ3" pin="8"/>
+    </net>
+    <net code="53" name="/PiHat_GND1">
       <node ref="RJ3" pin="7"/>
       <node ref="RPi1" pin="25"/>
     </net>
-    <net code="82" name="/PiHat_KeyPadOn">
-      <node ref="RJ3" pin="1"/>
-      <node ref="RPi1" pin="18"/>
+    <net code="54" name="/PiHat_PIEZO">
+      <node ref="RJ4" pin="9"/>
+      <node ref="RPi1" pin="12"/>
     </net>
-    <net code="83" name="Net-(RPi1-Pad4)">
-      <node ref="RPi1" pin="4"/>
+    <net code="55" name="/GND">
+      <node ref="NHD1" pin="3"/>
+      <node ref="NHD1" pin="20"/>
+      <node ref="C1" pin="2"/>
+      <node ref="H11" pin="11"/>
+      <node ref="DS1" pin="1"/>
+      <node ref="D5" pin="2"/>
+      <node ref="H11" pin="13"/>
+      <node ref="H11" pin="14"/>
+      <node ref="H11" pin="17"/>
+      <node ref="H11" pin="18"/>
+      <node ref="H11" pin="19"/>
+      <node ref="H11" pin="20"/>
+      <node ref="H11" pin="3"/>
+      <node ref="H11" pin="4"/>
+      <node ref="D6" pin="2"/>
+      <node ref="H9" pin="6"/>
+      <node ref="EC3" pin="7"/>
+      <node ref="EC3" pin="12"/>
+      <node ref="D3" pin="2"/>
+      <node ref="EC1" pin="12"/>
+      <node ref="EC1" pin="7"/>
+      <node ref="H10" pin="3"/>
+      <node ref="H8" pin="1"/>
+      <node ref="AST1" pin="2"/>
+      <node ref="H1" pin="2"/>
+      <node ref="D4" pin="2"/>
+      <node ref="NHD1" pin="19"/>
+      <node ref="NHD1" pin="18"/>
+      <node ref="NHD1" pin="17"/>
+      <node ref="NHD1" pin="14"/>
+      <node ref="NHD1" pin="13"/>
+      <node ref="NHD1" pin="12"/>
+      <node ref="NHD1" pin="10"/>
+      <node ref="NHD1" pin="1"/>
+      <node ref="NHD1" pin="11"/>
+      <node ref="NHD1" pin="4"/>
+      <node ref="NHD1" pin="6"/>
+      <node ref="NHD1" pin="5"/>
+      <node ref="RJ2" pin="12"/>
+      <node ref="RJ1" pin="7"/>
+      <node ref="H11" pin="6"/>
+      <node ref="H11" pin="1"/>
+      <node ref="H11" pin="12"/>
+      <node ref="H4" pin="6"/>
+      <node ref="H11" pin="5"/>
+      <node ref="H11" pin="10"/>
     </net>
-    <net code="84" name="Net-(RPi1-Pad3)">
-      <node ref="RPi1" pin="3"/>
+    <net code="56" name="/CS">
+      <node ref="NHD1" pin="15"/>
+      <node ref="H11" pin="15"/>
+      <node ref="H4" pin="2"/>
     </net>
-    <net code="85" name="Net-(RPi1-Pad30)">
-      <node ref="RPi1" pin="30"/>
+    <net code="57" name="/D2">
+      <node ref="H11" pin="9"/>
+      <node ref="H4" pin="3"/>
+      <node ref="NHD1" pin="9"/>
     </net>
-    <net code="86" name="Net-(RPi1-Pad32)">
-      <node ref="RPi1" pin="32"/>
+    <net code="58" name="/D1">
+      <node ref="H4" pin="4"/>
+      <node ref="H11" pin="8"/>
+      <node ref="NHD1" pin="8"/>
     </net>
-    <net code="87" name="/PiHat_39_doorGND">
-      <node ref="D2" pin="2"/>
-      <node ref="D1" pin="2"/>
-      <node ref="EC2" pin="7"/>
-      <node ref="RPi1" pin="34"/>
-      <node ref="EC2" pin="12"/>
+    <net code="59" name="/D0">
+      <node ref="H4" pin="5"/>
+      <node ref="NHD1" pin="7"/>
+      <node ref="H11" pin="7"/>
     </net>
-    <net code="88" name="/PiHat_37_doorON">
-      <node ref="EC2" pin="1"/>
-      <node ref="D2" pin="1"/>
-      <node ref="RPi1" pin="38"/>
+    <net code="60" name="/RES">
+      <node ref="H4" pin="1"/>
+      <node ref="H11" pin="16"/>
+      <node ref="NHD1" pin="16"/>
     </net>
-    <net code="89" name="Net-(RPi1-Pad39)">
-      <node ref="RPi1" pin="39"/>
+    <net code="61" name="/3V3">
+      <node ref="C1" pin="1"/>
+      <node ref="H4" pin="7"/>
+      <node ref="H11" pin="2"/>
+      <node ref="RJ1" pin="8"/>
+      <node ref="H8" pin="3"/>
+      <node ref="H9" pin="7"/>
+      <node ref="DS1" pin="3"/>
+      <node ref="R4" pin="2"/>
+      <node ref="H7" pin="1"/>
+      <node ref="NHD1" pin="2"/>
     </net>
-    <net code="90" name="Net-(RPi1-Pad5)">
-      <node ref="RPi1" pin="5"/>
+    <net code="62" name="/PiHat_LED_R">
+      <node ref="RPi1" pin="29"/>
+      <node ref="RJ4" pin="6"/>
     </net>
-    <net code="91" name="Net-(RPi1-Pad6)">
-      <node ref="RPi1" pin="6"/>
+    <net code="63" name="/PiHat_LED_B">
+      <node ref="RPi1" pin="31"/>
+      <node ref="RJ4" pin="4"/>
     </net>
-    <net code="92" name="Net-(TH1-Pad1)">
-      <node ref="TH1" pin="1"/>
+    <net code="64" name="/PiHat_Barcode_D-">
+      <node ref="RJ3" pin="12"/>
+      <node ref="J5" pin="3"/>
     </net>
-    <net code="93" name="Net-(TH1-Pad2)">
+    <net code="65" name="/PiHat_Barcode_GND">
+      <node ref="RJ3" pin="14"/>
+      <node ref="J5" pin="1"/>
+    </net>
+    <net code="66" name="/PiHat_CLK/SCLK/D0">
+      <node ref="RPi1" pin="23"/>
+      <node ref="RJ3" pin="5"/>
+    </net>
+    <net code="67" name="/PiHat_MOSI/SDI/D1">
+      <node ref="RJ3" pin="2"/>
+      <node ref="RPi1" pin="19"/>
+    </net>
+    <net code="68" name="Net-(ZM1-Pad1)">
+      <node ref="ZM1" pin="1"/>
+    </net>
+    <net code="69" name="Net-(ZM1-Pad2)">
+      <node ref="ZM1" pin="2"/>
+    </net>
+    <net code="70" name="Net-(ZM1-Pad3)">
+      <node ref="ZM1" pin="3"/>
+    </net>
+    <net code="71" name="/ENCL_DOOR">
+      <node ref="RJ1" pin="10"/>
+      <node ref="H7" pin="2"/>
+    </net>
+    <net code="72" name="/PiHat_RES">
+      <node ref="RPi1" pin="22"/>
+      <node ref="RJ3" pin="3"/>
+    </net>
+    <net code="73" name="/PiHat_LED_G">
+      <node ref="RPi1" pin="33"/>
+      <node ref="RJ4" pin="2"/>
+    </net>
+    <net code="74" name="/OLED_RES">
+      <node ref="H9" pin="1"/>
+      <node ref="RJ1" pin="3"/>
+    </net>
+    <net code="75" name="/OLED_CS">
+      <node ref="H9" pin="2"/>
+      <node ref="RJ1" pin="6"/>
+    </net>
+    <net code="76" name="/OLED_D2">
+      <node ref="H9" pin="3"/>
+      <node ref="RJ1" pin="4"/>
+    </net>
+    <net code="77" name="Net-(TH1-Pad2)">
       <node ref="TH1" pin="2"/>
     </net>
-    <net code="94" name="/Cable_RES">
-      <node ref="H6" pin="7"/>
+    <net code="78" name="Net-(TH1-Pad1)">
+      <node ref="TH1" pin="1"/>
+    </net>
+    <net code="79" name="/Cable_RES">
       <node ref="H5" pin="1"/>
+      <node ref="H6" pin="7"/>
     </net>
-    <net code="95" name="Net-(H10-Pad4)">
-      <node ref="R1" pin="2"/>
-      <node ref="H10" pin="4"/>
-    </net>
-    <net code="96" name="Net-(H10-Pad2)">
-      <node ref="R2" pin="2"/>
-      <node ref="H10" pin="2"/>
-    </net>
-    <net code="97" name="Net-(H10-Pad1)">
-      <node ref="R3" pin="2"/>
-      <node ref="H10" pin="1"/>
-    </net>
-    <net code="98" name="/OLED_D1">
-      <node ref="H9" pin="4"/>
-      <node ref="RJ1" pin="2"/>
-    </net>
-    <net code="99" name="/OLED_D0">
-      <node ref="RJ1" pin="5"/>
-      <node ref="H9" pin="5"/>
-    </net>
-    <net code="100" name="/Cable_CS">
-      <node ref="H5" pin="2"/>
+    <net code="80" name="/Cable_CS">
       <node ref="H6" pin="6"/>
+      <node ref="H5" pin="2"/>
     </net>
-    <net code="101" name="Net-(EC1-Pad3)">
-      <node ref="EC1" pin="3"/>
-    </net>
-    <net code="102" name="/Heater+">
-      <node ref="EC1" pin="4"/>
-      <node ref="J1" pin="1"/>
-    </net>
-    <net code="103" name="/HeaterPSU+">
-      <node ref="J1" pin="3"/>
-      <node ref="EC1" pin="5"/>
-    </net>
-    <net code="104" name="Net-(EC1-Pad8)">
-      <node ref="EC1" pin="8"/>
-    </net>
-    <net code="105" name="Net-(EC1-Pad9)">
-      <node ref="EC1" pin="9"/>
-    </net>
-    <net code="106" name="/HT_GND">
-      <node ref="H2" pin="1"/>
-      <node ref="DS2" pin="1"/>
-    </net>
-    <net code="107" name="/HT_DQ">
-      <node ref="H2" pin="2"/>
-      <node ref="DS2" pin="2"/>
-    </net>
-    <net code="108" name="/HT_VDD">
-      <node ref="DS2" pin="3"/>
-      <node ref="H2" pin="3"/>
-    </net>
-    <net code="109" name="/Cable_D2">
+    <net code="81" name="/Cable_D2">
       <node ref="H5" pin="3"/>
       <node ref="H6" pin="5"/>
     </net>
-    <net code="110" name="/Cable_D1">
-      <node ref="H5" pin="4"/>
+    <net code="82" name="/Cable_D1">
       <node ref="H6" pin="4"/>
+      <node ref="H5" pin="4"/>
     </net>
-    <net code="111" name="/Cable_D0">
-      <node ref="H5" pin="5"/>
+    <net code="83" name="/Cable_D0">
       <node ref="H6" pin="3"/>
+      <node ref="H5" pin="5"/>
     </net>
-    <net code="112" name="/Cable_VDD">
+    <net code="84" name="/Cable_VDD">
       <node ref="H5" pin="6"/>
       <node ref="H6" pin="2"/>
     </net>
-    <net code="113" name="/Cable__VSS">
+    <net code="85" name="/Cable__VSS">
       <node ref="H5" pin="7"/>
       <node ref="H6" pin="1"/>
     </net>
-    <net code="114" name="/HEAT_ON">
-      <node ref="D4" pin="1"/>
+    <net code="86" name="/OLED_D1">
+      <node ref="H9" pin="4"/>
+      <node ref="RJ1" pin="2"/>
+    </net>
+    <net code="87" name="/OLED_D0">
+      <node ref="H9" pin="5"/>
+      <node ref="RJ1" pin="5"/>
+    </net>
+    <net code="88" name="/HEAT_ON">
       <node ref="RJ1" pin="15"/>
       <node ref="EC1" pin="1"/>
+      <node ref="D4" pin="1"/>
     </net>
-    <net code="115" name="Net-(EC1-Pad10)">
-      <node ref="EC1" pin="10"/>
+    <net code="89" name="/Heater+">
+      <node ref="J1" pin="1"/>
+      <node ref="EC1" pin="4"/>
     </net>
-    <net code="116" name="/DS18B20">
-      <node ref="R4" pin="1"/>
-      <node ref="DS1" pin="2"/>
-      <node ref="RJ2" pin="11"/>
-      <node ref="H8" pin="2"/>
+    <net code="90" name="/HT_GND">
+      <node ref="DS2" pin="1"/>
+      <node ref="H2" pin="1"/>
     </net>
-    <net code="117" name="/GND">
-      <node ref="NHD1" pin="12"/>
-      <node ref="NHD1" pin="4"/>
-      <node ref="D5" pin="2"/>
-      <node ref="D6" pin="2"/>
-      <node ref="EC3" pin="12"/>
-      <node ref="EC3" pin="7"/>
-      <node ref="RJ2" pin="12"/>
-      <node ref="H1" pin="2"/>
-      <node ref="RJ1" pin="7"/>
-      <node ref="H4" pin="6"/>
-      <node ref="NHD1" pin="14"/>
-      <node ref="NHD1" pin="17"/>
-      <node ref="NHD1" pin="18"/>
-      <node ref="NHD1" pin="19"/>
-      <node ref="NHD1" pin="20"/>
-      <node ref="NHD1" pin="3"/>
-      <node ref="NHD1" pin="11"/>
-      <node ref="NHD1" pin="5"/>
-      <node ref="NHD1" pin="6"/>
-      <node ref="NHD1" pin="13"/>
-      <node ref="NHD1" pin="1"/>
-      <node ref="NHD1" pin="10"/>
-      <node ref="AST1" pin="2"/>
-      <node ref="DS1" pin="1"/>
-      <node ref="C1" pin="2"/>
-      <node ref="D3" pin="2"/>
-      <node ref="D4" pin="2"/>
-      <node ref="H10" pin="3"/>
-      <node ref="H9" pin="6"/>
-      <node ref="H8" pin="1"/>
-      <node ref="EC1" pin="7"/>
-      <node ref="EC1" pin="12"/>
+    <net code="91" name="/HT_DQ">
+      <node ref="H2" pin="2"/>
+      <node ref="DS2" pin="2"/>
     </net>
-    <net code="118" name="/HEAT_OFF">
-      <node ref="EC1" pin="6"/>
-      <node ref="D3" pin="1"/>
-      <node ref="RJ1" pin="16"/>
+    <net code="92" name="/HT_VDD">
+      <node ref="DS2" pin="3"/>
+      <node ref="H2" pin="3"/>
     </net>
-    <net code="119" name="/PIEZO">
-      <node ref="AST1" pin="1"/>
-      <node ref="RJ2" pin="9"/>
-    </net>
-    <net code="120" name="Net-(EC3-Pad10)">
-      <node ref="EC3" pin="10"/>
-    </net>
-    <net code="121" name="Net-(KP1-Pad1)">
-      <node ref="KP1" pin="1"/>
-    </net>
-    <net code="122" name="Net-(KP1-Pad2)">
-      <node ref="KP1" pin="2"/>
-    </net>
-    <net code="123" name="Net-(KP1-Pad3)">
-      <node ref="KP1" pin="3"/>
-    </net>
-    <net code="124" name="Net-(KP1-Pad4)">
-      <node ref="KP1" pin="4"/>
-    </net>
-    <net code="125" name="Net-(EC3-Pad3)">
-      <node ref="EC3" pin="3"/>
-    </net>
-    <net code="126" name="Net-(EC3-Pad8)">
-      <node ref="EC3" pin="8"/>
-    </net>
-    <net code="127" name="Net-(EC3-Pad9)">
-      <node ref="EC3" pin="9"/>
-    </net>
-    <net code="128" name="/KeyPadOff">
-      <node ref="D6" pin="1"/>
-      <node ref="EC3" pin="1"/>
-      <node ref="RJ2" pin="15"/>
-    </net>
-    <net code="129" name="/KeyPadRX">
-      <node ref="H1" pin="4"/>
-      <node ref="RJ2" pin="14"/>
-    </net>
-    <net code="130" name="/KeyPadTX">
-      <node ref="H1" pin="3"/>
-      <node ref="RJ2" pin="13"/>
-    </net>
-    <net code="131" name="/KeyPadOn">
-      <node ref="EC3" pin="6"/>
-      <node ref="RJ1" pin="1"/>
-      <node ref="D5" pin="1"/>
-    </net>
-    <net code="132" name="/KeyPadPSU+">
-      <node ref="EC3" pin="4"/>
-      <node ref="RJ2" pin="16"/>
-    </net>
-    <net code="133" name="/RES">
-      <node ref="H4" pin="1"/>
-      <node ref="NHD1" pin="16"/>
-    </net>
-    <net code="134" name="/B3,4V">
-      <node ref="H3" pin="2"/>
-      <node ref="LED1" pin="3"/>
-    </net>
-    <net code="135" name="/G3,3V">
+    <net code="93" name="/G3,3V">
       <node ref="LED1" pin="4"/>
       <node ref="H3" pin="1"/>
     </net>
-    <net code="136" name="/R1,9V">
-      <node ref="H3" pin="4"/>
+    <net code="94" name="/B3,4V">
+      <node ref="H3" pin="2"/>
+      <node ref="LED1" pin="3"/>
+    </net>
+    <net code="95" name="/R1,9V">
       <node ref="LED1" pin="1"/>
+      <node ref="H3" pin="4"/>
     </net>
-    <net code="137" name="Net-(H3-Pad3)">
-      <node ref="H3" pin="3"/>
+    <net code="96" name="Net-(H3-Pad3)">
       <node ref="LED1" pin="2"/>
+      <node ref="H3" pin="3"/>
     </net>
-    <net code="138" name="/D0">
-      <node ref="NHD1" pin="7"/>
-      <node ref="H4" pin="5"/>
+    <net code="97" name="/HeaterPSU+">
+      <node ref="EC1" pin="5"/>
+      <node ref="J1" pin="3"/>
     </net>
-    <net code="139" name="/D1">
-      <node ref="NHD1" pin="8"/>
-      <node ref="H4" pin="4"/>
+    <net code="98" name="Net-(EC1-Pad10)">
+      <node ref="EC1" pin="10"/>
     </net>
-    <net code="140" name="/D2">
-      <node ref="NHD1" pin="9"/>
-      <node ref="H4" pin="3"/>
+    <net code="99" name="Net-(EC1-Pad3)">
+      <node ref="EC1" pin="3"/>
     </net>
-    <net code="141" name="/CS">
-      <node ref="H4" pin="2"/>
-      <node ref="NHD1" pin="15"/>
+    <net code="100" name="Net-(EC1-Pad8)">
+      <node ref="EC1" pin="8"/>
+    </net>
+    <net code="101" name="Net-(EC1-Pad9)">
+      <node ref="EC1" pin="9"/>
+    </net>
+    <net code="102" name="Net-(H10-Pad1)">
+      <node ref="H10" pin="1"/>
+      <node ref="R3" pin="2"/>
+    </net>
+    <net code="103" name="Net-(H10-Pad2)">
+      <node ref="H10" pin="2"/>
+      <node ref="R2" pin="2"/>
+    </net>
+    <net code="104" name="/DS18B20">
+      <node ref="DS1" pin="2"/>
+      <node ref="H8" pin="2"/>
+      <node ref="R4" pin="1"/>
+      <node ref="RJ2" pin="11"/>
+    </net>
+    <net code="105" name="/HEAT_OFF">
+      <node ref="EC1" pin="6"/>
+      <node ref="RJ1" pin="16"/>
+      <node ref="D3" pin="1"/>
+    </net>
+    <net code="106" name="/LED_R">
+      <node ref="RJ2" pin="6"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="107" name="Net-(H10-Pad4)">
+      <node ref="R1" pin="2"/>
+      <node ref="H10" pin="4"/>
+    </net>
+    <net code="108" name="/PIEZO">
+      <node ref="AST1" pin="1"/>
+      <node ref="RJ2" pin="9"/>
+    </net>
+    <net code="109" name="/LED_B">
+      <node ref="R2" pin="1"/>
+      <node ref="RJ2" pin="4"/>
+    </net>
+    <net code="110" name="/LED_G">
+      <node ref="RJ2" pin="2"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="111" name="Net-(BCR1-PadVCC)">
+      <node ref="BCR1" pin="VCC"/>
+    </net>
+    <net code="112" name="Net-(BCR1-PadD-)">
+      <node ref="BCR1" pin="D-"/>
+    </net>
+    <net code="113" name="Net-(BCR1-PadD+)">
+      <node ref="BCR1" pin="D+"/>
+    </net>
+    <net code="114" name="Net-(BCR1-PadGND)">
+      <node ref="BCR1" pin="GND"/>
+    </net>
+    <net code="115" name="/Barcode_5V">
+      <node ref="RJ1" pin="11"/>
+      <node ref="J2" pin="4"/>
+    </net>
+    <net code="116" name="/Barcode_D+">
+      <node ref="RJ1" pin="13"/>
+      <node ref="J2" pin="2"/>
+    </net>
+    <net code="117" name="/Barcode_GND">
+      <node ref="RJ1" pin="14"/>
+      <node ref="J2" pin="1"/>
+    </net>
+    <net code="118" name="/KeyPadRX">
+      <node ref="RJ2" pin="14"/>
+      <node ref="H1" pin="4"/>
+    </net>
+    <net code="119" name="/KeyPadTX">
+      <node ref="RJ2" pin="13"/>
+      <node ref="H1" pin="3"/>
+    </net>
+    <net code="120" name="/KeyPad+">
+      <node ref="H1" pin="1"/>
+      <node ref="R5" pin="1"/>
+    </net>
+    <net code="121" name="/Heater-">
+      <node ref="RJ2" pin="SH"/>
+      <node ref="RJ2" pin="SH"/>
+      <node ref="J1" pin="2"/>
+      <node ref="J1" pin="4"/>
+      <node ref="RJ1" pin="SH"/>
+      <node ref="RJ1" pin="SH"/>
+    </net>
+    <net code="122" name="/Barcode_D-">
+      <node ref="J2" pin="3"/>
+      <node ref="RJ1" pin="12"/>
+    </net>
+    <net code="123" name="Net-(RJ1-Pad9)">
+      <node ref="RJ1" pin="9"/>
+    </net>
+    <net code="124" name="Net-(RJ2-Pad1)">
+      <node ref="RJ2" pin="1"/>
+    </net>
+    <net code="125" name="Net-(RJ2-Pad10)">
+      <node ref="RJ2" pin="10"/>
+    </net>
+    <net code="126" name="/KeyPadPSU+">
+      <node ref="EC3" pin="4"/>
+      <node ref="RJ2" pin="16"/>
+    </net>
+    <net code="127" name="Net-(RJ2-Pad3)">
+      <node ref="RJ2" pin="3"/>
+    </net>
+    <net code="128" name="Net-(RJ2-Pad5)">
+      <node ref="RJ2" pin="5"/>
+    </net>
+    <net code="129" name="Net-(RJ2-Pad7)">
+      <node ref="RJ2" pin="7"/>
+    </net>
+    <net code="130" name="Net-(RJ2-Pad8)">
+      <node ref="RJ2" pin="8"/>
+    </net>
+    <net code="131" name="Net-(EC3-Pad8)">
+      <node ref="EC3" pin="8"/>
+    </net>
+    <net code="132" name="Net-(KP1-Pad1)">
+      <node ref="KP1" pin="1"/>
+    </net>
+    <net code="133" name="Net-(KP1-Pad3)">
+      <node ref="KP1" pin="3"/>
+    </net>
+    <net code="134" name="Net-(KP1-Pad4)">
+      <node ref="KP1" pin="4"/>
+    </net>
+    <net code="135" name="Net-(EC3-Pad3)">
+      <node ref="EC3" pin="3"/>
+    </net>
+    <net code="136" name="Net-(EC3-Pad9)">
+      <node ref="EC3" pin="9"/>
+    </net>
+    <net code="137" name="Net-(EC3-Pad10)">
+      <node ref="EC3" pin="10"/>
+    </net>
+    <net code="138" name="/KeyPadOff">
+      <node ref="D6" pin="1"/>
+      <node ref="RJ2" pin="15"/>
+      <node ref="EC3" pin="1"/>
+    </net>
+    <net code="139" name="Net-(EC3-Pad5)">
+      <node ref="EC3" pin="5"/>
+      <node ref="R5" pin="2"/>
+    </net>
+    <net code="140" name="Net-(KP1-Pad2)">
+      <node ref="KP1" pin="2"/>
+    </net>
+    <net code="141" name="/KeyPadOn">
+      <node ref="RJ1" pin="1"/>
+      <node ref="D5" pin="1"/>
+      <node ref="EC3" pin="6"/>
     </net>
   </nets>
 </export>

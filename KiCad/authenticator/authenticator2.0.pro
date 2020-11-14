@@ -1,4 +1,4 @@
-update=ti 27. lokakuuta 2020 20.15.18
+update=pe 13. marraskuuta 2020 00.44.33
 version=1
 last_client=pcbnew
 [general]
@@ -30,6 +30,8 @@ MinMicroViaDrill=0.09999999999999999
 MinHoleToHole=0.25
 TrackWidth1=0.5
 TrackWidth2=1
+TrackWidth3=2
+TrackWidth4=3
 ViaDiameter1=0.6
 ViaDrill1=0.4
 ViaDiameter2=1.524
@@ -60,7 +62,7 @@ OthersTextUpright=1
 SolderMaskClearance=0.2
 SolderMaskMinWidth=0.25
 SolderPasteClearance=0
-SolderPasteRatio=0
+SolderPasteRatio=-0
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
 Type=0
@@ -218,7 +220,7 @@ Enabled=1
 [pcbnew/Layer.Margin]
 Enabled=1
 [pcbnew/Layer.B.CrtYd]
-Enabled=0
+Enabled=1
 [pcbnew/Layer.F.CrtYd]
 Enabled=1
 [pcbnew/Layer.B.Fab]
