@@ -1911,7 +1911,7 @@ Wire Wire Line
 	15500 6100 15600 6100
 Text Label 15600 5800 2    50   ~ 0
 PiHat_HEAT+_IN
-Text Label 14900 2450 0    39   ~ 0
+Text Label 14900 1950 0    39   ~ 0
 PiHat_ENCL_DOOR
 Text Label 11350 1300 0    39   ~ 0
 PiHat_GND2

@@ -868,7 +868,7 @@ KeyPadRX
 Text Label 4900 10150 0    39   ~ 0
 KeyPadTX
 Text Label 4900 10350 0    39   ~ 0
-KeyPadPSU+
+KeyPadPSU+_2
 Text Label 4900 10250 0    50   ~ 0
 GND
 Wire Wire Line
