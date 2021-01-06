@@ -1,7 +1,25 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP BC140
+D 1A Ic, 40V Vce, NPN Transistor, TO-39
+K NPN Transistor
+F http://www.farnell.com/datasheets/296634.pdf
+$ENDCMP
+#
+$CMP BC141
+D 1A Ic, 60V Vce, NPN Transistor, TO-39
+K NPN Transistor
+F http://www.farnell.com/datasheets/296634.pdf
+$ENDCMP
+#
 $CMP HCJT4-812SK-L12
 D Modular Connectors / Ethernet Connectors Shielded 1X4 Tab Up RJ45 G/Y LED
+$ENDCMP
+#
+$CMP KSD471AYTA
+D 800mA Ic, 50V Vce, NPN Transistor, TO-39
+K NPN Transistor
+F http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF
 $ENDCMP
 #
 $CMP RJHSE-5385-04
