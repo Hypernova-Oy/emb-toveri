@@ -40,7 +40,7 @@ echo "+------------------+"
 echo "| Setting hostname |"
 echo "+------------------+"
 echo ""
-echo "$TOVERI_HOSTNAME" >> /etc/hostname
+echo "$TOVERI_HOSTNAME" > /etc/hostname
 echo "127.0.0.1 $TOVERI_HOSTNAME" >> /etc/hosts
 echo "$TOVERI_CC_IP toveri-cc" >> /etc/hosts
 echo ""
