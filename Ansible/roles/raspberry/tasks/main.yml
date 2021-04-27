@@ -48,6 +48,16 @@
   become: yes
   notify: Restart raspberry pi
 
+- name: Set default language
+  blockinfile:
+    path: /etc/default/locale
+    marker: "# {mark} Ansible managed"
+    content: |
+      LANG=fi_FI.UTF-8
+      LC_MESSAGES=fi_FI.UTF-8
+      LANGUAGE=fi_FI.UTF-8
+      LC_ALL=fi_FI.UTF-8
+
 - name: Set default keyboard layout
   lineinfile:
     dest: /etc/default/keyboard
