@@ -5,11 +5,11 @@
   - role: raspberry
     tags: ['raspberry']
 
-  - role: geerlingguy.ntp
-    ntp_timezone: Europe/Helsinki
-    ntp_enabled: true
-    become: yes
-    tags: ['ntp']
+  #- role: geerlingguy.ntp  # ntp seems to be malfunctioning occasionally, so use systemd timedatectl systemd-timesyncd
+  #  ntp_timezone: Europe/Helsinki
+  #  ntp_enabled: true
+  #  become: yes
+  #  tags: ['ntp']
 
   - role: wiringPi
     programHome: "/home/toveri/wiringPi"
@@ -91,5 +91,12 @@
       value: "TemperatureCorrection {{hostvars[inventory_hostname]['toveri_temperature_correction']}}"
     tags: ['emb-heater']
 
+  - role: makeProgram
+    programName: "emb-tamper"
+    programHome: "/home/toveri/emb-tamper"
+    gitRepository: "https://github.com/Hypernova-Oy/emb-tamper.git"
+    programUser: toveri
+    configurations: []
+    tags: ['emb-tamper']
 
 
