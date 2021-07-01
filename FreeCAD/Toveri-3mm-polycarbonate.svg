@@ -14,7 +14,7 @@
    viewBox="0 0 210 297"
    version="1.1"
    id="svg51792"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
    sodipodi:docname="Toveri-3mm-polycarbonate.svg">
   <defs
      id="defs51786" />
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.3284078"
-     inkscape:cx="600.21638"
-     inkscape:cy="680.85994"
+     inkscape:zoom="1.8786523"
+     inkscape:cx="305.48654"
+     inkscape:cy="697.04279"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -5622,11 +5622,6 @@
        id="path13325" />
     <path
        inkscape:connector-curvature="0"
-       d="m 75.231153,271.33472 10.4998,14.5"
-       style="fill:none;stroke:#000000;stroke-width:0.26458332"
-       id="path13329" />
-    <path
-       inkscape:connector-curvature="0"
        d="m 75.231153,271.33472 v -23.06"
        style="fill:none;stroke:#000000;stroke-width:0.26458332"
        id="path13331" />
@@ -7307,11 +7302,6 @@
        id="path13325-7" />
     <path
        inkscape:connector-curvature="0"
-       d="M 75.229329,90.298735 85.729128,104.79873"
-       style="fill:none;stroke:#000000;stroke-width:0.26458332"
-       id="path13329-5" />
-    <path
-       inkscape:connector-curvature="0"
        d="M 75.229329,90.298735 V 67.238734"
        style="fill:none;stroke:#000000;stroke-width:0.26458332"
        id="path13331-3" />
@@ -7520,5 +7510,45 @@
        d="m 45.929329,107.99673 v 3"
        style="fill:none;stroke:#000000;stroke-width:0.26458332"
        id="path13413-7" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 84.932229,103.69672 0.7976,1.10201"
+       style="fill:none;stroke:#000000;stroke-width:0.26458332"
+       id="path73058" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 83.005629,103.69672 h 1.9266"
+       style="fill:none;stroke:#000000;stroke-width:0.26458332"
+       id="path73060" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 83.005629,101.03672 v 2.66"
+       style="fill:none;stroke:#000000;stroke-width:0.26458332"
+       id="path73062" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 75.229329,90.298735 7.7763,10.737985"
+       style="fill:none;stroke:#000000;stroke-width:0.26458332"
+       id="path73064" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 84.934053,284.73271 0.7976,1.10201"
+       style="fill:none;stroke:#000000;stroke-width:0.26458332"
+       id="path73058-2" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 83.007453,284.73271 h 1.9266"
+       style="fill:none;stroke:#000000;stroke-width:0.26458332"
+       id="path73060-9" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 83.007453,282.07271 v 2.66"
+       style="fill:none;stroke:#000000;stroke-width:0.26458332"
+       id="path73062-0" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 75.231153,271.33472 7.7763,10.73799"
+       style="fill:none;stroke:#000000;stroke-width:0.26458332"
+       id="path73064-2" />
   </g>
 </svg>
