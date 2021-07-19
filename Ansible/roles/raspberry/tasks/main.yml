@@ -57,6 +57,7 @@
       LC_MESSAGES=fi_FI.UTF-8
       LANGUAGE=fi_FI.UTF-8
       LC_ALL=fi_FI.UTF-8
+  become: yes
 
 - name: Set default keyboard layout
   lineinfile:

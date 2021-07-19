@@ -14,6 +14,7 @@ TOVERI_CC_HOSTNAME="toveri-cc"
 TOVERI_CC_IP="{{ansible_host}}"
 TOVERI_CC_HOST_KEY_PUB="ecdsa-sha2-nistp256 {{ansible_ssh_host_key_ecdsa_public}}"
 TOVERI_CC_SSH_REVERSE_SHELL_REMOTE_PORT="{{toveri_cc_ssh_remote_port}}"
+TOVERI_CC_ZABBIX_REVERSE_PORT="{{toveri_cc_monitoring_remote_port}}"
 
 TOVERI_HOSTNAME="{{toveri_inventory_hostname}}"
 TOVERI_ID_RSA="{{lookup('file', secret+'/id_rsa.'+toveri_inventory_hostname)}}"
@@ -31,7 +32,7 @@ echo "Checking if you are running as root"
 test $(whoami) != "root" && echo "Not running as root, aborting" && exit 1
 echo ""
 echo "Installing OpenSSH-Server"
-sudo apt -y install openssh-server
+sudo apt -y install openssh-server autossh
 #Raspberry Pi might have openssh-server installed but masked
 sudo systemctl enable ssh
 sudo systemctl start ssh
@@ -48,7 +49,7 @@ echo "+---------------------------------------------------------------+"
 echo "| Intalling some dependencies ansible needs to run it's modules |"
 echo "+---------------------------------------------------------------+"
 echo ""
-sudo apt -y install python autossh
+sudo apt -y install python
 echo ""
 echo "+-----------------------------------+"
 echo "| Creating ansible-user             |"
@@ -96,7 +97,7 @@ After=network.target
 Type=simple
 User=toveri
 Environment='AUTOSSH_GATETIME=0'
-ExecStart=/usr/bin/autossh -M 0 -o 'ServerAliveInterval 120' -o 'ServerAliveCountMax 2' -o 'ExitOnForwardFailure yes' -NT -R $TOVERI_CC_SSH_REVERSE_SHELL_REMOTE_PORT:localhost:22 toveri@toveri-cc
+ExecStart=/usr/bin/autossh -M 0 -o 'ServerAliveInterval 120' -o 'ServerAliveCountMax 2' -o 'ExitOnForwardFailure yes' -NT -R $TOVERI_CC_SSH_REVERSE_SHELL_REMOTE_PORT:localhost:22 -R $TOVERI_CC_IP:$TOVERI_CC_ZABBIX_REVERSE_PORT:localhost:10050 toveri@toveri-cc
 Restart=always
 RestartSec=3
 

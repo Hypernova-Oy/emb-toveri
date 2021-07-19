@@ -9,22 +9,31 @@
 
 - hosts: ansible_controller
 
+  pre_tasks:
+    - name: Find max Toveri port in use, to find the next free Toveri port.
+      set_fact: max_toveri_port="{{ groups['toveri'] | map('extract', hostvars, 'ansible_port') | list | sort | last }}"
+      when: max_toveri_port is not defined
+    - name: Set toveri_cc_ssh_remote_port
+      set_fact: toveri_cc_ssh_remote_port="{{ (max_toveri_port | int) + 1 }}"
+    - name: Set toveri_cc_monitoring_remote_port
+      set_fact: toveri_cc_monitoring_remote_port="{{ (max_toveri_port | int) + 1 - 40000 }}"
+    - name: Set toveri_inventory_hostname
+      set_fact: toveri_inventory_hostname="{{'toveri-' + toveri_organization_name + '-' + toveri_name}}"
+
   vars_prompt:
-    - name: "toveri_inventory_hostname"
-      prompt: "Give the toveri inventory_hostname"
+    - name: "toveri_organization_name"
+      prompt: "Give the toveri organization name. Eg. vaara, lumme, ..."
       private: no
-    - name: "toveri_cc_ssh_remote_port"
-      prompt: "Give the toveri central controller port to forward to Toveri ssh-server, eg. 535XX"
+    - name: "toveri_name"
+      prompt: "Give the toveri name. Eg. liperi, outokumpu-2, suomenniemi, ..."
       private: no
 
   tasks:
-
     - name: Check toveri_inventory_hostname
       assert:
         that:
           - "'_' not in  toveri_inventory_hostname" # _ Makes havoc with domain names
-          - "'-' not in  toveri_inventory_hostname" # - Makes havoc with Ansible
-          - "'toveri' in toveri_inventory_hostname" # simple naming convention enforcement
+          - "'toveri-' in toveri_inventory_hostname" # simple naming convention enforcement
         msg: "toveri_inventory_hostname contains 'toveri' and not '-' or '_'"
 
     - name: Check toveri_cc_ssh_remote_port is valid
@@ -71,13 +80,38 @@
       args:
         warn: False
 
+    - name: Create host_vars dir
+      file:
+        path: "{{ansible_config_dir}}/host_vars/{{toveri_inventory_hostname}}"
+        state: directory
+
     - name: Provide a template host_vars
-      command: cp -rT examples/default_config/host_vars/toverrii {{ansible_config_dir}}/host_vars/{{toveri_inventory_hostname}}
+      template:
+        src:  "templates/toveri_host_vars.yml"
+        dest: "{{ansible_config_dir}}/host_vars/{{toveri_inventory_hostname}}/vars.yml"
+
+    - name: Provide a template host_vars vault
+      template:
+        src:  "templates/toveri_host_vars_vault.yml"
+        dest: "{{ansible_config_dir}}/host_vars/{{toveri_inventory_hostname}}/vault.yml"
+
+    - name: Encrypt the vault template
+      command:
+        cmd:   ansible-vault encrypt {{ansible_config_dir}}/host_vars/{{toveri_inventory_hostname}}/vault.yml
+        chdir: "{{playbook_dir}}"
+
+    - name: Create a inventory entry enabling zabbix
+      lineinfile:
+        path:   "{{ansible_config_dir}}/inventory"
+        regexp: "^{{toveri_inventory_hostname}}\s+zabbix_agent_listenport"
+        insertafter: "\\[zabbix_agent\\]"
+        line:   "{{toveri_inventory_hostname}} zabbix_agent_listenport={{toveri_cc_monitoring_remote_port}}"
 
     - name: Create a inventory entry with connection parameters
       lineinfile:
         path:   "{{ansible_config_dir}}/inventory"
-        regexp: "^{{toveri_inventory_hostname}}"
+        regexp: "^{{toveri_inventory_hostname}}\s+ansible_host"
+        insertafter: "\\[toveri\\]"
         line:   "{{toveri_inventory_hostname}} ansible_host={{toveri_inventory_hostname}} ansible_port={{toveri_cc_ssh_remote_port}}"
 
     - name: Add /etc/hosts entry
