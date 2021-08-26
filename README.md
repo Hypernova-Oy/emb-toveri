@@ -1,6 +1,8 @@
 # emb-toveri
 Weatherproof embedded user authenticator and authorizator device
 
+![Toveri_PIN_entry](Pictures/Enclosures/white28%25_acrylic_painting.jpg)
+
 ## Skills needed to build a working Toveri
 
 From front-end to backend
@@ -66,9 +68,6 @@ From front-end to backend
 
 ## Some pics about the finished Toveri
 
-![Toveri_in_Eno](Pictures/Assembled/Eno.jpg)
-![toveri_top](Pictures/Assembled/toveri_iso.png)
-![toveri_bottom](Pictures/Assembled/toveri_iso2.png)
-![toveri_bottom](Pictures/Assembled/toveri_bottom.jpg)
-![toveri_bottom+card](Pictures/Assembled/toveri_bottom+card.jpg)
+![Previous enclosures](Pictures/Enclosures/)
+![Old models](Pictures/Assembled/)
 
