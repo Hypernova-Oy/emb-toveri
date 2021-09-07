@@ -1,11 +1,11 @@
 G04 #@! TF.GenerationSoftware,KiCad,Pcbnew,5.1.6-c6e7f7d~87~ubuntu19.10.1*
-G04 #@! TF.CreationDate,2021-07-01T13:16:57+03:00*
+G04 #@! TF.CreationDate,2021-09-07T13:02:59+03:00*
 G04 #@! TF.ProjectId,authenticator2.0,61757468-656e-4746-9963-61746f72322e,rev?*
 G04 #@! TF.SameCoordinates,Original*
 G04 #@! TF.FileFunction,Profile,NP*
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW 5.1.6-c6e7f7d~87~ubuntu19.10.1) date 2021-07-01 13:16:57*
+G04 Created by KiCad (PCBNEW 5.1.6-c6e7f7d~87~ubuntu19.10.1) date 2021-09-07 13:02:59*
 %MOMM*%
 %LPD*%
 G01*
@@ -15,6 +15,11 @@ G04 #@! TA.AperFunction,Profile*
 G04 #@! TD*
 G04 APERTURE END LIST*
 D10*
+X32000000Y-32500000D02*
+G75*
+G03*
+X32000000Y-32500000I-4500000J0D01*
+G01*
 X43600000Y-24500000D02*
 X45845000Y-21990000D01*
 X37590000Y-21990000D02*
