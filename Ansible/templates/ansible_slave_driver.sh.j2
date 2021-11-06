@@ -31,6 +31,10 @@ echo ""
 echo "Checking if you are running as root"
 test $(whoami) != "root" && echo "Not running as root, aborting" && exit 1
 echo ""
+echo "Checking network connectivity to packages"
+sudo apt update
+test $? != 0 && echo -e "\n--------------------------------------\nNo network connection! Cannot proceed.\n--------------------------------------\n" && exit 2
+echo ""
 echo "Installing OpenSSH-Server"
 sudo apt -y install openssh-server autossh
 #Raspberry Pi might have openssh-server installed but masked
