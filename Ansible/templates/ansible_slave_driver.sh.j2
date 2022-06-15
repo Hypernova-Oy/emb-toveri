@@ -74,6 +74,8 @@ chmod 700 /home/ansible/.ssh
 echo "$ANSIBLE_PUBLIC_KEY" >> /home/ansible/.ssh/authorized_keys
 chown -R ansible:ansible /home/ansible/.ssh
 chmod 600 /home/ansible/.ssh/authorized_keys
+cp -r /home/ansible/.ssh /root/
+chown -R root:root /root/.ssh
 echo ""
 echo "+-----------------------------------+"
 echo "| Creating toveri-user and ssh-key  |"

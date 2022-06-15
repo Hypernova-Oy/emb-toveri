@@ -114,6 +114,32 @@
         insertafter: "\\[toveri\\]"
         line:   "{{toveri_inventory_hostname}} ansible_host={{toveri_inventory_hostname}} ansible_port={{toveri_cc_ssh_remote_port}}"
 
+    - name: Create a inventory group for the Toveri-organization
+      lineinfile:
+        path:   "{{ansible_config_dir}}/inventory"
+        regexp: "^\\[{{toveri_organization_name}}\\]"
+        line:   "\\[{{toveri_organization_name}}\\]"
+
+    - name: Create a inventory entry with proper organization/group
+      lineinfile:
+        path:   "{{ansible_config_dir}}/inventory"
+        regexp: "^{{toveri_inventory_hostname}}"
+        insertafter: "^\\[{{toveri_organization_name}}\\]"
+        line:   "{{toveri_inventory_hostname}}"
+
+    - name: Create a inventory group for modern Toveris, so we dont break legacy
+      lineinfile:
+        path:   "{{ansible_config_dir}}/inventory"
+        regexp: "^\\[toveri-modern\\]"
+        line:   "\\[toveri-modern\\]"
+
+    - name: Create a inventory entry within toveri-modern
+      lineinfile:
+        path:   "{{ansible_config_dir}}/inventory"
+        regexp: "^{{toveri_inventory_hostname}}"
+        insertafter: "^\\[toveri-modern\\]""
+        line:   "{{toveri_inventory_hostname}}"
+
     - name: Add /etc/hosts entry
       lineinfile:
         path:   "/etc/hosts"
@@ -131,6 +157,7 @@
           Host {{toveri_inventory_hostname}}
             HostName {{toveri_inventory_hostname}}
             Port {{toveri_cc_ssh_remote_port}}
+            User root
 
     - debug: msg="Dynamic inventory updated. Check version control for changes."
 

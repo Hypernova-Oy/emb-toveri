@@ -1,9 +1,24 @@
 ---
 
-- name: "Install WiringPi from packages"
+- name: "WiringPi - Install dependencies"
   apt:
     name:
-      - wiringpi
+      - git
     state: present
     cache_valid_time: 3000
   become: yes
+
+- name: "WiringPi - Clone"
+  git:
+    repo: https://github.com/WiringPi/WiringPi.git
+    dest: /opt/wiringPi
+  become: yes
+  register: wiringPi_git_reg
+
+- name: "WiringPi - Install"
+  command:
+    cmd: /opt/wiringPi/build
+    chdir: /opt/wiringPi
+  when: wiringPi_git_reg.changed
+  become: yes
+

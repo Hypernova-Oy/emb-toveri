@@ -31,7 +31,7 @@
     configurations:
     - file: "/etc/cron.d/emb-rtttl"
       directive: "rtttl-player"
-      value: "57 8,12,14 * * *    root    /usr/local/bin/rtttl-player -o random"
+      value: "57 8,12,14 * * *    root    /usr/local/bin/rtttl-player -R"
       create: yes
     tags: ['emb-rtttl']
 
@@ -67,6 +67,9 @@
       directive: "ApiKey"
       value: "ApiKey {{hostvars[inventory_hostname]['toveri_api_key']}}"
     - file: "/etc/ssauthenticator/daemon.conf"
+      directive: "ApiPassword"
+      value: "ApiPassword {{hostvars[inventory_hostname]['toveri_api_password']}}"
+    - file: "/etc/ssauthenticator/daemon.conf"
       directive: "ApiUserName"
       value: "ApiUserName {{hostvars[inventory_hostname]['toveri_api_username']}}"
     - file: "/etc/ssauthenticator/daemon.conf"
@@ -76,8 +79,20 @@
       directive: "DoorOpenDuration"
       value: "DoorOpenDuration {{hostvars[inventory_hostname]['toveri_door_open_duration']}}"
     - file: "/etc/ssauthenticator/daemon.conf"
+      directive: "RequirePIN"
+      value: "RequirePIN {{hostvars[inventory_hostname]['toveri_require_pin']}}"
+    - file: "/etc/ssauthenticator/daemon.conf"
+      directive: "PINTimeout"
+      value: "PINTimeout {{hostvars[inventory_hostname]['toveri_pin_timeout']}}"
+    - file: "/etc/ssauthenticator/daemon.conf"
       directive: "RandomGreetingChance"
       value: "RandomGreetingChance {{hostvars[inventory_hostname]['random_greeting_chance']}}"
+    - file: "/etc/ssauthenticator/daemon.conf"
+      directive: "RandomMelodyChance"
+      value: "RandomMelodyChance {{hostvars[inventory_hostname]['random_melody_chance']}}"
+    - file: "/etc/ssauthenticator/daemon.conf"
+      directive: "RandomMelodySelector"
+      value: "RandomMelodySelector {{hostvars[inventory_hostname]['random_melody_selector']}}"
     tags: ['SSAuthenticator']
 
   - role: makeProgram
