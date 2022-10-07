@@ -118,27 +118,27 @@
       lineinfile:
         path:   "{{ansible_config_dir}}/inventory"
         regexp: "^\\[{{toveri_organization_name}}\\]"
-        line:   "\\[{{toveri_organization_name}}\\]"
+        line:   "[{{toveri_organization_name}}]"
 
     - name: Create a inventory entry with proper organization/group
       lineinfile:
         path:   "{{ansible_config_dir}}/inventory"
-        regexp: "^{{toveri_inventory_hostname}}"
+        regexp: "^{{toveri_inventory_hostname}}\\s+_grp"
         insertafter: "^\\[{{toveri_organization_name}}\\]"
-        line:   "{{toveri_inventory_hostname}}"
+        line:   "{{toveri_inventory_hostname}} _grp=1"
 
     - name: Create a inventory group for modern Toveris, so we dont break legacy
       lineinfile:
         path:   "{{ansible_config_dir}}/inventory"
         regexp: "^\\[toveri-modern\\]"
-        line:   "\\[toveri-modern\\]"
+        line:   "[toveri-modern]"
 
     - name: Create a inventory entry within toveri-modern
       lineinfile:
         path:   "{{ansible_config_dir}}/inventory"
-        regexp: "^{{toveri_inventory_hostname}}"
-        insertafter: "^\\[toveri-modern\\]""
-        line:   "{{toveri_inventory_hostname}}"
+        regexp: "^{{toveri_inventory_hostname}}\\s+_mdr"
+        insertafter: "^\\[toveri-modern\\]"
+        line:   "{{toveri_inventory_hostname}} _mdr=1"
 
     - name: Add /etc/hosts entry
       lineinfile:
