@@ -81,8 +81,23 @@
   become: yes
   notify: Restart raspberry pi
 
+- name: Set default python2 to python3
+  ansible.builtin.file:
+    state: link
+    dest: /usr/bin/python2
+    src: /usr/bin/python3
+    force: yes
+  become: yes
+
 - name: 'Upgrade to the newest apt packages'
   apt: upgrade=safe \
        update_cache=yes
   become: yes
 
+- name: 'Systemd-journald persists log files to disk'
+  ansible.builtin.file:
+    path: /var/log/journal
+    state: directory
+    owner: root
+    group: systemd-journal
+  become: yes
