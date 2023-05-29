@@ -89,6 +89,9 @@
     - file: "/etc/emb-heater/daemon.conf"
       directive: "TemperatureCorrection"
       value: "TemperatureCorrection {{hostvars[inventory_hostname]['toveri_temperature_correction']}}"
+    - file: "/etc/emb-heater/daemon.conf"
+      directive: "TemperatureSensorsCount"
+      value: "TemperatureSensorsCount {{hostvars[inventory_hostname]['toveri_temperature_sensors_count']}}"
     tags: ['emb-heater']
 
   - role: makeProgram

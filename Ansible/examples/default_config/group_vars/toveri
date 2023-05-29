@@ -4,3 +4,5 @@ toveri_git_server: "https://github.com/Hypernova-Oy"
 
 random_greeting_chance: 25
 
+toveri_temperature_sensors_count: 1
+
