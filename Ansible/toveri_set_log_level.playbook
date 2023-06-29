@@ -1,0 +1,27 @@
+---
+
+- hosts: toveri
+  tasks:
+    - name: Set loglevel for ssauthenticator daemon
+      lineinfile:
+        path: /etc/ssauthenticator/log4perl.conf
+        line: log4perl.rootLogger = {{toveri_log_level_ssauthenticator}}, SCREEN
+        regexp: log4perl.rootLogger = \w+, SCREEN
+      become: yes
+      notify: Reboot SSAuthenticator
+
+    - name: Set loglevel for ssauthenticator scraper
+      lineinfile:
+        path: /etc/ssauthenticator/log4perl.conf
+        line: log4perl.logger.scraper = {{toveri_log_level_ssauthenticator_scraper or toveri_log_level_ssauthenticator}}, SCRAPE
+        regexp: log4perl.logger.scraper = \w+, SCRAPE
+      become: yes
+      notify: Reboot SSAuthenticator
+
+  handlers:
+  - name: Reboot SSAuthenticator
+    service:
+      name: ssauthenticator
+      state: restarted
+    become: yes
+

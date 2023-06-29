@@ -6,3 +6,6 @@ random_greeting_chance: 25
 
 toveri_temperature_sensors_count: 1
 
+toveri_log_level_ssauthenticator: DEBUG
+toveri_log_level_ssauthenticator_scraper: ERROR
+
