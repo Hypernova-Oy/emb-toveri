@@ -1,0 +1,52 @@
+zabbix_agent2: True
+zabbix_agent_package_remove: True
+zabbix_agent2_server: ?.?.?.?,127.0.0.1,::1
+zabbix_agent2_serveractive: ?.?.?.?
+zabbix_agent2_hostname: "{{ inventory_hostname }}"
+zabbix_agent2_listenport: 10050 #Central controller has 135** For Toveri, 145** for Lainuri. Use default port locally.
+zabbix_agent_cc_ip: "{{ hostvars.ansible_controller.ansible_host }}" # Toveri-cc public IP, Zabbix-Server uses to connect into the reverse proxied Toveris
+zabbix_agent_cc_listenport: #Must be overriden from host-specific vars #Central controller ssh port forwards listens to this port
+zabbix_agent2_timeout: 30
+
+#Zabbix API variables
+zabbix_api_server_host: "?.?.?"
+zabbix_api_server_port: 443
+ansible_zabbix_url_path: ""
+zabbix_api_use_ssl: True
+zabbix_api_login_user: ?
+zabbix_api_login_pass: "{{ vault_zabbix_api_password }}"
+
+zabbix_api_create_hostgroup: True
+zabbix_api_create_hosts: True
+zabbix_useuip: 1 #1 if connection to zabbix-agent is made via ip, 0 for fqdn.
+
+zabbix_host_groups:
+  - Linux servers
+  - Toveris
+
+zabbix_agent_link_templates:
+  - Template OS Linux Active
+  - Template App Toveri
+
+zabbix_agent_macros:
+  - macro_key: '{$TOVERI_ALERT_EMAIL}'
+    macro_value:
+
+zabbix_agent_tags:
+  - tag: ToveriOrganization
+    value: "{{hostvars[inventory_hostname].group_names | intersect(toveri_allowed_organization_names) | first}}"
+
+zabbix_agent_interfaces: # This is needed for the API host definitions
+  - type: 1
+    main: 1
+    useip: "{{ zabbix_useuip }}"
+    ip: "{{ zabbix_agent_cc_ip }}"
+    dns: "{{ inventory_hostname }}"
+    port: "{{ zabbix_agent_cc_listenport }}"
+
+#TLS Specific configuration
+zabbix_agent2_tlsconnect: psk
+zabbix_agent2_tlsaccept: psk
+zabbix_agent2_tlspskidentity: "PSK {{ inventory_hostname }}"
+zabbix_agent2_tlspsk_secret: "{{ vault_zabbix_agent_psk_key }}"
+zabbix_agent2_tlspskfile: /etc/zabbix/zabbix_agent2.psk

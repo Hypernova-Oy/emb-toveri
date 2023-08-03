@@ -19,6 +19,10 @@
       set_fact: toveri_cc_monitoring_remote_port="{{ (max_toveri_port | int) + 1 - 40000 }}"
     - name: Set toveri_inventory_hostname
       set_fact: toveri_inventory_hostname="{{'toveri-' + toveri_organization_name + '-' + toveri_name}}"
+    - name: Validate toveri_organization_name
+      fail:
+        msg: "Variable toveri_organization_name '{{toveri_organization_name}}' is not one of the allowed values 'toveri_allowed_organization_names'"
+      when: toveri_organization_name not in toveri_allowed_organization_names
 
   vars_prompt:
     - name: "toveri_organization_name"
@@ -103,9 +107,9 @@
     - name: Create a inventory entry enabling zabbix
       lineinfile:
         path:   "{{ansible_config_dir}}/inventory"
-        regexp: "^{{toveri_inventory_hostname}}\s+zabbix_agent_listenport"
+        regexp: "^{{toveri_inventory_hostname}}\s+zabbix_agent_cc_listenport"
         insertafter: "\\[zabbix_agent\\]"
-        line:   "{{toveri_inventory_hostname}} zabbix_agent_listenport={{toveri_cc_monitoring_remote_port}}"
+        line:   "{{toveri_inventory_hostname}} zabbix_agent_cc_listenport={{toveri_cc_monitoring_remote_port}}"
 
     - name: Create a inventory entry with connection parameters
       lineinfile:

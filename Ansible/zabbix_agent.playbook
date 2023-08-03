@@ -3,4 +3,4 @@
   become: true
 
   roles:
-    - role: zabbix_agent
+    - role: community.zabbix.zabbix_agent
