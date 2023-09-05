@@ -1,0 +1,13 @@
+---
+- hosts: zabbix_agent
+  become: true
+
+  roles:
+    - role: community.zabbix.zabbix_agent
+    - role: ansible-role-zabbix-agent2-plugin
+      zbxp_plugin_name: "ZBX_Journald"
+      zbxp_plugin_repository_binary_url: https://github.com/Hypernova-Oy/zabbix-agent2-plugin-journald/releases/download/v0.0.1/zabbix-agent2-plugin-journald.arm
+      zbxp_plugin_configurations:
+        - directive: Plugins.{{zbxp_plugin_name}}.Test
+          value: 1
+

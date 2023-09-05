@@ -1,6 +1,0 @@
----
-- hosts: zabbix_agent
-  become: true
-
-  roles:
-    - role: community.zabbix.zabbix_agent
