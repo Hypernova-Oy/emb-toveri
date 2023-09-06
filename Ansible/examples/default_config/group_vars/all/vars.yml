@@ -6,3 +6,4 @@ ansible_sudo_pass:  "{{vault_ansible_sudo_pass}}"
 
 ansible_slave_driver_passphrase: "{{vault_ansible_slave_driver_passphrase}}"
 
+ansible_timezone: Europe/Helsinki

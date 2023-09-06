@@ -5,12 +5,6 @@
   - role: raspberry
     tags: ['raspberry']
 
-  #- role: geerlingguy.ntp  # ntp seems to be malfunctioning occasionally, so use systemd timedatectl systemd-timesyncd
-  #  ntp_timezone: Europe/Helsinki
-  #  ntp_enabled: true
-  #  become: yes
-  #  tags: ['ntp']
-
   - role: wiringPi
     programHome: "/home/toveri/wiringPi"
     programUser: toveri
@@ -123,4 +117,7 @@
     configurations: []
     tags: ['emb-tamper']
 
-
+  tasks:
+  - name: Set timezone to {{ansible_timezone}}
+    community.general.timezone:
+      name: "{{ansible_timezone}}"
