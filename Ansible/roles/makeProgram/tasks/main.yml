@@ -44,11 +44,13 @@
 
 #Overwrite configurations created by the make install
 - name: "{{programName}} - Deploy master configuration"
-  lineinfile: dest="{{item.file}}" \
-              regexp="{{item.directive}}" \
-              line="{{item.value}}" \
-              state=present
-              create="{{item.create|d('no')}}"
+  lineinfile:
+    dest: "{{item.file}}"
+    regexp: "{{item.directive}}"
+    line: "{{item.value}}"
+    state: present
+    create: "{{item.create|d('no')}}"
+    backup: true
   with_items: "{{configurations}}"
   register: master_configuration_output
   become: yes
