@@ -2,6 +2,14 @@
 - hosts: zabbix_agent
   become: true
 
+  pre_tasks:
+    # zabbix needs permissions to read systemd's log entries. There is currently no way to limit access to a single service only.
+    - ansible.builtin.user:
+        append: true
+        groups:
+          - systemd-journal
+        name: zabbix
+
   roles:
     - role: community.zabbix.zabbix_agent
     - role: ansible-role-zabbix-agent2-plugin
