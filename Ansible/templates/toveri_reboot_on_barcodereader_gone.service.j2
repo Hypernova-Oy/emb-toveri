@@ -1,0 +1,8 @@
+[Unit]
+Description=Reboot on Toveri barcode reader gone
+
+[Service]
+ExecStart=/home/toveri/SSAuthenticator/scripts/toveri_reboot_on_barcodereader_gone.sh
+
+[Install]
+WantedBy=multi-user.target

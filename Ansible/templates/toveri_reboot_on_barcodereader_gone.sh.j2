@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# {{ ansible_managed }}
+
+LOG_DIR=/var/log/ssauthenticator
+ATTEMPTED_TO_RESTART=0
+DATE_MATCHED=0
+
+restart_ssauthenticator () {
+  echo "Restarting ssauthenticator..." >> $LOG_DIR/barcodereader-gone.log
+  systemctl restart ssauthenticator
+  echo "Restarted ssauthenticator." >> $LOG_DIR/barcodereader-gone.log
+  echo 1
+}
+
+while true
+do
+
+  while true
+  do
+    journalctl --follow --lines 0 -u ssauthenticator | \
+    grep --line-buffered -m 1 -P "(\[FATAL\] Can't open \/dev\/ttyWGC300USBAt: No such file or directory|WGC300UsbAT: Unknown error receiving data 'Died at)" && break
+  done
+
+  # leave maintenance window in case stuck in a rebooting loop
+  currenttime=$(date +%H:%M)
+  if [[ "$currenttime" > "23:00" ]] || [[ "$currenttime" < "05:00" ]]; then
+    echo "sleeping" >> $LOG_DIR/barcodereader-gone.log
+    sleep 1
+    continue
+  fi
+
+  if [ $? = 0 ]; then
+    if [ ! -d "$LOG_DIR" ]; then
+      mkdir -p $LOG_DIR
+    fi
+
+    echo "Matched error message" >> $LOG_DIR/barcodereader-gone.log
+
+    if (( "$ATTEMPTED_TO_RESTART" )); then
+      tenminutesago=$(date -d '10 minutes ago')
+      if [[ "$tenminutesago" > "$DATE_MATCHED" ]]; then
+        echo "More than 10 minutes has passed, not rebooting..." >> $LOG_DIR/barcodereader-gone.log
+        ATTEMPTED_TO_RESTART="$(restart_ssauthenticator)"
+        DATE_MATCHED=$(date)
+        continue
+      fi
+
+      reboot
+    else
+      ATTEMPTED_TO_RESTART="$(restart_ssauthenticator)"
+      DATE_MATCHED=$(date)
+    fi
+  fi
+
+  sleep 1
+done

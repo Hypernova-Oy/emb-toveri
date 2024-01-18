@@ -1,0 +1,66 @@
+---
+
+- hosts: toveri
+  tasks:
+    - name: Copy journal monitor script
+      template:
+        src: toveri_reboot_on_barcodereader_gone.sh.j2
+        dest: /home/toveri/SSAuthenticator/scripts/toveri_reboot_on_barcodereader_gone.sh
+        owner: toveri
+        group: toveri
+        mode: '0774'
+      become: yes
+      tags: ['never', 'install']
+
+    - name: Install systemd unit file
+      template:
+        src: toveri_reboot_on_barcodereader_gone.service.j2
+        dest: /etc/systemd/system/toveri_reboot_on_barcodereader_gone.service
+        owner: root
+        group: root
+        mode: '0644'
+      become: yes
+      tags: ['never', 'install']
+
+    - name: Enable systemd unit
+      service:
+        name: toveri_reboot_on_barcodereader_gone
+        enabled: true
+      become: yes
+      tags: ['never', 'install']
+
+    - name: Start systemd unit
+      service:
+        name: toveri_reboot_on_barcodereader_gone
+        state: started
+      become: yes
+      tags: ['never', 'install']
+
+    - name: Restart systemd unit
+      service:
+        name: toveri_reboot_on_barcodereader_gone
+        state: restarted
+      become: yes
+      tags: ['never', 'install']
+
+    - name: Disable systemd unit
+      service:
+        name: toveri_reboot_on_barcodereader_gone
+        enabled: false
+        state: stopped
+      become: yes
+      tags: ['never', 'uninstall']
+
+    - name: Remove systemd unit file
+      file:
+        path: /etc/systemd/system/toveri_reboot_on_barcodereader_gone.service
+        state: absent
+      become: yes
+      tags: ['never', 'uninstall']
+
+    - name: Remove journal monitor script
+      file:
+        path: /home/toveri/SSAuthenticator/scripts/toveri_reboot_on_barcodereader_gone.sh
+        state: absent
+      become: yes
+      tags: ['never', 'uninstall']
