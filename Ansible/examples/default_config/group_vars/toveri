@@ -9,6 +9,12 @@ toveri_temperature_sensors_count: 1
 toveri_log_level_ssauthenticator: DEBUG
 toveri_log_level_ssauthenticator_scraper: ERROR
 
+toveri_pin_show_extra_light: ""
+
+toveri_oled_show_card_number_when_read: "h"
+
+toveri_oled_clear_timeout_s: 4
+
 toveri_allowed_organization_names:
  - vaara
  - lumme

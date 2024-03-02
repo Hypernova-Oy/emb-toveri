@@ -42,7 +42,10 @@
     programHome: "/home/toveri/emb-oled"
     gitRepository: "https://github.com/Hypernova-Oy/emb-oled.git"
     programUser: toveri
-    configurations: []
+    configurations:
+    - file: "/etc/emb-oled/server.conf"
+      directive: "^ClearTimeout "
+      value: "ClearTimeout '{{hostvars[inventory_hostname]['toveri_oled_clear_timeout_s']}}'"
     tags: ['emb-oled']
 
   - role: makeProgram
@@ -76,6 +79,9 @@
       directive: "^DoorOpenDuration "
       value: "DoorOpenDuration '{{hostvars[inventory_hostname]['toveri_door_open_duration']}}'"
     - file: "/etc/ssauthenticator/daemon.conf"
+      directive: "^OLED_ShowCardNumberWhenRead "
+      value: "OLED_ShowCardNumberWhenRead '{{hostvars[inventory_hostname]['toveri_oled_show_card_number_when_read']}}'"
+    - file: "/etc/ssauthenticator/daemon.conf"
       directive: "^RequirePIN "
       value: "RequirePIN '{{hostvars[inventory_hostname]['toveri_require_pin']}}'"
     - file: "/etc/ssauthenticator/daemon.conf"
@@ -88,6 +94,9 @@
       directive: "^PINLengthMin "
       value: "PINLengthMin '{{hostvars[inventory_hostname]['toveri_pin_length_min']}}'"
     - file: "/etc/ssauthenticator/daemon.conf"
+      directive: "^PINShowExtraLight "
+      value: "PINShowExtraLight '{{hostvars[inventory_hostname]['toveri_pin_show_extra_light']}}'"
+    - file: "/etc/ssauthenticator/daemon.conf"
       directive: "^RandomGreetingChance "
       value: "RandomGreetingChance '{{hostvars[inventory_hostname]['random_greeting_chance']}}'"
     - file: "/etc/ssauthenticator/daemon.conf"
@@ -96,6 +105,13 @@
     - file: "/etc/ssauthenticator/daemon.conf"
       directive: "^RandomMelodySelector "
       value: "RandomMelodySelector '{{hostvars[inventory_hostname]['random_melody_selector']}}'"
+
+    - file: "/etc/ssauthenticator/log4perl.conf"
+      directive: "^log4perl.rootLogger ="
+      value: "log4perl.rootLogger = {{hostvars[inventory_hostname]['toveri_log_level_ssauthenticator']}}, SCREEN"
+    - file: "/etc/ssauthenticator/log4perl.conf"
+      directive: "^log4perl.logger.scraper ="
+      value: "log4perl.logger.scraper = {{hostvars[inventory_hostname]['toveri_log_level_ssauthenticator_scraper']}}, SCRAPE"
     tags: ['SSAuthenticator']
 
   - role: makeProgram
