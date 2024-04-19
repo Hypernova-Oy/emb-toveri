@@ -60,7 +60,7 @@ echo "| Creating ansible-user             |"
 echo "+-----------------------------------+"
 echo ""
 useradd -m ansible
-addgroup ansible sudo
+adduser ansible sudo
 echo ""
 echo "ansible:$ANSIBLE_SUDO_PASS" | chpasswd
 echo "Password set. Thank you!"
