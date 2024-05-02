@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP P82B96P
+D Texas Instruments P82B96P, Dual Bus Buffer, 270ns 3mA, 2  15 V, 8-Pin PDIP
+K
+F http://componentsearchengine.com/Datasheets/3/P82B96P.pdf
+$ENDCMP
+#
+#End Doc Library

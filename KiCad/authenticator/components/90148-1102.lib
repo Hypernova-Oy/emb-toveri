@@ -1,0 +1,25 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model 90148-1102
+#/348599/350374/2.50/4/3/Connector
+DEF 90148-1102 J 0 30 Y Y 1 F N
+F0 "J" 650 300 50 H V L CNN
+F1 "90148-1102" 650 200 50 H V L CNN
+F2 "901481102" 650 100 50 H I L CNN
+F3 "https://www.molex.com/pdm_docs/sd/901481102_sd.pdf" 650 0 50 H I L CNN
+F4 "Headers & Wire Housings C-Grid PCB Conn SR H Horz Poly Sn-A 2Ckt" 650 -100 50 H I L CNN "Description"
+F5 "3.5" 650 -200 50 H I L CNN "Height"
+F6 "538-90148-1102" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Molex/90148-1102?qs=kEwmkoUtv7Qo9S3HYKo3RQ%3D%3D" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Molex" 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "90148-1102" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X 1 1 800 -100 200 L 50 50 0 0 P
+X 2 2 800 0 200 L 50 50 0 0 P
+X 3 3 0 -100 200 R 50 50 0 0 P
+X 4 4 0 0 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 600 100 600 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

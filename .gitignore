@@ -20,3 +20,5 @@ nytprof.out
 /_eumm/
 Pictures/*.png
 *.retry
+*.lck
+**.~lock.

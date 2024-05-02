@@ -1,3 +1,9 @@
 (sym_lib_table
-  (lib (name authenticator-rescue)(type Legacy)(uri ${KIPRJMOD}/authenticator-rescue.lib)(options "")(descr ""))
+  (version 7)
+  (lib (name "authenticator-rescue")(type "KiCad")(uri "${KIPRJMOD}/authenticator-rescue.kicad_sym")(options "")(descr ""))
+  (lib (name "SS-60300-010")(type "KiCad")(uri "${KIPRJMOD}/components/SS-60300-010.kicad_sym")(options "")(descr ""))
+  (lib (name "NSD15-12S5")(type "KiCad")(uri "${KIPRJMOD}/components/NSD15-12S5.kicad_sym")(options "")(descr ""))
+  (lib (name "694106301002")(type "KiCad")(uri "${KIPRJMOD}/components/694106301002.kicad_sym")(options "")(descr ""))
+  (lib (name "P82B96P")(type "KiCad")(uri "${KIPRJMOD}/components/P82B96P.kicad_sym")(options "")(descr ""))
+  (lib (name "90148-1102")(type "KiCad")(uri "${KIPRJMOD}/components/90148-1102.kicad_sym")(options "")(descr ""))
 )
