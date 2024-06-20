@@ -1,44 +1,48 @@
-Reference, Quantity, Value, Footprint, Datasheet, Manufacturer, Model, Title, Supplier, Length
-AST1 ,1,"AST-1732MR-R","Koha-Suomi:AST-1732MR-R","https://www.mouser.fi/datasheet/2/334/AST-1732MR-R-72511.pdf","PUI Audio","AST-1732MR-R","Speakers & Transducers SPEAKER 32OHM","",""
-BCR1 ,1,"Barcode_Reader","Koha-Suomi:Bad_board_tag","","Datalogic","GFS-4400","","",""
-C1 ,1,"CP","Koha-Suomi:UMW0G101MDD","https://www.mouser.fi/datasheet/2/293/e-umw-1219455.pdf","Nichicon","UMW0G101MDD","Aluminium Electrolytic Capacitors - Radial Leaded 4volts 100uF 85c 5x5 2LS","",""
-CAT1 ,1,"Cat-cable red","Koha-Suomi:Bad_board_tag","~","RS PRO","557-345","RS Pro Red Cat6 Cable F/UTP LSZH, 5m","fi.rsdelivers.com","5m"
-CAT2 ,1,"Cat-cable blue","Koha-Suomi:Bad_board_tag","~","RS PRO","557-317","RS Pro Blue Cat6 Cable F/UTP LSZH, 5m","fi.rsdelivers.com","5m"
-CC1 ,1,"Cabinet_cable_2-wire","Koha-Suomi:Bad_board_tag","","","Cabinet cable 2-wire","Cabinet cable 2-wire","","5m"
-D1 D2 D3 D4 ,4,"D","Koha-Suomi:1N4154TAP","https://www.mouser.fi/datasheet/2/427/1n4154-241332.pdf","Vishay Semiconductors","1N4154TAP","Diodes - General Purpose, Power, Switching Vr/35v Io/150mA","",""
-DS1 DS2 ,2,"DS18B20+","Koha-Suomi:TO-92_Inline_Wide","https://www.mouser.fi/datasheet/2/256/DS18B20-370043.pdf","Maxim Integrated","DS18B20+","Board Mount Temperature Sensors Prgmble Resolution 1-Wire Parasite Pwr","",""
-DUP1 ,1,"Dupont_Cable_4-pin","Koha-Suomi:Bad_board_tag","","","2.54 pitch 4-wire cable","","","20cm"
-DUP2 ,1,"Dupont_Cable_3-pin","Koha-Suomi:Bad_board_tag","","","2.54 pitch 3-wire cable","","","20cm"
-EC1 EC2 ,2,"EC2-3TNU","Koha-Suomi:EC2-3TNU","https://www.mouser.fi/datasheet/2/212/KEM_R7002_EC2_EE2-1104574.pdf","KEMET","EC2-3TNU","Low Signal Relays - PCB 3V 2A Dbl Latching LL=3.2mm","",""
-EG1 ,1,"Enclosure_Gasket_1550KSGASKET","Koha-Suomi:Bad_board_tag","https://www.mouser.fi/datasheet/2/177/1550-1389792.pdf","Hammond Manufacturing","1550KSGASKET","Enclosures, Boxes & Cases IP68 GasketKit/Pack2 For use with 1550K","",""
-H1 ,1,"HEADER_A_1X04","Koha-Suomi:Pin_Header_Angled_1x04_Pitch2.54mm","https://www.mouser.com/datasheet/2/276/0022122041_PCB_HEADERS-158542.pdf","Molex","22-12-2041","Headers & Wire Housings 4 CKT R/A HEADER","",""
-H10 H3 ,2,"HEADER_S_1X04","Koha-Suomi:Pin_Header_Straight_1x04_Pitch2.54mm","https://www.mouser.fi/datasheet/2/276/0022032041_PCB_HEADERS-158390.pdf","Molex","22-03-2041","Headers & Wire Housings VERT PCB HDR 4P TIN PLATING","",""
-H5 H6 ,2,"HEADER_A_1X07_F","Koha-Suomi:Header-1x7-F (Molex 38-00-1337)","https://www.mouser.fi/datasheet/2/276/0038001337_PCB_RECEPTACLES-159893.pdf","Molex","38-00-1337","","Mouser",""
-H2 H8 ,2,"HEADER_S_1X03","Koha-Suomi:Pin_Header_Straight_1x03_Pitch2.54mm","https://www.mouser.fi/datasheet/2/276/0022102031_PCB_HEADERS-158469.pdf","Molex","22-10-2031","Headers & Wire Housings VERT PCB HDR 3P GOLD PLATING","",""
-H4 H9 ,2,"HEADER_S_1X07","Koha-Suomi:Pin_Header_Straight_1x07_Pitch2.54mm","https://www.mouser.fi/datasheet/2/276/022102074_sd-589973.pdf","Molex","22-10-2074","Headers & Wire Housings KK 100 Hdr Flat VERT 20 Au 7Ckt","www.mouser.fi",""
-HS1 HS2 ,2,"Heatsink","Koha-Suomi:Bad_board_tag","https://www.mouser.fi/datasheet/2/2/Aavid-Board-Level-Heatsinks-Catalog-2018-1507171.pdf","Aavid","374624B00032G","Heat Sinks Heatsink for Metal/Ceramic BGA Packages, Black Anodized, 35x35x10mm, IC Pkg Size = 35 x 35, Tape #32","",""
-J1 ,1,"Barrel_Jack","Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight","~","CIE","CLB-JL-8118","CIE CLB-JL Series, Cable Mount Jack Adapter[Blank] Socket, 2 Pole, 5A","fi.rsdelivers.com",""
-LED1 ,1,"WP154A4SUREQBFZGC","Koha-Suomi:WP154A4SUREQBFZGC","https://www.mouser.fi/datasheet/2/216/WP154A4SUREQBFZGC-1173568.pdf","Kingbright","WP154A4SUREQBFZGC","Standard LEDs - Through Hole RGB 630/525/465nm 750/420/750mcd 60Deg","",""
-LH1 ,1,"Led_Holder_SML1083","Koha-Suomi:Bad_board_tag","","?"," SML1083","5mm LEDKEHYS/O-RENG./LINSSI, KROMI","www.yeint.fi",""
-,0,"LED_Holder_SML1083_fitting","Koha-Suomi:Bad_board_tag","","","","","3D printed",""
-N1 ,1,"Housing","","https://www.mouser.fi/datasheet/2/177/1550-1389792.pdf","Hammond Manufacturing","1550KBK","Enclosures, Boxes & Cases Diecast Aluminum Box 5.51x2.9x4.02" Black","",""
-NHD1 ,1,"NHD-0420CW-AB3","Koha-Suomi:Pin_Header_Straight_1x20_Pitch2.54mm","https://www.mouser.fi/datasheet/2/291/NHD-0420CW-AY3-587980.pdf","Newhaven Display","NHD-0420CW-AY3","OLED Displays & Accessories 4x20 Yellow Slim Character OLED","",""
-OR1 ,1,"O-Ring","Koha-Suomi:Bad_board_tag","","E-Switch","PV1PV4ORING","Switch Hardware SWITCH O-RING","www.mouser.fi",""
-PV4HN1 ,1,"PV4T_hex_nut","Koha-Suomi:Bad_board_tag","","E-Switch","PV1PV4HEXNUT19","Switch Hardware Hardware Hexnut for PV1, PV4 and PV Anti-Vandal Family","",""
-R1 R6 ,2,"110","Koha-Suomi:Resistor_ThroughHole_6.3x2.3mm_Spacing2.54mm","https://www.mouser.fi/datasheet/2/219/MF-MFS-RK-18760.pdf","KOA Speer","MF1/4DC1000F","Metal Film Resistors - Through Hole 100ohm 1% 100PPM","",""
-R2 R3 ,2,"220","Koha-Suomi:Resistor_ThroughHole_6.3x2.3mm_Spacing2.54mm","https://www.mouser.fi/datasheet/2/219/MF-MFS-RK-18760.pdf","KOA Speer","MF1/4CCT52R2200F","Metal Film Resistors - Through Hole 1/4 WATT 220 OHM 1%","",""
-R4 R5 ,2,"4.7k","Koha-Suomi:Resistor_ThroughHole_6.3x2.3mm_Spacing2.54mm","https://www.mouser.fi/datasheet/2/219/MF-MFS-RK-18760.pdf","KOE Speer","MF1/4DC4701F","Metal Film Resistors - Through Hole 4.7K 1% 100PPM","",""
-RJ1 RJ2 ,2,"RJ45_2xPort","Koha-Suomi:RJ45 dual port - WE-15016137621","https://katalog.we-online.com/em/datasheet/615016137621.pdf","Wurth Elektronik","615016137621","Modular Connectors / Ethernet Connectors WR-MJ Feml Shielded 8P8C Hztl Dual Port","",""
-RPE1 ,1,"RPi_Enclosure","Koha-Suomi:Bad_board_tag","","DesignSpark","ASM-1900036-12_Bulk","Raspberry Pi 3 Enclosure, White (bulk)","fi.rsdelivers.com",""
-RPi1 ,1,"RPi_GPIO","Koha-Suomi:PI_GPIO_Header_F_2x20","https://www.mouser.fi/datasheet/2/1/ts0815-31700.pdf","Adafruit","ADA1992","Adafruit GPIO Header for RaspberryPi A+/B+/Pi 2/Pi 3","thepihut.com",""
-SD1 ,1,"SD_Card","Koha-Suomi:Bad_board_tag","","Raspberry Pi","NOOBS_32GB_Retail","SD Card preloaded with NOOBS - 32GB","fi.rsdelivers.com",""
-SOC1 ,1,"SoC","Koha-Suomi:Bad_board_tag","","Raspberry Pi","Raspberry Pi 3 Model B+","Raspberry Pi 3 Model B+","fi.rsdelivers.com",""
-STO1 ,1,"Standoff x2","Koha-Suomi:Bad_board_tag","","Adafruit","Adafruit Brass M2.5 Standoffs 16mm tall - Black Plated - Pack of 2","ADA2337","thepihut.com",""
-SW1 ,1,"SW_Push_LED","Connectors_Molex:Molex_KK-6410-04_04x2.54mm_Straight","https://www.mouser.com/datasheet/2/140/E-Switch_06082018_PVT4_(003)-1500408.pdf","E-Switch","PVT4FW4SS311","Pushbutton Switches Pushbutton Anti-vandal 19mm Illuminated Crisp Tactile Response 50mA, 24VDC, SPST Off-(On), 490gf, IP65, Wire leads 300mm, Red LED","",""
-T1 ,1,"Screw_Terminal_01x04","Koha-Suomi:Terminal 1x4 (Molex-398800304)","https://www.molex.com/pdm_docs/sd/398800304_sd.pdf","Molex","39880-0304","Fixed Terminal Blocks LOW PROFILE 5.08 4 A W PROFILE 5.08 4 ASY","",""
-T2 ,1,"Screw_Terminal_01x02","Koha-Suomi:Screw_Terminal_01x02 (Molex)","https://www.mouser.fi/datasheet/2/276/0398800302_TERMINAL_BLOCKS-167600.pdf","Molex","39880-0302","Fixed Terminal Blocks 2 CKT TERM. BLOCK 5.08mm","",""
-TH1 ,1,"Thermistor_PTC","Koha-Suomi:1N4154TAP","https://docs-emea.rs-online.com/webdocs/0f72/0900766b80f72deb.pdf","DBK Enclosures","HPG-2/08-75X35-12-30","Enclosure Heating Element, 18W, 80°C, 12 → 30 V ac/dc","fi.rsdelivers.com",""
-U1 ,1,"Wall_PSU_5V","Koha-Suomi:Bad_board_tag","","Raspberry Pi","T6716DV","Raspberry Pi, 13W Plug In Power Supply 5.1V, 2.5A, 1 Output, 2-Pin Type C - EuroPlug","fi.rsdelivers.com",""
-U2 ,1,"Cable_USB_TypeA_F_M","","","Roline","11.02.8960-100","Roline Male USB A to Female USB A USB Extension Cable, 3m","fi.rsdelivers.com",""
-US1 ,1,"USB-Stick","","","Toshiba","THN-U401S0320E4","Toshiba 32GB TransMemory USB2.0 Metal","fi.rsdelivers.com",""
-V1 ,1,"+12V","Koha-Suomi:1N4154TAP","~","RS PRO","175-3316","RS PRO, 18W Plug Adapter 12V dc, 1.5A, Level VI Efficiency, 1 Output Power Adapter","fi.rsdelivers.com",""
+#,Ref,Qty,Value,Model,Title,Manufacturer,ALV0%€,Supplier
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+1,AST1,1,Piezo,AST-1732MR-R,Speakers & Transducers SPEAKER 32OHM,PUI Audio,3.5,mouser.fi
+4,"BJT1, BJT2, BJT5, BJT6, BJT7",5,BJT NPN,KSD471AYTA,Bipolar Transistors - BJT NPN Epitaxial Transistor ,ON Semiconductor / Fairchild,0.33,mouser.fi
+5,C1,1,100 uF,UMW0G101MDD,Aluminium Electrolytic Capacitors - Radial Leaded 4volts 100uF 85c 5x5 2LS,Nichicon,0.297,mouser.fi
+7,"D1, D2, D3, D4",4,D,1N4154TAP,"Diodes - General Purpose, Power, Switching Vr/35v Io/150mA",Vishay Semiconductors,0.135,mouser.fi
+8,DS1,1,DS18B20+,DS18B20+,Board Mount Temperature Sensors Prgmble Resolution 1-Wire Parasite Pwr,Maxim Integrated,3.53,mouser.fi
+9,"EC1, EC2",2,EC2-3TNU,EC2-3TNU,Low Signal Relays - PCB 3V 2A Dbl Latching LL=3.2mm,KEMET,2.42,mouser.fi
+13,"H1, H4, H9, H15",4,HEADER_S_1X07,TSW-107-15-T-S,"Headers & Wire Housings Classic PCB Header Strips, 0.100"" pitch",Samtec,0.605,mouser.fi
+14,H2,1,HEADER_A_1X04_F,38-00-1334,,Molex,0.605,mouser.fi
+15,"H3, H5, H6, H10",4,HEADER_A_1X07_F,38-00-1337,,Molex,1.22,mouser.fi
+16,H7,1,HEADER_S_1X02,22-10-2021 ,,Molex,0.339,mouser.fi
+17,"H8, H17",2,HEADER_S_1X07_stacking,3366,,Adafruit,1.38,mouser.fi
+18,H11,1,HEADER_S_1X20,M20-9992046,,Harwin,0.552,mouser.fi
+20,H13,1,HEADER_A_1X05_F,38-00-1335,,Molex,0.771,mouser.fi
+22,H16,1,HEADER_A_1X08_F,38-00-1338,,Molex,0.967,mouser.fi
+23,H18,1,HEADER_A_1X02,22-05-2021,Headers & Wire Housings R/A PCB HDR 2P TIN PLATING ,Molex,0.193,mouser.fi
+24,"HS1, HS2",2,Heatsink,374624B00032G,"Heat Sinks Heatsink for Metal/Ceramic BGA Packages, Black Anodized, 35x35x10mm, IC Pkg Size = 35 x 35, Tape #32",Aavid,5.49,mouser.fi
+25,"IC1, IC2",2,Line Driver,P82B96P,Buffers & Line Drivers Dual Bidirectional Bus Buffer ,Texas Instruments,3.91,mouser.fi
+26,"J1, J13, J14",3,Ethernet Socket,SS-60300-010,Modular Connectors / Ethernet Connectors RJ45 Connector ,Bel,2.46,mouser.fi
+27,J2,1,HEADER_S_02x20_F_PRT,PRT-16763,Headers & Wire Housings Extended GPIO Female Header - 2x20 Pin (16mm/7.30mm) ,SparkFun,1.87,mouser.fi
+28,"J4, J5",2,Barrel Jack,694106301002,DC Power Connectors WR-DC PwrJk CtrPnTHT Right Angled ,Wurth Elektronik,0.949,mouser.fi
+30,"J8, J9, J10, J11, J12",5,HEADER_A_01x02_CGrid,90148-1102,Headers & Wire Housings C-Grid PCB Conn SR H Horz Poly Sn-A 2Ckt ,Molex,0.911,mouser.fi
+31,"J15, J16",2,HEADER_S_01x22_low,SLW-122-01-T-S,"Headers & Wire Housings .100"" Tiger Buy Low Profile Socket Strip ",SAMTEC,2.53,mouser.fi
+32,J17,1,HEADER_02x06_F_LOW,SLW-106-01-T-D,,SAMTEC,1.59,mouser.fi
+33,J18,1,HEADER_02x06,TSW-106-23-T-D,"Headers & Wire Housings Classic PCB Header Strips, 0.100"" pitch  02x06",SAMTEC,0.707,mouser.fi
+36,LED1,1,RGBLED,WP154A4SUREQBFZGC,Standard LEDs - Through Hole RGB 630/525/465nm 750/420/750mcd 60Deg,Kingbright,1.65,mouser.fi
+42,NHD1,1,NHD-0420CW-AW3,NHD-0420CW-AW3,,Newhaven Display,33.73,mouser.fi
+43,PS1,1,NSD15-12S5,NSD15-12S5,Isolated DC/DC Converters - Through Hole 15W 5V/3A W/EMI FILTER ,Mean Well,17.76,mouser.fi
+44,PS2,1,SCWN06A-05,SCWN06A-05,Isolated DC/DC Converters - Through Hole 6W 9-18Vin 5Vout 1000mA DIP24 Iso ,Mean Well,12.4,mouser.fi
+45,Q1,1,RX3L07BGNC16,RX3L07BGNC16,"MOSFET Nch 60V 70A, TO-220AB, Power MOSFET. ",ROHM Semiconductor,2.27,mouser.fi
+46,R1,1,110,MF1/4DC1000F,Metal Film Resistors - Through Hole 100ohm 1% 100PPM,KOA Speer,0.231,mouser.fi
+47,"R2, R3",2,220,MF1/4DC2200F,Metal Film Resistors - Through Hole 1/4 WATT 220 OHM 1%,KOA Speer,0.191,mouser.fi
+48,R4,1,4.7k,MF1/4DC4701F,Metal Film Resistors - Through Hole 4.7K 1% 100PPM,KOA Speer,0.231,mouser.fi
+49,"R5, R6, R7, R10, R11",5,3.3k,MF1/4DCT52R3301F,Metal Film Resistors - Through Hole 1/4 WATT 3.3K OHM 1%,KOA Speer,0.029,mouser.fi
+52,S1,1,Push Button,TL2202OAYA,"Pushbutton Switches Pushbutton, DPDT , On-(On), Through Hole ",E-Switch,0.363,mouser.fi
+54,SD1,1,SD_Card,SDIT/16GB,Memory Cards 16G SDHC Industrial pSLC,Kingston,16.25,mouser.fi
+55,SOC1,1,SoC,SC0022,Single Board Computers Raspberry Pi 3 Model B V1.2,Raspberry Pi,32.55,mouser.fi
+56,"SSW1, SSW2, SSW3, SSW4",4,Screw M2.5 20mm,50M025045K010,"Screws & Fasteners Hex Slotted Screw, M2.5 X .45 Thread, 10mm Lg, Natural, Nylon ",Essentra,0.071,mouser.fi
+57,"STO1, STO2, STO3, STO4, STO5, STO6, STO7, STO8",8,Standoff 20mm,971200154,Standoffs & Spacers WA-SSTIE M 2.5x20mm SW 5 ,Wurth Elektronik,0.819,mouser.fi
+58,"T1, T2",2,Screw_Terminal_01x02,39880-0302,Fixed Terminal Blocks 2 CKT TERM. BLOCK 5.08mm,Molex,0.648,mouser.fi
+61,U2,1,ESP32-S3-DEVKITM-1-N8,ESP32-S3-DEVKITM-1-N8,,Espressif Systems,13.95,mouser.fi
+62,U3,1,Gate Driver,MIC4423YN,Gate Drivers 3A Dual High Speed MOSFET Driver ,Microchip Technology,2.4,mouser.fi
+63,"U4, U5, U6, U7",4,Nut M3,04M030050HNDIN34814,"Screws & Fasteners Hex Nut, M3 X .5 Thread, 2.4mm Max Height, Natural, Nylon, 5.5mm Across Flats",Essentra,0.107,mouser.fi
+64,USBTTL1,1,TTL-232R-RPI,TTL-232R-RPI,,FTDI,20.74,mouser.fi
+65,ZM1,1,Snap Switch,MS0850501F025C1A,Basic / Snap Action Switches SPDT 5A OF 25g,E-Switch,1.33,mouser.fi

@@ -22,3 +22,7 @@ Pictures/*.png
 *.retry
 *.lck
 **.~lock.
+
+authenticator-backups
+_autosave-authenticator.kicad_pcb
+*.FCStd1

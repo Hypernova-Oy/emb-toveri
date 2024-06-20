@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TSW-106-23-T-D
+D CONN HEADER 12 POS .100"
+K
+F http://suddendocs.samtec.com/catalog_english/tsw_th.pdf
+$ENDCMP
+#
+#End Doc Library

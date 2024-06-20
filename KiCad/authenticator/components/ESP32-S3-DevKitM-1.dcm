@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ESP32-S3-DevKitM-1
+D WiFi Development Tools - 802.11 ESP32-S3 Gen-Purpose Dev Board, embeds ESP32-S3-MINI-1, 8 MB flash, w/ Pin Header
+K
+F https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/hw-reference/esp32s3/user-guide-devkitm-1.html
+$ENDCMP
+#
+#End Doc Library
