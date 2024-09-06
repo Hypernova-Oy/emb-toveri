@@ -15,6 +15,9 @@ toveri_oled_show_card_number_when_read: "h"
 
 toveri_oled_clear_timeout_s: 4
 
+# Wait some time after some end-user interactions with the display, to not confuse the end-user with Heartbeat-checks.
+toveri_oled_heartbeat_idle_before_heartbeating_s: 3600
+
 toveri_allowed_organization_names:
  - vaara
  - lumme
